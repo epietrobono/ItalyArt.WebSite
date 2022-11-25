@@ -33,7 +33,7 @@ const PortfolioContainer = () => {
                             PortfolioData.map((portfolio) => (
                                 <div
                                     key={portfolio.id}
-                                    group={`any`}
+                                    // group={`any`}
                                     className={`col masonry-grid mb-30 ${portfolio.categories
                                         .map((cat) => slugify(cat))
                                         .join(" ")}`}
