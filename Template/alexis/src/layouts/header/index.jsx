@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
 import { Fragment, useEffect, useState } from "react";
-import HamburgerMenu from "../../components/hamburger-menu";
-import HeaderSearch from "../../components/header-search";
+import HeaderLinks from "../../components/header-links";
+import LanguageSelector from "../../components/language-selector";
 import Logo from "../../components/logo/index";
-import PopupSearch from "../../components/popup-search";
 
 const Header = ({ classOption }) => {
     const [ofcanvasShow, setOffcanvasShow] = useState(false);
@@ -31,42 +30,35 @@ const Header = ({ classOption }) => {
     return (
         <Fragment>
             <header
-                className={`header-area header-default sticky-header ${classOption} ${
+                className={`py-0 header-area header-default sticky-header ${classOption} ${
                     scroll > headerTop ? "sticky" : ""
-                }`}
-            >
+                }`}>
+
                 <div className="container-fluid">
                     <div className="row align-items-center justify-content-between">
-                        <div className="col-auto">
-                            <div className="header-action-area">
-                                <button
-                                    className="btn-menu"
-                                    onClick={onCanvasHandler}
-                                >
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                                <span className="menu-text">Menu</span>
-                            </div>
-                        </div>
-
-                        <div className="col-auto">
+                        <div className="col-auto offset-md-2">
                             <div className="header-logo-area">
                                 <Logo
                                     image={`${process.env.PUBLIC_URL}/img/logo.png`}
                                 />
                             </div>
                         </div>
+                        
+                        <div className="col">
+                            <div className="header-links-area">
+                                <HeaderLinks></HeaderLinks>
+                            </div>
+                        </div>
 
                         <div className="col-auto">
-                            <HeaderSearch onClick={onSearchHandler} />
+                            <div className="header-languages-area">
+                                <LanguageSelector></LanguageSelector>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </header>
-            <PopupSearch show={searchbarShow} onClose={onSearchHandler} />
-            <HamburgerMenu show={ofcanvasShow} onClose={onCanvasHandler} />
         </Fragment>
     );
 };

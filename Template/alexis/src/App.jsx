@@ -2,6 +2,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "lightgallery.js/dist/css/lightgallery.css";
 import { useEffect } from "react";
+import "react-bootstrap";
 import "react-modal-video/scss/modal-video.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "swiper/components/pagination/pagination.scss";

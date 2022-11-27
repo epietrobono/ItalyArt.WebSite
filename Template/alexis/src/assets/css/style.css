@@ -3317,8 +3317,10 @@ iframe {
   Header CSS
 -----------------------------------------------------------------------
 */
+
 .header-area {
   padding: 50px 0;
+  height: 68px;
 }
 @media only screen and (max-width: 1199px) {
   .header-area .container {
