@@ -39,5 +39,8 @@
         "html",
         "javascript",
         "javascriptreact"
-    ]
+    ],
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }

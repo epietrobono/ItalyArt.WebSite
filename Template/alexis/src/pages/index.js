@@ -1,9 +1,9 @@
 import React from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
-import QuteContainer from "../containers/global/global-qute/index.jsx";
-import PortfolioContainer from "../containers/global/portfolio/index.jsx";
-import IntroContainer from "../containers/home/intro/index.jsx";
+// import QuteContainer from "../containers/global/global-qute/index.jsx";
+// import PortfolioContainer from "../containers/global/portfolio/index.jsx";
+import MonumentsSearchContainer from "../containers/home/monuments-search/index.jsx";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
@@ -14,14 +14,15 @@ const HomePage = () => {
             <Layout>
                 <SEO title="ItalyArt" />
                 <div className="wrapper home-default-wrapper">
-                    <Header />
-                    <IntroContainer />
+                    <Header></Header>
+                    <MonumentsSearchContainer></MonumentsSearchContainer>
+                    {/*
                     <div className="main-content">
                         <QuteContainer />
                         <PortfolioContainer />
-                    </div>
-                    <Footer />
-                    <ScrollToTop />
+                    </div> */}
+                    <Footer></Footer>
+                    <ScrollToTop></ScrollToTop>
                 </div>
             </Layout>
         </React.Fragment>

@@ -3,7 +3,7 @@ import FooterLogo from "../../components/footer-logo";
 function CenterFooterLogo() {
     return (
         <div>
-            <div style={{width: "300px"}}>
+            <div className="center-footer-logo">
                 <FooterLogo
                     image={`${process.env.PUBLIC_URL}/img/footer-logo.png`}
                 />

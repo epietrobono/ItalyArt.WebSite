@@ -4,7 +4,7 @@ import SocialLogo from "../social-logo";
 function RightUsefulLinks() {
     return (
         <ul>
-            <div style={{height: "170px"}}></div>
+            <div className="footer-empty-space"></div>
             <h3>Link Utili</h3>
             <li>
                 <Link
