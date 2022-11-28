@@ -25,9 +25,9 @@ function RightUsefulLinks() {
                 </Link>
             </li>
             <li>
-                <div className="row align-items-start justify-content-between">
-                    <SocialLogo className="col" social="instagram"></SocialLogo>
-                    <SocialLogo className="col" social="facebook"></SocialLogo>
+                <div className="row align-items-start justify-content-end">
+                    <SocialLogo className="col-auto" social="instagram"></SocialLogo>
+                    <SocialLogo className="col-auto" social="facebook"></SocialLogo>
                 </div>
             </li>
         </ul>
