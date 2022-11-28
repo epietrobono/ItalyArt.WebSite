@@ -11,11 +11,15 @@
     text-shadow: 1px 1px 8px black;
 }
 
-/* 
-.intro-image .intro-content .monuments-search-input {
-    width: 757px;
-} 
-*/
+.extra-links-background{
+    background-color: lightgray;
+    height: 348px;
+}
+
+.extra-link {
+    width: 370px;
+    height: 247px;
+}
 
 .footer-area .center-footer-logo {
     width: 300px;

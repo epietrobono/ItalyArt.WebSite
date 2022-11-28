@@ -3,6 +3,7 @@ import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
 // import QuteContainer from "../containers/global/global-qute/index.jsx";
 // import PortfolioContainer from "../containers/global/portfolio/index.jsx";
+import ExtraLinksContainer from "../containers/extra-links-container";
 import MonumentsSearchContainer from "../containers/home/monuments-search/index.jsx";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
@@ -16,6 +17,7 @@ const HomePage = () => {
                 <div className="wrapper home-default-wrapper">
                     <Header></Header>
                     <MonumentsSearchContainer></MonumentsSearchContainer>
+                    <ExtraLinksContainer></ExtraLinksContainer>
                     {/*
                     <div className="main-content">
                         <QuteContainer />

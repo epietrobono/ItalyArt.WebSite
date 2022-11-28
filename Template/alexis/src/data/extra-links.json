@@ -1,0 +1,26 @@
+[
+    {
+        "icon": {
+            "path": "#/icon",
+            "image": "/img/icons/placeholder.png"
+        },
+        "title": "Scegli un luogo",
+        "desc": "Bacon ipsum dolor amet jerky tenderloin pastrami drumstick leberkas venison bresaola shank tail"
+    },
+    {
+        "icon": {
+            "path": "#/icon",
+            "image": "/img/icons/placeholder.png"
+        },
+        "title": "Visita un Monumento",
+        "desc": "Bacon ipsum dolor amet jerky tenderloin pastrami drumstick leberkas venison bresaola shank tail"
+    },
+    {
+        "icon": {
+            "path": "#/icon",
+            "image": "/img/icons/placeholder.png"
+        },
+        "title": "Entra a 360°",
+        "desc": "Bacon ipsum dolor amet jerky tenderloin pastrami drumstick leberkas venison bresaola shank tail"
+    }
+]
