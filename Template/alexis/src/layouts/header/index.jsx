@@ -3,6 +3,7 @@ import { Fragment, useEffect, useState } from "react";
 import HeaderLinks from "../../components/header-links";
 import LanguageSelector from "../../components/language-selector";
 import Logo from "../../components/logo/index";
+import HeaderLinksData from "../../data/header-links.json";
 
 const Header = ({ classOption }) => {
     const [ofcanvasShow, setOffcanvasShow] = useState(false);
@@ -46,7 +47,7 @@ const Header = ({ classOption }) => {
                         
                         <div className="col">
                             <div className="header-links-area">
-                                <HeaderLinks></HeaderLinks>
+                                <HeaderLinks data={HeaderLinksData.it}></HeaderLinks>
                             </div>
                         </div>
 

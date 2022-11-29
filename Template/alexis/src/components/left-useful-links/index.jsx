@@ -1,17 +1,18 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function LeftUsefulLinks() {
+function LeftUsefulLinks({ data }) {
     return (
         <ul>
             <div className="footer-empty-space"></div>
-            <h3>Link Utili</h3>
+            <h3>{data.title}</h3>
             <li>
                 <Link
                     to={
                         process.env.PUBLIC_URL + "/"
                     }
                 >
-                    Home
+                    {data.home}
                 </Link>
             </li>
             <li>
@@ -20,7 +21,7 @@ function LeftUsefulLinks() {
                         process.env.PUBLIC_URL + "/monuments"
                     }
                 >
-                    Monumenti
+                    {data.monuments}
                 </Link>
             </li>
             <li>
@@ -29,7 +30,7 @@ function LeftUsefulLinks() {
                         process.env.PUBLIC_URL + "/blog"
                     }
                 >
-                    Blog
+                    {data.blog}
                 </Link>
             </li>
             <li>
@@ -38,11 +39,15 @@ function LeftUsefulLinks() {
                         process.env.PUBLIC_URL + "/privacy"
                     }
                 >
-                    Privacy
+                    {data.privacy}
                 </Link>
             </li>
         </ul>
     );
 }
+
+LeftUsefulLinks.propTypes = {
+    data: PropTypes.object,
+};
 
 export default LeftUsefulLinks;

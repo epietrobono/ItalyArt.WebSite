@@ -5,7 +5,7 @@ const ExtraLinksContainer = () => {
     return (
         <div className="row extra-links-background justify-content-around align-items-center">
             {
-            ExtraLinksData.map((data, key) => {
+            ExtraLinksData.it.map((data, key) => {
                 console.log(data);
                 return (
                     <ExtraLink className="col" icon={data.icon} title={data.title} desc={data.desc} key={key}></ExtraLink>

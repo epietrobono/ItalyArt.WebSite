@@ -5,7 +5,7 @@ import HomeMonumentsData from "../../../data/home-monuments.json";
 const MonumentsSearchContainer = () => {
     return (
             <div className="intro-image">
-                <IntroMonuments data={HomeMonumentsData}/>
+                <IntroMonuments data={HomeMonumentsData.it}/>
             </div>
     );
 };

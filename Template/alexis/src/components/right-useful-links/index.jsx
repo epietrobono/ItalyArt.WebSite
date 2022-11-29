@@ -1,18 +1,19 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import SocialLogo from "../social-logo";
 
-function RightUsefulLinks() {
+function RightUsefulLinks({ data }) {
     return (
         <ul>
             <div className="footer-empty-space"></div>
-            <h3>Link Utili</h3>
+            <h3>{data.title}</h3>
             <li>
                 <Link
                     to={
                         process.env.PUBLIC_URL + "/about"
                     }
                 >
-                    Chi Siamo
+                    {data.about}
                 </Link>
             </li>
             <li>
@@ -21,7 +22,7 @@ function RightUsefulLinks() {
                         process.env.PUBLIC_URL + "/info"
                     }
                 >
-                    ItalyArt.info
+                    {data.info}
                 </Link>
             </li>
             <li>
@@ -33,5 +34,9 @@ function RightUsefulLinks() {
         </ul>
     );
 }
+
+RightUsefulLinks.propTypes = {
+    data: PropTypes.object,
+};
 
 export default RightUsefulLinks;

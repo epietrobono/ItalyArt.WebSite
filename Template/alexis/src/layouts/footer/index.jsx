@@ -1,6 +1,7 @@
 import CenterFooterLogo from "../../components/center-footer-logo";
 import LeftUsefulLinks from "../../components/left-useful-links";
 import RightUsefulLinks from "../../components/right-useful-links";
+import FooterLinksData from "../../data/footer-links.json";
 
 const Footer = () => {
     return (
@@ -9,13 +10,13 @@ const Footer = () => {
                 <div className="col-sm-12">
                     <div className="footer-content row align-items-start justify-content-evenly">
                         <div className="left-useful-links text-start col-auto">
-                            <LeftUsefulLinks></LeftUsefulLinks>
+                            <LeftUsefulLinks data={FooterLinksData.it.left}></LeftUsefulLinks>
                         </div>
                         <div className="center-footer-logo text-center col-auto">
-                            <CenterFooterLogo></CenterFooterLogo>
+                            <CenterFooterLogo data={FooterLinksData.it.center}></CenterFooterLogo>
                         </div>
                         <div className="right-useful-links text-end col-auto">
-                            <RightUsefulLinks></RightUsefulLinks>
+                            <RightUsefulLinks data={FooterLinksData.it.right}></RightUsefulLinks>
                         </div>
                     </div>
                 </div>

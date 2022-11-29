@@ -1,0 +1,20 @@
+{
+    "it": {
+        "left": {
+            "title": "Link Utili",
+            "home": "Home",
+            "monuments": "Monumenti",
+            "blog": "Blog",
+            "privacy": "Privacy"
+        },
+        "center": {
+            "desc": "Bacon ipsum dolor amet jerky tenderloin pastrami drumstick leberkas venison bresaola shank tail, ham t-bone sirloin corned beef spare ribs. Jerky tongue chicken, ribeye frankfurter capicola strip steak pork belly pastrami shoulder. Cupim tail andouille capicola, filet mignon chuck leberkas ground round. Venison ribeye meatloaf flank porchetta meatball. Tail strip steak brisket spare ribs kielbasa ribeye pork chop shank drumstick turducken chuck capicola meatball beef ribs alcatra."
+        },
+        "right": {
+            "title": "Link Utili",
+            "about": "Chi Siamo",
+            "info": "ItalyArt.info"
+        }
+    },
+    "us": {}
+}

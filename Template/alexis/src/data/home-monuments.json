@@ -1,7 +1,10 @@
 {
-    "backgroundImage": "img/photos/home-picture.jpg",
-    "title": "Visita l'Italia a 360°",
-    "placeholder": "Inserisci Luogo o Monumento...",
-    "buttonText": "Cerca",
-    "url": "#/search-monuments"
+    "it": {
+        "backgroundImage": "img/photos/home-picture.jpg",
+        "title": "Visita l'Italia a 360°",
+        "placeholder": "Inserisci Luogo o Monumento...",
+        "buttonText": "Cerca",
+        "url": "#/search-monuments"
+    },
+    "us": {}
 }
