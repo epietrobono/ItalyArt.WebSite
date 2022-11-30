@@ -1,0 +1,34 @@
+{
+    "it": {
+        "title": "Cosa vuoi vedere?",
+        "desc": "Spicy jalapeno bacon ipsum dolor amet buffalo corned beef burgdoggen t-bone jowl.",
+        "categories": [
+            {
+                "name": "Palazzi",
+                "path": "/img/photos/palace.jpg",
+                "url": "/monuments/palaces"
+            },
+            {
+                "name": "Musei",
+                "path": "/img/photos/museum.jpg",
+                "url": "/monuments/museums"
+            },
+            {
+                "name": "Chiese",
+                "path": "/img/photos/church.jpg",
+                "url": "/monuments/churches"
+            },
+            {
+                "name": "Archi",
+                "path": "/img/photos/arc.jpg",
+                "url": "/monuments/arcs"
+            },
+            {
+                "name": "Castelli",
+                "path": "/img/photos/castle.jpg",
+                "url": "/monuments/castles"
+            }
+        ]
+    },
+    "us": {}
+}

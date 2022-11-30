@@ -1,9 +1,9 @@
 import React from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
-// import QuteContainer from "../containers/global/global-qute/index.jsx";
-// import PortfolioContainer from "../containers/global/portfolio/index.jsx";
+import CategoriesContainer from "../containers/categories";
 import ExtraLinksContainer from "../containers/extra-links-container";
+import CarouselMonumentsContainer from "../containers/home/carousel-monuments";
 import MonumentsSearchContainer from "../containers/home/monuments-search/index.jsx";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
@@ -18,11 +18,10 @@ const HomePage = () => {
                     <Header></Header>
                     <MonumentsSearchContainer></MonumentsSearchContainer>
                     <ExtraLinksContainer></ExtraLinksContainer>
-                    {/*
                     <div className="main-content">
-                        <QuteContainer />
-                        <PortfolioContainer />
-                    </div> */}
+                        <CategoriesContainer></CategoriesContainer>
+                        <CarouselMonumentsContainer></CarouselMonumentsContainer>
+                    </div>
                     <Footer></Footer>
                     <ScrollToTop></ScrollToTop>
                 </div>

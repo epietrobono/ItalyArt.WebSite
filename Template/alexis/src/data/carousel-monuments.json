@@ -1,0 +1,22 @@
+{
+    "it": [
+        {
+            "title": "Il Duomo di Milano",
+            "desc": "Bacon ipsum dolor amet buffalo ribeye corned beef, pancetta short loin kevin shankle doner culpa exercitation porchetta sint. Leberkas landjaeger cow pastrami, minim deserunt tail commodo turducken.",
+            "alt": "Duomo di Milano",
+            "path": "/img/photos/duomo-di-milano.jpg",
+            "url": "#/monuments/duomo-di-milano",
+            "text": "Visita ora",
+            "active": "active"
+        },
+        {
+            "title": "La Torre di Pisa",
+            "desc": "Bacon ipsum dolor amet buffalo ribeye corned beef, pancetta short loin kevin shankle doner culpa exercitation porchetta sint. Leberkas landjaeger cow pastrami, minim deserunt tail commodo turducken.",
+            "alt": "Torre di Pisa",
+            "path": "/img/photos/torre-di-pisa.jpg",
+            "url": "#/monuments/torre-di-pisa",
+            "text": "Visita ora"
+        }
+    ],
+    "us": []
+}

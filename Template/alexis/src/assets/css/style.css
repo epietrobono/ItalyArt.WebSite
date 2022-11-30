@@ -13,12 +13,77 @@
 
 .extra-links-background{
     background-color: lightgray;
-    height: 348px;
+    height: auto;
 }
 
 .extra-link {
     width: 370px;
-    height: 247px;
+    height: auto;
+}
+
+.categories .category {
+    opacity: 100%;
+    scale: 70%;
+    transition: scale 100ms;
+}
+.categories .category.zoom-0{
+    scale: 100%;
+    z-index: 4;
+}
+.categories .category.zoom-1{
+    scale: 90%;
+    z-index: 3;
+}
+.categories .category.zoom-2{
+    scale: 80%;
+    z-index: 2;
+}
+.categories .category.zoom-3{
+    scale: 70%;
+    z-index: 1;
+}
+.categories .category.zoom-4{
+    scale: 60%;
+    z-index: 0;
+}
+
+.categories .category#category-photo-0{
+    position: relative;
+    left: 16%;
+}
+.categories .category#category-photo-1{
+    position: relative;
+    left: 8%;
+    right: 8%;
+}
+.categories .category#category-photo-2{
+    position: relative;
+    left: 0%;
+    right: 16%;
+}
+.categories .category#category-photo-3{
+    position: relative;
+    left: -8%;
+    right: 24%;
+}
+.categories .category#category-photo-4{
+    position: relative;
+    left: -16%;
+    right: 32%;
+}
+
+.categories .category-name {
+    position: relative;
+    top: -20%;
+    color: white;
+    text-shadow: 1px 1px 8px black;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    filter: opacity(100%);
+    filter: brightness(0%);
+    -webkit-filter: opacity(100%);
+    -webkit-filter: brightness(0%);
 }
 
 .footer-area .center-footer-logo {
