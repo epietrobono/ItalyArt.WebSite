@@ -1,0 +1,38 @@
+{
+    "it": {
+        "title": "I posti più consigliati",
+        "desc": "Spicy jalapeno bacon ipsum dolor amet buffalo corned beef burgdoggen t-bone jowl.",
+        "buttonText": "Visita altri posti",
+        "suggestions": [
+            {
+                "title": "Villa Lante",
+                "location": "Viterbo",
+                "buttonText": "Visita",
+                "path": "/img/photos/villa-lante.jpg",
+                "url": "/monuments/villa-lante"
+            },
+            {
+                "title": "Villa Lante",
+                "location": "Viterbo",
+                "buttonText": "Visita",
+                "path": "/img/photos/villa-lante.jpg",
+                "url": "/monuments/villa-lante"
+            },
+            {
+                "title": "Villa Lante",
+                "location": "Viterbo",
+                "buttonText": "Visita",
+                "path": "/img/photos/villa-lante.jpg",
+                "url": "/monuments/villa-lante"
+            },
+            {
+                "title": "Villa Lante",
+                "location": "Viterbo",
+                "buttonText": "Visita",
+                "path": "/img/photos/villa-lante.jpg",
+                "url": "/monuments/villa-lante"
+            }
+        ]
+    },
+    "us": {}
+}

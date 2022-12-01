@@ -5,6 +5,7 @@ import CategoriesContainer from "../containers/categories";
 import ExtraLinksContainer from "../containers/extra-links-container";
 import CarouselMonumentsContainer from "../containers/home/carousel-monuments";
 import MonumentsSearchContainer from "../containers/home/monuments-search/index.jsx";
+import SuggestionsContainer from "../containers/suggestions";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
@@ -21,6 +22,7 @@ const HomePage = () => {
                     <div className="main-content">
                         <CategoriesContainer></CategoriesContainer>
                         <CarouselMonumentsContainer></CarouselMonumentsContainer>
+                        <SuggestionsContainer></SuggestionsContainer>
                     </div>
                     <Footer></Footer>
                     <ScrollToTop></ScrollToTop>
