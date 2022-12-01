@@ -1,0 +1,50 @@
+{
+    "it": {
+        "title": "I nostri 3D",
+        "desc": "Spicy jalapeno bacon ipsum dolor amet buffalo corned beef burgdoggen t-bone jowl.",
+        "buttonText": "Visita altri posti",
+        "suggestions": [
+            {
+                "title": "Torre di Pisa",
+                "location": "Pisa",
+                "buttonText": "Visita",
+                "image": {
+                    "path": "/img/photos/torre-di-pisa-3d.jpg",
+                    "alt": "Torre di Pisa 3D"
+                },
+                "url": "/3d/torre-di-pisa"
+            },
+            {
+                "title": "Torre di Pisa",
+                "location": "Pisa",
+                "buttonText": "Visita",
+                "image": {
+                    "path": "/img/photos/torre-di-pisa-3d.jpg",
+                    "alt": "Torre di Pisa 3D"
+                },
+                "url": "/3d/torre-di-pisa"
+            },
+            {
+                "title": "Torre di Pisa",
+                "location": "Pisa",
+                "buttonText": "Visita",
+                "image": {
+                    "path": "/img/photos/torre-di-pisa-3d.jpg",
+                    "alt": "Torre di Pisa 3D"
+                },
+                "url": "/3d/torre-di-pisa"
+            },
+            {
+                "title": "Torre di Pisa",
+                "location": "Pisa",
+                "buttonText": "Visita",
+                "image": {
+                    "path": "/img/photos/torre-di-pisa-3d.jpg",
+                    "alt": "Torre di Pisa 3D"
+                },
+                "url": "/3d/torre-di-pisa"
+            }
+        ]
+    },
+    "us": {}
+}

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Suggestion = ({ data }) => {
     return (
         <div className="shadow rounded p-2">
-            <Image rounded src={process.env.PUBLIC_URL + data.path}></Image>
+            <Image rounded alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
             <div className="row">
                 <h4 className="text-left">{data.title}</h4>
                 <div className="row justify-content-between">

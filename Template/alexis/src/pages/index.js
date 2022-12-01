@@ -6,6 +6,8 @@ import ExtraLinksContainer from "../containers/extra-links-container";
 import CarouselMonumentsContainer from "../containers/home/carousel-monuments";
 import MonumentsSearchContainer from "../containers/home/monuments-search/index.jsx";
 import SuggestionsContainer from "../containers/suggestions";
+import WhereToGoContainer from "../containers/where-to-go";
+import ModelSuggestionsContainer from "../containers/model-suggestions";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
@@ -23,6 +25,8 @@ const HomePage = () => {
                         <CategoriesContainer></CategoriesContainer>
                         <CarouselMonumentsContainer></CarouselMonumentsContainer>
                         <SuggestionsContainer></SuggestionsContainer>
+                        <WhereToGoContainer></WhereToGoContainer>
+                        <ModelSuggestionsContainer></ModelSuggestionsContainer>
                     </div>
                     <Footer></Footer>
                     <ScrollToTop></ScrollToTop>

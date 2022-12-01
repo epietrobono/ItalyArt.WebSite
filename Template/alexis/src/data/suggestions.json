@@ -8,28 +8,40 @@
                 "title": "Villa Lante",
                 "location": "Viterbo",
                 "buttonText": "Visita",
-                "path": "/img/photos/villa-lante.jpg",
+                "image": {
+                    "path": "/img/photos/villa-lante.jpg",
+                    "alt": "Villa Lante"
+                },
                 "url": "/monuments/villa-lante"
             },
             {
                 "title": "Villa Lante",
                 "location": "Viterbo",
                 "buttonText": "Visita",
-                "path": "/img/photos/villa-lante.jpg",
+                "image": {
+                    "path": "/img/photos/villa-lante.jpg",
+                    "alt": "Villa Lante"
+                },
                 "url": "/monuments/villa-lante"
             },
             {
                 "title": "Villa Lante",
                 "location": "Viterbo",
                 "buttonText": "Visita",
-                "path": "/img/photos/villa-lante.jpg",
+                "image": {
+                    "path": "/img/photos/villa-lante.jpg",
+                    "alt": "Villa Lante"
+                },
                 "url": "/monuments/villa-lante"
             },
             {
                 "title": "Villa Lante",
                 "location": "Viterbo",
                 "buttonText": "Visita",
-                "path": "/img/photos/villa-lante.jpg",
+                "image": {
+                    "path": "/img/photos/villa-lante.jpg",
+                    "alt": "Villa Lante"
+                },
                 "url": "/monuments/villa-lante"
             }
         ]
