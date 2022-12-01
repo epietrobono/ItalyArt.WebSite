@@ -22,7 +22,6 @@
 }
 
 .categories .category {
-    opacity: 100%;
     scale: 70%;
     transition: scale 100ms;
 }
