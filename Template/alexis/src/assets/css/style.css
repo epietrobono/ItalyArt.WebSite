@@ -12,7 +12,7 @@
 }
 
 .extra-links-background{
-    background-color: lightgray;
+    background-color: #f9e7e7;
     height: auto;
 }
 
@@ -76,6 +76,14 @@
     top: -20%;
     color: white;
     text-shadow: 1px 1px 8px black;
+}
+
+.carousel-monuments, .carousel-models {
+    height: 400px;
+}
+.carousel-monuments .carousel-image, .carousel-models .carousel-image {
+    height: 400px;
+    width: auto;
 }
 
 .carousel-control-next, .carousel-control-prev {
