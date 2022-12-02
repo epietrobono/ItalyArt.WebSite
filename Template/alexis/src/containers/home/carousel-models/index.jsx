@@ -1,14 +1,14 @@
 import { Image } from "react-bootstrap";
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from "react-router-dom";
-import CarouselMonumentsData from "../../../data/carousel-monuments.json";
+import CarouselModelsData from "../../../data/carousel-models.json";
 
-function CarouselMonumentsContainer() {
+function CarouselModelsContainer() {
     return (
-        <div className="carousel-monuments">
+        <div className="carousel-models">
             <Carousel indicators={false}>
                 {
-                    CarouselMonumentsData.it.map((data, key) => {
+                    CarouselModelsData.it.map((data, key) => {
                         return (
                             <Carousel.Item key={key}>
                                 <div className="row mx-5 px-5">
@@ -35,4 +35,4 @@ function CarouselMonumentsContainer() {
     );
 }
 
-export default CarouselMonumentsContainer;
+export default CarouselModelsContainer;

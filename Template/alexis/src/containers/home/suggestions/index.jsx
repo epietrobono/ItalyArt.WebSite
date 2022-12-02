@@ -1,9 +1,9 @@
-import ModelSuggestionsData from "../../data/model-suggestions.json";
-import Suggestion from "../../components/suggestion";
+import SuggestionsData from "../../../data/suggestions.json";
+import Suggestion from "../../../components/suggestion";
 import { Link } from "react-router-dom";
 
-const ModelSuggestionsContainer = () => {
-    const data = ModelSuggestionsData.it;
+const SuggestionsContainer = () => {
+    const data = SuggestionsData.it;
     return (
         <div className="py-4 d-flex flex-column">
             <h2 className="text-center">{data.title}</h2>
@@ -19,8 +19,14 @@ const ModelSuggestionsContainer = () => {
                     })
                 }
             </div>
+            <Link
+                to={process.env.PUBLIC_URL + "/suggestions"}
+                className="btn btn-light border shadow rounded-pill mx-auto"
+            >
+                {data.buttonText}
+            </Link>
         </div>
     );
 };
 
-export default ModelSuggestionsContainer;
+export default SuggestionsContainer;

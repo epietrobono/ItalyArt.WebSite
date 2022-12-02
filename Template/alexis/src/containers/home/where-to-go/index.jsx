@@ -1,4 +1,4 @@
-import WhereToGoData from "../../data/where-to-go.json";
+import WhereToGoData from "../../../data/where-to-go.json";
 import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -15,7 +15,7 @@ const WhereToGoContainer = () => {
                     <form action="#" className="form-search">
                         <input
                             id="search"
-                            className="col col-auto input-text border shadow rounded-pill mx-2 px-4 py-1 search-map"
+                            className="col col-auto input-text border shadow rounded-pill mx-2 px-4 py-1 search-icon"
                             placeholder={data.placeholder}
                             aria-describedby="search-icon"
                             type="search"

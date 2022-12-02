@@ -1,5 +1,5 @@
-import ExtraLink from "../../components/extra-link";
-import ExtraLinksData from "../../data/extra-links.json";
+import ExtraLink from "../../../components/extra-link";
+import ExtraLinksData from "../../../data/extra-links.json";
 
 const ExtraLinksContainer = () => {
     return (

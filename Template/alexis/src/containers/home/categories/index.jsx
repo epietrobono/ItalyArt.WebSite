@@ -1,5 +1,5 @@
-import CategoriesGallery from "../../components/categories-gallery";
-import CategoriesData from "../../data/categories.json";
+import CategoriesGallery from "../../../components/categories-gallery";
+import CategoriesData from "../../../data/categories.json";
 
 const CategoriesContainer = () => {
     return (

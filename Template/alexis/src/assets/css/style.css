@@ -97,11 +97,22 @@
     background-color: #f9e7e7;
 }
 
-.search-map {
+.search-icon {
     background-image: url("../img/search.svg");
     background-repeat: no-repeat;
     background-position: 5%;
     text-indent: 20px;
+}
+
+.email-icon {
+    background-image: url("../img/email.svg");
+    background-repeat: no-repeat;
+    background-position: 5%;
+    text-indent: 20px;
+}
+
+.news {
+    background-color: #f9e7e7;
 }
 
 .footer-area .center-footer-logo {
