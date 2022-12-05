@@ -1,14 +1,13 @@
-.intro-image .intro-section {
+.monuments-search {
     height: 818px;
     background-size: cover;
 }
-.intro-image .intro-content .title, .monuments-search-input {
+.monuments-search .monuments-form .title {
+    color: white;
+    font-size: 50px;
+    text-shadow: 1px 1px 10px black;
     animation-fill-mode: none;
     animation-name: fadeInUp;
-}
-
-.intro-image .intro-content .title {
-    text-shadow: 1px 1px 8px black;
 }
 
 .extra-links-background{

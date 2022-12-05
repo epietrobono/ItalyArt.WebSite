@@ -1,6 +1,6 @@
 import SuggestionsData from "../../../data/suggestions.json";
-import Suggestion from "../../../components/suggestion";
 import { Link } from "react-router-dom";
+import MonumentCard from "../../../components/monument-card";
 
 const SuggestionsContainer = () => {
     const data = SuggestionsData.it;
@@ -13,7 +13,7 @@ const SuggestionsContainer = () => {
                     data.suggestions.map((val, key)=>{
                         return(
                             <div className="col col-auto" key={key}>
-                                <Suggestion className="col col-auto" data={val}></Suggestion>
+                                <MonumentCard className="col col-auto" data={val}></MonumentCard>
                             </div>
                         );
                     })

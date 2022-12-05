@@ -2,7 +2,7 @@ import PropType from "prop-types";
 import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const Suggestion = ({ data }) => {
+const MonumentCard = ({ data }) => {
     return (
         <div className="shadow rounded p-2">
             <Image rounded alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
@@ -22,8 +22,8 @@ const Suggestion = ({ data }) => {
     );
 };
 
-Suggestion.propTypes = {
+MonumentCard.propTypes = {
     data: PropType.object,
 }
 
-export default Suggestion;
+export default MonumentCard;

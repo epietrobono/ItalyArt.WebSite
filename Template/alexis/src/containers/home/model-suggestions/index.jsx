@@ -1,5 +1,5 @@
 import ModelSuggestionsData from "../../../data/model-suggestions.json";
-import Suggestion from "../../../components/suggestion";
+import MonumentCard from "../../../components/monument-card";
 
 const ModelSuggestionsContainer = () => {
     const data = ModelSuggestionsData.it;
@@ -12,7 +12,7 @@ const ModelSuggestionsContainer = () => {
                     data.suggestions.map((val, key)=>{
                         return(
                             <div className="col col-auto" key={key}>
-                                <Suggestion className="col col-auto" data={val}></Suggestion>
+                                <MonumentCard data={val}></MonumentCard>
                             </div>
                         );
                     })

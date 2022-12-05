@@ -1,0 +1,48 @@
+{
+    "it": {
+        "projectInfo": {
+            "title": "Nascita del progetto",
+            "desc": "Consectetur voluptate adipisicing magna sunt excepteur tempor do. Ad cillum magna amet ea esse et labore fugiat occaecat aute consectetur. Nostrud enim nulla enim veniam quis eiusmod est ex eu labore qui in ullamco adipisicing. Aliquip deserunt officia aute dolor do occaecat. Magna consequat exercitation sunt cupidatat consequat nisi nulla.",
+            "image": {
+                "path": "/img/about/bio01.jpg",
+                "alt": ""
+            }
+        },
+        "biographies": [
+            {
+                "title": "Biografia",
+                "desc": "Dolore consectetur eiusmod adipisicing ut proident cupidatat nisi ipsum laboris ea magna. Ad incididunt anim ullamco nisi excepteur commodo cillum sit amet. Adipisicing eiusmod id voluptate non.",
+                "image": {
+                    "path": "/img/about/bio01.jpg",
+                    "alt": ""
+                }
+            },
+            {
+                "title": "Biografia",
+                "desc": "Dolore consectetur eiusmod adipisicing ut proident cupidatat nisi ipsum laboris ea magna. Ad incididunt anim ullamco nisi excepteur commodo cillum sit amet. Adipisicing eiusmod id voluptate non.",
+                "image": {
+                    "path": "/img/about/bio01.jpg",
+                    "alt": ""
+                }
+            },
+            {
+                "title": "Biografia",
+                "desc": "Dolore consectetur eiusmod adipisicing ut proident cupidatat nisi ipsum laboris ea magna. Ad incididunt anim ullamco nisi excepteur commodo cillum sit amet. Adipisicing eiusmod id voluptate non.",
+                "image": {
+                    "path": "/img/about/bio01.jpg",
+                    "alt": ""
+                }
+            },
+            {
+                "title": "Biografia",
+                "desc": "Dolore consectetur eiusmod adipisicing ut proident cupidatat nisi ipsum laboris ea magna. Ad incididunt anim ullamco nisi excepteur commodo cillum sit amet. Adipisicing eiusmod id voluptate non.",
+                "image": {
+                    "path": "/img/about/bio01.jpg",
+                    "alt": ""
+                }
+            }
+        ]
+    },
+    "us": {
+    }
+}

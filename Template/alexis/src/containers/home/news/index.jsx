@@ -6,11 +6,11 @@ const NewsContainer = () => {
     return (
         <div className="news py-4">
             <h2 className="text-center">{data.title}</h2>
-            <div className="row row-cols-3 justift-content-center">
+            <div className="row justify-content-center">
                 {
                     data.news.map((val, key)=>{
                         return(
-                            <div className="col" key={key}>
+                            <div className="col col-3 px-4 mx-4" key={key}>
                                 <News data={val}></News>
                             </div>
                         );

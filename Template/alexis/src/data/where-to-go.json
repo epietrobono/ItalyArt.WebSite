@@ -5,7 +5,7 @@
         "desc": "Spicy jalapeno bacon ipsum dolor amet buffalo corned beef burgdoggen t-bone jowl.",
         "placeholder": "Inserisci città, paese o indirizzo...",
         "buttonText": "Cerca",
-        "url": "#/search-monuments",
+        "url": "#/search-locations",
         "image": {
             "path": "/img/photos/italy-outline.png",
             "alt": "Bordo Mappa Italia"

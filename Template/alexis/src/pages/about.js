@@ -1,13 +1,9 @@
 import React from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
-import AboutAward from "../containers/about/about-award";
-import AboutService from "../containers/about/about-service/index.jsx";
-import Blockquote from "../containers/about/blockquote";
-import AboutGallery from "../containers/about/gallery";
-import TeamContainer from "../containers/about/team";
-import BrandContainer from "../containers/global/brand";
-import PageTitleContainer from "../containers/global/page-title";
+import WhoContainer from "../containers/about/who";
+import ZigZagContainer from "../containers/about/zig-zag";
+import InfoContainer from "../containers/about/info";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
@@ -20,13 +16,9 @@ const AboutPage = () => {
                 <div className="wrapper about-page-wrapper">
                     <Header classOption="hb-border" />
                     <div className="main-content">
-                        <PageTitleContainer />
-                        <AboutService />
-                        <TeamContainer />
-                        <Blockquote />
-                        <AboutGallery />
-                        <AboutAward />
-                        <BrandContainer />
+                        <WhoContainer></WhoContainer>
+                        <ZigZagContainer></ZigZagContainer>
+                        <InfoContainer></InfoContainer>
                     </div>
                     <Footer />
                     <ScrollToTop />
