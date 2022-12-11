@@ -4,10 +4,10 @@ import SEO from "../components/seo";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
-import Articles from "../containers/blog/articles";
-import RecentArticles from "../containers/blog/recent-articles";
-import PopularArticles from "../containers/blog/popular-articles";
-import AllArticles from "../containers/blog/all-articles";
+import ArticlesContainer from "../containers/blog/articles";
+import RecentArticlesContainer from "../containers/blog/recent-articles";
+import PopularArticlesContainer from "../containers/blog/popular-articles";
+import AllArticlesContainer from "../containers/blog/all-articles";
 import ArticlesData from "../data/articles.json";
 
 const Blog = () => {
@@ -20,10 +20,10 @@ const Blog = () => {
                 <div className="wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
                     <div className="main-content">
-                        <Articles articles={articles}></Articles>
-                        <RecentArticles title={data.recentTitle} articles={articles}></RecentArticles>
-                        <PopularArticles title={data.popularTitle} articles={articles}></PopularArticles>
-                        <AllArticles title={data.allTitle} articles={articles}></AllArticles>
+                        <ArticlesContainer articles={articles}></ArticlesContainer>
+                        <RecentArticlesContainer title={data.recentTitle} articles={articles}></RecentArticlesContainer>
+                        <PopularArticlesContainer title={data.popularTitle} articles={articles}></PopularArticlesContainer>
+                        <AllArticlesContainer title={data.allTitle} articles={articles}></AllArticlesContainer>
                     </div>
                     <Footer />
                     <ScrollToTop />

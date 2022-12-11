@@ -1,7 +1,7 @@
 import ArticlesData from "../../../data/articles.json";
 import ArticlePreview from "../../../components/article-preview";
 
-const Articles = () => {
+const ArticlesContainer = () => {
     const data = ArticlesData.it;
     const articles = data.articles;
     return (
@@ -23,4 +23,4 @@ const Articles = () => {
     );
 };
 
-export default Articles;
+export default ArticlesContainer;

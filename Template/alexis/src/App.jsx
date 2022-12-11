@@ -25,6 +25,7 @@ import BlogAuthor from "./templates/blog-author";
 import BlogCategory from "./templates/blog-category";
 import BlogDate from "./templates/blog-date";
 import BlogDetails from "./templates/blog-details";
+import BlogArticle from "./templates/blog-article";
 import BlogTag from "./templates/blog-tag";
 import PortfolioDetails from "./templates/portfolio-details";
 
@@ -72,6 +73,10 @@ const App = () => {
                     <Route
                         path={`${process.env.PUBLIC_URL + "/blog"}`}
                         component={Blog}
+                    />
+                    <Route
+                        path={`${process.env.PUBLIC_URL + "/article/:id"}`}
+                        component={BlogArticle}
                     />
                     <Route
                         path={`${process.env.PUBLIC_URL + "/category/:slug"}`}

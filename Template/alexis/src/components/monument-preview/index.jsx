@@ -1,0 +1,44 @@
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import Image from 'react-bootstrap/Image';
+
+function MonumentPreview ({data, preview=true, titleLocation=false}) {
+    return (
+        <div className="row" >
+            <div className="col col-auto">
+                <div className="row">
+                    <Image rounded className="shadow" alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
+                </div>
+                <div className="row">
+                    {
+                        titleLocation ? <h6>{data.title + " - " + data.location}</h6> : <h6>{data.title}</h6>
+                    }
+                    <strong>{data.subtitle}</strong>
+                    {
+                        preview ? <p>{data.preview}</p> : ""
+                    }
+                    
+                    {
+                        titleLocation ? "" : <p className="col col-auto">{data.location}</p>
+                    }
+                    <form action={data.url}>
+                        <Link
+                            to={process.env.PUBLIC_URL + data.url}
+                            className="col col-auto btn btn-light border rounded-pill ms-2"
+                        >
+                            {data.buttonText}
+                        </Link>
+                    </form>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+MonumentPreview.propTypes = {
+    data: PropTypes.object,
+    preview: PropTypes.bool,
+    titleLocation: PropTypes.bool,
+};
+
+export default MonumentPreview;

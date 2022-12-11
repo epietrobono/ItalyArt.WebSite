@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import ArticlePreview from "../../../components/article-preview";
 
-const RecentArticles = ({title, articles}) => {
+const RecentArticlesContainer = ({title, articles}) => {
     return (
         <div>
             <div className="row justify-content-around">
@@ -20,9 +20,9 @@ const RecentArticles = ({title, articles}) => {
     );
 };
 
-RecentArticles.propTypes = {
+RecentArticlesContainer.propTypes = {
     title: PropTypes.string,
     articles: PropTypes.object,
 }
 
-export default RecentArticles;
+export default RecentArticlesContainer;

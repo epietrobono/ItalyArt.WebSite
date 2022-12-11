@@ -9,13 +9,13 @@ const MonumentCard = ({ data }) => {
             <div className="row">
                 <h4 className="text-left">{data.title}</h4>
                 <div className="row justify-content-between">
-                <p className="col col-auto">{data.location}</p>
-                <Link
-                    to={process.env.PUBLIC_URL + data.url}
-                    className="col col-auto btn btn-light border shadow rounded-pill"
-                >
-                    {data.buttonText}
-                </Link>
+                    <p className="col col-auto">{data.location}</p>
+                    <Link
+                        to={process.env.PUBLIC_URL + data.url}
+                        className="col col-auto btn btn-light border shadow rounded-pill"
+                    >
+                        {data.buttonText}
+                    </Link>
                 </div>
             </div>
         </div>

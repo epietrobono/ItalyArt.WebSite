@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import ArticlePreview from "../../../components/article-preview";
 
-const PopularArticles = ({title, articles}) => {
+const PopularArticlesContainer = ({title, articles}) => {
     return (
         <div>
             <div className="row justify-content-around">
@@ -20,9 +20,9 @@ const PopularArticles = ({title, articles}) => {
     );
 };
 
-PopularArticles.propTypes = {
+PopularArticlesContainer.propTypes = {
     title: PropTypes.string,
     articles: PropTypes.object,
 }
 
-export default PopularArticles;
+export default PopularArticlesContainer;

@@ -1,17 +1,17 @@
 import PropTypes from "prop-types";
-import ArticlePreview from "../../../components/article-preview";
+import MonumentPreview from "../../../components/monument-preview";
 
-const AllArticlesContainer = ({title, articles}) => {
+const MonumentsContainer = ({title, monuments}) => {
     return (
         <div>
             <div className="row justify-content-center">
                 <div className="col col-auto">
-                    <h1>{title}</h1>
+                    <h4>{title}</h4>
                     {
-                        articles.map((val, key)=>{
+                        monuments.slice(0,3).map((val, key)=>{
                             return (
                                 <div className="row" key={key}>
-                                    <ArticlePreview data={val} horizontal={true}></ArticlePreview>
+                                    <MonumentPreview data={val} titleLocation={true}></MonumentPreview>
                                 </div>
                             )
                         })
@@ -22,9 +22,9 @@ const AllArticlesContainer = ({title, articles}) => {
     );
 };
 
-AllArticlesContainer.propTypes = {
+MonumentsContainer.propTypes = {
     title: PropTypes.string,
-    articles: PropTypes.object,
+    monuments: PropTypes.object,
 }
 
-export default AllArticlesContainer;
+export default MonumentsContainer;

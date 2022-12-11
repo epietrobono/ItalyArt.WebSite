@@ -1,17 +1,17 @@
 import PropTypes from "prop-types";
 import ArticlePreview from "../../../components/article-preview";
 
-const AllArticlesContainer = ({title, articles}) => {
+const RelatedArticlesContainer = ({title, articles}) => {
     return (
         <div>
             <div className="row justify-content-center">
                 <div className="col col-auto">
-                    <h1>{title}</h1>
+                    <h4>{title}</h4>
                     {
                         articles.map((val, key)=>{
                             return (
                                 <div className="row" key={key}>
-                                    <ArticlePreview data={val} horizontal={true}></ArticlePreview>
+                                    <ArticlePreview data={val}></ArticlePreview>
                                 </div>
                             )
                         })
@@ -22,9 +22,9 @@ const AllArticlesContainer = ({title, articles}) => {
     );
 };
 
-AllArticlesContainer.propTypes = {
+RelatedArticlesContainer.propTypes = {
     title: PropTypes.string,
     articles: PropTypes.object,
 }
 
-export default AllArticlesContainer;
+export default RelatedArticlesContainer;
