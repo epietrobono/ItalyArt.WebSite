@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 const MonumentCard = ({ data }) => {
     return (
         <div className="shadow rounded p-2">
-            <Image rounded className="img-monumenty-card" alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
+            <div className="img-monumenty-card">
+            <Image rounded alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
+            </div>
             <div className="textarea-monument-card">
-                <h4 className="text-left">{data.title}</h4>
+                <h4 className="text-left monument-card-title">{data.title}</h4>
                 <div className="d-flex justify-content-between">
                     <p className="col col-auto">{data.location}</p>
                     <Link

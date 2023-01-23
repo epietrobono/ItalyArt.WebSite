@@ -26,10 +26,10 @@ const MonumentsPage = () => {
                     </div>
                     <div className="main-content">
                         <div className="row">
-                            <div className="col-4">
-                                <GridContainer nCols={2}></GridContainer>
+                            <div className="col-5">
+                                <GridContainer nCols={3}></GridContainer>
                             </div>
-                            <div className="col-8">
+                            <div className="col-7">
                                 <MapContainer></MapContainer>
                             </div>
                         </div>

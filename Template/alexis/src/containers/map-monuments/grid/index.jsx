@@ -9,7 +9,7 @@ function GridContainer({nCols}) {
             {
                 data.monuments.map((val, key)=>{
                     return (
-                        <div className="col" key={key}>
+                        <div className="col col-auto" key={key}>
                             <MonumentCard data={val}></MonumentCard>
                         </div>
                     )
