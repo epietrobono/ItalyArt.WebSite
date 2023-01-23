@@ -3,7 +3,7 @@
         {
             "icon": {
                 "path": "#/icon",
-                "image": "/img/icons/placeholder.png"
+                "image": "/assets/img/icona-scegli.svg"
             },
             "title": "Scegli un luogo",
             "desc": "Bacon ipsum dolor amet jerky tenderloin pastrami drumstick leberkas venison bresaola shank tail"
