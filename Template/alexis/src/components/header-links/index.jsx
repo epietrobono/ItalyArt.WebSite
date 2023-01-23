@@ -16,7 +16,7 @@ function HeaderLinks({ data }) {
                             <a className="mx-3 nav-link" href="/blog">{data.blog}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="mx-3 nav-link" href="/about">{data.about}</a>
+                            <a className="mx-3 nav-link" href="/map">{data.map}</a>
                         </li>
                     </ul>
                 </div>
