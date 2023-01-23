@@ -4,10 +4,8 @@ import Header from "../layouts/header";
 import Footer from "../layouts/footer";
 import SEO from "../components/seo";
 import MonumentPageData from "../data/monument.json";
-import Model3D from "../containers/monument/3dmodel";
-import Tour360 from "../containers/monument/tour360";
-import Title from "../containers/monument/title";
-import Text from "../containers/monument/text";
+import MonumentHome from "../containers/monument/home";
+import MonumentSections from "../containers/monument/sections";
 import ScrollToTop from "../components/scroll-to-top";
 import PropTypes from "prop-types";
 
@@ -23,38 +21,41 @@ const MonumentPage = ({
             return monument
         }
     }).pop();
-    return (
-        <React.Fragment>
-        <Layout>
-            <SEO title="ItalyArt || Monument" />
-            <div className="wrapper home-default-wrapper">
-                <Header classOption="hb-border" />
-                <div className="main-content">
-                    <div className="col-12 justify-content-center">
-                            {
-                                monument.contenuti.map((contenuto,index) => {
-                                    switch(contenuto.type){
-                                        case 'title':                                            
-                                            return (<Title contenuto={contenuto}></Title>);
-                                        case 'text':                                            
-                                            return (<Text contenuto={contenuto}></Text>);
-                                        case 'model3d':                                            
-                                            return (<Model3D contenuto={contenuto}></Model3D>);
-                                        case 'tour':                                            
-                                            return (<Tour360 contenuto={contenuto}></Tour360>);
-                                        default:
-                                            return'';
-                                    }
-                                })
-                            }
+    if(monument.isSezioni=="true"){
+        return (
+            <React.Fragment>
+            <Layout>
+                <SEO title="ItalyArt || Monument" />
+                <div className="wrapper home-default-wrapper">
+                    <Header classOption="hb-border" />
+                    <MonumentSections monument={monument}></MonumentSections>
+                    <div className="main-content">
+                        <MonumentHome monuments={monuments} id={id}></MonumentHome>                    
                     </div>
+                    <Footer />
+                    <ScrollToTop />
                 </div>
-                <Footer />
-                <ScrollToTop />
-            </div>
-        </Layout>
-    </React.Fragment>
-    );
+            </Layout>
+        </React.Fragment>
+        );
+    }else{
+        return (
+            <React.Fragment>
+            <Layout>
+                <SEO title="ItalyArt || Monument" />
+                <div className="wrapper home-default-wrapper">
+                    <Header classOption="hb-border" />
+                    <div className="main-content">
+                        <MonumentHome monuments={monuments} id={id}></MonumentHome>                    
+                    </div>
+                    <Footer />
+                    <ScrollToTop />
+                </div>
+            </Layout>
+        </React.Fragment>
+        );
+    }
+    
 };
 
 MonumentPage.propTypes = {
