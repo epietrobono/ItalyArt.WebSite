@@ -17,7 +17,7 @@
 }
 
 .extra-link {
-    width: 370px;
+    max-width: 25%;
     height: auto;
     border-radius: 10px !important;
 }
@@ -48,24 +48,29 @@
     transition: scale 100ms;
 }
 .categories .category.zoom-0{
-    scale: 100%;
+    scale: 110%;
     z-index: 4;
+    transition-duration: 0.5s;
 }
 .categories .category.zoom-1{
     scale: 90%;
     z-index: 3;
+    transition-duration: 0.5s;
 }
 .categories .category.zoom-2{
-    scale: 80%;
+    scale: 83%;
     z-index: 2;
+    transition-duration: 0.5s;
 }
 .categories .category.zoom-3{
-    scale: 70%;
+    scale: 75%;
     z-index: 1;
+    transition-duration: 0.5s;
 }
 .categories .category.zoom-4{
-    scale: 60%;
+    scale: 68%;
     z-index: 0;
+    transition-duration: 0.5s;
 }
 
 .categories .category#category-photo-0{
@@ -104,8 +109,18 @@
     height: 400px;
 }
 .carousel-monuments .carousel-image, .carousel-models .carousel-image {
+    height: 320px;
+    width: auto;
+}
+
+.carousel-image-3d {
     height: 400px;
     width: auto;
+    height: 400px;
+    position: absolute;
+    width: auto;
+    right: 10px;
+    bottom: 0;
 }
 
 .carousel-control-next, .carousel-control-prev {
@@ -133,7 +148,10 @@
     background-image: url("../img/email.svg");
     background-repeat: no-repeat;
     background-position: 5%;
-    text-indent: 20px;
+    text-indent: 35px;
+    width: 75%;
+    font-weight: 400;
+    font-size: 15px;
 }
 
 .news {
@@ -410,9 +428,16 @@
     font-size: 19px;
     background: #C21718 0% 0% no-repeat padding-box;
     box-shadow: 0px 1px 4px #C2171829;
+    border: 2px solid #C21718 !important;
     color: white;
     font-weight: 500;
     padding: 2px 30px !important;
+}
+
+.btn:hover{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #C21718 !important;
+    color: #2E2E2E;
 }
 
 .home-bar{
@@ -440,5 +465,127 @@
 }
 
 .container-home{
-    padding: 0 5%;
+    padding: 0 8%;
+}
+
+.botton-card{
+    height: fit-content !important;
+    border-radius:9px !important;
+}
+
+.textarea-monument-card{
+    margin-top: 10px;
+    padding-left: 5px;
+    width: 100%;
+    margin-bottom: -10px;
+}
+
+.img-monumenty-card{
+    width: 100%;
+}
+
+.botton-suggestions{
+    margin-top: 50px;
+    line-height: inherit !important;
+    font-size: 19px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #C21718 !important;
+    color: #2E2E2E;
+    font-weight: 500;
+    padding: 4px 40px !important;
+}
+
+.botton-suggestions:hover{
+    background: #C21718 0% 0% no-repeat padding-box !important;
+    color: white !important;
+    
+}
+
+.botton-monument-carousel{
+    line-height: inherit !important;
+    font-size: 19px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #C21718 !important;
+    color: #2E2E2E;
+    font-weight: 500;
+    padding: 4px 40px !important;
+}
+
+.botton-monument-carousel:hover{
+    background: #C21718 0% 0% no-repeat padding-box !important;
+    color: white !important;
+    
+}
+
+.carousel-inner{
+    overflow: visible !important;
+    width: 85%;
+    margin: auto;
+}
+
+.card-3d-carousel {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 6px #00000063;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.carousel-desc-3d{
+    max-width: 60%;
+}
+
+.mappa-italia{
+    height: 400px;
+}
+
+.sezione-dove-andare{
+    margin: 40px 0;
+}
+
+.delete-margin{
+    margin-left: -50px;
+    margin-right: -50px;
+}
+
+.width-3d-card{
+    max-width: 20%;
+}
+
+.newsletter{
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 6px #00000029;
+    border: 3px solid #C21718;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.img-newsletter{
+    width: 35%;
+}
+
+.img-newsletter img{
+    border-radius: 15px;
+}
+
+.d-flex-news{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.newsletter-desc{
+    width: 40%;
+    text-align: center;
+}
+
+.d-flex-news .search-form{
+    width:80%;
 }

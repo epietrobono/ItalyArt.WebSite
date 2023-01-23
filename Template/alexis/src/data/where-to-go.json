@@ -7,7 +7,7 @@
         "buttonText": "Cerca",
         "url": "#/search-locations",
         "image": {
-            "path": "/img/photos/italy-outline.png",
+            "path": "/img/photos/italy-outline.svg",
             "alt": "Bordo Mappa Italia"
         }
     },
