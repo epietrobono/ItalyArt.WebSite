@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@googlemaps/react-wrapper": "^1.1.35",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "disqus-react": "^1.0.11",
