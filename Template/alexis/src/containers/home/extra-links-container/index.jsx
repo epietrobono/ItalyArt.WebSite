@@ -3,7 +3,7 @@ import ExtraLinksData from "../../../data/extra-links.json";
 
 const ExtraLinksContainer = () => {
     return (
-        <div className="row extra-links-background justify-content-around align-items-center py-5">
+        <div className="row extra-links-background justify-content-around align-items-center py-5 container-home">
             {
             ExtraLinksData.it.map((data, key) => {
                 return (

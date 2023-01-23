@@ -1,12 +1,11 @@
-import NewsletterData from "../../../data/newsletter.json";
-import { Link } from "react-router-dom";
 import { Image } from "react-bootstrap";
 import SearchForm from "../../../components/search-form";
+import NewsletterData from "../../../data/newsletter.json";
 
 const NewsletterContainer = () => {
     const data = NewsletterData.it;
     return (
-        <div className="newsletter row justify-content-center py-5">
+        <div className="newsletter row justify-content-center py-5 section-margin">
             <div className="col col-auto w-50 text-center">
                 <h1>{data.title}</h1>
                 <p>{data.desc}</p>

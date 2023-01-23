@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="62.586" height="42.237" viewBox="0 0 62.586 42.237">
+  <g id="icona-visita" transform="translate(-543 -814.625)">
+    <g id="Raggruppa_845" data-name="Raggruppa 845" transform="translate(543 814.625)">
+      <g id="Raggruppa_841" data-name="Raggruppa 841" transform="translate(0)">
+        <g id="Rettangolo_166" data-name="Rettangolo 166" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="46.876" height="41.695" rx="2" stroke="none"/>
+          <rect x="0.5" y="0.5" width="45.876" height="40.695" rx="1.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Raggruppa_843" data-name="Raggruppa 843" transform="translate(3.549 5.246)">
+        <line id="Linea_49" data-name="Linea 49" x2="21.834" transform="translate(0 16.989)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="1"/>
+        <line id="Linea_430" data-name="Linea 430" x2="21.834" transform="translate(9.46 25.313)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="1"/>
+        <path id="Tracciato_7217" data-name="Tracciato 7217" d="M24,0" transform="translate(19.327)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="0.5"/>
+        <line id="Linea_48" data-name="Linea 48" x2="38.834" transform="translate(0 19.44)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="0.5"/>
+        <path id="Tracciato_7223" data-name="Tracciato 7223" d="M0,0H28.571" transform="translate(9.46 28.188)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="0.5"/>
+        <path id="Tracciato_7215" data-name="Tracciato 7215" d="M24,0" transform="translate(19.327 28.546)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="0.5"/>
+        <line id="Linea_47" data-name="Linea 47" x2="38.834" transform="translate(0 21.158)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="0.5"/>
+        <line id="Linea_53" data-name="Linea 53" x2="28.705" transform="translate(9.46 29.905)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="0.5"/>
+        <path id="Tracciato_7216" data-name="Tracciato 7216" d="M24,0" transform="translate(19.327 31.205)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="0.5"/>
+      </g>
+      <g id="Rettangolo_172" data-name="Rettangolo 172" transform="translate(2.658 2.819)" fill="rgba(194,23,24,0.6)" stroke="#707070" stroke-width="1">
+        <rect width="40.926" height="17.268" rx="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="39.926" height="16.268" rx="0.5" fill="none"/>
+      </g>
+      <g id="Rettangolo_175" data-name="Rettangolo 175" transform="translate(2.658 29.128)" fill="rgba(194,23,24,0.6)" stroke="#707070" stroke-width="1">
+        <rect width="7.975" height="6.646" rx="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="6.975" height="5.646" rx="0.5" fill="none"/>
+      </g>
+    </g>
+    <path id="Tracciato_7229" data-name="Tracciato 7229" d="M17.936,0,15.76,5.184,22.5,5.077V8.706l-6.741.107,2.177,5.6L0,6.946Z" transform="translate(587.397 830.8) rotate(39)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="1"/>
+    <line id="Linea_450" data-name="Linea 450" y1="1.606" x2="1.606" transform="translate(585.56 831.681)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="1"/>
+    <line id="Linea_451" data-name="Linea 451" y1="1.606" x2="1.606" transform="translate(578.042 837.703) rotate(-146)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="1"/>
+    <line id="Linea_452" data-name="Linea 452" x1="1.733" y1="1.606" transform="translate(578.109 831.353)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="1"/>
+    <line id="Linea_453" data-name="Linea 453" x1="1.606" y2="1.606" transform="translate(584.298 831.451) rotate(140)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="1"/>
+    <line id="Linea_454" data-name="Linea 454" x1="1.606" y2="1.606" transform="matrix(0.995, -0.105, 0.105, 0.995, 578.96, 838.599)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>

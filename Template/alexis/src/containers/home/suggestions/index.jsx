@@ -1,11 +1,11 @@
-import SuggestionsData from "../../../data/suggestions.json";
 import { Link } from "react-router-dom";
 import MonumentCard from "../../../components/monument-card";
+import SuggestionsData from "../../../data/suggestions.json";
 
 const SuggestionsContainer = () => {
     const data = SuggestionsData.it;
     return (
-        <div className="py-4 d-flex flex-column">
+        <div className="py-4 d-flex flex-column section-margin">
             <h2 className="text-center">{data.title}</h2>
             <p className="text-center">{data.desc}</p>
             <div className="row justify-content-center">
