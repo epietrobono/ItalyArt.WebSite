@@ -19,6 +19,7 @@ import Blog from "./pages/blog";
 import Contact from "./pages/contact";
 import HomePage from "./pages/index";
 import MonumentsPage from "./pages/monuments";
+import MapMonumentsPage from "./pages/map";
 import MonumentPage from "./pages/monument";
 import Portfolio from "./pages/portfolio";
 import VideoGallery from "./pages/video-gallery";
@@ -56,6 +57,10 @@ const App = () => {
                     <Route
                         path={`${process.env.PUBLIC_URL + "/monuments"}`}
                         component={MonumentsPage}
+                    />
+                    <Route
+                        path={`${process.env.PUBLIC_URL + "/map"}`}
+                        component={MapMonumentsPage}
                     />
                     <Route
                         path={`${process.env.PUBLIC_URL + "/monument/:id"}`}
