@@ -7,7 +7,7 @@
 body {
   color: $body-color;
   @include font-size($font-size-base);
-  font-family: $body-font;
+  font-family: 'Helvetica Now Display';
   font-weight: $body-font-weight;
   line-height: $body-line-height;
   margin: 0;
@@ -19,7 +19,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: $heading-color;
-  font-family: $heading-font;
+  font-family: 'Helvetica Now Display';
   font-weight: $heading-font-weight;
   line-height: 1.1;
   margin-bottom: 10px;
