@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import Image from 'react-bootstrap/Image';
+import { Link } from "react-router-dom";
 
 function CardWithButton ({data, right=false}) {
     if (right) {
@@ -15,7 +15,7 @@ function CardWithButton ({data, right=false}) {
                     <form action={data.url}>
                         <Link
                             to={process.env.PUBLIC_URL + data.url}
-                            className="col col-auto btn btn-light border rounded-pill ms-2"
+                            className="col col-auto btn btn-light border botton-card ms-2"
                         >
                             {data.buttonText}
                         </Link>
@@ -32,7 +32,7 @@ function CardWithButton ({data, right=false}) {
                     <form action={data.url}>
                         <Link
                             to={process.env.PUBLIC_URL + data.url}
-                            className="col col-auto btn btn-light border rounded-pill ms-2"
+                            className="col col-auto btn btn-light border botton-card rounded-pill ms-2"
                         >
                             {data.buttonText}
                         </Link>
