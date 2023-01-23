@@ -1,10 +1,10 @@
-import ModelSuggestionsData from "../../../data/model-suggestions.json";
 import MonumentCard from "../../../components/monument-card";
+import ModelSuggestionsData from "../../../data/model-suggestions.json";
 
 const ModelSuggestionsContainer = () => {
     const data = ModelSuggestionsData.it;
     return (
-        <div className="py-4 d-flex flex-column">
+        <div className="py-4 d-flex flex-column section-margin">
             <h2 className="text-center">{data.title}</h2>
             <p className="text-center">{data.desc}</p>
             <div className="row justify-content-center">

@@ -1,11 +1,11 @@
-import WhereToGoData from "../../../data/where-to-go.json";
-import SearchForm from "../../../components/search-form";
 import { Image } from "react-bootstrap";
+import SearchForm from "../../../components/search-form";
+import WhereToGoData from "../../../data/where-to-go.json";
 
 const WhereToGoContainer = () => {
     const data = WhereToGoData.it;
     return (
-        <div className="row where-to-go justify-content-center">
+        <div className="row where-to-go justify-content-center section-margin">
             <div className="col col-auto py-4">
                 <h1 className="text-center">{data.title}</h1>
                 <div className="row justify-content-center align-items-center">
