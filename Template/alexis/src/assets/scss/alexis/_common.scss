@@ -4,44 +4,6 @@
 -----------------------------------------------------------------------
 */
 
-.main-content{
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-.container-button-tour{
-    position: absolute;
-    z-index: 50;
-    padding-top: 15%;
-    padding-left: 46%;
-}
-
-.container-button-3Dmodel{
-    position: absolute;
-    z-index: 50;
-    padding-top: 15%;
-    padding-left: 46%;
-}
-
-.iframe-model3D{
-    width: 100% !important;
-}
-
-.iframe-Tour360{
-    width: 100% !important;
-    height: 100% !important;
-}
-
-.btn-italyart{
-    border-radius: 30px;
-    border: 2px;
-    border-color: #BF0202 !important;
-    background: white;
-    color: black;
-    padding-left: 25px;
-    padding-right: 25px;
-    border-style: solid;
-}
 
 .section-padding-bottom {
     padding-bottom: 100px;
@@ -2720,4 +2682,48 @@ iframe {
             transform: translate(-50%, -50%);
         }
     }
+}
+
+
+
+
+//Stili personalizzati da noi
+
+.main-content{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.container-button-tour{
+    position: absolute;
+    z-index: 50;
+    padding-top: 15%;
+    padding-left: 46%;
+}
+
+.container-button-3Dmodel{
+    position: absolute;
+    z-index: 50;
+    padding-top: 15%;
+    padding-left: 46%;
+}
+
+.iframe-model3D{
+    width: 100% !important;
+}
+
+.iframe-Tour360{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.btn-italyart{
+    border-radius: 30px;
+    border: 2px;
+    border-color: #BF0202 !important;
+    background: white;
+    color: black;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-style: solid;
 }

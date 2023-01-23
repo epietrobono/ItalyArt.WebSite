@@ -17,7 +17,7 @@ const Monument3DModelContainer = ({conentuto}) => {
                 </div>
                 <Monument3dModel conentuto={conentuto}></Monument3dModel>
             </div>
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={show} fullscreen={fullscreen} onHide={handleClose}>
                 <Modal.Header closeButton></Modal.Header>
                 <Modal.Body>
                     <Monument3dModel conentuto={conentuto}></Monument3dModel>
