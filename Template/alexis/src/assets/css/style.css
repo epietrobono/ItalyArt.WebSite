@@ -441,7 +441,7 @@
 }
 
 .home-bar{
-    width: 60% !important;
+    width: 55% !important;
     z-index: 10;
 }
 
@@ -594,4 +594,24 @@
 
 .d-flex-news .search-form{
     width:80%;
+}
+
+.container-ita{
+    width: 90%;
+    margin: auto;
+}
+
+.container-ita-2{
+    width: 80%;
+    margin: auto;
+}
+
+.icon-cat{
+   width: 100%; 
+}
+
+.d-flex-icon-cat{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

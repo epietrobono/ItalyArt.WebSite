@@ -5,7 +5,9 @@ import WhereToGoData from "../../../data/where-to-go.json";
 const WhereToGoContainer = () => {
     const data = WhereToGoData.it;
     return (
-        <div className="row where-to-go justify-content-center section-margin delete-margin">
+        <div className="news delete-margin">
+        <div className="container-ita">
+        <div className="row where-to-go justify-content-center section-margin ">
             <div className="col col-auto py-5">
                 <h1 className="text-center">{data.title}</h1>
                 <div className="row justify-content-center align-items-center d-flex sezione-dove-andare">
@@ -19,6 +21,8 @@ const WhereToGoContainer = () => {
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
     );
 }

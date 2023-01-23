@@ -5,27 +5,27 @@
         "categories": [
             {
                 "name": "Palazzi",
-                "path": "/img/photos/palace.jpg",
+                "path": "/img/icons/icona-palazzi.svg",
                 "url": "/monuments/palaces"
             },
             {
                 "name": "Musei",
-                "path": "/img/photos/museum.jpg",
+                "path": "/img/icons/icona-musei.svg",
                 "url": "/monuments/museums"
             },
             {
                 "name": "Chiese",
-                "path": "/img/photos/church.jpg",
+                "path": "/img/icons/icona-chiese.svg",
                 "url": "/monuments/churches"
             },
             {
-                "name": "Archi",
-                "path": "/img/photos/arc.jpg",
+                "name": "Archeo",
+                "path": "/img/icons/icona-archeo.svg",
                 "url": "/monuments/arcs"
             },
             {
-                "name": "Castelli",
-                "path": "/img/photos/castle.jpg",
+                "name": "Panorami",
+                "path": "/img/icons/icona-panorami.svg",
                 "url": "/monuments/castles"
             }
         ]

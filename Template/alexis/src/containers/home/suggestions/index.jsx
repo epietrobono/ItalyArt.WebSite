@@ -5,6 +5,7 @@ import SuggestionsData from "../../../data/suggestions.json";
 const SuggestionsContainer = () => {
     const data = SuggestionsData.it;
     return (
+        <div className="container-ita-2">
         <div className="py-4 d-flex flex-column section-margin">
             <h2 className="text-center">{data.title}</h2>
             <p className="text-center">{data.desc}</p>
@@ -12,7 +13,7 @@ const SuggestionsContainer = () => {
                 {
                     data.suggestions.map((val, key)=>{
                         return(
-                            <div className="col col-auto" key={key}>
+                            <div className="col " key={key}>
                                 <MonumentCard className="col col-auto" data={val}></MonumentCard>
                             </div>
                         );
@@ -25,6 +26,7 @@ const SuggestionsContainer = () => {
             >
                 {data.buttonText}
             </Link>
+        </div>
         </div>
     );
 };
