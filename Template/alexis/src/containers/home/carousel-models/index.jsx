@@ -5,6 +5,7 @@ import CarouselModelsData from "../../../data/carousel-models.json";
 
 function CarouselModelsContainer() {
     return (
+        <div className="container-ita">
         <div className="carousel-models section-margin">
             <Carousel indicators={false}>
                 {
@@ -31,6 +32,7 @@ function CarouselModelsContainer() {
                     })
                 }
             </Carousel>
+        </div>
         </div>
     );
 }

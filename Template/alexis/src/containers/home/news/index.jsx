@@ -4,6 +4,8 @@ import NewsData from "../../../data/news.json";
 const NewsContainer = () => {
     const data = NewsData.it;
     return (
+        <div className="news">
+        <div className="container-ita">
         <div className="news py-5 section-margin delete-margin">
             <h2 className="text-center">{data.title}</h2>
             <div className="row justify-content-center">
@@ -17,6 +19,8 @@ const NewsContainer = () => {
                     })
                 }
             </div>
+        </div>
+        </div>
         </div>
     );
 };

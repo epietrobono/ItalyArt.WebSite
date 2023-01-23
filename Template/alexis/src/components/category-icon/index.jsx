@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function CategoryIcon ({data}) {
     return (
-        <div>
+        <div className="d-flex-icon-cat">
             <Link to={process.env.PUBLIC_URL + data.url}>
                 <img
-                    className="icon-main"
+                    className="icon-main icon-cat"
                     src={process.env.PUBLIC_URL + data.path}
                     alt="Icon"
                 />
