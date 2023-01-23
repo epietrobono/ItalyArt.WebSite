@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 
-function Tour360ContentModal  ({conentuto}) {
+function Tour360ContentModal  ({url}) {
     return (
-        <iframe title='Duomo di Siena' className="embed-responsive iframe-Tour360" src={conentuto}> </iframe>
+        <iframe title='Duomo di Siena' className="embed-responsive iframe-Tour360" src={url}> </iframe>
     );
 }
 
 Tour360ContentModal.propTypes = {
-    conentuto: PropTypes.string
+    url: PropTypes.string
 };
 
 export default Tour360ContentModal;

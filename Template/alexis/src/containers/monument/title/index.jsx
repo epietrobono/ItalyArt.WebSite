@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 
-const MonumentTitleContainer = ({conentuto}) => {
+const MonumentTitleContainer = ({contenuto}) => {
     return (
         <div>
             <div className="row justify-content-center">
                 <div className="col col-auto">
-                    <h4>{conentuto}</h4>
+                    <h4>{contenuto.titolo}</h4>
                 </div>
             </div>
         </div>
@@ -13,7 +13,7 @@ const MonumentTitleContainer = ({conentuto}) => {
 };
 
 MonumentTitleContainer.propTypes = {
-    conentuto: PropTypes.string
+    contenuto: PropTypes.object
 }
 
 export default MonumentTitleContainer;

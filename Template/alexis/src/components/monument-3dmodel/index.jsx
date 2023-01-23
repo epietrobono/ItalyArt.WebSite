@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 
-function Model3DContent ({conentuto}) {
+function Model3DContent ({iframe}) {
     return (
-            <div dangerouslySetInnerHTML={{__html: conentuto }} />
+            <div dangerouslySetInnerHTML={{__html: iframe }} />
     );
 }
 
 Model3DContent.propTypes = {
-    conentuto: PropTypes.string
+    iframe: PropTypes.string
 };
 
 export default Model3DContent;

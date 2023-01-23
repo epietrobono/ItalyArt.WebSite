@@ -35,13 +35,13 @@ const MonumentPage = ({
                                 monument.contenuti.map((contenuto,index) => {
                                     switch(contenuto.type){
                                         case 'title':                                            
-                                            return (<Title conentuto={contenuto.contenuto}></Title>);
+                                            return (<Title contenuto={contenuto}></Title>);
                                         case 'text':                                            
-                                            return (<Text conentuto={contenuto.contenuto}></Text>);
+                                            return (<Text contenuto={contenuto}></Text>);
                                         case 'model3d':                                            
-                                            return (<Model3D conentuto={contenuto.contenuto}></Model3D>);
+                                            return (<Model3D contenuto={contenuto}></Model3D>);
                                         case 'tour':                                            
-                                            return (<Tour360 conentuto={contenuto.contenuto}></Tour360>);
+                                            return (<Tour360 contenuto={contenuto}></Tour360>);
                                         default:
                                             return'';
                                     }
