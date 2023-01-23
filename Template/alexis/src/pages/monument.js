@@ -4,7 +4,7 @@ import Header from "../layouts/header";
 import Footer from "../layouts/footer";
 import SEO from "../components/seo";
 import MonumentPageData from "../data/monument.json";
-import MonumentHome from "../containers/monument/home";
+import MonumentHomeContainer from "../containers/monument/home";
 import MonumentSections from "../containers/monument/sections";
 import ScrollToTop from "../components/scroll-to-top";
 import PropTypes from "prop-types";
@@ -14,14 +14,18 @@ const MonumentPage = ({
         params: { id },
     },
 }) => {
+    console.log(id);
     const data = MonumentPageData.it;
+    console.log(data);
     const monuments = data.monuments;
+    console.log(monuments);
     const monument = monuments.filter((monument)=>{
         if (monument.id == id){
             return monument
         }
     }).pop();
-    if(monument.isSezioni=="true"){
+    console.log(monument);
+    if(monument?.isSezioni=="true"){
         return (
             <React.Fragment>
             <Layout>
@@ -30,7 +34,7 @@ const MonumentPage = ({
                     <Header classOption="hb-border" />
                     <MonumentSections monument={monument}></MonumentSections>
                     <div className="main-content">
-                        <MonumentHome monuments={monuments} id={id}></MonumentHome>                    
+                        <MonumentHomeContainer monuments={monuments} id={id}></MonumentHomeContainer>                    
                     </div>
                     <Footer />
                     <ScrollToTop />
@@ -46,7 +50,7 @@ const MonumentPage = ({
                 <div className="wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
                     <div className="main-content">
-                        <MonumentHome monuments={monuments} id={id}></MonumentHome>                    
+                        <MonumentHomeContainer monuments={monuments} id={id}></MonumentHomeContainer>                    
                     </div>
                     <Footer />
                     <ScrollToTop />

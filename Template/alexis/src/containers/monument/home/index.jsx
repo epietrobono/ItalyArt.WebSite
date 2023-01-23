@@ -4,7 +4,7 @@ import Tour360 from "../tour360";
 import Title from "../title";
 import Text from "../text";
 
-const MonumentTextContainer = ({monuments,id}) => {
+const MonumentHomeContainer = ({monuments,id}) => {
     
     const monument = monuments.filter((monument)=>{
         if (monument.id == id){
@@ -33,9 +33,9 @@ const MonumentTextContainer = ({monuments,id}) => {
     );
 };
 
-MonumentTextContainer.propTypes = {
+MonumentHomeContainer.propTypes = {
     monuments: PropTypes.object,
     id: PropTypes.number
 }
 
-export default MonumentTextContainer;
+export default MonumentHomeContainer;
