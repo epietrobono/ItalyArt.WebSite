@@ -1,5 +1,5 @@
 import CategoryIcon from "../../../components/category-icon";
-import CategoriesData from "../../../data/categories.json";
+import CategoriesData from "../../../data/categories-icon.json";
 
 function CategoriesContainer() {
     const data = CategoriesData.it.categories;
