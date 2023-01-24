@@ -607,7 +607,8 @@
 }
 
 .icon-cat{
-   width: 100%; 
+   width: 150%; 
+   margin-left: -25%;
 }
 
 .d-flex-icon-cat{
