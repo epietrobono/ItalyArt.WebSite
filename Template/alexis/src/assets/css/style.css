@@ -163,7 +163,7 @@
 }
 
 .footer-area .footer-empty-space {
-    height: 170px;
+    height: 20px;
 }
 
 /* sezione aggiunte */
@@ -620,4 +620,24 @@
 
 .categories {
     row-gap: 25px;
+}
+
+.form-width{
+    width:40%;
+}
+
+.nav-item a{
+    color:#707070;
+    font-size: 17px;
+}
+
+#dropdown-basic-button{
+    background: #FFFFFF 0% 0% no-repeat padding-box !important;
+    border: 2px solid #C21718 !important;
+    color: #2E2E2E;
+    padding: 2px 15px !important;
+}
+
+.logo-footer{
+    width: 50%;
 }

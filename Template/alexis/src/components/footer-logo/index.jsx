@@ -4,7 +4,7 @@ const FooterLogo = ({ image }) => {
     return (
         <Link to={process.env.PUBLIC_URL + "/"}>
             <img
-                className="logo-main"
+                className="logo-main logo-footer"
                 src={process.env.PUBLIC_URL + image}
                 alt="Logo"
             />
