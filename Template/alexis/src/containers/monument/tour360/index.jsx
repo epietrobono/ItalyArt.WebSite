@@ -1,10 +1,9 @@
 import PropTypes from "prop-types";
-import Tour360 from "../../../components/monument-tour360";
-import { Image } from "react-bootstrap";
-import Tour360ContentModal from "../../../components/monument-tour360modal";
 import React, { useState } from 'react';
+import { Image } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Tour360ContentModal from "../../../components/monument-tour360modal";
 
 const MonumentTour360 = ({contenuto}) => {    
     const [show, setShow] = useState(false);
@@ -14,9 +13,10 @@ const MonumentTour360 = ({contenuto}) => {
     const handleShow = () => setShow(true);
     return (
         <>
-            <div className="row justify-content-center">
+            <div className="row justify-content-center module-3d img-3d">
+            <div className="img-3d-overlay"></div>
                 <div className="container-button-3Dmodel">
-                    <Button className="btn btn-primary btn-italyart" title="Visita ora a 360" onClick={handleShow}>Visita ora a 360</Button>
+                    <Button className="btn btn-primary botton-monument-carousel btn-italyart" title="Visita ora a 360" onClick={handleShow}>Visita ora a 360</Button>
                 </div>
                 <Image rounded src={process.env.PUBLIC_URL + contenuto.image}></Image>
             </div>

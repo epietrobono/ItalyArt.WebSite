@@ -26,6 +26,16 @@ h1, h2, h3, h4, h5, h6,
   color: #373737;
 }
 
+h1{
+  font-weight: 800;
+}
+
+h2{
+  font-weight: 700;
+}
+
+
+
 a {
   color: #373737;
   text-decoration: none;
@@ -51,7 +61,8 @@ a {
 
 p {
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.35;
   color: #373737;
   &:last-child{
     margin-bottom: 0;

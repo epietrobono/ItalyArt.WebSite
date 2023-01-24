@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
-import Monument3dModel from "../../../components/monument-3dmodel";
-import { Image } from "react-bootstrap";
 import React, { useState } from 'react';
+import { Image } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Monument3dModel from "../../../components/monument-3dmodel";
 
 const Monument3DModelContainer = ({contenuto}) => {
     const [show, setShow] = useState(false);
@@ -13,11 +13,13 @@ const Monument3DModelContainer = ({contenuto}) => {
     const handleShow = () => setShow(true);
     return (
         <>
-            <div className="row justify-content-center">
-                <div className="container-button-3Dmodel">
-                    <Button className="btn btn-primary btn-italyart" title="Visita il 3D" onClick={handleShow}>Visita il 3D</Button>
+            <div className="row justify-content-center module-3d img-3d">
+                <div className="img-3d-overlay"></div>
+                <div className="container-button-3Dmodel ">
+                    
+                    <Button className="btn btn-primary btn-italyart botton-monument-carousel container-button-position" title="Visita il 3D" onClick={handleShow}>Visita il 3D</Button>
                 </div>
-                <Image rounded src={process.env.PUBLIC_URL + contenuto.image}></Image>
+                <Image rounded  src={process.env.PUBLIC_URL + contenuto.image}></Image>
             </div>
             <Modal show={show} fullscreen={fullscreen} onHide={handleClose}>
                 <Modal.Header closeButton></Modal.Header>

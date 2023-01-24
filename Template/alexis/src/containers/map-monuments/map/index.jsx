@@ -1,5 +1,5 @@
-import React from "react";
 import GoogleMapReact from 'google-map-react';
+import React from "react";
 import MapPlace from "../../../components/map-place";
 
 
@@ -14,7 +14,7 @@ function MapContainer() {
         };
     return (
         // Important! Always set the container height explicitly
-        <div style={{ height: '100vh', width: '100%' }}>
+        <div className="map-position" style={{ height: '70vh', width: '100%' }}>
            <GoogleMapReact
                 bootstrapURLKeys={{ key: "AIzaSyC5scNnifCVhQTXGB2lciM4Ai15rYKgDrM" }}
                 defaultCenter={defaultProps.center}

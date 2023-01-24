@@ -3,11 +3,11 @@ import Image from 'react-bootstrap/Image';
 
 function ArticleContent ({data}) {
     return (
-        <div className="row justify-content-center" >
+        <div className="row-mod justify-content-center" >
             <Image rounded className="shadow" alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
-            <h6>{data.title}</h6>
-            <strong>{data.subtitle}</strong>
-            <p>{data.content}</p>
+            <h6 className="title-blog-article-detail">{data.title}</h6>
+            <strong className="strong-blog-article-detail">{data.subtitle}</strong>
+            <p className="p-blog-article">{data.content}</p>
         </div>
     );
 }

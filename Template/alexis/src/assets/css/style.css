@@ -423,15 +423,32 @@
     border-radius: 15px !important;
 }
 
-.btn{
+.btn-cerca{
     line-height: inherit !important;
-    font-size: 19px;
+    font-size: 18px;
     background: #C21718 0% 0% no-repeat padding-box;
     box-shadow: 0px 1px 4px #C2171829;
     border: 2px solid #C21718 !important;
     color: white;
     font-weight: 500;
     padding: 2px 30px !important;
+}
+
+.btn-cerca:hover{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #C21718 !important;
+    color: #2E2E2E;
+}
+
+.btn{
+    line-height: inherit !important;
+    font-size: 15px;
+    background: #C21718 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 4px #C2171829;
+    border: 2px solid #C21718 !important;
+    color: white;
+    font-weight: 500;
+    padding: 0.1rem 1.3rem !important;
 }
 
 .btn:hover{
@@ -474,10 +491,10 @@
 }
 
 .textarea-monument-card{
-    margin-top: 10px;
+    margin-top: 15px;
     padding-left: 5px;
     width: 100%;
-    margin-bottom: -10px;
+    margin-bottom: -15px;
 }
 
 .img-monumenty-card{
@@ -640,4 +657,193 @@
 
 .logo-footer{
     width: 50%;
+}
+
+.img-monumenty-card img{
+    height: 100%;
+}
+
+.intro-blog{
+    display: flex;
+
+}
+
+.img-prew{
+    width: 100%;
+}
+.img-prew img{
+    width: 100%;
+}
+
+#primo-articolo{
+    margin-right: 3%;
+}
+
+#primo-articolo h6{
+    font-size: 1.9rem !important;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+#primo-articolo strong{
+    font-size: 1.7rem !important;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #373737;
+}
+
+.text-article-space{
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.text-article-space h6{
+    margin-bottom: 0rem;
+}
+
+.text-article-space p{
+    margin-bottom: 15px;
+}
+
+.space-botton-article{
+    margin-bottom: 30px;
+}
+
+.orizontal-line{
+    color: #373737;
+    opacity: 1;
+    height: 2px !important;
+}
+
+.title-blog{
+    font-weight: 600;
+    font-size: 2.2rem;
+
+}
+
+.space-blog-title{
+    margin-top: 50px;
+}
+
+.sezione-tutti-aricoli{
+    margin-bottom: 20px;
+}
+
+.sezione-tutti-aricoli .col-3{
+    width:35%
+}
+
+.sezione-tutti-aricoli .col-5{
+    width:65%
+}
+
+.title-blog-article{
+    font-size: 1.4rem !important;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.strong-blog-article{
+    font-size: 1.3rem !important;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: #373737;
+}
+
+.card-mon-blog{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 2px 8px #00000042;
+border-radius: 10px;
+padding: 7px;
+margin-bottom: 15px;
+}
+
+.spazio-destro{
+    margin-right: 5%;
+}
+
+.title-blog-article-detail{
+    font-size: 1.6rem !important;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+
+.strong-blog-article-detail{
+    font-size: 1.5rem !important;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: #373737;
+}
+
+.spazio-sopra{
+    margin-top: 45px;
+}
+
+.row-mod{
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+}
+
+.img-blog-mon{
+    height: 190px;
+}
+
+.blog-mon h6{
+    font-size: 1.4rem !important;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.blog-mon strong{
+    font-size: 1.3rem !important;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: #373737;
+}
+
+.blog-mon p{
+    margin-bottom: 5px;
+
+}
+
+.btn-right{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.title-monument{
+    margin-top: 40px;
+    font-weight: 800;
+}
+
+.module-3d{
+    border-radius: 15px;
+}
+
+.img-3d{
+    height: 400px !important;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.img-3d-overlay{
+    background-color: rgba(0, 0, 0, 0.15);
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.img-3d img{
+    height: 100%;
+    padding: 0;
+    
 }

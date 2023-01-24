@@ -1,13 +1,13 @@
+import PropTypes from "prop-types";
 import React from "react";
-import Layout from "../layouts";
-import Header from "../layouts/header";
-import Footer from "../layouts/footer";
+import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
-import MonumentPageData from "../data/monument.json";
 import MonumentHomeContainer from "../containers/monument/home";
 import MonumentSections from "../containers/monument/sections";
-import ScrollToTop from "../components/scroll-to-top";
-import PropTypes from "prop-types";
+import MonumentPageData from "../data/monument.json";
+import Layout from "../layouts";
+import Footer from "../layouts/footer";
+import Header from "../layouts/header";
 
 const MonumentPage = ({
     match: {
@@ -30,7 +30,7 @@ const MonumentPage = ({
             <React.Fragment>
             <Layout>
                 <SEO title="ItalyArt || Monument" />
-                <div className="wrapper home-default-wrapper">
+                <div className="container-ita-2 wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
                     <MonumentSections monument={monument}></MonumentSections>
                     <div className="main-content">
@@ -47,7 +47,7 @@ const MonumentPage = ({
             <React.Fragment>
             <Layout>
                 <SEO title="ItalyArt || Monument" />
-                <div className="wrapper home-default-wrapper">
+                <div className="container-ita-2 wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
                     <div className="main-content">
                         <MonumentHomeContainer monuments={monuments} id={id}></MonumentHomeContainer>                    

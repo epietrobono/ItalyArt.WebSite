@@ -1,16 +1,16 @@
+import PropTypes from "prop-types";
 import React from "react";
+import ArticleContent from "../components/article-content";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
-import Footer from "../layouts/footer";
-import Header from "../layouts/header/index";
-import Layout from "../layouts/index";
-import ArticlesData from "../data/articles.json";
-import MonumentsData from "../data/monuments.json";
-import ArticleContent from "../components/article-content";
 import RelatedArticlesContainer from "../containers/blog/related-articles";
 import MonumentsContainer from "../containers/monuments/monuments";
 import OtherMonumentsContainer from "../containers/monuments/other-monuments";
-import PropTypes from "prop-types";
+import ArticlesData from "../data/articles.json";
+import MonumentsData from "../data/monuments.json";
+import Footer from "../layouts/footer";
+import Header from "../layouts/header/index";
+import Layout from "../layouts/index";
 
 const BlogArticle = ({
     match: {
@@ -34,12 +34,12 @@ const BlogArticle = ({
                 <div className="wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
                     <div className="main-content">
-                        <div className="row row-cols-8 justify-content-center">
-                            <div className="col col-6">
+                        <div className="spazio-sopra row row-cols-8 justify-content-center">
+                            <div className="col col-7 spazio-destro">
                                 <ArticleContent data={article}></ArticleContent>
                             </div>
                             <div className="col col-3">
-                                <div className="row">
+                                <div className="">
                                     <MonumentsContainer title={monumentsData.alsoTitle} monuments={monuments}></MonumentsContainer>
                                 </div>
                                 <div className="row">

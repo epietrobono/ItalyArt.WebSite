@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import Image from 'react-bootstrap/Image';
+import { Link } from "react-router-dom";
 
 function ArticlePreview ({data, horizontal=false}) {
     if (horizontal) {
@@ -10,9 +10,9 @@ function ArticlePreview ({data, horizontal=false}) {
                     <Image rounded className="shadow" alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
                 </div>
                 <div className="col col-5">
-                    <h6>{data.title}</h6>
-                    <strong>{data.subtitle}</strong>
-                    <p>{data.preview}</p>
+                <h6 className="title-blog-article">{data.title}</h6>
+                        <strong className="strong-blog-article">{data.subtitle}</strong>
+                        <p className="p-blog-article">{data.preview}</p>
                     <form action={data.url}>
                         <Link
                             to={process.env.PUBLIC_URL + data.url}
@@ -28,17 +28,17 @@ function ArticlePreview ({data, horizontal=false}) {
         return (
             <div className="row" >
                 <div className="col col-auto">
-                    <div className="row">
+                    <div className="img-prew">
                         <Image rounded className="shadow" alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
                     </div>
-                    <div className="row">
-                        <h6>{data.title}</h6>
-                        <strong>{data.subtitle}</strong>
-                        <p>{data.preview}</p>
+                    <div className="row text-article-space">
+                        <h6 className="title-blog-article">{data.title}</h6>
+                        <strong className="strong-blog-article">{data.subtitle}</strong>
+                        <p className="p-blog-article">{data.preview}</p>
                         <form action={data.url}>
                             <Link
                                 to={process.env.PUBLIC_URL + data.url}
-                                className="col col-auto btn btn-light border rounded-pill ms-2"
+                                className="col space-botton-article col-auto btn btn-light border rounded-pill ms-2"
                             >
                                 {data.buttonText}
                             </Link>

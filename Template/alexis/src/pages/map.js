@@ -1,13 +1,13 @@
 import React from "react";
-import Layout from "../layouts";
-import Header from "../layouts/header";
-import Footer from "../layouts/footer";
-import SEO from "../components/seo";
-import MonumentsPageData from "../data/monuments-page.json";
+import ScrollToTop from "../components/scroll-to-top";
 import SearchForm from "../components/search-form";
+import SEO from "../components/seo";
 import GridContainer from "../containers/map-monuments/grid";
 import MapContainer from "../containers/map-monuments/map";
-import ScrollToTop from "../components/scroll-to-top";
+import MonumentsPageData from "../data/monuments-page.json";
+import Layout from "../layouts";
+import Footer from "../layouts/footer";
+import Header from "../layouts/header";
 
 const MonumentsPage = () => {
     const data = MonumentsPageData.it;
@@ -20,7 +20,7 @@ const MonumentsPage = () => {
                 <div className="wrapper monuments-wrapper">
                     <Header classOption="hb-border"></Header>
                     <div className="row justify-content-center py-5">
-                        <div className="col col-auto">
+                        <div className="col col-auto form-width">
                             <SearchForm data={form}></SearchForm>
                         </div>
                     </div>

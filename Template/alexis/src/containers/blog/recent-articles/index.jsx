@@ -4,8 +4,9 @@ import ArticlePreview from "../../../components/article-preview";
 const RecentArticlesContainer = ({title, articles}) => {
     return (
         <div>
-            <div className="row justify-content-around">
-                <h1>{title}</h1>
+            <div className="container-ita row justify-content-around">
+                <h1 className="title-blog">{title}</h1>
+                <hr className="orizontal-line"></hr>
                 {
                     articles.map((val, key)=>{
                         return (

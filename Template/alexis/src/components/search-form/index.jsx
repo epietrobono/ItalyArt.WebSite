@@ -12,7 +12,7 @@ const SearchForm = ({ data, icon="search-icon" }) => {
                 />
                 <Link
                     to={process.env.PUBLIC_URL + data.url}
-                    className="col col-auto btn btn-light border rounded-pill ms-2"
+                    className="col col-auto btn-cerca btn-light border rounded-pill ms-2"
                 >
                     {data.buttonText}
                 </Link>
