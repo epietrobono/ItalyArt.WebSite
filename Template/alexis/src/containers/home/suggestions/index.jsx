@@ -13,7 +13,7 @@ const SuggestionsContainer = () => {
                 {
                     data.suggestions.map((val, key)=>{
                         return(
-                            <div className="col " key={key}>
+                            <div className="col-auto" key={key}>
                                 <MonumentCard className="col col-auto" data={val}></MonumentCard>
                             </div>
                         );

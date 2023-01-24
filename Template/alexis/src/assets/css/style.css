@@ -609,6 +609,7 @@
 .icon-cat{
    width: 150%; 
    margin-left: -25%;
+   max-width: 150%;
 }
 
 .d-flex-icon-cat{
@@ -617,6 +618,6 @@
     flex-direction: column;
 }
 
-.row{
-    flex-wrap: nowrap !important;
+.categories {
+    row-gap: 25px;
 }
