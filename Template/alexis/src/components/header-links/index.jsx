@@ -18,6 +18,9 @@ function HeaderLinks({ data }) {
                         <li className="nav-item">
                             <a className="mx-3 nav-link" href="/map">{data.map}</a>
                         </li>
+                        <li className="nav-item">
+                            <a className="mx-3 nav-link" href="/about">{data.about}</a>
+                        </li>
                     </ul>
                 </div>
             </div>

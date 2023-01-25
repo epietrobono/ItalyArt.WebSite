@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function Tour360ContentModal  ({url}) {
     return (
-        <iframe title='Duomo di Siena' className="embed-responsive iframe-Tour360" src={url}> </iframe>
+        <iframe title='Duomo di Siena' allowfullscreen className="embed-responsive iframe-Tour360" src={url}> </iframe>
     );
 }
 

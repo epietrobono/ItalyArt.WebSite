@@ -5,44 +5,44 @@
         "buttonText": "Visita altri posti",
         "suggestions": [
             {
-                "title": "Torre di Pisa",
-                "location": "Pisa",
+                "title": "Duomo di Siena",
+                "location": "Siena",
                 "buttonText": "Visita",
                 "image": {
-                    "path": "/img/photos/torre-di-pisa-3d.png",
-                    "alt": "Torre di Pisa 3D"
+                    "path": "/img/photos/Siena.png",
+                    "alt": "Duomo di Siena 3D"
                 },
-                "url": "/models/torre-di-pisa"
+                "url": "/monuments/10"
             },
             {
-                "title": "Torre di Pisa",
-                "location": "Pisa",
+                "title": "Busto Femminile di Mezzaselva",
+                "location": "Mezzaselva",
                 "buttonText": "Visita",
                 "image": {
-                    "path": "/img/photos/torre-di-pisa-3d.png",
-                    "alt": "Torre di Pisa 3D"
+                    "path": "/img/photos/busto-mezzaselva.png",
+                    "alt": "Busto Femminile di Mezzaselva"
                 },
-                "url": "/models/torre-di-pisa"
+                "url": "/monuments/6"
             },
             {
-                "title": "Torre di Pisa",
-                "location": "Pisa",
+                "title": "Ercole Farnese",
+                "location": "Napoli",
                 "buttonText": "Visita",
                 "image": {
-                    "path": "/img/photos/torre-di-pisa-3d.png",
-                    "alt": "Torre di Pisa 3D"
+                    "path": "/img/photos/ercole-farnese.png",
+                    "alt": "Ercole Farnese"
                 },
-                "url": "/models/torre-di-pisa"
+                "url": "/monuments/8"
             },
             {
-                "title": "Torre di Pisa",
-                "location": "Pisa",
+                "title": "Erma Bifronte",
+                "location": "Nemi",
                 "buttonText": "Visita",
                 "image": {
-                    "path": "/img/photos/torre-di-pisa-3d.png",
-                    "alt": "Torre di Pisa 3D"
+                    "path": "/img/photos/erma-bifronte.png",
+                    "alt": "Erma Bifronte"
                 },
-                "url": "/models/torre-di-pisa"
+                "url": "/monuments/7"
             }
         ]
     },

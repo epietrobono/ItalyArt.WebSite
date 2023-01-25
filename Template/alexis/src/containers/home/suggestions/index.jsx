@@ -21,7 +21,7 @@ const SuggestionsContainer = () => {
                 }
             </div>
             <Link
-                to={process.env.PUBLIC_URL + "/suggestions"}
+                to={process.env.PUBLIC_URL + "/monuments"}
                 className=" border shadow rounded-pill mx-auto botton-suggestions"
             >
                 {data.buttonText}

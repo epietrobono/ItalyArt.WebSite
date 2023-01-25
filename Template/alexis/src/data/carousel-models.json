@@ -1,20 +1,20 @@
 {
     "it": [
         {
-            "title": "La Torre di Pisa",
+            "title": "Duomo di Siena",
             "desc": "Bacon ipsum dolor amet buffalo ribeye corned beef, pancetta short loin kevin shankle doner culpa exercitation porchetta sint. Leberkas landjaeger cow pastrami, minim deserunt tail commodo turducken.",
-            "alt": "Torre di Pisa",
-            "path": "/img/photos/torre-di-pisa-3d.png",
-            "url": "#/models/torre-di-pisa",
+            "alt": "Duomo di Siena",
+            "path": "/img/photos/Siena.png",
+            "url": "#/models/10",
             "text": "Visita ora",
             "active": "active"
         },
         {
-            "title": "La Torre di Pisa",
+            "title": "Busto femminile di Mezzaselva",
             "desc": "Bacon ipsum dolor amet buffalo ribeye corned beef, pancetta short loin kevin shankle doner culpa exercitation porchetta sint. Leberkas landjaeger cow pastrami, minim deserunt tail commodo turducken.",
-            "alt": "Torre di Pisa",
-            "path": "/img/photos/torre-di-pisa-3d.png",
-            "url": "#/models/torre-di-pisa",
+            "alt": "Busto femminile di Mezzaselva",
+            "path": "/img/photos/busto-mezzaselva.png",
+            "url": "#/models/6",
             "text": "Visita ora",
             "active": "active"
         }

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const MonumentCard = ({ data }) => {
     return (
-        <div className="shadow rounded p-2">
+        <div className="shadow rounded p-2 card-monument-size">
             <div className="">
             <Image rounded alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
             </div>

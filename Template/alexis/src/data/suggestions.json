@@ -3,46 +3,46 @@
         "title": "I posti più consigliati",
         "desc": "Spicy jalapeno bacon ipsum dolor amet buffalo corned beef burgdoggen t-bone jowl.",
         "buttonText": "Visita altri posti",
-        "suggestions": [
+        "suggestions": [        
             {
-                "title": "Villa Lante",
-                "location": "Viterbo",
+                "title":"Reggia di Caserta",
+                "location": "Caserta",
                 "buttonText": "Visita",
                 "image": {
-                    "path": "/img/photos/villa-lante.jpg",
-                    "alt": "Villa Lante"
+                    "path": "/img/preview-monuments/reggia-di-Caserta.jpg",
+                    "alt":"Reggia di Caserta"
                 },
-                "url": "/monuments/villa-lante"
+                "url": "/monuments/16"
             },
             {
-                "title": "Villa Lante",
-                "location": "Viterbo",
+                "title":"Fontana di Trevi",
+                "location": "Faleria",
                 "buttonText": "Visita",
                 "image": {
-                    "path": "/img/photos/villa-lante.jpg",
-                    "alt": "Villa Lante"
+                    "path": "/img/preview-monuments/con-carousel/fontana-di-trevi.jpg",
+                    "alt": "Fontana di Trevi"
                 },
-                "url": "/monuments/villa-lante"
+                "url": "/monuments/17"
             },
             {
-                "title": "Villa Lante",
-                "location": "Viterbo",
+                "title":"Casa di Augusto",
+                "location": "Roma",
                 "buttonText": "Visita",
                 "image": {
-                    "path": "/img/photos/villa-lante.jpg",
-                    "alt": "Villa Lante"
+                    "path": "/img/preview-monuments/con-carousel/roma-casa-di-augusto.jpg",
+                    "alt": "Casa di Augusto"
                 },
-                "url": "/monuments/villa-lante"
+                "url": "/monument/18"
             },
             {
-                "title": "Villa Lante",
-                "location": "Viterbo",
+                "title":"Terme di Caracalla",
+                "location": "Roma",
                 "buttonText": "Visita",
                 "image": {
-                    "path": "/img/photos/villa-lante.jpg",
-                    "alt": "Villa Lante"
+                    "path": "/img/preview-monuments/con-carousel/rm-caracalla.jpg",
+                    "alt": "Terme di Caracalla"
                 },
-                "url": "/monuments/villa-lante"
+                "url": "/monuments/19"
             }
         ]
     },

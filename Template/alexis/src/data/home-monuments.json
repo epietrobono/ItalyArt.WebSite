@@ -1,10 +1,42 @@
 {
     "it": {
-        "backgroundImage": "img/photos/home-picture.jpg",
-        "title": "Visita l'Italia a 360°",
-        "placeholder": "Inserisci Luogo o Monumento...",
-        "buttonText": "Cerca",
-        "url": "#/search-monuments"
+        "banners":[
+            {
+                "backgroundImage": "img/banners/reggia-di-caserta.jpg",
+                "title": "Visita l'Italia a 360°",
+                "placeholder": "Inserisci Luogo o Monumento...",
+                "buttonText": "Cerca",
+                "url": "/monuments"
+            },
+            {
+                "backgroundImage": "img/banners/san-ivo.jpg",
+                "title": "Visita l'Italia a 360°",
+                "placeholder": "Inserisci Luogo o Monumento...",
+                "buttonText": "Cerca",
+                "url": "/monuments"
+            },
+            {
+                "backgroundImage": "img/banners/galleria-corsini.jpg",
+                "title": "Visita l'Italia a 360°",
+                "placeholder": "Inserisci Luogo o Monumento...",
+                "buttonText": "Cerca",
+                "url": "/monuments"
+            },
+            {
+                "backgroundImage": "img/banners/san-pietro.jpg",
+                "title": "Visita l'Italia a 360°",
+                "placeholder": "Inserisci Luogo o Monumento...",
+                "buttonText": "Cerca",
+                "url": "/monuments"
+            },
+            {
+                "backgroundImage": "img/banners/villa-del-casale.jpg",
+                "title": "Visita l'Italia a 360°",
+                "placeholder": "Inserisci Luogo o Monumento...",
+                "buttonText": "Cerca",
+                "url": "/monuments"
+            }
+        ]
     },
     "us": {}
 }
