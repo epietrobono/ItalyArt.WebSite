@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import MonumentCard from "../../../components/monument-card";
-import MonumentsData from "../../../data/monuments.json";
+import MonumentsData from "../../../data/map-monuments.json";
 
 function GridContainer({nCols}) {
     const data = MonumentsData.it;

@@ -110,7 +110,7 @@
                         "type":"tour",
                         "titolo":"Duomo di Siena",
                         "model3D":"",
-                        "tour360":"http://www.italyart.it/visitsiena/index.htm",
+                        "tour360":"https://www.italyart.it/visitsiena/index.htm",
                         "image":"/img/tour360/Siena.jpg",
                         "testo":""
                     },
@@ -269,7 +269,7 @@
                         "type":"tour",
                         "titolo":"Duomo di Siena",
                         "model3D":"",
-                        "tour360":"http://www.italyart.it/visitsiena/index.htm",
+                        "tour360":"https://www.italyart.it/visitsiena/index.htm",
                         "image":"/img/tour360/Siena.jpg",
                         "testo":""
                     },
@@ -458,7 +458,7 @@
                         "type":"tour",
                         "titolo":"Galleria Borghese",
                         "model3D":"",
-                        "tour360":"http://www.italyart.it/mod/r002/rm-galleriaborghese/rm-galleriaborghese.html",
+                        "tour360":"https://www.italyart.it/mod/r002/rm-galleriaborghese/rm-galleriaborghese.html",
                         "image":"/img/preview-monuments/galleria-borghese.jpg",
                         "testo":""
                     }
@@ -483,7 +483,7 @@
                         "type":"tour",
                         "titolo":"San Gennaro",
                         "model3D":"",
-                        "tour360":"http://www.italyart.it/mod/r003/na-sangennaro/na-sangennaro.html",
+                        "tour360":"https://www.italyart.it/mod/r003/na-sangennaro/na-sangennaro.html",
                         "image":"/img/preview-monuments/san-gennaro.jpg",
                         "testo":""
                     }
@@ -508,7 +508,7 @@
                         "type":"tour",
                         "titolo":"Reggia di Caserta",
                         "model3D":"",
-                        "tour360":"http://www.italyart.it/mod/r003/ce-reggiaceante/ce-reggiaceante.html",
+                        "tour360":"https://www.italyart.it/mod/r003/ce-reggiaceante/ce-reggiaceante.html",
                         "image":"/img/preview-monuments/reggia-di-Caserta.jpg",
                         "testo":""
                     }
@@ -533,7 +533,7 @@
                         "type":"tour",
                         "titolo":"Fontana di Trevi",
                         "model3D":"",
-                        "tour360":"http://www.italyart.it/mod/r002/rm-fontanaditrevi/rm-fontanaditrevi.html",
+                        "tour360":"https://www.italyart.it/mod/r002/rm-fontanaditrevi/rm-fontanaditrevi.html",
                         "image":"/img/preview-monuments/con-carousel/fontana-di-trevi.jpg",
                         "testo":""
                     }
@@ -558,7 +558,7 @@
                         "type":"tour",
                         "titolo":"Casa di Augusto",
                         "model3D":"",
-                        "tour360":"http://www.italyart.it/mod/r002/rm-casadiaugusto/rm-casadiaugusto.html",
+                        "tour360":"https://www.italyart.it/mod/r002/rm-casadiaugusto/rm-casadiaugusto.html",
                         "image":"/img/preview-monuments/con-carousel/roma-casa-di-augusto.jpg",
                         "testo":""
                     }
@@ -583,7 +583,7 @@
                         "type":"tour",
                         "titolo":"Terme di Caracalla",
                         "model3D":"",
-                        "tour360":"http://www.italyart.it/mod/r002/rm-termedicaracalla/rm-termedicaracalla.html",
+                        "tour360":"https://www.italyart.it/mod/r002/rm-termedicaracalla/rm-termedicaracalla.html",
                         "image":"/img/preview-monuments/con-carousel/rm-caracalla.jpg",
                         "testo":""
                     }
@@ -608,7 +608,7 @@
                         "type":"tour",
                         "titolo":"Mann",
                         "model3D":"",
-                        "tour360":"http://www.italyart.it/mod/r003/na-mann/na-mann.html",
+                        "tour360":"https://www.italyart.it/mod/r003/na-mann/na-mann.html",
                         "image":"/img/preview-monuments/093-MANN-Collezione-Farnese.jpg",
                         "testo":""
                     }
@@ -633,7 +633,7 @@
                         "type":"tour",
                         "titolo":"Galleria Nazionale",
                         "model3D":"",
-                        "tour360":"http://www.italyart.it/mod/r010/pg-gallerianazionale/pg-gallerianazionale.html",
+                        "tour360":"https://www.italyart.it/mod/r010/pg-gallerianazionale/pg-gallerianazionale.html",
                         "image":"/img/preview-monuments/galleria-umbria.jpg",
                         "testo":""
                     }
