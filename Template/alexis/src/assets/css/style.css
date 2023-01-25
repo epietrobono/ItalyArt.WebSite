@@ -857,3 +857,117 @@ margin-bottom: 15px;
 .card-monument-size{
     width: 230px;
 }
+
+@media only screen and (max-width: 900px) {
+    .monuments-search .monuments-form .title{
+        font-size: 38px;
+    }
+    .home-bar{
+        width: 75% !important;
+    }
+
+    .search-form form {
+        display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    justify-content: space-around;
+    border-radius: 15px;
+    align-items: center;
+    }
+
+    .barra-ricerca{
+        padding: 0.9rem !important;
+    }
+    
+
+    .search-icon{
+        width: 100%;
+        text-indent: 12px;
+        padding-right: 0.5rem !important;
+        padding-top: 0.1rem !important;
+        padding-bottom: 0.1rem !important;
+        font-size: 14px;
+    }
+
+    .btn-cerca{
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+        padding: 0px;
+        border: none !important;
+    }
+    .home-overlay {
+        height: 90vh;
+    }
+
+    .monuments-search {
+        height: 90vh;
+    }
+
+    .row{
+        --bs-gutter-x: 0rem !important;
+    }
+
+    .extra-links-background{
+        flex-direction: column;
+    }
+
+    .extra-link {
+        max-width: none;
+    }
+
+    #primo, #terzo{
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-around;
+        line-height: 1.5 !important;
+    }
+
+    #secondo  {
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        justify-content: space-around;
+        line-height: 1.5 !important;
+    }
+
+    .text-extra-link{
+        text-align: left;
+        width: 60%;
+        line-height: 1.5 !important;
+    }
+
+    .text-extra-link h3{
+        text-align: left !important;
+        font-size: 16px;
+    }
+
+    .text-extra-link span{
+        font-size: 12px;
+        line-height: 1.5 !important;
+    }
+
+    .text-categorie-home h2{
+        font-size: 18px;
+    }
+
+    .text-categorie-home span{
+        font-size: 12px;
+        line-height: 1.5 !important;
+    }
+
+    .carousel-item{
+        margin-right: 0 !important;
+
+    }
+
+    .carousel-item .px-5{
+        flex-wrap: nowrap !important;
+
+    }
+
+    .carousel-monuments .carousel-image, .carousel-models .carousel-image {
+        height: auto !important;
+        width: 30%;
+    }
+    
+}

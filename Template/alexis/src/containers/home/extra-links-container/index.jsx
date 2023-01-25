@@ -7,7 +7,7 @@ const ExtraLinksContainer = () => {
             {
             ExtraLinksData.it.map((data, key) => {
                 return (
-                    <ExtraLink className="col" icon={data.icon} title={data.title} desc={data.desc} key={key}></ExtraLink>
+                    <ExtraLink className="col" icon={data.icon} title={data.title} desc={data.desc} id={data.id} key={key}></ExtraLink>
                 )
             })
             }

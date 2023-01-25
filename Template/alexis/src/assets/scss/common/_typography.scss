@@ -59,6 +59,14 @@ a {
   box-shadow: none;
 }
 
+@media only screen and (max-width: 600px) {
+  p {
+    margin-bottom: 30px;
+    font-size: 12px;
+  }
+}
+
+
 p {
   margin-bottom: 30px;
   font-size: 15px;
@@ -127,3 +135,4 @@ fieldset {
 table p {
   margin-bottom: 0;
 }
+
