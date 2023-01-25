@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import Image from 'react-bootstrap/Image';
-import { Link } from "react-router-dom";
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
+import { Link } from "react-router-dom";
 
 
 function CategoriesGallery({ data }) {
@@ -14,7 +14,8 @@ function CategoriesGallery({ data }) {
                         return(
                         <div key={key}>
                             <Link to={process.env.PUBLIC_URL + image.url}>
-                                <Image rounded className="d-block w-100 shadow" src={process.env.PUBLIC_URL + image.path}></Image>
+                                <Image rounded className="d-block w-100 shadow img-category-mobile" src={process.env.PUBLIC_URL + image.path}></Image>
+                                <div className="overlay-category w-100"></div>
                                 <h5 className="category-name text-center">{image.name}</h5>
                             </Link>
                         </div>

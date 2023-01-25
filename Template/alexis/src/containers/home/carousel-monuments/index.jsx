@@ -5,7 +5,7 @@ import CarouselMonumentsData from "../../../data/carousel-monuments.json";
 
 function CarouselMonumentsContainer() {
     return (
-        <div className="carousel-monuments section-margin">
+        <div className="carousel-monuments section-margin" id="mon-carousel">
             <Carousel indicators={false}>
                 {
                     CarouselMonumentsData.it.map((data, key) => {

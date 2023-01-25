@@ -6,7 +6,7 @@ import CarouselModelsData from "../../../data/carousel-models.json";
 function CarouselModelsContainer() {
     return (
         <div className="container-ita">
-        <div className="carousel-models section-margin">
+        <div className="carousel-models section-margin " id="tred-carousel">
             <Carousel indicators={false}>
                 {
                     CarouselModelsData.it.map((data, key) => {

@@ -1,5 +1,5 @@
-import CategoriesGalleryMobile from "../../../components/categories-gallery-mobile";
 import CategoriesGallery from "../../../components/categories-gallery";
+import CategoriesGalleryMobile from "../../../components/categories-gallery-mobile";
 import CategoriesData from "../../../data/categories.json";
 
 const CategoriesContainer = () => {

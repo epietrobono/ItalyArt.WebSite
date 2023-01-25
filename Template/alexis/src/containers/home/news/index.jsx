@@ -4,22 +4,20 @@ import NewsData from "../../../data/news.json";
 const NewsContainer = () => {
     const data = NewsData.it;
     return (
-        <div className="news">
-        <div className="container-ita">
-        <div className="news py-5 section-margin delete-margin">
-            <h2 className="text-center">{data.title}</h2>
+        <div className="news ">
+        <div className="news py-5 section-margin delete-margin mob-news">
+            <h2 className="text-center mob-h2">{data.title}</h2>
             <div className="row justify-content-center">
                 {
                     data.news.map((val, key)=>{
                         return(
-                            <div className="col col-3 px-4 mx-4" key={key}>
-                                <News data={val}></News>
-                            </div>
+                            
+                                <News data={val}  key={key}></News>
+                            
                         );
                     })
                 }
             </div>
-        </div>
         </div>
         </div>
     );
