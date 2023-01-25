@@ -1,8 +1,8 @@
 {
     "it": [
         {
-            "title":"Fontana di Trevi",
-            "desc": "Bacon ipsum dolor amet buffalo ribeye corned beef, pancetta short loin kevin shankle doner culpa exercitation porchetta sint. Leberkas landjaeger cow pastrami, minim deserunt tail commodo turducken.",
+            "title": "Fontana di Trevi",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "alt": "Fontana di Trevi",
             "path": "/img/carousel-monuments/FONTANA DI TREVI.jpg",
             "url": "#/monuments/17",
@@ -10,16 +10,16 @@
             "active": "active"
         },
         {
-            "title":"Reggia di Caserta",
-            "desc": "Bacon ipsum dolor amet buffalo ribeye corned beef, pancetta short loin kevin shankle doner culpa exercitation porchetta sint. Leberkas landjaeger cow pastrami, minim deserunt tail commodo turducken.",
+            "title": "Reggia di Caserta",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "alt": "Reggia di Caserta",
             "path": "/img/carousel-monuments/REGGIA DI CASERTA.jpeg",
             "url": "#/monuments/16",
             "text": "Visita ora"
         },
         {
-            "title":"Terme di Caracalla",
-            "desc": "Bacon ipsum dolor amet buffalo ribeye corned beef, pancetta short loin kevin shankle doner culpa exercitation porchetta sint. Leberkas landjaeger cow pastrami, minim deserunt tail commodo turducken.",
+            "title": "Terme di Caracalla",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "alt": "Terme di Caracalla",
             "path": "/img/carousel-monuments/CARACALLA.jpg",
             "url": "#/monuments/19",

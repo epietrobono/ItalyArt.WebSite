@@ -7,13 +7,13 @@ const SuggestionsContainer = () => {
     return (
         <div className="container-ita-2">
         <div className="py-4 d-flex flex-column section-margin">
-            <h2 className="text-center">{data.title}</h2>
-            <p className="text-center">{data.desc}</p>
-            <div className="row justify-content-center">
+            <h2 className="text-center mob-h2">{data.title}</h2>
+            <p className="text-center mob-p">{data.desc}</p>
+            <div className="row justify-content-center sezione-card-monumenti">
                 {
                     data.suggestions.map((val, key)=>{
                         return(
-                            <div className="col-auto" key={key}>
+                            <div className="col-auto card-monumenti" key={key}>
                                 <MonumentCard className="col col-auto" data={val}></MonumentCard>
                             </div>
                         );

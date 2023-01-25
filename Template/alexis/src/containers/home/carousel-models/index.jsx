@@ -14,8 +14,8 @@ function CarouselModelsContainer() {
                             <Carousel.Item key={key}>
                                 <div className="row mx-5 px-5 card-3d-carousel">
                                     <div className="col text-left carousel-info p-4 m-4 ">
-                                        <h1 className="carousel-title">{data.title}</h1>
-                                        <p className="carousel-desc-3d">{data.desc}</p>
+                                        <h1 className="carousel-title mob-h2">{data.title}</h1>
+                                        <p className="carousel-desc-3d col-6 mob-p">{data.desc}</p>
                                         <form action="#" className="form-search">
                                             <Link
                                                 to={process.env.PUBLIC_URL + data.url}
