@@ -1,4 +1,5 @@
-import CategoriesGallery from "../../../components/categories-gallery-mobile";
+import CategoriesGalleryMobile from "../../../components/categories-gallery-mobile";
+import CategoriesGallery from "../../../components/categories-gallery";
 import CategoriesData from "../../../data/categories.json";
 
 const CategoriesContainer = () => {
@@ -7,6 +8,7 @@ const CategoriesContainer = () => {
         <h2 className="text-center">{CategoriesData.it.title}</h2>
         <span className="text-center">{CategoriesData.it.desc}</span>
         <CategoriesGallery data={CategoriesData.it.categories}></CategoriesGallery>
+        <CategoriesGalleryMobile data={CategoriesData.it.categories}></CategoriesGalleryMobile>
     </div>
     );
 };

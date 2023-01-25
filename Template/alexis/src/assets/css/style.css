@@ -861,8 +861,20 @@ margin-bottom: 15px;
 .mob-btn-card{
     display: block;
 }
-
+.category-gallery-desktop{
+    display: block;
+}
+.category-gallery-mobile{
+    display:none;
+}
 @media only screen and (max-width: 900px) {
+    .category-gallery-desktop{
+        display: none !important;
+    }
+    .category-gallery-mobile{
+        display:block !important;
+    }
+
     .monuments-search .monuments-form .title{
         font-size: 38px;
     }

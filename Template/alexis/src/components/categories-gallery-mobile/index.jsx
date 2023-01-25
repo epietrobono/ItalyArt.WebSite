@@ -7,6 +7,7 @@ import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 function CategoriesGallery({ data }) {
     var i=1;
     return(
+        <div className="category-gallery-mobile">
             <ScrollMenu>
                 {
                     data.map((image, key) => {
@@ -21,6 +22,7 @@ function CategoriesGallery({ data }) {
                     })
                 }
             </ScrollMenu> 
+        </div>
     );
 }
 
