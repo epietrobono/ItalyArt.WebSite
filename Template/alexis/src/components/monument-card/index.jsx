@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 const MonumentCard = ({ data }) => {
     return (
+        <Link
+                        to={process.env.PUBLIC_URL + data.url}>
         <div className="shadow rounded p-2 card-monument-size">
             <div className="">
             <Image rounded alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
@@ -14,13 +16,14 @@ const MonumentCard = ({ data }) => {
                     <p className="col col-auto">{data.location}</p>
                     <Link
                         to={process.env.PUBLIC_URL + data.url}
-                        className="col col-auto btn btn-light border botton-card shadow rounded-pill"
+                        className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card"
                     >
                         {data.buttonText}
                     </Link>
                 </div>
             </div>
         </div>
+        </Link>
     );
 };
 

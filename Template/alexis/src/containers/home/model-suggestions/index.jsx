@@ -6,13 +6,13 @@ const ModelSuggestionsContainer = () => {
     return (
         <div className="container-ita">
         <div className="py-4 d-flex flex-column section-margin ">
-            <h2 className="text-center">{data.title}</h2>
-            <p className="text-center">{data.desc}</p>
-            <div className="row justify-content-center">
+            <h2 className="text-center mob-h2">{data.title}</h2>
+            <p className="text-center mob-p">{data.desc}</p>
+            <div className="row justify-content-center sezione-card-monumenti">
                 {
                     data.suggestions.map((val, key)=>{
                         return(
-                            <div className="col col-auto width-3d-card" key={key}>
+                            <div className="col col-auto width-3d-card card-monumenti" key={key}>
                                 <MonumentCard data={val}></MonumentCard>
                             </div>
                         );

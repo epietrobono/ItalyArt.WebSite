@@ -858,6 +858,10 @@ margin-bottom: 15px;
     width: 230px;
 }
 
+.mob-btn-card{
+    display: block;
+}
+
 @media only screen and (max-width: 900px) {
     .monuments-search .monuments-form .title{
         font-size: 38px;
@@ -874,7 +878,7 @@ margin-bottom: 15px;
     border-radius: 15px;
     align-items: center;
     }
-
+    
     .barra-ricerca{
         padding: 0.9rem !important;
     }
@@ -929,6 +933,7 @@ margin-bottom: 15px;
         justify-content: space-around;
         line-height: 1.5 !important;
     }
+    
 
     .text-extra-link{
         text-align: left;
@@ -955,19 +960,143 @@ margin-bottom: 15px;
         line-height: 1.5 !important;
     }
 
-    .carousel-item{
-        margin-right: 0 !important;
-
+    .carousel-inner{
+        width: 100%;
     }
 
+    
     .carousel-item .px-5{
         flex-wrap: nowrap !important;
+        padding-right: 0rem !important; 
+        padding-left: 0rem !important;
+        margin-right: 0rem !important; 
+        margin-left: 0rem !important;
+    }
 
+    .carousel-monuments, .carousel-models {
+        height: auto;
     }
 
     .carousel-monuments .carousel-image, .carousel-models .carousel-image {
-        height: auto !important;
+        height: max-content;
         width: 30%;
+        margin: 0rem !important;
     }
+
+    .carousel-info{
+        padding: 0.5rem !important;
+        margin:0 !important
+    }
+
+    .carousel-title{
+        font-size: 16px;
+
+    }
+
+    .carousel-desc{
+        font-size: 12px;
+        
+    }
+
+    .carousel-control-prev {
+        left: -40px;
+    }
+
+    .carousel-control-next {
+        right: -40px;
+    }
+
+    .botton-monument-carousel {
+        line-height: inherit !important;
+        font-size: 14px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #C21718 !important;
+        color: #2E2E2E;
+        font-weight: 500;
+        padding: 1px 20px !important;
+    }
+
+    .mob-h2{
+        font-size: 18px;
+    }
+
+    .mob-p {
+        font-size: 12px;
+    }
+
+    .container-ita-2{
+        width: 100%;
+    }
+
+    .card-monument-size{
+        width: auto;
+        min-width: 150px;
+    }
+
+    .sezione-card-monumenti{
+        gap: 10px ;
+    }
+
+    .card-monumenti{
+        flex: 1 !important;
+    }
+
+    .main-content {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .mob-btn-card{
+        display: none;
+    }
+
+    .mappa-italia {
+        height: auto;
+        margin-right: 0rem !important; 
+        margin-left: 0rem !important;
+    }
+
+    .mob-none{
+        display: none !important;
+    }
+
+    .mob-cerca{
+        display: block !important;
+        margin: auto;
+    }
+
+    .sezione-dove-andare{
+        flex-wrap: nowrap;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .carousel-image-3d{
+        height: auto !important;
+        margin: 0.25rem !important;
+        width: 45%;
+    }
+
+    .card-3d-carousel{
+        margin-top: 20px;
+    }
+
+    .width-3d-card {
+        max-width: 100% !important;
+    }
+
+
+
+
+
+
+}
+
+.mob-none{
+    display: block;
+}
+
+.mob-cerca{
+    display: none;
     
 }
