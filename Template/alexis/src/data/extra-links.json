@@ -6,7 +6,8 @@
                 "image": "/img/icons/icona-scegli.svg"
             },
             "title": "Scegli un luogo",
-            "desc": "Bacon ipsum dolor amet jerky tenderloin pastrami drumstick leberkas venison "
+            "desc": "Bacon ipsum dolor amet jerky tenderloin pastrami drumstick leberkas venison ",
+            "id": "primo"
         },
         {
             "icon": {
@@ -14,7 +15,8 @@
                 "image": "/img/icons/icona-visita.svg"
             },
             "title": "Visita un Monumento",
-            "desc": "Bacon ipsum dolor amet jerky tenderloin pastrami drumstick leberkas venison "
+            "desc": "Bacon ipsum dolor amet jerky tenderloin pastrami drumstick leberkas venison ",
+            "id": "secondo"
         },
         {
             "icon": {
@@ -22,7 +24,8 @@
                 "image": "/img/icons/icona-360.svg"
             },
             "title": "Entra a 360°",
-            "desc": "Bacon ipsum dolor amet jerky tenderloin pastrami drumstick leberkas venison "
+            "desc": "Bacon ipsum dolor amet jerky tenderloin pastrami drumstick leberkas venison ",
+            "id": "terzo"
         }
     ],
     "us": []
