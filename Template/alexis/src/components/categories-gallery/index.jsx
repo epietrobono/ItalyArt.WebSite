@@ -12,7 +12,7 @@ function activateCategory(key){
 
 function CategoriesGallery({ data }) {
     return(
-        <div className="row justify-content-center categories py-5">
+        <div className="row justify-content-center categories py-5 category-gallery-desktop">
             {
                 data.map((image, key) => {
                     return (
