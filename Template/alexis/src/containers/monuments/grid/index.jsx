@@ -5,11 +5,11 @@ import MonumentsData from "../../../data/monuments.json";
 function GridContainer({nCols}) {
     const data = MonumentsData.it;
     return (
-        <div className={"categories row row-cols-" + nCols + " justify-content-center mx-0"}>
+        <div className={"categories sezione-card-monumenti row row-cols-" + nCols + " justify-content-center mx-0"}>
             {
                 data.monuments.map((val, key)=>{
                     return (
-                        <div className="col col-auto" key={key}>
+                        <div className="col col-auto card-monumenti" key={key}>
                             <MonumentCard data={val}></MonumentCard>
                         </div>
                     )

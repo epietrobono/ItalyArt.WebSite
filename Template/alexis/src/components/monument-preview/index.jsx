@@ -11,15 +11,15 @@ function MonumentPreview ({data, preview=true, titleLocation=false}) {
                 </div>
                 <div className="row-mod blog-mon">
                     {
-                        titleLocation ? <h6>{data.title + " - " + data.location}</h6> : <h6>{data.title}</h6>
+                        titleLocation ? <h4 className="monument-card-title  margin-title-article ">{data.title + " - " + data.location}</h4 > : <h4 className="monument-card-title margin-title-article">{data.title}</h4>
                     }
                     <strong>{data.subtitle}</strong>
                     {
-                        preview ? <p>{data.preview}</p> : ""
+                        preview ? <p className="mob-p">{data.preview}</p> : ""
                     }
                     
                     {
-                        titleLocation ? "" : <p className="col col-auto">{data.location}</p>
+                        titleLocation ? "" : <p className="col col-auto mob-p">{data.location}</p>
                     }
                     <form className="btn-right" action={data.url}>
                         <Link

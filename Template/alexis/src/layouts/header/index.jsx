@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Fragment, useEffect, useState } from "react";
+import HamburgerMenu from "../../components/hamburger-menu";
 import HeaderLinks from "../../components/header-links";
 import LanguageSelector from "../../components/language-selector";
 import Logo from "../../components/logo/index";
@@ -48,6 +49,12 @@ const Header = ({ classOption }) => {
                         <div className="col">
                             <div className="header-links-area">
                                 <HeaderLinks data={HeaderLinksData.it}></HeaderLinks>
+                            </div>
+                        </div>
+
+                        <div className="col">
+                            <div className="header-links-area">
+                                <HamburgerMenu data={HeaderLinksData.it}></HamburgerMenu>
                             </div>
                         </div>
 

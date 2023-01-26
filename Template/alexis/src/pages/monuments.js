@@ -18,22 +18,22 @@ const MonumentsPage = () => {
                 <SEO title="ItalyArt Monuments"></SEO>
                 <div className="wrapper monuments-wrapper">
                     <Header classOption="hb-border"></Header>
-                    <div className="row justify-content-center py-5">
-                        <div className="col col-auto form-width">
+                    <div className="row justify-content-center search-bar-monuments py-5">
+                        <div className="col col-auto form-width" id="search-form-monuments">
                             <SearchForm data={form}></SearchForm>
                         </div>
                     </div>
                     <CategoriesContainer></CategoriesContainer>
                     <div className="main-content">
                         <div className="col col-auto my-4">
-                            <div className="row mx-5">
-                                <h1>{data.gridTitle1}</h1>
+                            <div className="row mx-5 monuments-section">
+                                <h1 className="mob-h2">{data.gridTitle1}</h1>
                                 <GridContainer nCols={5}></GridContainer>
                             </div>
                         </div>
                         <div className="col col-auto my-4 px-auto">
-                            <div className="row mx-5">
-                                <h1>{data.gridTitle2}</h1>
+                            <div className="row mx-5 monuments-section">
+                                <h1 className="mob-h2">{data.gridTitle2}</h1>
                                 <GridContainer nCols={5}></GridContainer>
                             </div>
                         </div>

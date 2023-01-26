@@ -6,16 +6,18 @@ const MonumentsContainer = ({title, monuments}) => {
         <div>
             <div className="row-mod justify-content-center">
                 <div className="col col-auto">
-                    <h4>{title}</h4>
+                    <h4 className="mob-h2">{title}</h4>
+                    <div className="blog-monuments gap-10">
                     {
-                        monuments.slice(0,3).map((val, key)=>{
+                        monuments.slice(0,2).map((val, key)=>{
                             return (
-                                <div className="row-mod" key={key}>
+                                <div className="row-mod flex-1" key={key}>
                                     <MonumentPreview data={val} titleLocation={true}></MonumentPreview>
                                 </div>
                             )
                         })
                     }
+                    </div>
                 </div>
             </div>
         </div>

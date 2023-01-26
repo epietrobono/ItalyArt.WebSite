@@ -34,11 +34,11 @@ const BlogArticle = ({
                 <div className="wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
                     <div className="main-content">
-                        <div className="spazio-sopra row row-cols-8 justify-content-center">
-                            <div className="col col-7 col-7 col-lg-8 col-sm-12 spazio-destro">
+                        <div className="spazio-sopra row row-cols-8 justify-content-center article-page-start">
+                            <div className="col col-md-7 col-lg-8 col-sm-12 spazio-destro">
                                 <ArticleContent data={article}></ArticleContent>
                             </div>
-                            <div className="col col-3 col-3 col-lg-2 col-sm-4 ">
+                            <div className="col  col-lg-2 col-sm-12 ">
                                 <div className="row">
                                     <MonumentsContainer title={monumentsData.alsoTitle} monuments={monuments}></MonumentsContainer>
                                 </div>

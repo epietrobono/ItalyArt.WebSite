@@ -4,9 +4,9 @@ import ArticlePreview from "../../../components/article-preview";
 const AllArticlesContainer = ({title, articles}) => {
     return (
         <div>
-            <div className="container-ita row justify-content-left">
+            <div className="container-ita-3 row justify-content-left">
                 <div className="col col-auto">
-                    <h1 className="title-blog space-blog-title">{title}</h1>
+                    <h1 className="title-blog space-blog-title mob-h2">{title}</h1>
                     <hr className="orizontal-line"></hr>
                     {
                         articles.map((val, key)=>{

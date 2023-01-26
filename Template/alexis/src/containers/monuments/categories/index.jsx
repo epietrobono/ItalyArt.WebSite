@@ -4,7 +4,7 @@ import CategoriesData from "../../../data/categories-icon.json";
 function CategoriesContainer() {
     const data = CategoriesData.it.categories;
     return (
-        <div className="categories row justify-content-center">
+        <div className="categories cat-manuments row justify-content-center">
             {
                 data.map((val, key)=>{
                     return (

@@ -420,7 +420,11 @@
 }
 
 .rounded{
-    border-radius: 15px !important;
+    border-radius: 10px !important;
+}
+
+.rounded-2{
+    border-radius: 7px !important;
 }
 
 .btn-cerca{
@@ -671,7 +675,7 @@
 
 .intro-blog{
     display: flex;
-
+    flex-direction: nowrap;
 }
 
 .img-prew{
@@ -1038,11 +1042,16 @@ margin-bottom: 15px;
     }
 
     .mob-h2{
-        font-size: 18px;
+        font-size: 18px !important;
     }
 
+    .mob-h3{
+        font-size: 15px !important;
+    }
+
+
     .mob-p {
-        font-size: 12px;
+        font-size: 12px !important; 
     }
 
     .container-ita-2{
@@ -1060,6 +1069,7 @@ margin-bottom: 15px;
 
     .card-monumenti{
         flex: 1 !important;
+        max-width: 50%;
     }
 
     .main-content {
@@ -1240,9 +1250,177 @@ margin-bottom: 15px;
         width: 100% !important;
     }
 
+    #search-form-monuments {
+        width: 90% !important;
+    }
+
+    #search-form-monuments .search-form form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border-radius: 15px;
+        align-items: center;
+    }
+    
+    .barra-ricerca{
+        padding: 0.9rem !important;
+    }
+
+    #search-form-monuments .search-icon{
+        width: 68%;
+        text-indent: 20px;
+        padding-right: 0.5rem !important;
+        padding-top: 0.1rem !important;
+        padding-bottom: 0.1rem !important;
+        font-size: 14px;
+    }
+
+    #search-form-monuments .btn-cerca{
+        width: 23%;
+        font-size: 14px;
+        text-align: center;
+        padding: 2px 15px !important;
+        border: none !important;
+    }
+
+    .cat-manuments .col-1{
+        flex : 1 0 !important
+    }
+
+    .cat-manuments{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .icon-cat {
+        width: 120%;
+        margin-left: -5%;
+    }
+
+    .search-bar-monuments{
+        padding-top: 1.7rem !important;
+        padding-bottom: 1.7rem !important;
+    }
+
+    .monuments-section{
+        margin-right: 0.5rem !important; 
+        margin-left: 0.5rem !important;
+    }
+
+    .section-grid-monuments{
+        display: flex !important;
+    }
+
+    .intro-blog {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #primo-articolo .mob-h2 {
+        font-size: 22px !important;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    #primo-articolo .mob-h3 {
+        font-size: 19px !important;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+    
+    .flex-1 {
+        flex: 1 1 !important;
+    }
+
+    #uno-blog , #due-blog {
+        flex: 1 1 !important;
+    }
+
+    .gap-10{
+        gap:10px
+    }
+
+    #tre-blog{
+        display: none !important;
+    }
+
+    .orizontal-line{
+        height:1px !important;
+    }
+    
+    .container-ita-3{
+        width: 100% !important;
+    }
+
+    .sezione-tutti-aricoli .col-5 {
+        width: 55% !important;
+    }
+
+    .sezione-tutti-aricoli .col-3 {
+        width: 42%;
+        margin-right: 3%;
+    }
+
+    .sezione-tutti-aricoli p {
+        margin-bottom: 5px !important;
+    }
+
+    .sezione-tutti-aricoli .justify-content-center{
+        margin-bottom: 10px;
+    }
+
+    .article-page-start{
+        display: flex;
+        flex-direction: column !important;
+        row-gap: 35px;
+    }
+
+    .blog-monuments{
+        display: flex;
+        flex-wrap: wrap
+    }
+
+    .margin-title-article{
+        margin-top: 10px;
+    }
+
+    .slider{
+        display: block;
+    width: 100%;
+    overflow-x: scroll;
+    }
+
+    .lista-scorrevole{
+        display: inline-flex;
+    white-space: nowrap;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: auto;
+    padding: 15px;
+    }
+
 
 
 }
+
+.article-page-start{
+    display: flex;
+    flex-direction: row;
+    row-gap: 35px;
+}
+
+.container-ita-3{
+    width: 90%;
+}
+
+
+#tre-blog{
+    display: block;
+}
+
+
 .img-newsletter{
     display: block;
 }

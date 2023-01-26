@@ -6,16 +6,17 @@ const RelatedArticlesContainer = ({title, articles}) => {
         <div>
             <div className="row justify-content-center">
                 <div className="col col-auto">
-                    <h4>{title}</h4>
+                    <h4 className="mob-h2 ">{title}</h4>
+                    <div className="gap-10 blog-monuments">
                     {
-                        articles.map((val, key)=>{
+                        articles.slice(0,2).map((val, key)=>{
                             return (
-                                <div className="row" key={key}>
+                                <div className="row flex-1" key={key}>
                                     <ArticlePreview data={val}></ArticlePreview>
                                 </div>
                             )
                         })
-                    }
+                    }</div>
                 </div>
             </div>
         </div>
