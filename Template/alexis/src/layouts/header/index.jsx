@@ -52,21 +52,25 @@ const Header = ({ classOption }) => {
                             </div>
                         </div>
 
-                        <div className="col">
-                            <div className="header-links-area">
-                                <HamburgerMenu data={HeaderLinksData.it}></HamburgerMenu>
-                            </div>
-                        </div>
-
                         <div className="col-auto">
                             <div className="header-languages-area">
                                 <LanguageSelector></LanguageSelector>
+                            </div>
+                            <div className="header-action-area">
+                                <button
+                                    className="btn btn-white"
+                                    onClick={onCanvasHandler}
+                                    id="btn-burger-menu"
+                                >
+                                    <img src={`${process.env.PUBLIC_URL}/img/icons/burger-menu.svg`} alt="burger menu" />
+                                </button>
                             </div>
                         </div>
 
                     </div>
                 </div>
             </header>
+            <HamburgerMenu show={ofcanvasShow} onClose={onCanvasHandler} data={HeaderLinksData.it}></HamburgerMenu>
         </Fragment>
     );
 };

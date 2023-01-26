@@ -1,11 +1,11 @@
 {
     "it": { 
-        "gridTitle1": "I nostri monumenti a Nepi",
-        "gridTitle2": "Monumenti vicino a Nepi",
+        "gridTitle1": "I nostri monumenti",
+        "gridTitle2": "Monumenti vicino",
         "form": {
             "placeholder": "Inserisci città, paese o indirizzo...",
             "buttonText": "Cerca",
-            "url": "#/monuments"
+            "url": "/monuments"
         }
     },
     "us": {

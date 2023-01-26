@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import { getClosest, getSiblings, slideToggle, slideUp } from "../../utils";
 
-const HamburgerMenu = ({ show, onClose }) => {
+const HamburgerMenu = ({ show, onClose, data }) => {
     const onClickHandler = (e) => {
         const target = e.currentTarget;
         const parentEl = target.parentElement;
@@ -48,107 +48,50 @@ const HamburgerMenu = ({ show, onClose }) => {
                         <div className="asside-navigation-area">
                             <ul className="asside-menu">
                                 <li className="item">
-                                    <NavLink
-                                        exact
-                                        to={process.env.PUBLIC_URL + "/"}
-                                    >
-                                        Home
-                                    </NavLink>
+                                        <NavLink
+                                            exact
+                                            to={process.env.PUBLIC_URL + "/"}
+                                        >
+                                            {data.home}
+                                        </NavLink>
                                 </li>
-                                <li className="dropdown-submenu">
-                                    <NavLink
-                                        to={
-                                            process.env.PUBLIC_URL +
-                                            "/portfolio"
-                                        }
-                                    >
-                                        <span>Portfolio</span>
-                                    </NavLink>
-                                    <span
-                                        className="menu-toggle"
-                                        onClick={onClickHandler}
-                                        aria-hidden="true"
-                                    ></span>
-                                    <ul className="dropdown-nav">
-                                        <li>
-                                            <NavLink
-                                                to={
-                                                    process.env.PUBLIC_URL +
-                                                    "/portfolio"
-                                                }
-                                            >
-                                                Portfolio
-                                            </NavLink>
-                                        </li>
-                                        <li>
-                                            <NavLink
-                                                to={
-                                                    process.env.PUBLIC_URL +
-                                                    "/portfolio-details/1"
-                                                }
-                                            >
-                                                Portfolio Details
-                                            </NavLink>
-                                        </li>
-                                    </ul>
+                                <li className="item">
+                                        <NavLink
+                                            exact
+                                            to={process.env.PUBLIC_URL + "/monuments"}
+                                        >
+                                            {data.monuments}
+                                        </NavLink>
                                 </li>
-                                <li>
-                                    <NavLink
-                                        to={process.env.PUBLIC_URL + "/about"}
-                                    >
-                                        About
-                                    </NavLink>
+                                <li className="item">
+                                        <NavLink
+                                            exact
+                                            to={process.env.PUBLIC_URL + "/blog"}
+                                        >
+                                            {data.blog}
+                                        </NavLink>
                                 </li>
-                                <li>
-                                    <NavLink
-                                        to={
-                                            process.env.PUBLIC_URL +
-                                            "/video-gallery"
-                                        }
-                                    >
-                                        Video Gallery
-                                    </NavLink>
+                                <li className="item">
+                                        <NavLink
+                                            exact
+                                            to={process.env.PUBLIC_URL + "/map"}
+                                        >
+                                            {data.map}
+                                        </NavLink>
                                 </li>
-                                <li>
-                                    <NavLink
-                                        to={process.env.PUBLIC_URL + "/contact"}
-                                    >
-                                        Contact
-                                    </NavLink>
+                                <li className="item">
+                                        <NavLink
+                                            exact
+                                            to={process.env.PUBLIC_URL + "/about"}
+                                        >
+                                            {data.about}
+                                        </NavLink>
                                 </li>
-                                <li className="dropdown-submenu">
-                                    <NavLink
-                                        to={process.env.PUBLIC_URL + "/blog"}
-                                    >
-                                        <span>Blog</span>
-                                    </NavLink>
-                                    <span
-                                        className="menu-toggle"
-                                        onClick={onClickHandler}
-                                        aria-hidden="true"
-                                    ></span>
-                                    <ul className="dropdown-nav">
-                                        <li>
-                                            <NavLink
-                                                to={
-                                                    process.env.PUBLIC_URL +
-                                                    "/blog"
-                                                }
-                                            >
-                                                Blog Grid
-                                            </NavLink>
-                                        </li>
-                                        <li>
-                                            <NavLink
-                                                to={
-                                                    process.env.PUBLIC_URL +
-                                                    "/blog-details/1"
-                                                }
-                                            >
-                                                Blog Details
-                                            </NavLink>
-                                        </li>
-                                    </ul>
+                                <li className="item">
+                                    <select id="language" className="form-select" style={{color: "white", background: "#111"}}>
+                                        <option value="it">Italiano</option>
+                                        <option value="en">English</option>
+                                    </select>
                                 </li>
                             </ul>
                         </div>
@@ -163,6 +106,7 @@ const HamburgerMenu = ({ show, onClose }) => {
 HamburgerMenu.propTypes = {
     show: PropTypes.bool,
     onClose: PropTypes.func,
+    data: PropTypes.object
 };
 
 export default HamburgerMenu;

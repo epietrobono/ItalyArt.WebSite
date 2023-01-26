@@ -5,7 +5,7 @@
         "buttonText": "Visita altri posti",
         "suggestions": [
             {
-                "title": "Duomo di Siena",
+                "title": "Duomo",
                 "location": "Siena",
                 "buttonText": "Visita",
                 "image": {
@@ -15,7 +15,7 @@
                 "url": "/monuments/10"
             },
             {
-                "title": "Busto Femminile di Mezzaselva",
+                "title": "Busto Femminile",
                 "location": "Mezzaselva",
                 "buttonText": "Visita",
                 "image": {

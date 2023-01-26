@@ -5,7 +5,7 @@
             "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "alt": "Fontana di Trevi",
             "path": "/img/carousel-monuments/FONTANA DI TREVI.jpg",
-            "url": "#/monuments/17",
+            "url": "/monuments/17",
             "text": "Visita ora",
             "active": "active"
         },
@@ -14,7 +14,7 @@
             "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "alt": "Reggia di Caserta",
             "path": "/img/carousel-monuments/REGGIA DI CASERTA.jpeg",
-            "url": "#/monuments/16",
+            "url": "/monuments/16",
             "text": "Visita ora"
         },
         {
@@ -22,7 +22,7 @@
             "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "alt": "Terme di Caracalla",
             "path": "/img/carousel-monuments/CARACALLA.jpg",
-            "url": "#/monuments/19",
+            "url": "/monuments/19",
             "text": "Visita ora"
         }
     ],

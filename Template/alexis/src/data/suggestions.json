@@ -5,7 +5,7 @@
         "buttonText": "Visita altri posti",
         "suggestions": [
             {
-                "title": "Reggia di Caserta",
+                "title": "Reggia",
                 "location": "Caserta",
                 "buttonText": "Visita",
                 "image": {
@@ -16,7 +16,7 @@
             },
             {
                 "title": "Fontana di Trevi",
-                "location": "Faleria",
+                "location": "Roma",
                 "buttonText": "Visita",
                 "image": {
                     "path": "/img/preview-monuments/con-carousel/fontana-di-trevi.jpg",

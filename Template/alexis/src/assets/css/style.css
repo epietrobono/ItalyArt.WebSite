@@ -664,7 +664,11 @@
     color: #2E2E2E;
     padding: 2px 15px !important;
 }
-
+#btn-burger-menu{
+    background: #FFFFFF 0% 0% no-repeat padding-box !important;
+    color: #2E2E2E;
+    padding: 2px 15px !important;
+}
 .logo-footer{
     width: 50%;
 }
@@ -865,17 +869,17 @@ margin-bottom: 15px;
 .mob-btn-card{
     display: block;
 }
-.category-gallery-desktop{
+.category-gallery-desktop, .header-languages-area{
     display: inherit;
 }
-.category-gallery-mobile{
+.category-gallery-mobile, .header-action-area{
     display:none;
 }
 @media only screen and (max-width: 900px) {
-    .category-gallery-desktop{
+    .category-gallery-desktop, .header-languages-area{
         display: none !important;
     }
-    .category-gallery-mobile{
+    .category-gallery-mobile,.header-action-area{
         display:block !important;
     }
 
