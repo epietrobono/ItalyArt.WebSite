@@ -19,7 +19,7 @@ function CarouselModelsContainer() {
                                         <form action="#" className="form-search">
                                             <Link
                                                 to={process.env.PUBLIC_URL + data.url}
-                                                className="btn btn-light carousel-btn border botton-monument-carousel rounded-pill mx-2"
+                                                className=" btn-light carousel-btn border botton-monument-carousel rounded-pill mx-2"
                                             >
                                                 {data.text}
                                             </Link>

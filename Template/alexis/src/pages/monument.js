@@ -30,10 +30,10 @@ const MonumentPage = ({
             <React.Fragment>
             <Layout>
                 <SEO title="ItalyArt || Monument" />
-                <div className="container-ita-2 wrapper home-default-wrapper">
+                <div className=" wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
                     <MonumentSections monument={monument}></MonumentSections>
-                    <div className="main-content">
+                    <div className="main-content container-ita-2">
                         <MonumentHomeContainer monuments={monuments} id={id}></MonumentHomeContainer>                    
                     </div>
                     <Footer />
@@ -47,9 +47,9 @@ const MonumentPage = ({
             <React.Fragment>
             <Layout>
                 <SEO title="ItalyArt || Monument" />
-                <div className="container-ita-2 wrapper home-default-wrapper">
+                <div className=" wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
-                    <div className="main-content">
+                    <div className="main-content container-ita-2">
                         <MonumentHomeContainer monuments={monuments} id={id}></MonumentHomeContainer>                    
                     </div>
                     <Footer />

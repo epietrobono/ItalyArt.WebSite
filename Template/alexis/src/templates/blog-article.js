@@ -38,7 +38,7 @@ const BlogArticle = ({
                             <div className="col col-md-7 col-lg-8 col-sm-12 spazio-destro">
                                 <ArticleContent data={article}></ArticleContent>
                             </div>
-                            <div className="col  col-lg-2 col-sm-12 ">
+                            <div className="col  col-lg-3 col-sm-12 ">
                                 <div className="row">
                                     <MonumentsContainer title={monumentsData.alsoTitle} monuments={monuments}></MonumentsContainer>
                                 </div>

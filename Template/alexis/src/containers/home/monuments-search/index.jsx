@@ -1,7 +1,7 @@
 import React from "react";
+import Carousel from 'react-bootstrap/Carousel';
 import SearchForm from "../../../components/search-form";
 import HomeMonumentsData from "../../../data/home-monuments.json";
-import Carousel from 'react-bootstrap/Carousel';
 
 const MonumentsSearchContainer = () => {
     const data = HomeMonumentsData.it;

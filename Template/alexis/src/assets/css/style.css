@@ -550,6 +550,11 @@
     margin: auto;
 }
 
+.home-banners{
+    overflow: hidden !important;
+
+}
+
 .home-banners .carousel-inner{
     overflow: visible !important;
     width: 100%;
@@ -668,6 +673,7 @@
     background: #FFFFFF 0% 0% no-repeat padding-box !important;
     color: #2E2E2E;
     padding: 2px 15px !important;
+    box-shadow: none;
 }
 .logo-footer{
     width: 50%;
@@ -1045,6 +1051,16 @@ margin-bottom: 15px;
         padding: 1px 20px !important;
     }
 
+    #button-3d, #button-360{
+        line-height: inherit !important;
+        font-size: 14px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #C21718 !important;
+        color: #2E2E2E;
+        font-weight: 500;
+        padding: 1px 20px !important;
+    }
+
     .mob-h2{
         font-size: 18px !important;
     }
@@ -1077,8 +1093,9 @@ margin-bottom: 15px;
     }
 
     .main-content {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 4%;
+        padding-right: 4%;
+        overflow: hidden;
     }
 
     .mob-btn-card{
@@ -1396,17 +1413,45 @@ margin-bottom: 15px;
 
     .lista-scorrevole{
         display: inline-flex;
-    white-space: nowrap;
     gap: 10px;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
     width: auto;
     padding: 15px;
+    padding-left: 15px !important;
+    }
+
+    .container-button-3Dmodel {
+        position: absolute;
+        z-index: 50;
+        padding-top: 0px; 
+        height: 100%;
+        padding-left: 0px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .min-width-slider{
+        min-width: 170px;
     }
 
 
 
+
+
+}
+
+.container-button-3Dmodel {
+    position: absolute;
+    z-index: 50;
+    padding-top: 0px; 
+    height: 100%;
+    padding-left: 0px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .article-page-start{
@@ -1445,4 +1490,18 @@ margin-bottom: 15px;
 .mob-cerca{
     display: none;
     
+}
+
+.lista-scorrevole{
+    padding-left: 10%;
+}
+
+
+.home-form-search{
+    position: absolute;
+}
+
+.home-global{
+    width: 100%;
+
 }

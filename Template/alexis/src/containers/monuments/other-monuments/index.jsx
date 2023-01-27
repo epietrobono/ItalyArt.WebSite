@@ -10,7 +10,7 @@ const OtherMonumentsContainer = ({title, monuments}) => {
                 {
                     monuments.slice(0, 5).map((val, key) => {
                         return (
-                            <div className="col col-2 " key={key}>
+                            <div className="col col-2 min-width-slider" key={key}>
                                 <MonumentPreview data={val} preview={false}></MonumentPreview>
                             </div>
                         )
