@@ -7,7 +7,7 @@ const MonumentsSearchContainer = () => {
     const data = HomeMonumentsData.it;
     const banners= data.banners;
     return (
-        <>
+        <div className="home-global">
             <Carousel className="home-banners" indicators={false}>
                     {
                         data.banners.map((banner, key) => {
@@ -20,6 +20,7 @@ const MonumentsSearchContainer = () => {
                                                 process.env.PUBLIC_URL + banner.backgroundImage
                                             })`,
                                         }}>
+                                            <div className="home-overlay"></div>  
                                         
                                     </div>
                                 </Carousel.Item>
@@ -27,14 +28,14 @@ const MonumentsSearchContainer = () => {
                         })
                     }
                 </Carousel>
-                <div className="home-overlay"></div>  
+                
                 <div className="home-bar monuments-form">
                     <h1 className="title text-center">{data.title}</h1>
                     <div className="bg-light rounded barra-ricerca py-2 px-4">
                         <SearchForm data={data} />
                     </div>
                 </div>
-            </>
+            </div>
     )
     // return (
     //     <div>

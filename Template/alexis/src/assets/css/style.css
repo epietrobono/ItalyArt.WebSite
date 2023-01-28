@@ -2,7 +2,7 @@
     height: 818px;
     background-size: cover;
 }
-.monuments-search .monuments-form .title {
+.home-bar .title {
     color: white;
     font-size: 72px;
     font-weight: bold;
@@ -889,7 +889,7 @@ margin-bottom: 15px;
         display:block !important;
     }
 
-    .monuments-search .monuments-form .title{
+    .home-bar .title{
         font-size: 38px;
     }
     .home-bar{
@@ -1271,11 +1271,11 @@ margin-bottom: 15px;
         width: 100% !important;
     }
 
-    #search-form-monuments {
+    #search-form-monuments, #search-form-map {
         width: 90% !important;
     }
 
-    #search-form-monuments .search-form form {
+    #search-form-monuments .search-form form, #search-form-map .search-form form{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -1287,7 +1287,7 @@ margin-bottom: 15px;
         padding: 0.9rem !important;
     }
 
-    #search-form-monuments .search-icon{
+    #search-form-monuments .search-icon, #search-form-map .search-icon{
         width: 68%;
         text-indent: 20px;
         padding-right: 0.5rem !important;
@@ -1296,7 +1296,7 @@ margin-bottom: 15px;
         font-size: 14px;
     }
 
-    #search-form-monuments .btn-cerca{
+    #search-form-monuments .btn-cerca, #search-form-map .btn-cerca{
         width: 23%;
         font-size: 14px;
         text-align: center;
@@ -1437,10 +1437,78 @@ margin-bottom: 15px;
         min-width: 170px;
     }
 
+    .home-bar{
+        position: absolute;
+        display: flex;
+        top: 38vh;
+        left: 12.5% !important;
+        flex-direction: column;
+    }
+
+    .header-space{
+        padding-top: 30px ;
+    }
+
+    .map-section{
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+
+    .monumenti-map{
+        grid-gap: 10px;
+        gap: 10px;
+       
+    }
+
+    .column-monument-map{
+        border-radius: 35px 35px 0 0;
+        background-color: white;
+        z-index: 10;
+        margin-top: 80vh;
+    }
+
+    .map-mobile{
+        position: fixed;
+        height: 90vh !important;
+        top: 10vh;
+    }
+
+    .map-position{
+        position: fixed;
+        height: 90vh !important;
+        top: 10vh;
+    }
+
+    .ricerca-map{
+        position: fixed;
+        z-index: 20;
+        background-color: white;
+        width: 100%;
+        margin-top: -5px;
+
+    }
+
+    .number-article-map{
+        display: flex !important;
+        align-items: center;
+        justify-content: space-around;
+        bottom: 0;
+        padding: 25px;
+    }
+
+    .sezione-card-maps{
+        margin: 0 4% !important;
+    }
 
 
 
 
+
+}
+
+.number-article-map{
+    display: none;
 }
 
 .container-button-3Dmodel {
@@ -1497,11 +1565,23 @@ margin-bottom: 15px;
 }
 
 
-.home-form-search{
+.home-bar{
     position: absolute;
+    display: flex;
+    top: 38vh;
+    left: 22.5%;
+    flex-direction: column;
 }
 
 .home-global{
     width: 100%;
+    
+}
 
+.space-header{
+    padding-top: 40px;
+}
+
+.header-space{
+    padding-top: 50px ;
 }

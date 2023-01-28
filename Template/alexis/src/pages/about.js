@@ -1,9 +1,9 @@
 import React from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
+import InfoContainer from "../containers/about/info";
 import WhoContainer from "../containers/about/who";
 import ZigZagContainer from "../containers/about/zig-zag";
-import InfoContainer from "../containers/about/info";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
@@ -15,6 +15,7 @@ const AboutPage = () => {
                 <SEO title="Alexis || About" />
                 <div className="wrapper about-page-wrapper">
                     <Header classOption="hb-border" />
+                    <div className="header-space"></div>
                     <div className="main-content">
                         <WhoContainer></WhoContainer>
                         <ZigZagContainer></ZigZagContainer>

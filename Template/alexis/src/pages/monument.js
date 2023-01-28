@@ -32,6 +32,7 @@ const MonumentPage = ({
                 <SEO title="ItalyArt || Monument" />
                 <div className=" wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
+                    <div className="header-space"></div>
                     <MonumentSections monument={monument}></MonumentSections>
                     <div className="main-content container-ita-2">
                         <MonumentHomeContainer monuments={monuments} id={id}></MonumentHomeContainer>                    
@@ -49,6 +50,7 @@ const MonumentPage = ({
                 <SEO title="ItalyArt || Monument" />
                 <div className=" wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
+                    <div className="header-space"></div>
                     <div className="main-content container-ita-2">
                         <MonumentHomeContainer monuments={monuments} id={id}></MonumentHomeContainer>                    
                     </div>

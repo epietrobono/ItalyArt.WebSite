@@ -19,6 +19,7 @@ const Blog = () => {
                 <SEO title="ItalyArt || Blog" />
                 <div className="wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
+                    <div className="header-space"></div>
 
                     <div className="container-ita">
                         <ArticlesContainer articles={articles}></ArticlesContainer>

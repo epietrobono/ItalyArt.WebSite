@@ -18,6 +18,7 @@ const MonumentsPage = () => {
                 <SEO title="ItalyArt Monuments"></SEO>
                 <div className="wrapper monuments-wrapper">
                     <Header classOption="hb-border"></Header>
+                    <div className="header-space"></div>
                     <div className="row justify-content-center search-bar-monuments py-5">
                         <div className="col col-auto form-width" id="search-form-monuments">
                             <SearchForm data={form}></SearchForm>

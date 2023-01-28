@@ -232,8 +232,9 @@
     &.header-default {
         background-color: $white;
         padding: 40px 0 35px;
-        position: relative;
+        position: fixed;
         z-index: 999;
+        width: 100%;
         @media #{$md-device} {
             padding: 20px 0 20px;
         }

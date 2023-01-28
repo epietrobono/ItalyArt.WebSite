@@ -33,6 +33,7 @@ const BlogArticle = ({
                 <SEO title="ItalyArt || Article" />
                 <div className="wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
+                    <div className="header-space"></div>
                     <div className="main-content">
                         <div className="spazio-sopra row row-cols-8 justify-content-center article-page-start">
                             <div className="col col-md-7 col-lg-8 col-sm-12 spazio-destro">

@@ -14,6 +14,7 @@ const Contact = () => {
                 <SEO title="Alexis || Contact" />
                 <div className="wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
+                    <div className="header-space"></div>
                     <div className="main-content">
                         <ContactContainer />
                         <MapContainer />

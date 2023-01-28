@@ -19,17 +19,21 @@ const MonumentsPage = () => {
                 <SEO title="ItalyArt Monuments"></SEO>
                 <div className="wrapper monuments-wrapper">
                     <Header classOption="hb-border"></Header>
-                    <div className="row justify-content-center py-5">
-                        <div className="col col-auto form-width">
+                    <div className="header-space"></div>
+                    <div className="row justify-content-center py-5 search-bar-monuments ricerca-map">
+                        <div className="col col-auto form-width" id="search-form-map">
                             <SearchForm data={form}></SearchForm>
                         </div>
                     </div>
-                    <div className="main-content">
-                        <div className="row">
-                            <div className="col-5">
+                    <div >
+                        <div className="row map-section">
+                            <div className="col-md-5 col-sm-12 column-monument-map">
+                                <div className="number-article-map">
+                                    <h2 className="mob-h2">0 Risultati</h2>
+                                </div>
                                 <GridContainer nCols={3}></GridContainer>
                             </div>
-                            <div className="col-7">
+                            <div className="col-md-7 col-sm-12 map-mobile">
                                 <MapContainer></MapContainer>
                             </div>
                         </div>
