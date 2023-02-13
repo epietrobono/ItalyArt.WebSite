@@ -56,7 +56,7 @@ const App = () => {
                         component={AboutPage}
                     />
                     <Route
-                        path={`${process.env.PUBLIC_URL + "/monuments"}`}
+                        path={`${process.env.PUBLIC_URL + "/monuments/:category?"}`}
                         component={MonumentsPage}
                     />
                     <Route

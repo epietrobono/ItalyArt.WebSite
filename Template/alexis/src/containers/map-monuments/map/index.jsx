@@ -15,6 +15,7 @@ function MapContainer() {
         greatPlaceCoords: {lat: 43.327874, lng: 11.321994}
         };
     const data = MonumentsData.it;
+    const demoFancyMapStyles = require("../../../data/map-style.json");
     
     return (
         // Important! Always set the container height explicitly
@@ -23,6 +24,7 @@ function MapContainer() {
                 bootstrapURLKeys={{ key: "AIzaSyC5scNnifCVhQTXGB2lciM4Ai15rYKgDrM" }}
                 defaultCenter={defaultProps.center}
                 defaultZoom={defaultProps.zoom}
+                defaultOptions={{ styles: demoFancyMapStyles }}
                 yesIWantToUseGoogleMapApiInternals
                 >
                 {

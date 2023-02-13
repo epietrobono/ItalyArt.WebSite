@@ -1,16 +1,36 @@
 import React from "react";
+import PropTypes from "prop-types";
 import ScrollToTop from "../components/scroll-to-top";
 import SearchForm from "../components/search-form";
 import SEO from "../components/seo";
 import CategoriesContainer from "../containers/monuments/categories";
+import MonumentsData from "../data/monuments.json";
 import GridContainer from "../containers/monuments/grid";
 import MonumentsPageData from "../data/monuments-page.json";
 import Layout from "../layouts";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header";
 
-const MonumentsPage = () => {
-    const data = MonumentsPageData.it;
+const MonumentsPage = ({
+    match: {
+        params: { category },
+    },
+}) => {
+    const data = MonumentsPageData.it;    
+    
+    console.log(category);
+    console.log(MonumentsData);
+    const monumentsDt = MonumentsData.it.monuments;
+    console.log(monumentsDt);
+    const monuments = monumentsDt.filter((monument)=>{
+        if(!category){
+            return monument;
+        }
+        if (monument.categories.includes(category)){
+            return monument
+        }
+    });
+    console.log(monuments);
     const form = data.form;
     return (
         <React.Fragment>
@@ -29,13 +49,13 @@ const MonumentsPage = () => {
                         <div className="col col-auto my-4">
                             <div className="row mx-5 monuments-section">
                                 <h1 className="mob-h2">{data.gridTitle1}</h1>
-                                <GridContainer nCols={5}></GridContainer>
+                                <GridContainer nCols={5} monuments={monuments}></GridContainer>
                             </div>
                         </div>
                         <div className="col col-auto my-4 px-auto">
                             <div className="row mx-5 monuments-section">
                                 <h1 className="mob-h2">{data.gridTitle2}</h1>
-                                <GridContainer nCols={5}></GridContainer>
+                                <GridContainer nCols={5} monuments={monuments}></GridContainer>
                             </div>
                         </div>
                     </div>
@@ -45,6 +65,14 @@ const MonumentsPage = () => {
             </Layout>
         </React.Fragment>
     );
+};
+
+MonumentsPage.propTypes = {
+    match: PropTypes.shape({
+        params: PropTypes.shape({
+            category: PropTypes.string,
+        }),
+    }),
 };
 
 export default MonumentsPage;

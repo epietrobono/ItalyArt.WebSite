@@ -1,13 +1,11 @@
 import PropTypes from "prop-types";
 import MonumentCard from "../../../components/monument-card";
-import MonumentsData from "../../../data/monuments.json";
 
-function GridContainer({nCols}) {
-    const data = MonumentsData.it;
+function GridContainer({nCols, monuments}) {
     return (
         <div className={"categories sezione-card-monumenti row row-cols-" + nCols + " justify-content-center mx-0"}>
             {
-                data.monuments.map((val, key)=>{
+                monuments.map((val, key)=>{
                     return (
                         <div className="col col-auto card-monumenti" key={key}>
                             <MonumentCard data={val}></MonumentCard>
@@ -21,6 +19,7 @@ function GridContainer({nCols}) {
 
 GridContainer.propTypes = {
     nCols: PropTypes.number,
+    monuments: PropTypes.object
 };
 
 export default GridContainer;

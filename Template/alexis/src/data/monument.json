@@ -641,6 +641,31 @@
                 "isSezioni":"false",
                 "titoloSezione":"",
                 "sezioni": []
+            },
+            {
+                "id": 22,
+                "title":"Tarquinia",
+                "contenuti":[
+                    {
+                        "type":"title",
+                        "titolo":"Tarquinia",
+                        "model3D":"",
+                        "tour360":"",
+                        "image":"",
+                        "testo":""
+                    },
+                    {
+                        "type":"tour",
+                        "titolo":"Tarquinia",
+                        "model3D":"",
+                        "tour360":"https://www.italyart.it/tarquinia/index.php",
+                        "image":"/img/preview-monuments/tarquinia.jpg",
+                        "testo":""
+                    }
+                ],
+                "isSezioni":"false",
+                "titoloSezione":"",
+                "sezioni": []
             }
         ]
     },

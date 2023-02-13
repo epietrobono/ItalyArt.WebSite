@@ -6,27 +6,27 @@
             {
                 "name": "Palazzi",
                 "path": "/img/icons/icona-palazzi.svg",
-                "url": "/monuments/palaces"
+                "url": "/monuments/palazzi"
             },
             {
                 "name": "Musei",
                 "path": "/img/icons/icona-musei.svg",
-                "url": "/monuments/museums"
+                "url": "/monuments/musei"
             },
             {
                 "name": "Chiese",
                 "path": "/img/icons/icona-chiese.svg",
-                "url": "/monuments/churches"
+                "url": "/monuments/chiese"
             },
             {
                 "name": "Archeo",
                 "path": "/img/icons/icona-archeo.svg",
-                "url": "/monuments/arcs"
+                "url": "/monuments/archeo"
             },
             {
                 "name": "Panorami",
                 "path": "/img/icons/icona-panorami.svg",
-                "url": "/monuments/castles"
+                "url": "/monuments/panorami"
             }
         ]
     },
