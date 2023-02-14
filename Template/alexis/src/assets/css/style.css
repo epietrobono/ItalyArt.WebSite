@@ -501,15 +501,18 @@
     margin-bottom: -15px;
 }
 
+.monument-card-title{
+    font-size:1rem;
+    margin-bottom: 10px !important;
+}
+
+
 .img-monumenty-card{
     width:270px !important;
     height:200px !important;
     
 }
 
-.monument-card-title{
-    font-size:1rem;
-}
 
 .botton-suggestions{
     margin-top: 50px;
@@ -1501,7 +1504,26 @@ margin-bottom: 15px;
         margin: 0 4% !important;
     }
 
+    .card-background{
+        height: 150px !important;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+    }
 
+    .textarea-monument-card{
+        margin-top: 8px;
+        padding-left: 5px;
+        width: 100%;
+        margin-bottom: -26px;
+    }
+    
+    
+    
+    .monument-card-title{
+        font-size:1rem;
+        margin-bottom: 3px !important;
+    }
 
 
 
@@ -1584,4 +1606,11 @@ margin-bottom: 15px;
 
 .header-space{
     padding-top: 50px ;
+}
+
+.card-background{
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
 }
