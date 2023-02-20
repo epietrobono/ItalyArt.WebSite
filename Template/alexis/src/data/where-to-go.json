@@ -2,7 +2,7 @@
     "it": {
         "title": "Dove vuoi andare?",
         "subtitle": "Cerca nella mappa",
-        "desc": "Spicy jalapeno bacon ipsum dolor amet buffalo corned beef burgdoggen t-bone jowl.",
+        "desc": "Per trovare il luogo che vuoi visitare, cerca sulla mappa interattiva e scopri tutti i posti da vedere. La tua prossima avventura ti aspetta!",
         "placeholder": "Inserisci città, paese o indirizzo...",
         "buttonText": "Cerca",
         "url": "#/search-locations",
