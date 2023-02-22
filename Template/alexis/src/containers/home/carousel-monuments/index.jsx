@@ -24,7 +24,7 @@ function CarouselMonumentsContainer() {
                                             </Link>
                                         </form>
                                     </div>
-                                    <Image rounded className="col carousel-image m-4" alt={data.alt} src={process.env.PUBLIC_URL + data.path}></Image>
+                                    <Image rounded className="col m-4 image-home-carousel-360" alt={data.alt} src={process.env.PUBLIC_URL + data.path}></Image>
                                 </div>
                             </Carousel.Item>
                         )

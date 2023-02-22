@@ -1525,8 +1525,18 @@ margin-bottom: 15px;
         margin-bottom: 3px !important;
     }
 
+    .image-home-carousel-360{
+        height: max-content !important;
+        width: 30% !important;
+        margin: 0rem !important;
+    }
 
 
+}
+
+.image-home-carousel-360{
+    width: auto;
+    height: fit-content;
 }
 
 .number-article-map{
