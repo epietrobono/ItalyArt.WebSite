@@ -37,8 +37,8 @@ const Header = ({ classOption }) => {
                 }`}>
 
                 <div className="container-fluid">
-                    <div className="row align-items-center justify-content-between">
-                        <div className="col-auto offset-md-2">
+                    <div className="row align-items-center justify-content-between padd-header">
+                        <div className="col-auto ">
                             <div className="header-logo-area">
                                 <Logo
                                     image={`${process.env.PUBLIC_URL}/img/logo.png`}

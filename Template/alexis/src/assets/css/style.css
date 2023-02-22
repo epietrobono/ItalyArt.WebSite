@@ -830,7 +830,8 @@ margin-bottom: 15px;
 }
 
 .img-blog-mon{
-    height: 190px;
+    height: auto;
+    width: 11.5rem;
 }
 
 .blog-mon h6{
@@ -1460,8 +1461,8 @@ margin-bottom: 15px;
         justify-content: center;
     }
 
-    .min-width-slider{
-        min-width: 170px;
+    .width-card-slider{
+        width: 10rem !important;
     }
 
     .home-bar{
@@ -1682,4 +1683,24 @@ margin-bottom: 15px;
 
 .r-gap{
     row-gap: 15px;
+}
+
+.width-card-slider{
+    width: 12rem;
+}
+
+
+.slider {
+    display: block;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.m-bott-card{
+    margin-bottom: 5px;
+}
+
+.padd-header{
+    padding-right: 2%;
+    padding-left: 2%;
 }

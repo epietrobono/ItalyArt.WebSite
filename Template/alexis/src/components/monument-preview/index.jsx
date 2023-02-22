@@ -7,7 +7,7 @@ function MonumentPreview ({data, preview=true, titleLocation=false}) {
         <div className="row-mod" >
             <div className="col col-auto card-mon-blog">
                 <div className="row-mod ">
-                    <Image rounded className="shadow img-blog-mon" alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
+                    <Image rounded className="m-bott-card img-blog-mon" alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
                 </div>
                 <div className="row-mod blog-mon">
                     {
