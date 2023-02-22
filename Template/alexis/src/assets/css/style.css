@@ -18,8 +18,14 @@
 
 .extra-link {
     max-width: 25%;
-    height: auto;
+    height: 29vh;
     border-radius: 10px !important;
+    padding: 1.5rem 0.5rem 1.5rem 0.5rem !important;
+}
+
+.extra-link-content-area{
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
 }
 
 .extra-link div a img{
@@ -32,15 +38,22 @@
 }
 
 .extra-link h3 {
-    font-size: 24px;
+    font-size: 1.4em;
     font-weight: bold;
     color: #373737;
+    margin-bottom: 5px;
+}
+
+.extra-link span {
+    line-height: 1.7142857143 !important;
 }
 
 .extra-link div {
     font-size: 15px;
     font-weight: 400;
     color: #373737;
+    text-align: center;
+    justify-content: center;
 }
 
 .categories .category {
@@ -114,12 +127,11 @@
 }
 
 .carousel-image-3d {
-    height: 400px;
-    width: auto;
-    height: 400px;
+    height: auto;
+    width: 40% !important;
     position: absolute;
     width: auto;
-    right: 10px;
+    right: 2.5%;
     bottom: 0;
 }
 
@@ -139,7 +151,7 @@
     background-repeat: no-repeat;
     background-position: 4%;
     text-indent: 35px;
-    width: 75%;
+    width: 78%;
     font-weight: 400;
     font-size: 15px;
 }
@@ -415,7 +427,7 @@
 .search-form form{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between ;
     border-radius: 15px;
 }
 
@@ -569,6 +581,12 @@
     box-shadow: 0px 1px 6px #00000063;
     border-radius: 10px;
     margin-top: 100px;
+    margin-left: 2.5%;
+    width: 95%;
+}
+
+.card-3d-carousel h1{
+    max-width: 60%;
 }
 
 .carousel-desc-3d{
@@ -589,7 +607,7 @@
 }
 
 .width-3d-card{
-    max-width: 20%;
+    /*max-width: 20%;*/
 }
 
 .newsletter{
@@ -920,7 +938,7 @@ margin-bottom: 15px;
 
     .search-icon{
         width: 100%;
-        text-indent: 12px;
+        text-indent: 18px;
         padding-right: 0.5rem !important;
         padding-top: 0.1rem !important;
         padding-bottom: 0.1rem !important;
@@ -952,6 +970,7 @@ margin-bottom: 15px;
 
     .extra-link {
         max-width: none;
+        height: auto !important;
     }
 
     #primo, #terzo{
@@ -960,6 +979,7 @@ margin-bottom: 15px;
         justify-content: space-around;
         line-height: 1.5 !important;
         padding: 0.5rem !important;
+        text-align: left !important;
     }
 
     #secondo  {
@@ -968,6 +988,7 @@ margin-bottom: 15px;
         justify-content: space-around;
         line-height: 1.5 !important;
         padding: 0.5rem !important;
+        text-align: right !important;
     }
     
     .extra-link div a {
@@ -979,7 +1000,7 @@ margin-bottom: 15px;
     }
 
     .text-extra-link{
-        text-align: left;
+        text-align: left !important;
         width: 65%;
         line-height: 1.5 !important;
     }
@@ -990,9 +1011,10 @@ margin-bottom: 15px;
         margin-bottom: 5px;
     }
 
-    .text-extra-link span{
+    .text-extra-link p{
         font-size: 12px;
         line-height: 1.5 !important;
+        text-align: left !important;
     }
 
     .text-categorie-home h2{
@@ -1089,6 +1111,8 @@ margin-bottom: 15px;
     .sezione-card-monumenti{
         gap: 10px ;
     }
+
+    
 
     .card-monumenti{
         flex: 1 !important;
@@ -1531,7 +1555,21 @@ margin-bottom: 15px;
         margin: 0rem !important;
     }
 
+    .rounded-search{
+        border-radius: 10px !important;
+    }
 
+    .carousel-monuments-home{
+        margin: 0 !important;
+        min-height: 24vh !important;
+    }
+
+
+}
+
+
+.rounded-search{
+    border-radius: 50px ;
 }
 
 .image-home-carousel-360{
@@ -1623,4 +1661,25 @@ margin-bottom: 15px;
     background-position: center;
     background-size: cover;
     border-radius: 10px;
+}
+
+.carousel-monuments-home{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-right: 3rem ; 
+    margin-left: 3rem ;
+    min-height: auto;
+}
+
+.carousel-monuments-home .text-left{
+    width: 40% !important;
+}
+
+.carousel-monuments-home img{
+    width: 60% !important;
+}
+
+.r-gap{
+    row-gap: 15px;
 }

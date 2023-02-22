@@ -12,8 +12,8 @@ function CarouselModelsContainer() {
                     CarouselModelsData.it.map((data, key) => {
                         return (
                             <Carousel.Item key={key}>
-                                <div className="row mx-5 px-5 card-3d-carousel">
-                                    <div className="col text-left carousel-info p-4 m-4 ">
+                                <div className="row card-3d-carousel">
+                                    <div className="col text-left carousel-info p-4  ">
                                         <h1 className="carousel-title mob-h2">{data.title}</h1>
                                         <p className="carousel-desc-3d col-6 mob-p">{data.desc}</p>
                                         <form action="#" className="form-search">
@@ -25,7 +25,7 @@ function CarouselModelsContainer() {
                                             </Link>
                                         </form>
                                     </div>
-                                    <Image rounded className="col carousel-image-3d m-4" alt={data.alt} src={process.env.PUBLIC_URL + data.path}></Image>
+                                    <Image rounded className="col carousel-image-3d " alt={data.alt} src={process.env.PUBLIC_URL + data.path}></Image>
                                 </div>
                             </Carousel.Item>
                         )
