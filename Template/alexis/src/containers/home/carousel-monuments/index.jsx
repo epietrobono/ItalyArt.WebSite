@@ -11,8 +11,8 @@ function CarouselMonumentsContainer() {
                     CarouselMonumentsData.it.map((data, key) => {
                         return (
                             <Carousel.Item key={key}>
-                                <div className="row mx-5 px-5">
-                                    <div className="col text-left carousel-info p-4 m-4">
+                                <div className="row mx-5 carousel-monuments-home">
+                                    <div className="col text-left carousel-info  ">
                                         <h1 className="carousel-title">{data.title}</h1>
                                         <p className="carousel-desc">{data.desc}</p>
                                         <form action="#" className="form-search">
@@ -24,7 +24,7 @@ function CarouselMonumentsContainer() {
                                             </Link>
                                         </form>
                                     </div>
-                                    <Image rounded className="col carousel-image m-4" alt={data.alt} src={process.env.PUBLIC_URL + data.path}></Image>
+                                    <Image rounded className="col  image-home-carousel-360" alt={data.alt} src={process.env.PUBLIC_URL + data.path}></Image>
                                 </div>
                             </Carousel.Item>
                         )
