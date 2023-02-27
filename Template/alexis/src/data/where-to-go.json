@@ -2,7 +2,7 @@
     "it": {
         "title": "Dove vuoi andare?",
         "subtitle": "Cerca nella mappa",
-        "desc": "Per trovare il luogo che vuoi visitare, cerca sulla mappa interattiva e scopri tutti i posti da vedere. La tua prossima avventura ti aspetta!",
+        "desc": "Per trovare il luogo che vuoi visitare, cerca sulla mappa interattiva e scopri tutti i luoghi da vedere. La tua prossima avventura ti aspetta!",
         "placeholder": "Inserisci città, paese o indirizzo...",
         "buttonText": "Cerca",
         "url": "#/search-locations",

@@ -551,6 +551,7 @@
     color: #2E2E2E;
     font-weight: 500;
     padding: 4px 40px !important;
+    white-space: nowrap;
 }
 
 .botton-monument-carousel:hover{
@@ -952,6 +953,7 @@ margin-bottom: 15px;
         text-align: center;
         padding: 0px;
         border: none !important;
+        margin-left: 0 !important;
     }
     .home-overlay {
         height: 90vh;
@@ -1075,6 +1077,7 @@ margin-bottom: 15px;
         color: #2E2E2E;
         font-weight: 500;
         padding: 1px 20px !important;
+        white-space: nowrap;
     }
 
     #button-3d, #button-360{
@@ -1551,9 +1554,10 @@ margin-bottom: 15px;
     }
 
     .image-home-carousel-360{
-        height: max-content !important;
+        height: auto !important;
         width: 30% !important;
         margin: 0rem !important;
+        object-fit: cover;
     }
 
     .rounded-search{
@@ -1563,6 +1567,10 @@ margin-bottom: 15px;
     .carousel-monuments-home{
         margin: 0 !important;
         min-height: 24vh !important;
+    }
+
+    .carousel-monuments-home img{
+        width: 50% !important;
     }
 
 
@@ -1678,7 +1686,8 @@ margin-bottom: 15px;
 }
 
 .carousel-monuments-home img{
-    width: 60% !important;
+    width: 60%;
+    padding: 0;
 }
 
 .r-gap{
@@ -1704,3 +1713,36 @@ margin-bottom: 15px;
     padding-right: 2%;
     padding-left: 2%;
 }
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    
+    .search-icon {
+        text-indent: 34px;
+    }
+
+    .logo-footer {
+        width: 25%;
+    }
+
+    .footer-area.border-top-style {
+        padding: 40px  ;
+    }
+
+  }
+
+  @media all and (device-width: 1024px) and (device-height: 600px)  {
+    
+    .search-icon {
+        text-indent: 15px;
+    }
+
+    .extra-link{
+        height: 37vh;
+    }
+
+    .carousel {
+        overflow: auto;
+    }
+
+
+  }

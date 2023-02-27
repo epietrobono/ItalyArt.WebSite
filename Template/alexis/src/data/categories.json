@@ -1,7 +1,8 @@
 {
     "it": {
         "title": "Cosa vuoi vedere?",
-        "desc": "Viaggia attraverso l'arte italiana come se fossi lì! Scopri i tesori nascosti delle città italiane, respira la magia e progetta il tuo viaggio, da virtuale a reale.",
+        "desc": "Viaggia attraverso l'arte italiana come se fossi lì! ",
+        "desc2": "Scopri i tesori nascosti delle città italiane, respira la magia e progetta il tuo viaggio, da virtuale a reale.",
         "categories": [
             {
                 "name": "Palazzi",
