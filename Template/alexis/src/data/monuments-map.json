@@ -1,7 +1,7 @@
 {
     "it": {
         "alsoTitle": "Vedi Anche",
-        "otherTitle": "Visita anche questi posti",
+        "otherTitle": "Visita anche questi luoghi",
         "monuments": [
             {
                 "id": 1,
@@ -135,7 +135,5 @@
             }
         ]
     },
-    "us": {
-
-    }
+    "us": {}
 }
