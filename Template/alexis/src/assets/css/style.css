@@ -700,6 +700,7 @@
 }
 .logo-footer{
     width: 50%;
+    max-width: 200px;
 }
 
 .img-monumenty-card img{
@@ -1762,6 +1763,12 @@ margin-bottom: 15px;
   @media screen and (max-width: 450px){
     h5 {
         font-size: 12px !important;
+    }
+     
+  }
+  @media screen and (max-width: 1000px){
+    .footer-content{
+        display: flex !important;
     }
      
   }
