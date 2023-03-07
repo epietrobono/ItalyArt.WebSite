@@ -14,11 +14,11 @@
 .extra-links-background{
     background-color: #f9e7e7;
     height: auto;
+    align-items: stretch !important;
 }
 
 .extra-link {
     max-width: 25%;
-    height: 29vh;
     border-radius: 10px !important;
     padding: 1.5rem 0.5rem 1.5rem 0.5rem !important;
 }
@@ -535,6 +535,7 @@
     color: #2E2E2E;
     font-weight: 500;
     padding: 4px 40px !important;
+    white-space: nowrap;
 }
 
 .botton-suggestions:hover{
@@ -969,6 +970,7 @@ margin-bottom: 15px;
 
     .extra-links-background{
         flex-direction: column;
+        align-items: stretch !important;
     }
 
     .extra-link {
@@ -1114,13 +1116,15 @@ margin-bottom: 15px;
 
     .sezione-card-monumenti{
         gap: 10px ;
+        grid-template-columns: repeat(auto-fit, minmax(162px, 2fr)) !important;
+        justify-items: start !important;
     }
 
     
 
     .card-monumenti{
         flex: 1 !important;
-        max-width: 50%;
+        max-width: unset !important;
     }
 
     .main-content {
@@ -1532,6 +1536,7 @@ margin-bottom: 15px;
         margin: 0 4% !important;
     }
 
+    
     .card-background{
         height: 150px !important;
         background-position: center;
@@ -1571,6 +1576,10 @@ margin-bottom: 15px;
 
     .carousel-monuments-home img{
         width: 50% !important;
+    }
+
+    .header-action-area{
+        margin-right: -10px;
     }
 
 
@@ -1714,6 +1723,13 @@ margin-bottom: 15px;
     padding-left: 2%;
 }
 
+.sezione-card-monumenti{
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
+    justify-items: center
+}
+
+
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
     
     .search-icon {
@@ -1736,13 +1752,16 @@ margin-bottom: 15px;
         text-indent: 15px;
     }
 
-    .extra-link{
-        height: 37vh;
-    }
-
     .carousel {
         overflow: auto;
     }
 
 
+  }
+
+  @media screen and (max-width: 450px){
+    h5 {
+        font-size: 12px !important;
+    }
+     
   }
