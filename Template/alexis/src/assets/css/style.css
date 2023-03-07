@@ -1583,7 +1583,9 @@ margin-bottom: 15px;
         margin-right: -10px;
     }
 
-
+    .social-logo{
+        margin: 10px;
+    }
 }
 
 
@@ -1729,6 +1731,8 @@ margin-bottom: 15px;
     grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
     justify-items: center
 }
+
+
 
 
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
