@@ -1731,6 +1731,9 @@ margin-bottom: 15px;
     grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
     justify-items: center
 }
+.carousel {
+    overflow: auto;
+}
 
 
 
