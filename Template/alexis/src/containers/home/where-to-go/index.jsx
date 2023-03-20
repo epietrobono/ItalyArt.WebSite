@@ -15,7 +15,7 @@ const WhereToGoContainer = () => {
                     <div className="col col-6 mx-6">
                         <div className="where-to-go-form ">
                             <h2 className="mob-h2">{data.subtitle}</h2>
-                            <p className="text-wrap mob-p">{data.desc}</p>
+                            <p className="mob-p" style={{"white-space": "pre-line"}}>{data.desc}</p>
                             <div className="mob-none" >
                                 <SearchForm data={data} />
                             </div>
