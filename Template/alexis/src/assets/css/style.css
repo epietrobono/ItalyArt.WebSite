@@ -1727,9 +1727,13 @@ margin-bottom: 15px;
 }
 
 .sezione-card-monumenti{
-    display: grid !important;
+    display: grid ;
     grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
     justify-items: center
+}
+
+.flex-container-monuments{
+    display: flex !important;
 }
 
 .dropdown-menu{
@@ -1758,6 +1762,10 @@ margin-bottom: 15px;
 .form-select{
     color: #C21718 !important;
     background: rgb(255, 255, 255) !important;
+}
+
+.logo-main, .logo-light{
+    max-width: 68px;
 }
 
 

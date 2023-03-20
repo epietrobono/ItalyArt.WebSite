@@ -42,6 +42,7 @@ const Header = ({ classOption }) => {
                             <div className="header-logo-area">
                                 <Logo
                                     image={`${process.env.PUBLIC_URL}/img/logo.png`}
+                                    className="logo-nav-bar"
                                 />
                             </div>
                         </div>
