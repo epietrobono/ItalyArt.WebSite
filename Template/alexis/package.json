@@ -32,8 +32,8 @@
     "react-error-overlay": "6.0.9"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "start": "react-scripts start --openssl-legacy-provider ",
+    "build": "react-scripts build --openssl-legacy-provider ",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.{js,jsx}\"",

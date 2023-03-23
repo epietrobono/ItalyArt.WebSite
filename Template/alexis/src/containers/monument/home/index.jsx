@@ -1,10 +1,17 @@
 import PropTypes from "prop-types";
 import Model3D from "../3dmodel";
-import Tour360 from "../tour360";
-import Title from "../title";
+import MonumentCitContainer from "../citazione";
+import MonumentRightImgContainer from "../imageADestra";
+import MonumentLeftImgContainer from "../imageASinistra";
 import Text from "../text";
+import Title from "../title";
+import Tour360 from "../tour360";
 
 const MonumentHomeContainer = ({monuments,id}) => {
+    
+    let testoDestra = 0;
+    let testoSinistra = 0;
+    let citazione = 0;
     
     const monument = monuments.filter((monument)=>{
         if (monument.id == id){
@@ -24,6 +31,21 @@ const MonumentHomeContainer = ({monuments,id}) => {
                             return (<Model3D contenuto={contenuto}></Model3D>);
                         case 'tour':                                            
                             return (<Tour360 contenuto={contenuto}></Tour360>);
+                        case 'testoADestra':                                            
+                            testoDestra++;
+                            return (
+                                <MonumentLeftImgContainer contenuto={contenuto} nSezione={testoDestra - 1} />
+                            );
+                        case 'testoASinistra':                                            
+                            testoSinistra++;
+                            return (
+                                <MonumentRightImgContainer contenuto={contenuto} nSezione={testoSinistra - 1} />
+                            );
+                        case 'citazione':                                            
+                            citazione++;
+                            return (
+                                <MonumentCitContainer contenuto={contenuto} nSezione={citazione - 1} />
+                            );
                         default:
                             return'';
                     }
