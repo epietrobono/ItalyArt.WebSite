@@ -20,7 +20,7 @@ const MonumentPage = ({
     const monuments = data.monuments;
     console.log(monuments);
     const monument = monuments.filter((monument)=>{
-        if (monument.id == id){
+        if (monument.id == parseInt(id)){
             return monument
         }
     }).pop();
@@ -67,7 +67,7 @@ const MonumentPage = ({
 MonumentPage.propTypes = {
     match: PropTypes.shape({
         params: PropTypes.shape({
-            id: PropTypes.number,
+            id: PropTypes.string,
         }),
     }),
 };

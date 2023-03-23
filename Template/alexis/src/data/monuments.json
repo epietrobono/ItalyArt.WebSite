@@ -19,61 +19,7 @@
 				"image": {
 					"path": "/img/monuments/arco-traiano.jpg",
 					"alt": "Arco di Traiano a Benevento"
-				},
-				"testoADestra": [
-					{
-						"image": {
-							"path": "/img/monuments/arco-traiano.jpg",
-							"alt": "Arco di Traiano a Benevento"
-						},
-						"titolo": "Titolo img a destra",
-						"testo": "testo img a destra prova Eu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proi, "
-					}
-				],
-				"testoASinistra": [
-					{
-						"image": {
-							"path": "/img/monuments/arco-traiano.jpg",
-							"alt": "Arco di Traiano a Benevento"
-						},
-						"titolo": "Titolo img a sinistra",
-						"testo": "testo img a sinistra prova Eu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proi, "
-					}
-				],
-				"testoConTitolo": [
-					{
-						"titolo": "testo con titolo ",
-						"testo": "testo con titolo prova ident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proi, "
-					}
-				],
-				"citazione": [
-					{
-						"citazione": "testo con citazione ",
-						"testo": "testo con citazione prova ident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proi, "
-					}
-				],
-				"gallery": [
-					{
-						"alt": "Arco di Traiano a Benevento",
-						"path": "/img/monuments/arco-traiano.jpg"
-					},
-					{
-						"alt": "Arco di Traiano a Benevento",
-						"path": "/img/monuments/arco-traiano.jpg"
-					},
-					{
-						"alt": "Arco di Traiano a Benevento",
-						"path": "/img/monuments/arco-traiano.jpg"
-					},
-					{
-						"alt": "Arco di Traiano a Benevento",
-						"path": "/img/monuments/arco-traiano.jpg"
-					},
-					{
-						"alt": "Arco di Traiano a Benevento",
-						"path": "/img/monuments/arco-traiano.jpg"
-					}
-				]
+				}
 			},
 			{
 				"id": 2,

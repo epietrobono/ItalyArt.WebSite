@@ -1,29 +1,29 @@
 import PropTypes from "prop-types";
 
-const MonumentCitContainer = ({contenuto, nSezione }) => {
+const MonumentGalleryContainer = ({contenuto }) => {
     return (
         <div className="row justify-content-center">
             <div className="col col-auto border-citazione">
                 {
-                    contenuto.gallery.map((content, index) => {
+                    contenuto.images.map((content, index) => {
                         return <img src={content.path} alt={content.alt} key={index} />;
-                      });
+                      })
                 }
             </div>
         </div>
     );
 };
 
-MonumentCitContainer.propTypes = {
+MonumentGalleryContainer.propTypes = {
     contenuto: PropTypes.shape({
-        gallery: PropTypes.arrayOf(
-          PropTypes.shape({
-            alt: PropTypes.string,
-            path: PropTypes.string,
-          })
-        )
-      }),      
-      nSezione: PropTypes.number.isRequired,
-    };
+      images: PropTypes.arrayOf(
+        PropTypes.shape({
+          path: PropTypes.string.isRequired,
+          alt: PropTypes.string.isRequired,
+        })
+      ).isRequired,
+    }).isRequired,
+  };
 
-export default MonumentCitContainer;
+
+export default MonumentGalleryContainer;

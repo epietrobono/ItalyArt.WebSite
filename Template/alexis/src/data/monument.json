@@ -12,7 +12,11 @@
                         "titolo": "Arco di Traiano a Benevento",
                         "model3D": "",
                         "tour360": "",
-                        "image": "",
+                        "image": {
+                            "path": "/img/monuments/arco-traiano.jpg",
+                            "alt": "Arco di Traiano a Benevento"
+                        },
+                        "images": [],
                         "testo": ""
                     },
                     {
@@ -20,8 +24,117 @@
                         "titolo": "Arco di Traiano a Benevento",
                         "model3D": "<div class='sketchfab-embed-wrapper'> <iframe class='embed-responsive iframe-model3D' title='Villa del Colle del Cardinale Perugia' frameborder='0' allowfullscreen mozallowfullscreen='true' webkitallowfullscreen='true' allow='autoplay; fullscreen; xr-spatial-tracking' xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src='https://sketchfab.com/models/207d0db400224756867809de461a926d/embed?autostart=0&preload=1&transparent=1'> </iframe> </div>",
                         "tour360": "",
-                        "image": "/img/model3D/arco-traiano.jpg",
+                        "image": {
+                            "path": "/img/monuments/arco-traiano.jpg",
+                            "alt": "Arco di Traiano a Benevento"
+                        },
+                        "images": [],
                         "testo": ""
+                    },
+                    {
+                        "type": "text",
+                        "titolo": "Arco di Traiano a Benevento",
+                        "image": {
+                            "path": "/img/monuments/arco-traiano.jpg",
+                            "alt": "Arco di Traiano a Benevento"
+                        },
+                        "model3D": "",
+                        "tour360": "",
+                        "images": [],
+                        "testo": "testo img a destra prova Eu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proi, "
+                    },
+                    {
+                        "type": "testoADestra",
+                        "titolo": "Arco di Traiano a Benevento",
+                        "image": {
+                            "path": "/img/monuments/arco-traiano.jpg",
+                            "alt": "Arco di Traiano a Benevento"
+                        },
+                        "model3D": "",
+                        "tour360": "",
+                        "images": [],
+                        "testo": "testo img a destra prova Eu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proi, "
+                    },
+                    {
+                        "type": "testoASinistra",
+                        "titolo": "Arco di Traiano a Benevento",
+                        "image": {
+                            "path": "/img/monuments/arco-traiano.jpg",
+                            "alt": "Arco di Traiano a Benevento"
+                        },
+                        "model3D": "",
+                        "tour360": "",
+                        "images": [],
+                        "testo": "testo img a destra prova Eu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proi, "
+                    },
+                    {
+                        "type": "testoConTitolo",
+                        "titolo": "Arco di Traiano a Benevento",
+                        "image": {
+                            "path": "/img/monuments/arco-traiano.jpg",
+                            "alt": "Arco di Traiano a Benevento"
+                        },
+                        "model3D": "",
+                        "tour360": "",
+                        "images": [],
+                        "testo": "testo con titolo prova ident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proi, "
+                    },
+                    {
+                        "type": "citazione",
+                        "titolo": "Arco di Traiano a Benevento",
+                        "image": {
+                            "path": "/img/monuments/arco-traiano.jpg",
+                            "alt": "Arco di Traiano a Benevento"
+                        },
+                        "model3D": "",
+                        "tour360": "",
+                        "images": [],
+                        "testo": "testo con citazione prova ident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proi, "
+                    },
+                    {
+                        "type": "testoConTitolo",
+                        "titolo": "Arco di Traiano a Benevento",
+                        "image": {
+                            "path": "/img/monuments/arco-traiano.jpg",
+                            "alt": "Arco di Traiano a Benevento"
+                        },
+                        "model3D": "",
+                        "tour360": "",
+                        "images": [],
+                        "testo": "testo con citazione prova ident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proi, "
+                    },
+                    {
+                        "type": "galleria",
+                        "titolo": "Arco di Traiano a Benevento",
+                        "image": {
+                            "path": "/img/monuments/arco-traiano.jpg",
+                            "alt": "Arco di Traiano a Benevento"
+                        },
+                        "model3D": "",
+                        "tour360": "",
+                        "testo": "testo con citazione prova ident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proi, ",
+                        "images": [
+                            {
+                                "alt": "Arco di Traiano a Benevento",
+                                "path": "/img/monuments/arco-traiano.jpg"
+                            },
+                            {
+                                "alt": "Arco di Traiano a Benevento",
+                                "path": "/img/monuments/arco-traiano.jpg"
+                            },
+                            {
+                                "alt": "Arco di Traiano a Benevento",
+                                "path": "/img/monuments/arco-traiano.jpg"
+                            },
+                            {
+                                "alt": "Arco di Traiano a Benevento",
+                                "path": "/img/monuments/arco-traiano.jpg"
+                            },
+                            {
+                                "alt": "Arco di Traiano a Benevento",
+                                "path": "/img/monuments/arco-traiano.jpg"
+                            }
+                        ]
                     }
                 ],
                 "isSezioni": "false",
