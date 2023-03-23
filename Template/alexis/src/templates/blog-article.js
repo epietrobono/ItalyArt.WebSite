@@ -21,14 +21,14 @@ const BlogArticle = ({
     const [monumentsData, setmonumentsData] = useState({});
     const [isMounted15, setIsMounted15] = useState(false);
     
-    useEffect(() => {
+    useEffect(async () => {
         console.log("entro in useEffects");
-        setIsMounted15(true);
-        Api.GetTestiArticoli().then((results) => {    
+        await Api.GetTestiArticoli().then((results) => {    
+            setIsMounted15(true);
             console.log("esegue then");
             setarticlesData(results);
         });
-        Api.GetMonuments().then((results) => {    
+        await Api.GetMonuments().then((results) => {    
             console.log("esegue then");
             setmonumentsData(results);
         });

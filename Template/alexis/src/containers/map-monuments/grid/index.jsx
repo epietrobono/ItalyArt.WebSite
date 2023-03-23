@@ -7,10 +7,10 @@ function GridContainer({nCols}) {
     const [GridContainerData, setGridContainerData] = useState({});
     const [isMounted10, setIsMounted10] = useState(false);
     
-    useEffect(() => {
+    useEffect(async () => {
         console.log("entro in useEffects");
-        setIsMounted10(true);
-        Api.GetMonuments().then((results) => {    
+        await Api.GetMonuments().then((results) => {    
+            setIsMounted10(true);
         console.log("esegue then");
         setGridContainerData(results);
       });

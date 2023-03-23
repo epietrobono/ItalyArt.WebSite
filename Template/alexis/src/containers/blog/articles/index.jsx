@@ -6,10 +6,10 @@ const ArticlesContainer = () => {
     const [articlesContainerData, setarticlesContainerData] = useState({});
     const [isMounted1, setIsMounted1] = useState(false);
 
-    useEffect(() => {
+    useEffect(async() => {
         console.log("entro in useEffects");
-        setIsMounted1(true);
-        Api.GetTestiArticoli().then((results) => {
+        await Api.GetTestiArticoli().then((results) => {
+            setIsMounted1(true);
         
         console.log("esegue then");
         setarticlesContainerData(results);

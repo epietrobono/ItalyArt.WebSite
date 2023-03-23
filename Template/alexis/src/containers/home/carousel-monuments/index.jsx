@@ -8,10 +8,10 @@ function CarouselMonumentsContainer() {
     const [carouselMonumentsContainerData, setcarouselMonumentsContainerData] = useState({});
     const [isMounted3, setIsMounted3] = useState(false);
     
-    useEffect(() => {
+    useEffect(async () => {
         console.log("entro in useEffects");
-        setIsMounted3(true);
-        Api.GetCarouselModel360().then((results) => {    
+        await Api.GetCarouselModel360().then((results) => {    
+            setIsMounted3(true);
         console.log("esegue then");
         setcarouselMonumentsContainerData(results);
       });

@@ -7,12 +7,13 @@ import Api from "../../services/Api";
 const Footer = () => {    
     const [FooterData, setFooterData] = useState({});
     const [isMounted12, setIsMounted12] = useState(false);
-    
-    useEffect(() => {
+    var data;
+    useEffect(async () => {
         console.log("entro in useEffects");
-        setIsMounted12(true);
-        Api.GetFooter().then((results) => {    
+        await Api.GetFooter().then((results) => { 
+        setIsMounted12(true);   
         console.log("esegue then");
+        data=results;
         setFooterData(results);
       });
     }, []);

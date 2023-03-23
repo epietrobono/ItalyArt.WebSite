@@ -6,10 +6,10 @@ const ModelSuggestionsContainer = () => {
     const [modelSuggestionsContainerData, setmodelSuggestionsContainerData] = useState({});
     const [isMounted6, setIsMounted6] = useState(false);
     
-    useEffect(() => {
+    useEffect(async () => {
         console.log("entro in useEffects");
-        setIsMounted6(true);
-        Api.GetMonuments3DHome().then((results) => {    
+        await Api.GetMonuments3DHome().then((results) => {    
+            setIsMounted6(true);
         console.log("esegue then");
         setmodelSuggestionsContainerData(results);
       });

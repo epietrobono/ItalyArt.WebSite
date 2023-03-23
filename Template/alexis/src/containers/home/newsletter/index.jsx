@@ -7,10 +7,10 @@ const NewsletterContainer = () => {
     const [NewsletterContainerData, setNewsletterContainerData] = useState({});
     const [isMounted8, setIsMounted8] = useState(false);
     
-    useEffect(() => {
+    useEffect(async () => {
         console.log("entro in useEffects");
-        setIsMounted8(true);
-        Api.GetNewsletter().then((results) => {    
+        await Api.GetNewsletter().then((results) => {    
+            setIsMounted8(true);
         console.log("esegue then");
         setNewsletterContainerData(results);
       });

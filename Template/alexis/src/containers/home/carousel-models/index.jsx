@@ -8,10 +8,10 @@ function CarouselModelsContainer() {
 const [carouselModelContainerData, setcarouselModelContainerData] = useState({});
 const [isMounted2, setIsMounted2] = useState(false);
 
-useEffect(() => {
+useEffect(async () => {
     console.log("entro in useEffects");
-    setIsMounted2(true);
-    Api.GetCarouselModel3D().then((results) => {    
+    await Api.GetCarouselModel3D().then((results) => {  
+        setIsMounted2(true);  
     console.log("esegue then");
     setcarouselModelContainerData(results);
   });

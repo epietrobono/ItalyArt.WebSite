@@ -7,10 +7,10 @@ const CategoriesContainer = () => {
     const [categoriesContainerData, setcategoriesContainerData] = useState({});
     const [isMounted4, setIsMounted4] = useState(false);
     
-    useEffect(() => {
+    useEffect(async () => {
         console.log("entro in useEffects");
-        setIsMounted4(true);
-        Api.GetCategorieHome().then((results) => {    
+        await Api.GetCategorieHome().then((results) => {    
+          setIsMounted4(true);
         console.log("esegue then");
         setcategoriesContainerData(results);
       });

@@ -14,10 +14,10 @@ const MonumentsPage = () => {
     const [MapMonumentsPageData, setMapMonumentsPageData] = useState({});
     const [isMounted13, setIsMounted13] = useState(false);
     
-    useEffect(() => {
+    useEffect(async () => {
         console.log("entro in useEffects");
-        setIsMounted13(true);
-        Api.GetMonumentPageText().then((results) => {    
+        await Api.GetMonumentPageText().then((results) => {    
+            setIsMounted13(true);
         console.log("esegue then");
         setMapMonumentsPageData(results);
       });

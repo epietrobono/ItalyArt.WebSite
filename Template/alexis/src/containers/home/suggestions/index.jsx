@@ -7,10 +7,10 @@ const SuggestionsContainer = () => {
     const [SuggestionsContainerData, setSuggestionsContainerData] = useState({});
     const [isMounted9, setIsMounted9] = useState(false);
     
-    useEffect(() => {
+    useEffect(async () => {
         console.log("entro in useEffects");
-        setIsMounted9(true);
-        Api.GetMonuments360Home().then((results) => {    
+        await Api.GetMonuments360Home().then((results) => {    
+            setIsMounted9(true);
         console.log("esegue then");
         setSuggestionsContainerData(results);
       });

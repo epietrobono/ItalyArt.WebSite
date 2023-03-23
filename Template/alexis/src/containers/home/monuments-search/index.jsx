@@ -7,10 +7,10 @@ const MonumentsSearchContainer = () => {
     const [MonumentsSearchContainerData, setMonumentsSearchContainerData] = useState({});
     const [isMounted7, setIsMounted7] = useState(false);
     
-    useEffect(() => {
+    useEffect(async () => {
         console.log("entro in useEffects");
-        setIsMounted7(true);
-        Api.GetBanner().then((results) => {    
+        await Api.GetBanner().then((results) => {    
+            setIsMounted7(true);
         console.log("esegue then");
         setMonumentsSearchContainerData(results);
       });

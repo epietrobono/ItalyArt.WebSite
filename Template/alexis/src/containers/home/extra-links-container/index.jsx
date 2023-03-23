@@ -6,10 +6,10 @@ const ExtraLinksContainer = () => {
     const [extraLinks, setExtraLinks] = useState([]);
     const [isMounted5, setIsMounted5] = useState(false);
 
-    useEffect(() => {
+    useEffect(async () => {
         console.log("entro in useEffects");
-        setIsMounted5(true);
-        Api.GetSubmenus().then((data) => {
+        await Api.GetSubmenus().then((data) => {
+            setIsMounted5(true);
         
         console.log("esegue then");
         setExtraLinks(data);

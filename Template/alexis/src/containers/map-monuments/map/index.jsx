@@ -19,10 +19,10 @@ function MapContainer() {
     const [MapContainerData, setMapContainerData] = useState({});
     const [isMounted11, setIsMounted11] = useState(false);
     
-    useEffect(() => {
+    useEffect(async () => {
         console.log("entro in useEffects");
-        setIsMounted11(true);
-        Api.GetMonuments().then((results) => {    
+        await Api.GetMonuments().then((results) => {    
+            setIsMounted11(true);
         console.log("esegue then");
         setMapContainerData(results);
       });
