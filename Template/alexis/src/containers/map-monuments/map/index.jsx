@@ -1,7 +1,7 @@
 import GoogleMapReact from 'google-map-react';
+import React, { useEffect, useState } from "react";
 import MapPlace from "../../../components/map-place";
 import MapPlaceTour from "../../../components/map-place-tour";
-import {React,useEffect, useState }  from "react";
 import Api from "../../../services/Api";
 
 
@@ -17,23 +17,21 @@ function MapContainer() {
     const demoFancyMapStyles = require("../../../data/map-style.json");
 
     const [MapContainerData, setMapContainerData] = useState({});
-    const [isMounted11, setIsMounted11] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     
-    useEffect(async () => {
-        console.log("entro in useEffects");
-        await Api.GetMonuments().then((results) => {    
-            setIsMounted11(true);
-        console.log("esegue then");
-        setMapContainerData(results);
-      });
+    useEffect(() => {
+        const fetchData = async () => {
+            const results = await Api.GetMonuments()  
+            setMapContainerData(results);
+            setIsLoading(false);
+        }
+        fetchData();
     }, []);
-    
-    if (!isMounted11) {
-        return null; // non renderizzare il componente fino a quando non è montato
-      }
     
     return (
         // Important! Always set the container height explicitly
+        <>
+        {!isLoading && (
         <div className="map-position" style={{ height: '70vh', width: '100%' }}>
            <GoogleMapReact
                 bootstrapURLKeys={{ key: "AIzaSyC5scNnifCVhQTXGB2lciM4Ai15rYKgDrM" }}
@@ -57,6 +55,8 @@ function MapContainer() {
                 }
             </GoogleMapReact>
         </div>
+        )}
+        </>
         );
     }
 

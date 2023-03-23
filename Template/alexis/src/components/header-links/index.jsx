@@ -1,6 +1,12 @@
 import PropTypes from "prop-types";
+import React, { useEffect } from "react";
 
 function HeaderLinks({ data }) {
+
+    useEffect (() => {
+        console.log('menu'+data)
+    },[])
+
     return (
         <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid">

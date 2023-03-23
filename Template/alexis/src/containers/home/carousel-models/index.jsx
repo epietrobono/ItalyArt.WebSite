@@ -1,28 +1,28 @@
+import React, { useEffect, useState } from "react";
 import { Image } from "react-bootstrap";
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from "react-router-dom";
 import Api from "../../../services/Api";
-import {React,useEffect, useState }  from "react";
 
 function CarouselModelsContainer() {    
 const [carouselModelContainerData, setcarouselModelContainerData] = useState({});
-const [isMounted2, setIsMounted2] = useState(false);
+const [isLoading, setIsLoading] = useState(true);
 
-useEffect(async () => {
-    console.log("entro in useEffects");
-    await Api.GetCarouselModel3D().then((results) => {  
-        setIsMounted2(true);  
-    console.log("esegue then");
-    setcarouselModelContainerData(results);
-  });
+useEffect(() => {
+    const fetchData = async () => { 
+        const results = await Api.GetCarouselModel3D()  
+        setcarouselModelContainerData(results);
+        setIsLoading(false);
+    }
+    fetchData()
 }, []);
 
-if (!isMounted2) {
-    return null; // non renderizzare il componente fino a quando non è montato
-  }
+
     return (
         <div className="container-ita">
         <div className="carousel-models section-margin " id="tred-carousel">
+        {!isLoading && (
+        <>
             <Carousel indicators={false}>
                 {
                     carouselModelContainerData?.map((monumento, key) => {
@@ -48,6 +48,8 @@ if (!isMounted2) {
                     })
                 }
             </Carousel>
+        </>
+        )}
         </div>
         </div>
     );

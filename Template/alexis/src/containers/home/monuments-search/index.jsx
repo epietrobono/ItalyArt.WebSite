@@ -1,29 +1,27 @@
-import {React,useEffect, useState }  from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import SearchForm from "../../../components/search-form";
 import Api from "../../../services/Api";
 
 const MonumentsSearchContainer = () => {
     const [MonumentsSearchContainerData, setMonumentsSearchContainerData] = useState({});
-    const [isMounted7, setIsMounted7] = useState(false);
-    
-    useEffect(async () => {
-        console.log("entro in useEffects");
-        await Api.GetBanner().then((results) => {    
-            setIsMounted7(true);
-        console.log("esegue then");
-        setMonumentsSearchContainerData(results);
-      });
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const results = await Api.GetBanner()  
+            setMonumentsSearchContainerData(results);
+            setIsLoading(false);
+        }
+        fetchData();
     }, []);
     
-    if (!isMounted7) {
-        return null; // non renderizzare il componente fino a quando non è montato
-      }
+
     
         return (
             <div className="home-global">
             <Carousel className="home-banners" indicators={false}>
-                    {
+                    {!isLoading &&
                         MonumentsSearchContainerData?.Banners?.map((banner, key) => {
                             return (
                                 <Carousel.Item style={{width: "100%"}} key={key}>

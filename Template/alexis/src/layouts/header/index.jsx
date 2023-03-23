@@ -4,35 +4,40 @@ import HamburgerMenu from "../../components/hamburger-menu";
 import HeaderLinks from "../../components/header-links";
 import LanguageSelector from "../../components/language-selector";
 import Logo from "../../components/logo/index";
-import Api from "../../services/Api";
 
 const Header = ({ classOption }) => {
     const [ofcanvasShow, setOffcanvasShow] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+    
+    const [data, setData] = useState({});
+    
     const onCanvasHandler = () => {
         setOffcanvasShow((prev) => !prev);
     };
+    
     const [searchbarShow, setSearchbarShow] = useState(false);
     const onSearchHandler = () => {
         setSearchbarShow((prev) => !prev);
     };
+    
     const [scroll, setScroll] = useState(0);
     const [headerTop, setHeaderTop] = useState(0);
-    useEffect(() => {
-        const header = document.querySelector(".header-area");
-        setHeaderTop(header.offsetTop);
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
+    
+    // useEffect(() => {
+    //     const header = document.querySelector(".header-area");
+    //     setHeaderTop(header.offsetTop);
+    //     window.addEventListener("scroll", handleScroll);
+    //     return () => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     };
+    // }, []);
+    
     const handleScroll = ({}) => {
         setScroll(window.scrollY);
     };
-
-    const [data, setData] = useState({});
+    
     useEffect(() => {
-        async function getAjaxApiData() {
+        const getAjaxApiData = async () =>  {
             const postBody = {
                 Pagina:"Home",
                 Lingua:"IT"
@@ -48,13 +53,23 @@ const Header = ({ classOption }) => {
             const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/SubMenus`, settings);
             const responseJson = await response.json();
             setData(responseJson.results);
+            setIsLoading(false);
+            const header = document.querySelector(".header-area");
+            setHeaderTop(header.offsetTop);
+            window.addEventListener("scroll", handleScroll);
+            return () => {
+                window.removeEventListener("scroll", handleScroll);
+            };
         }
-
+    
         getAjaxApiData();
+
         }, []);
 
     return (
         <Fragment>
+            {!isLoading && ( 
+            <>
             <header
                 className={`py-0 header-area header-default sticky-header ${classOption} ${
                     scroll > headerTop ? "sticky" : ""
@@ -96,7 +111,9 @@ const Header = ({ classOption }) => {
                 </div>
             </header>
             <HamburgerMenu show={ofcanvasShow} onClose={onCanvasHandler} data={data}></HamburgerMenu>
-        </Fragment>
+       </> 
+            )}
+       </Fragment>
     );
 };
 
