@@ -7,19 +7,19 @@ function HeaderLinks({ data }) {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="mx-3 nav-link active" aria-current="page" href="/">{data.home}</a>
+                            <a className="mx-3 nav-link active" aria-current="page" href="/">{data.Home}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="mx-3 nav-link" href="/monuments">{data.monuments}</a>
+                            <a className="mx-3 nav-link" href="/monuments">{data.Monuments}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="mx-3 nav-link" href="/blog">{data.blog}</a>
+                            <a className="mx-3 nav-link" href="/blog">{data.Blog}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="mx-3 nav-link" href="/map">{data.map}</a>
+                            <a className="mx-3 nav-link" href="/map">{data.Map}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="mx-3 nav-link" href="/about">{data.about}</a>
+                            <a className="mx-3 nav-link" href="/about">{data.About}</a>
                         </li>
                     </ul>
                 </div>

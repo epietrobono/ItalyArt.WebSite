@@ -2,7 +2,7 @@ import GoogleMapReact from 'google-map-react';
 import React from "react";
 import MapPlace from "../../../components/map-place";
 import MapPlaceTour from "../../../components/map-place-tour";
-import MonumentsData from "../../../data/map-monuments.json";
+import {React,useEffect, useState }  from "react";
 
 
 function MapContainer() {
@@ -14,8 +14,30 @@ function MapContainer() {
         zoom: 9.5,
         greatPlaceCoords: {lat: 43.327874, lng: 11.321994}
         };
-    const data = MonumentsData.it;
     const demoFancyMapStyles = require("../../../data/map-style.json");
+
+    const [data, setData] = useState({});
+    useEffect(() => {
+        async function getAjaxApiData() {
+            const postBody = {
+                Pagina:"Home",
+                Lingua:"IT"
+            };
+            const settings = {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(postBody)
+            };
+            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/Monuments`, settings);
+            const responseJson = await response.json();
+            setData(responseJson.results);
+        }
+
+        getAjaxApiData();
+        }, []);
     
     return (
         // Important! Always set the container height explicitly
@@ -28,14 +50,14 @@ function MapContainer() {
                 yesIWantToUseGoogleMapApiInternals
                 >
                 {
-                    data.monuments.map((val, key)=>{
-                        if(val.type=="3Dmodel"){
+                    data.Monuments.map((val, key)=>{
+                        if(val.Type=="3Dmodel"){
                             return(
-                                <MapPlaceTour lat={val.gps.latitude} lng={val.gps.longitude} text={val.title} key={key} />
+                                <MapPlaceTour lat={val.Gps.Latitude} lng={val.Gps.Longitude} text={val.Title} key={key} />
                             )
                         }else{
                             return(
-                                <MapPlace lat={val.gps.latitude} lng={val.gps.longitude} text={val.title} key={key} />
+                                <MapPlace lat={val.Gps.Latitude} lng={val.Gps.Longitude} text={val.Title} key={key} />
                             )
                         }
                     })

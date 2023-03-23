@@ -7,26 +7,26 @@ function MonumentPreview ({data, preview=true, titleLocation=false}) {
         <div className="row-mod" >
             <div className="col col-auto card-mon-blog">
                 <div className="row-mod ">
-                    <Image rounded className="m-bott-card img-blog-mon" alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
+                    <Image rounded className="m-bott-card img-blog-mon" alt={data.Image.Alt} src={process.env.PUBLIC_URL + data.Image.Path}></Image>
                 </div>
                 <div className="row-mod blog-mon">
                     {
-                        titleLocation ? <h4 className="monument-card-title  margin-title-article ">{data.title + " - " + data.location}</h4 > : <h4 className="monument-card-title margin-title-article">{data.title}</h4>
+                        titleLocation ? <h4 className="monument-card-title  margin-title-article ">{data.Title + " - " + data.Location}</h4 > : <h4 className="monument-card-title margin-title-article">{data.Title}</h4>
                     }
-                    <strong>{data.subtitle}</strong>
+                    <strong>{data.Subtitle}</strong>
                     {
-                        preview ? <p className="mob-p">{data.preview}</p> : ""
+                        preview ? <p className="mob-p">{data.Preview}</p> : ""
                     }
                     
                     {
-                        titleLocation ? "" : <p className="col col-auto mob-p">{data.location}</p>
+                        titleLocation ? "" : <p className="col col-auto mob-p">{data.Location}</p>
                     }
-                    <form className="btn-right" action={data.url}>
+                    <form className="btn-right" action={data.Url}>
                         <Link
-                            to={process.env.PUBLIC_URL + data.url}
+                            to={process.env.PUBLIC_URL + data.Url}
                             className="col  botton-card col-auto btn btn-light border rounded-pill ms-2"
                         >
-                            {data.buttonText}
+                            {data.ButtonText}
                         </Link>
                     </form>
                 </div>

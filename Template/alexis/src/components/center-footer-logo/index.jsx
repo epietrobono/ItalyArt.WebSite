@@ -9,7 +9,7 @@ function CenterFooterLogo({ data }) {
                     image={`${process.env.PUBLIC_URL}/img/footer-logo.png`}
                 />
                 <p className="text-wrap">
-                    {data.desc}
+                    {data.Desc}
                 </p>
             </div>
         </div>

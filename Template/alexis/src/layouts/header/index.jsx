@@ -4,7 +4,7 @@ import HamburgerMenu from "../../components/hamburger-menu";
 import HeaderLinks from "../../components/header-links";
 import LanguageSelector from "../../components/language-selector";
 import Logo from "../../components/logo/index";
-import HeaderLinksData from "../../data/header-links.json";
+import {React,useEffect, useState }  from "react";
 
 const Header = ({ classOption }) => {
     const [ofcanvasShow, setOffcanvasShow] = useState(false);
@@ -29,6 +29,30 @@ const Header = ({ classOption }) => {
     const handleScroll = ({}) => {
         setScroll(window.scrollY);
     };
+
+    const [data, setData] = useState({});
+    useEffect(() => {
+        async function getAjaxApiData() {
+            const postBody = {
+                Pagina:"Home",
+                Lingua:"IT"
+            };
+            const settings = {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(postBody)
+            };
+            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/SubMenus`, settings);
+            const responseJson = await response.json();
+            setData(responseJson.results);
+        }
+
+        getAjaxApiData();
+        }, []);
+
     return (
         <Fragment>
             <header
@@ -49,7 +73,7 @@ const Header = ({ classOption }) => {
                         
                         <div className="col">
                             <div className="header-links-area">
-                                <HeaderLinks data={HeaderLinksData.it}></HeaderLinks>
+                                <HeaderLinks data={data}></HeaderLinks>
                             </div>
                         </div>
 
@@ -71,7 +95,7 @@ const Header = ({ classOption }) => {
                     </div>
                 </div>
             </header>
-            <HamburgerMenu show={ofcanvasShow} onClose={onCanvasHandler} data={HeaderLinksData.it}></HamburgerMenu>
+            <HamburgerMenu show={ofcanvasShow} onClose={onCanvasHandler} data={data}></HamburgerMenu>
         </Fragment>
     );
 };

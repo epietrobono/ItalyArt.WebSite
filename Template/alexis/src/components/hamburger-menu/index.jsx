@@ -52,7 +52,7 @@ const HamburgerMenu = ({ show, onClose, data }) => {
                                             exact
                                             to={process.env.PUBLIC_URL + "/"}
                                         >
-                                            {data.home}
+                                            {data.Home}
                                         </NavLink>
                                 </li>
                                 <li className="item">
@@ -60,7 +60,7 @@ const HamburgerMenu = ({ show, onClose, data }) => {
                                             exact
                                             to={process.env.PUBLIC_URL + "/monuments"}
                                         >
-                                            {data.monuments}
+                                            {data.Monuments}
                                         </NavLink>
                                 </li>
                                 <li className="item">
@@ -68,7 +68,7 @@ const HamburgerMenu = ({ show, onClose, data }) => {
                                             exact
                                             to={process.env.PUBLIC_URL + "/blog"}
                                         >
-                                            {data.blog}
+                                            {data.Blog}
                                         </NavLink>
                                 </li>
                                 <li className="item">
@@ -76,7 +76,7 @@ const HamburgerMenu = ({ show, onClose, data }) => {
                                             exact
                                             to={process.env.PUBLIC_URL + "/map"}
                                         >
-                                            {data.map}
+                                            {data.Map}
                                         </NavLink>
                                 </li>
                                 <li className="item">
@@ -84,7 +84,7 @@ const HamburgerMenu = ({ show, onClose, data }) => {
                                             exact
                                             to={process.env.PUBLIC_URL + "/about"}
                                         >
-                                            {data.about}
+                                            {data.About}
                                         </NavLink>
                                 </li>
                                 <li className="item">

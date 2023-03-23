@@ -1,13 +1,11 @@
 import PropTypes from "prop-types";
-import React from "react";
+import {React,useEffect, useState }  from "react";
 import ArticleContent from "../components/article-content";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
 import RelatedArticlesContainer from "../containers/blog/related-articles";
 import MonumentsContainer from "../containers/monuments/monuments";
 import OtherMonumentsContainer from "../containers/monuments/other-monuments";
-import ArticlesData from "../data/articles.json";
-import MonumentsData from "../data/monuments.json";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
@@ -17,16 +15,61 @@ const BlogArticle = ({
         params: { id },
     },
 }) => {
-    const articlesData = ArticlesData.it;
-    const articles = articlesData.articles;
+    //TODO Metodo Singolo Articolo
+    const [articlesData, setarticlesData] = useState({});
+    useEffect(() => {
+        async function getAjaxApiData() {
+            const postBody = {
+                Pagina:"Home",
+                Lingua:"IT"
+            };
+            const settings = {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(postBody)
+            };
+            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/TestiArticoli`, settings);
+            const responseJson = await response.json();
+            setarticlesData(responseJson.results);
+        }
+
+        getAjaxApiData();
+        }, []);
+
+    const articles = articlesData.Articles;
     const article = articles.filter((article)=>{
-        if (article.id == id){
+        if (article.Id == Id){
             return article
         }
     }).pop();
+    
+    const [monumentsData, setmonumentsData] = useState({});
+    useEffect(() => {
+        async function getAjaxApiData() {
+            const postBody = {
+                Pagina:"Home",
+                Lingua:"IT"
+            };
+            const settings = {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(postBody)
+            };
+            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/Monuments`, settings);
+            const responseJson = await response.json();
+            setmonumentsData(responseJson.results);
+        }
 
-    const monumentsData = MonumentsData.it;
-    const monuments = monumentsData.monuments;
+        getAjaxApiData();
+        }, []);
+        
+    const monuments = monumentsData.Monuments;
     return (
         <React.Fragment>
             <Layout>
@@ -41,15 +84,15 @@ const BlogArticle = ({
                             </div>
                             <div className="col  col-lg-3 col-sm-12 ">
                                 <div className="row">
-                                    <MonumentsContainer title={monumentsData.alsoTitle} monuments={monuments}></MonumentsContainer>
+                                    <MonumentsContainer title={monumentsData.AlsoTitle} monuments={monuments}></MonumentsContainer>
                                 </div>
                                 <div className="row">
-                                    <RelatedArticlesContainer title={articlesData.relatedTitle} articles={articles}></RelatedArticlesContainer>
+                                    <RelatedArticlesContainer title={articlesData.RelatedTitle} articles={articles}></RelatedArticlesContainer>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <OtherMonumentsContainer title={monumentsData.othertitle} monuments={monuments}></OtherMonumentsContainer>
+                    <OtherMonumentsContainer title={monumentsData.Othertitle} monuments={monuments}></OtherMonumentsContainer>
                     <Footer />
                     <ScrollToTop />
                 </div>

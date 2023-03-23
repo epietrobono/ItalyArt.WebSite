@@ -6,14 +6,14 @@ function RightUsefulLinks({ data }) {
     return (
         <ul>
             <div className="footer-empty-space"></div>
-            <h3>{data.title}</h3>
+            <h3>{data.Title}</h3>
             <li>
                 <Link
                     to={
                         process.env.PUBLIC_URL + "/about"
                     }
                 >
-                    {data.about}
+                    {data.About}
                 </Link>
             </li>
             <li>
@@ -22,7 +22,7 @@ function RightUsefulLinks({ data }) {
                         process.env.PUBLIC_URL + "/info"
                     }
                 >
-                    {data.info}
+                    {data.Info}
                 </Link>
             </li>
             <li>

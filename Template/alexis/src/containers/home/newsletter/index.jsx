@@ -1,19 +1,40 @@
 import { Image } from "react-bootstrap";
 import SearchForm from "../../../components/search-form";
-import NewsletterData from "../../../data/newsletter.json";
+import {React,useEffect, useState }  from "react";
 
 const NewsletterContainer = () => {
-    const data = NewsletterData.it;
+    const [data, setData] = useState({});
+    useEffect(() => {
+        async function getAjaxApiData() {
+            const postBody = {
+                Pagina:"Home",
+                Lingua:"IT"
+            };
+            const settings = {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(postBody)
+            };
+            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/Newsletter`, settings);
+            const responseJson = await response.json();
+            setData(responseJson.results);
+        }
+
+        getAjaxApiData();
+        }, []);
     return (
         <div className="container-ita">
         <div className="newsletter row justify-content-center py-3 section-margin">
             <div className="col d-flex-news text-center">
-                <h1>{data.title}</h1>
-                <p className="newsletter-desc">{data.desc}</p>
+                <h1>{data.Title}</h1>
+                <p className="newsletter-desc">{data.Desc}</p>
                 <SearchForm data={data} icon={"email-icon"}></SearchForm>
             </div>
             <div className="img-newsletter">
-                <Image alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
+                <Image alt={data.Image.Alt} src={process.env.PUBLIC_URL + data.Image.Path}></Image>
             </div>
         </div>
         </div>

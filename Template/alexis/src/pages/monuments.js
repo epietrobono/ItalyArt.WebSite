@@ -1,12 +1,11 @@
-import React from "react";
+
+import {React,useEffect, useState }  from "react";
 import PropTypes from "prop-types";
 import ScrollToTop from "../components/scroll-to-top";
 import SearchForm from "../components/search-form";
 import SEO from "../components/seo";
 import CategoriesContainer from "../containers/monuments/categories";
-import MonumentsData from "../data/monuments.json";
 import GridContainer from "../containers/monuments/grid";
-import MonumentsPageData from "../data/monuments-page.json";
 import Layout from "../layouts";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header";
@@ -16,22 +15,63 @@ const MonumentsPage = ({
         params: { category },
     },
 }) => {
-    const data = MonumentsPageData.it;    
+    const [data, setData] = useState({});
+    useEffect(() => {
+        async function getAjaxApiData() {
+            const postBody = {
+                Pagina:"Home",
+                Lingua:"IT"
+            };
+            const settings = {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(postBody)
+            };
+            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/MonumentPageText`, settings);
+            const responseJson = await response.json();
+            setData(responseJson.results);
+        }
+
+        getAjaxApiData();
+        }, []);
     
-    console.log(category);
-    console.log(MonumentsData);
-    const monumentsDt = MonumentsData.it.monuments;
-    console.log(monumentsDt);
+    //TODO: Form Ricerca
+    const [monumentsDt, setmonumentsDt] = useState({});
+    useEffect(() => {
+        async function getAjaxApiData() {
+            const postBody = {
+                Pagina:"Home",
+                Lingua:"IT"
+            };
+            const settings = {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(postBody)
+            };
+            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/Monuments`, settings);
+            const responseJson = await response.json();
+            setmonumentsDt(responseJson.results.Monuments);
+        }
+
+        getAjaxApiData();
+        }, []);
+        
     const monuments = monumentsDt.filter((monument)=>{
         if(!category){
             return monument;
         }
-        if (monument.categories.includes(category)){
+        if (monument.Categories.includes(category)){
             return monument
         }
     });
     console.log(monuments);
-    const form = data.form;
+    const form = data.Form;
     return (
         <React.Fragment>
             <Layout>
@@ -48,13 +88,13 @@ const MonumentsPage = ({
                     <div className="main-content">
                         <div className="col col-auto my-4">
                             <div className="row mx-5 monuments-section">
-                                <h1 className="mob-h2">{data.gridTitle1}</h1>
+                                <h1 className="mob-h2">{data.GridTitle1}</h1>
                                 <GridContainer nCols={5} monuments={monuments}></GridContainer>
                             </div>
                         </div>
                         <div className="col col-auto my-4 px-auto">
                             <div className="row mx-5 monuments-section">
-                                <h1 className="mob-h2">{data.gridTitle2}</h1>
+                                <h1 className="mob-h2">{data.GridTitle2}</h1>
                                 <GridContainer nCols={5} monuments={monuments}></GridContainer>
                             </div>
                         </div>

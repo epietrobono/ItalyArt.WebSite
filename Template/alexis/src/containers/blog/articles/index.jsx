@@ -1,8 +1,30 @@
 import ArticlePreview from "../../../components/article-preview";
-import ArticlesData from "../../../data/articles.json";
+import {React,useEffect, useState }  from "react";
 
-const ArticlesContainer = () => {
-    const data = ArticlesData.it;
+const ArticlesContainer = () => {    
+    const [data, setData] = useState({});
+    useEffect(() => {
+        async function getAjaxApiData() {
+            const postBody = {
+                Pagina:"Home",
+                Lingua:"IT"
+            };
+            const settings = {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(postBody)
+            };
+            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/TestiArticoli`, settings);
+            const responseJson = await response.json();
+            setData(responseJson.results);
+        }
+
+        getAjaxApiData();
+        }, []);
+
     const articles = data.articles;
     return (
         <div className="row justify-content-center intro-blog py-5">

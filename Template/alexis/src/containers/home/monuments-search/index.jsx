@@ -1,15 +1,13 @@
 import {React,useEffect, useState }  from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import SearchForm from "../../../components/search-form";
-// import HomeMonumentsData from "../../../data/home-monuments.json";
+import {React,useEffect, useState }  from "react";
 
 const MonumentsSearchContainer = () => {
 
-    console.log("entrato");
     const [data, setData] = useState({});
     useEffect(() => {
-        async function getBanners() {
-            console.log("getBanners");
+        async function getAjaxApiData() {
             const postBody = {
                 Pagina:"Home",
                 Lingua:"IT"
@@ -23,13 +21,11 @@ const MonumentsSearchContainer = () => {
                 body: JSON.stringify(postBody)
             };
             const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/Banner`, settings);
-            console.log(response);
             const responseJson = await response.json();
-            console.log(responseJson);
             setData(responseJson.results);
         }
 
-        getBanners();
+        getAjaxApiData();
         }, []);
     
         return (

@@ -5,14 +5,14 @@ function LeftUsefulLinks({ data }) {
     return (
         <ul>
             <div className="footer-empty-space"></div>
-            <h3>{data.title}</h3>
+            <h3>{data.Title}</h3>
             <li>
                 <Link
                     to={
                         process.env.PUBLIC_URL + "/"
                     }
                 >
-                    {data.home}
+                    {data.Home}
                 </Link>
             </li>
             <li>
@@ -21,7 +21,7 @@ function LeftUsefulLinks({ data }) {
                         process.env.PUBLIC_URL + "/monuments"
                     }
                 >
-                    {data.monuments}
+                    {data.Monuments}
                 </Link>
             </li>
             <li>
@@ -30,7 +30,7 @@ function LeftUsefulLinks({ data }) {
                         process.env.PUBLIC_URL + "/blog"
                     }
                 >
-                    {data.blog}
+                    {data.Blog}
                 </Link>
             </li>
             <li>
@@ -39,7 +39,7 @@ function LeftUsefulLinks({ data }) {
                         process.env.PUBLIC_URL + "/privacy"
                     }
                 >
-                    {data.privacy}
+                    {data.Privacy}
                 </Link>
             </li>
         </ul>

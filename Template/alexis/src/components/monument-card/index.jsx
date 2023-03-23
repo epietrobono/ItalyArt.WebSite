@@ -24,24 +24,24 @@ const MonumentCard = ({ data }) => {
         console.log("toggle it");
     }
 
-    if(data.title.length>20 && width<=900){        
+    if(data.Title.length>20 && width<=900){        
         return (
-            <Link to={process.env.PUBLIC_URL + data.url}>
+            <Link to={process.env.PUBLIC_URL + data.Url}>
                 <div className="shadow rounded p-2 card-monument-size">
                     {/*<div className="card-background" alt={data.image.alt} style={{ backgroundImage:`url(${process.env.PUBLIC_URL + data.image.path}) ` }}>*/}
-                    <Image rounded alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
+                    <Image rounded alt={data.Image.Alt} src={process.env.PUBLIC_URL + data.Image.Path}></Image>
                     {/*</div>*/}
                     <div className="textarea-monument-card">
                         <Marquee direction={"left"} gradient={false} delay={5}>
-                            <h4 className="text-left monument-card-title">{data.title} &nbsp;</h4>
+                            <h4 className="text-left monument-card-title">{data.Title} &nbsp;</h4>
                         </Marquee>
                         <div className="d-flex justify-content-between">
-                            <p className="col col-auto">{data.location}</p>
+                            <p className="col col-auto">{data.Location}</p>
                             <Link
-                                to={process.env.PUBLIC_URL + data.url}
+                                to={process.env.PUBLIC_URL + data.Url}
                                 className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card"
                             >
-                                {data.buttonText}
+                                {data.ButtonText}
                             </Link>
                         </div>
                     </div>
@@ -51,20 +51,20 @@ const MonumentCard = ({ data }) => {
     }
     else{
         return (
-            <Link to={process.env.PUBLIC_URL + data.url}>
+            <Link to={process.env.PUBLIC_URL + data.Url}>
                 <div className="shadow rounded p-2 card-monument-size">
                     {/*<div className="card-background" alt={data.image.alt} style={{ backgroundImage:`url(${process.env.PUBLIC_URL + data.image.path}) ` }}>*/}
-                         <Image rounded alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
+                         <Image rounded alt={data.Image.Alt} src={process.env.PUBLIC_URL + data.Image.Path}></Image>
                     {/*</div>*/}
                     <div className="textarea-monument-card">
-                        <h4 className="text-left monument-card-title">{data.title}</h4>
+                        <h4 className="text-left monument-card-title">{data.Title}</h4>
                         <div className="d-flex justify-content-between">
-                            <p className="col col-auto">{data.location}</p>
+                            <p className="col col-auto">{data.Location}</p>
                             <Link
-                                to={process.env.PUBLIC_URL + data.url}
+                                to={process.env.PUBLIC_URL + data.Url}
                                 className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card"
                             >
-                                {data.buttonText}
+                                {data.ButtonText}
                             </Link>
                         </div>
                     </div>

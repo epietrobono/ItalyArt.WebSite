@@ -22,9 +22,9 @@ function CategoriesGallery({ data }) {
                             onMouseOver={() => { activateCategory(key) }}
                             onFocus={() => { console.log(key) }}
                         >
-                            <Link to={process.env.PUBLIC_URL + image.url}>
-                                <Image rounded className="shadow" src={process.env.PUBLIC_URL + image.path}></Image>
-                                <h5 className="category-name text-center">{image.name}</h5>
+                            <Link to={process.env.PUBLIC_URL + image.Url}>
+                                <Image rounded className="shadow" src={process.env.PUBLIC_URL + image.Path}></Image>
+                                <h5 className="category-name text-center">{image.Name}</h5>
                             </Link>
                         </div>
                     )
