@@ -8,31 +8,26 @@ import MapContainer from "../containers/map-monuments/map";
 import Layout from "../layouts";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header";
+import Api from "../services/Api";
 
 const MonumentsPage = () => {
-    const [data, setData] = useState({});
+    const [MapMonumentsPageData, setMapMonumentsPageData] = useState({});
+    const [isMounted13, setIsMounted13] = useState(false);
+    
     useEffect(() => {
-        async function getAjaxApiData() {
-            const postBody = {
-                Pagina:"Home",
-                Lingua:"IT"
-            };
-            const settings = {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(postBody)
-            };
-            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/MonumentPageText`, settings);
-            const responseJson = await response.json();
-            setData(responseJson.results);
-        }
+        console.log("entro in useEffects");
+        setIsMounted13(true);
+        Api.GetMonumentPageText().then((results) => {    
+        console.log("esegue then");
+        setMapMonumentsPageData(results);
+      });
+    }, []);
+    
+    if (!isMounted13) {
+        return null; // non renderizzare il componente fino a quando non è montato
+      }
 
-        getAjaxApiData();
-        }, []);
-    const form = data.Form;
+    const form = MapMonumentsPageData.Form;
 
     return (
         <React.Fragment>

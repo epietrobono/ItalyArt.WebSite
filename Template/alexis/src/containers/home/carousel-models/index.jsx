@@ -1,37 +1,31 @@
 import { Image } from "react-bootstrap";
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from "react-router-dom";
+import Api from "../../../services/Api";
 import {React,useEffect, useState }  from "react";
 
-function CarouselModelsContainer() {
-    const [data, setData] = useState({});
-    useEffect(() => {
-        async function getAjaxApiData() {
-            const postBody = {
-                Pagina:"Home",
-                Lingua:"IT"
-            };
-            const settings = {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(postBody)
-            };
-            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/CarouselModel3D`, settings);
-            const responseJson = await response.json();
-            setData(responseJson.results);
-        }
+function CarouselModelsContainer() {    
+const [carouselModelContainerData, setcarouselModelContainerData] = useState({});
+const [isMounted2, setIsMounted2] = useState(false);
 
-        getAjaxApiData();
-        }, []);
+useEffect(() => {
+    console.log("entro in useEffects");
+    setIsMounted2(true);
+    Api.GetCarouselModel3D().then((results) => {    
+    console.log("esegue then");
+    setcarouselModelContainerData(results);
+  });
+}, []);
+
+if (!isMounted2) {
+    return null; // non renderizzare il componente fino a quando non è montato
+  }
     return (
         <div className="container-ita">
         <div className="carousel-models section-margin " id="tred-carousel">
             <Carousel indicators={false}>
                 {
-                    data?.map((monumento, key) => {
+                    carouselModelContainerData?.map((monumento, key) => {
                         return (
                             <Carousel.Item key={key}>
                                 <div className="row card-3d-carousel">

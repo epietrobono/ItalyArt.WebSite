@@ -9,6 +9,7 @@ import OtherMonumentsContainer from "../containers/monuments/other-monuments";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
+import Api from "../services/Api";
 
 const BlogArticle = ({
     match: {
@@ -17,27 +18,25 @@ const BlogArticle = ({
 }) => {
     //TODO Metodo Singolo Articolo
     const [articlesData, setarticlesData] = useState({});
+    const [monumentsData, setmonumentsData] = useState({});
+    const [isMounted15, setIsMounted15] = useState(false);
+    
     useEffect(() => {
-        async function getAjaxApiData() {
-            const postBody = {
-                Pagina:"Home",
-                Lingua:"IT"
-            };
-            const settings = {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(postBody)
-            };
-            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/TestiArticoli`, settings);
-            const responseJson = await response.json();
-            setarticlesData(responseJson.results);
-        }
-
-        getAjaxApiData();
-        }, []);
+        console.log("entro in useEffects");
+        setIsMounted15(true);
+        Api.GetTestiArticoli().then((results) => {    
+            console.log("esegue then");
+            setarticlesData(results);
+        });
+        Api.GetMonuments().then((results) => {    
+            console.log("esegue then");
+            setmonumentsData(results);
+        });
+    }, []);
+    
+    if (!isMounted15) {
+        return null; // non renderizzare il componente fino a quando non è montato
+      }
 
     const articles = articlesData.Articles;
     const article = articles.filter((article)=>{
@@ -45,30 +44,7 @@ const BlogArticle = ({
             return article
         }
     }).pop();
-    
-    const [monumentsData, setmonumentsData] = useState({});
-    useEffect(() => {
-        async function getAjaxApiData() {
-            const postBody = {
-                Pagina:"Home",
-                Lingua:"IT"
-            };
-            const settings = {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(postBody)
-            };
-            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/Monuments`, settings);
-            const responseJson = await response.json();
-            setmonumentsData(responseJson.results);
-        }
-
-        getAjaxApiData();
-        }, []);
-        
+            
     const monuments = monumentsData.Monuments;
     return (
         <React.Fragment>

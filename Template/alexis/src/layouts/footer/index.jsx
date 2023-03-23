@@ -2,30 +2,24 @@ import CenterFooterLogo from "../../components/center-footer-logo";
 import LeftUsefulLinks from "../../components/left-useful-links";
 import RightUsefulLinks from "../../components/right-useful-links";
 import {React,useEffect, useState }  from "react";
+import Api from "../../services/Api";
 
 const Footer = () => {    
-    const [data, setData] = useState({});
+    const [FooterData, setFooterData] = useState({});
+    const [isMounted12, setIsMounted12] = useState(false);
+    
     useEffect(() => {
-        async function getAjaxApiData() {
-            const postBody = {
-                Pagina:"Home",
-                Lingua:"IT"
-            };
-            const settings = {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(postBody)
-            };
-            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/Footer`, settings);
-            const responseJson = await response.json();
-            setData(responseJson.results);
-        }
-
-        getAjaxApiData();
-        }, []);
+        console.log("entro in useEffects");
+        setIsMounted12(true);
+        Api.GetFooter().then((results) => {    
+        console.log("esegue then");
+        setFooterData(results);
+      });
+    }, []);
+    
+    if (!isMounted12) {
+        return null; // non renderizzare il componente fino a quando non è montato
+      }
         
     return (
         <footer className="footer-area reveal-footer border-top-style">
@@ -33,13 +27,13 @@ const Footer = () => {
                 <div className="col-sm-12">
                     <div className="footer-content row align-items-start justify-content-evenly">
                         <div className="left-useful-links text-start col-auto">
-                            <LeftUsefulLinks data={data.Left}></LeftUsefulLinks>
+                            <LeftUsefulLinks data={FooterData.Left}></LeftUsefulLinks>
                         </div>
                         <div className="center-footer-logo text-center col-auto">
-                            <CenterFooterLogo data={data.Center}></CenterFooterLogo>
+                            <CenterFooterLogo data={FooterData.Center}></CenterFooterLogo>
                         </div>
                         <div className="right-useful-links text-end col-auto">
-                            <RightUsefulLinks data={data.Right}></RightUsefulLinks>
+                            <RightUsefulLinks data={FooterData.Right}></RightUsefulLinks>
                         </div>
                     </div>
                 </div>

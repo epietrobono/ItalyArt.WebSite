@@ -4,6 +4,7 @@ import HamburgerMenu from "../../components/hamburger-menu";
 import HeaderLinks from "../../components/header-links";
 import LanguageSelector from "../../components/language-selector";
 import Logo from "../../components/logo/index";
+import Api from "../../services/Api";
 
 const Header = ({ classOption }) => {
     const [ofcanvasShow, setOffcanvasShow] = useState(false);

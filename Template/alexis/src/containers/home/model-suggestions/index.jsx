@@ -1,37 +1,32 @@
 import MonumentCard from "../../../components/monument-card";
 import React, { useEffect, useState } from "react";
+import Api from "../../../services/Api";
 
 const ModelSuggestionsContainer = () => {
-    const [data, setData] = useState({});
+    const [modelSuggestionsContainerData, setmodelSuggestionsContainerData] = useState({});
+    const [isMounted6, setIsMounted6] = useState(false);
+    
     useEffect(() => {
-        async function getAjaxApiData() {
-            const postBody = {
-                Pagina:"Home",
-                Lingua:"IT"
-            };
-            const settings = {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(postBody)
-            };
-            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/Monuments3DHome`, settings);
-            const responseJson = await response.json();
-            setData(responseJson.results);
-        }
-
-        getAjaxApiData();
-        }, []);
+        console.log("entro in useEffects");
+        setIsMounted6(true);
+        Api.GetMonuments3DHome().then((results) => {    
+        console.log("esegue then");
+        setmodelSuggestionsContainerData(results);
+      });
+    }, []);
+    
+    if (!isMounted6) {
+        return null; // non renderizzare il componente fino a quando non è montato
+      }
+    
     return (
         <div className="container-ita">
         <div className="py-4 d-flex flex-column section-margin ">
-            <h2 className="text-center mob-h2">{data.Title}</h2>
-            <p className="text-center mob-p">{data.Desc}</p>
+            <h2 className="text-center mob-h2">{modelSuggestionsContainerData.Title}</h2>
+            <p className="text-center mob-p">{modelSuggestionsContainerData.Desc}</p>
             <div className="row justify-content-center sezione-card-monumenti r-gap">
                 {
-                    data.Suggestions.map((val, key)=>{
+                    modelSuggestionsContainerData.Suggestions.map((val, key)=>{
                         return(
                             <div className="col col-auto width-3d-card card-monumenti" key={key}>
                                 <MonumentCard data={val}></MonumentCard>

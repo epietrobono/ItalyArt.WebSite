@@ -2,6 +2,7 @@ import GoogleMapReact from 'google-map-react';
 import MapPlace from "../../../components/map-place";
 import MapPlaceTour from "../../../components/map-place-tour";
 import {React,useEffect, useState }  from "react";
+import Api from "../../../services/Api";
 
 
 function MapContainer() {
@@ -15,28 +16,21 @@ function MapContainer() {
         };
     const demoFancyMapStyles = require("../../../data/map-style.json");
 
-    const [data, setData] = useState({});
+    const [MapContainerData, setMapContainerData] = useState({});
+    const [isMounted11, setIsMounted11] = useState(false);
+    
     useEffect(() => {
-        async function getAjaxApiData() {
-            const postBody = {
-                Pagina:"Home",
-                Lingua:"IT"
-            };
-            const settings = {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(postBody)
-            };
-            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/Monuments`, settings);
-            const responseJson = await response.json();
-            setData(responseJson.results);
-        }
-
-        getAjaxApiData();
-        }, []);
+        console.log("entro in useEffects");
+        setIsMounted11(true);
+        Api.GetMonuments().then((results) => {    
+        console.log("esegue then");
+        setMapContainerData(results);
+      });
+    }, []);
+    
+    if (!isMounted11) {
+        return null; // non renderizzare il componente fino a quando non è montato
+      }
     
     return (
         // Important! Always set the container height explicitly
@@ -49,7 +43,7 @@ function MapContainer() {
                 yesIWantToUseGoogleMapApiInternals
                 >
                 {
-                    data.Monuments.map((val, key)=>{
+                    MapContainerData.Monuments.map((val, key)=>{
                         if(val.Type=="3Dmodel"){
                             return(
                                 <MapPlaceTour lat={val.Gps.Latitude} lng={val.Gps.Longitude} text={val.Title} key={key} />

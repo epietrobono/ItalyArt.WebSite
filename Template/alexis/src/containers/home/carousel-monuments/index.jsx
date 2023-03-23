@@ -1,38 +1,31 @@
 import { Image } from "react-bootstrap";
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from "react-router-dom";
+import Api from "../../../services/Api";
 import {React,useEffect, useState }  from "react";
 
 function CarouselMonumentsContainer() {
+    const [carouselMonumentsContainerData, setcarouselMonumentsContainerData] = useState({});
+    const [isMounted3, setIsMounted3] = useState(false);
     
-    const [data, setData] = useState({});
     useEffect(() => {
-        async function getAjaxApiData() {
-            const postBody = {
-                Pagina:"Home",
-                Lingua:"IT"
-            };
-            const settings = {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(postBody)
-            };
-            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/CarouselTour360`, settings);
-            const responseJson = await response.json();
-            setData(responseJson.results);
-        }
-
-        getAjaxApiData();
-        }, []);
+        console.log("entro in useEffects");
+        setIsMounted3(true);
+        Api.GetCarouselModel360().then((results) => {    
+        console.log("esegue then");
+        setcarouselMonumentsContainerData(results);
+      });
+    }, []);
     
+    if (!isMounted3) {
+        return null; // non renderizzare il componente fino a quando non è montato
+      }
+      
     return (
         <div className="carousel-monuments section-margin" id="mon-carousel">
             <Carousel indicators={false}>
                 {
-                    data?.map((monumento, key) => {
+                    carouselMonumentsContainerData?.map((monumento, key) => {
                         return (
                             <Carousel.Item key={key}>
                                 <div className="row mx-5 carousel-monuments-home">

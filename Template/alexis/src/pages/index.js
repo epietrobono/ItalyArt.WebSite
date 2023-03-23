@@ -29,7 +29,7 @@ const HomePage = () => {
                         <CategoriesContainer></CategoriesContainer>
                         <CarouselMonumentsContainer></CarouselMonumentsContainer>
                         <SuggestionsContainer></SuggestionsContainer>
-                        <WhereToGoContainer></WhereToGoContainer>
+                        {/* <WhereToGoContainer></WhereToGoContainer> */}
                         <CarouselModelsContainer></CarouselModelsContainer>
                         <ModelSuggestionsContainer></ModelSuggestionsContainer>
                         <NewsContainer></NewsContainer>
