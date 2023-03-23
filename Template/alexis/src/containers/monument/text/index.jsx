@@ -4,7 +4,7 @@ const MonumentTextContainer = ({contenuto}) => {
     return (
         <div className="row justify-content-center">
             <div className="col col-auto">
-                <p>{contenuto.testo}</p>
+                <p className="mb-5">{contenuto.testo}</p>
             </div>
         </div>
     );
