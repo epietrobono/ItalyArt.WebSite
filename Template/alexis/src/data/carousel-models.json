@@ -1,0 +1,23 @@
+{
+    "it": [
+        {
+            "title": "Duomo di Siena",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "alt": "Duomo di Siena",
+            "path": "/img/photos/Siena.png",
+            "url": "/models/10",
+            "text": "Visita ora",
+            "active": "active"
+        },
+        {
+            "title": "Busto femminile di Mezzaselva",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "alt": "Busto femminile di Mezzaselva",
+            "path": "/img/photos/busto-mezzaselva.png",
+            "url": "/models/6",
+            "text": "Visita ora",
+            "active": "active"
+        }
+    ],
+    "us": []
+}

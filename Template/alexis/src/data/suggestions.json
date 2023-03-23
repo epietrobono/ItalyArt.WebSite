@@ -1,0 +1,50 @@
+{
+    "it": {
+        "title": "I luoghi più consigliati",
+        "desc": "Spicy jalapeno bacon ipsum dolor amet buffalo corned beef burgdoggen t-bone jowl.",
+        "buttonText": "Visita altri luoghi",
+        "suggestions": [
+            {
+                "title": "Reggia",
+                "location": "Caserta",
+                "buttonText": "Visita",
+                "image": {
+                    "path": "/img/preview-monuments/reggia-di-Caserta.jpg",
+                    "alt": "Reggia di Caserta"
+                },
+                "url": "/monument/16"
+            },
+            {
+                "title": "Fontana di Trevi",
+                "location": "Roma",
+                "buttonText": "Visita",
+                "image": {
+                    "path": "/img/preview-monuments/con-carousel/fontana-di-trevi.jpg",
+                    "alt": "Fontana di Trevi"
+                },
+                "url": "/monument/17"
+            },
+            {
+                "title": "Casa di Augusto",
+                "location": "Roma",
+                "buttonText": "Visita",
+                "image": {
+                    "path": "/img/preview-monuments/con-carousel/roma-casa-di-augusto.jpg",
+                    "alt": "Casa di Augusto"
+                },
+                "url": "/monument/18"
+            },
+            {
+                "title": "Terme di Caracalla",
+                "location": "Roma",
+                "buttonText": "Visita",
+                "image": {
+                    "path": "/img/preview-monuments/con-carousel/rm-caracalla.jpg",
+                    "alt": "Terme di Caracalla"
+                },
+                "url": "/monument/19"
+            }
+        ]
+    },
+    "us": {}
+}

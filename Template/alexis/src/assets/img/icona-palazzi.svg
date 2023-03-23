@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28.364" height="24.687" viewBox="0 0 28.364 24.687">
+  <g id="icona-palazzi" transform="translate(0.5 0.501)">
+    <g id="Livello_1" data-name="Livello 1" transform="translate(0 0)">
+      <path id="Tracciato_7269" data-name="Tracciato 7269" d="M36.534,19.522A1.232,1.232,0,1,1,35.3,18.29,1.232,1.232,0,0,1,36.534,19.522Z" transform="translate(-21.518 -11.791)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Tracciato_7270" data-name="Tracciato 7270" d="M47.777,20.86h-7.9V37.053h.042A4.109,4.109,0,0,1,43.9,34.119a3.826,3.826,0,0,1,3.47,2.368.383.383,0,0,1-.383.566H36.106a.031.031,0,0,1-.031-.034V30.753a.727.727,0,0,0-.727-.727H33.007a.727.727,0,0,0-.727.731v6.3" transform="translate(-20.413 -13.377)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Tracciato_7271" data-name="Tracciato 7271" d="M10.265,58.454h-.042A4.116,4.116,0,0,0,6.241,55.52a3.826,3.826,0,0,0-3.4,2.23.486.486,0,0,0,.413.7H10.2" transform="translate(-2.201 -34.778)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Tracciato_7272" data-name="Tracciato 7272" d="M22.09,8.783l4.939-6.951a1.239,1.239,0,0,1,2.108.119c1.228,2.02,3.588,5.7,4.514,6.829a.054.054,0,0,0,.084,0c1.071-1.6,2.3-3.726,3.366-5.31a.738.738,0,0,1,1.209,0c.528.891,2.647,4.449,3.175,5.356v.011" transform="translate(-14.121 -1.3)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Tracciato_7273" data-name="Tracciato 7273" d="M22.186,37.061l-.1-16.2" transform="translate(-14.121 -13.377)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Tracciato_7274" data-name="Tracciato 7274" d="M1.31,11.735H9.191a.038.038,0,0,0,.031-.057L5.916,6.391a.731.731,0,0,0-1.194,0L1.31,11.747v.042" transform="translate(-1.291 -4.253)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Tracciato_7275" data-name="Tracciato 7275" d="M28.624,20.871V36.33a.723.723,0,0,1-.723.723H1.991a.727.727,0,0,1-.731-.731q0-7.131,0-14.292V20.86" transform="translate(-1.26 -13.377)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linea_480" data-name="Linea 480" x2="7.942" transform="translate(4.028 1.828)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linea_481" data-name="Linea 481" x2="7.881" transform="translate(15.75 1.828)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linea_482" data-name="Linea 482" y2="4.549" transform="translate(4.028 10.627)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linea_483" data-name="Linea 483" y2="4.549" transform="translate(23.412 10.627)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

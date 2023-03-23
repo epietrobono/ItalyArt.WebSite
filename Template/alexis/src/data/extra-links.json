@@ -1,0 +1,32 @@
+{
+    "it": [
+        {
+            "icon": {
+                "path": "#/icon",
+                "image": "/img/icons/icona-scegli.svg"
+            },
+            "title": "Scegli un luogo",
+            "desc": "Esplora l'Italia dal tuo schermo, scegli dove andare e parti per il tuo viaggio.",
+            "id": "primo"
+        },
+        {
+            "icon": {
+                "path": "#/icon",
+                "image": "/img/icons/icona-visita.svg"
+            },
+            "title": "Visita un Monumento",
+            "desc": "Scopri la bellezza dei monumenti Italiani senza muoverti da casa.",
+            "id": "secondo"
+        },
+        {
+            "icon": {
+                "path": "#/icon",
+                "image": "/img/icons/icona-360.svg"
+            },
+            "title": "Entra a 360°",
+            "desc": "Esplora l'Italia come mai prima d'ora grazie alle visite a 360°.",
+            "id": "terzo"
+        }
+    ],
+    "us": []
+}

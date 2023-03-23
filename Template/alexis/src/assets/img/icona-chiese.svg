@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30.328" height="25.254" viewBox="0 0 30.328 25.254">
+  <g id="icona-chiese" transform="translate(0.693 0.088)">
+    <g id="Livello_1" data-name="Livello 1" transform="translate(0 0)">
+      <line id="Linea_463" data-name="Linea 463" y2="9.141" transform="translate(20.255 3.555)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Tracciato_7254" data-name="Tracciato 7254" d="M61.191,5.677,56.6,1.432a.682.682,0,0,0-.923,0L51,5.752" transform="translate(-32.263 -0.785)" fill="rgba(191,191,191,0)" stroke="#3e3e3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Tracciato_7255" data-name="Tracciato 7255" d="M6.58,17.566V29.938a.655.655,0,0,0,.682.621H31.4a.659.659,0,0,0,.685-.621V9.45" transform="translate(-4.573 -5.895)" fill="rgba(191,191,191,0)" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Tracciato_7256" data-name="Tracciato 7256" d="M9.954,34.2V26.369a.655.655,0,0,1,.682-.621h3.491a.655.655,0,0,1,.682.621v7.212a.655.655,0,0,0,.682.621h5.329a.659.659,0,0,0,.674-.621V22.075a.6.6,0,0,0-.245-.49l-8.463-6.154a.727.727,0,0,0-.825-.019L1.25,22.539" transform="translate(-1.25 -9.537)" fill="rgba(191,191,191,0)" stroke="#3e3e3e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Tracciato_7259" data-name="Tracciato 7259" d="M78,12.844a.094.094,0,1,1-.094-.094A.094.094,0,0,1,78,12.844Z" transform="translate(-48.976 -7.952)" fill="rgba(191,191,191,0)" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linea_464" data-name="Linea 464" y1="5.981" transform="translate(11.129)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linea_465" data-name="Linea 465" x2="3.601" transform="translate(9.393 1.446)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Tracciato_7261" data-name="Tracciato 7261" d="M62.821,61.033a3.5,3.5,0,0,0-3.39-2.493,3.358,3.358,0,0,0-3.141,2.493" transform="translate(-35.561 -36.496)" fill="rgba(191,191,191,0)" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <g id="Ellisse_92" data-name="Ellisse 92" transform="translate(9.641 9.549)" fill="#fff" stroke="#3e3e3e" stroke-width="1">
+        <circle cx="1.696" cy="1.696" r="1.696" stroke="none"/>
+        <circle cx="1.696" cy="1.696" r="1.196" fill="none"/>
+      </g>
+      <g id="Ellisse_93" data-name="Ellisse 93" transform="translate(22.239 4.703)" fill="#fff" stroke="#3e3e3e" stroke-width="1">
+        <circle cx="1.696" cy="1.696" r="1.696" stroke="none"/>
+        <circle cx="1.696" cy="1.696" r="1.196" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

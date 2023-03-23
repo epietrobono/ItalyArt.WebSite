@@ -1,0 +1,10 @@
+{
+    "it": {
+        "backgroundImage": "img/banners/reggia-di-caserta.jpg",
+        "title": "Visita l'Italia a 360°",
+        "placeholder": "Inserisci Luogo o Monumento...",
+        "buttonText": "Cerca",
+        "url": "/monuments"
+    },
+    "us": {}
+}

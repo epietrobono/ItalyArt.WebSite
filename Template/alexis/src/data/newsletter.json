@@ -1,0 +1,14 @@
+{
+    "it": {
+        "title": "Iscriviti alla nostra Newsletter",
+        "desc": "Non perderti le nostre novità e le curiosità sull'arte italiana e sui luoghi da visitare! Iscriviti alla nostra newsletter per avere tips&triks su come viaggiare al meglio e rimanere sempre aggiornato e vivere l'Italia come non hai mai fatto prima.",
+        "placeholder": "Inserisci e-mail...",
+        "buttonText": "Invia",
+        "url": "#/newsletter",
+        "image": {
+            "alt": "Newsletter",
+            "path": "/img/newsletter.png"
+        }
+    },
+    "us": {}
+}

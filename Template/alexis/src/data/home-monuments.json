@@ -1,0 +1,26 @@
+{
+    "it": {
+        "banners":[
+            {
+                "backgroundImage": "img/banners/reggia-di-caserta.jpg"
+            },
+            {
+                "backgroundImage": "img/banners/san-ivo.jpg"
+            },
+            {
+                "backgroundImage": "img/banners/galleria-corsini.jpg"
+            },
+            {
+                "backgroundImage": "img/banners/san-pietro.jpg"
+            },
+            {
+                "backgroundImage": "img/banners/villa-del-casale.jpg"
+            }
+        ],
+        "title": "Visita l'Italia a 360°",
+        "placeholder": "Inserisci Luogo o Monumento...",
+        "buttonText": "Cerca",
+        "url": "/monuments"
+    },
+    "us": {}
+}

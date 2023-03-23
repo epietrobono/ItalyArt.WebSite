@@ -1,0 +1,50 @@
+{
+    "it": {
+        "title": "I nostri 3D",
+        "desc": "Spicy jalapeno bacon ipsum dolor amet buffalo corned beef burgdoggen t-bone jowl.",
+        "buttonText": "Visita altri luoghi",
+        "suggestions": [
+            {
+                "title": "Duomo",
+                "location": "Siena",
+                "buttonText": "Visita",
+                "image": {
+                    "path": "/img/photos/Siena.png",
+                    "alt": "Duomo di Siena 3D"
+                },
+                "url": "/monuments/10"
+            },
+            {
+                "title": "Busto Femminile",
+                "location": "Mezzaselva",
+                "buttonText": "Visita",
+                "image": {
+                    "path": "/img/photos/busto-mezzaselva.png",
+                    "alt": "Busto Femminile di Mezzaselva"
+                },
+                "url": "/monuments/6"
+            },
+            {
+                "title": "Ercole Farnese",
+                "location": "Napoli",
+                "buttonText": "Visita",
+                "image": {
+                    "path": "/img/photos/ercole-farnese.png",
+                    "alt": "Ercole Farnese"
+                },
+                "url": "/monuments/8"
+            },
+            {
+                "title": "Erma Bifronte",
+                "location": "Nemi",
+                "buttonText": "Visita",
+                "image": {
+                    "path": "/img/photos/erma-bifronte.png",
+                    "alt": "Erma Bifronte"
+                },
+                "url": "/monuments/7"
+            }
+        ]
+    },
+    "us": {}
+}

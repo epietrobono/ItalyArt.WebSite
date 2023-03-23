@@ -1,0 +1,35 @@
+{
+    "it": {
+        "title": "Cosa vuoi vedere?",
+        "desc": "Viaggia attraverso l'arte italiana come se fossi lì! ",
+        "desc2": "Scopri i tesori nascosti delle città italiane, respira la magia e progetta il tuo viaggio, da virtuale a reale.",
+        "categories": [
+            {
+                "name": "Palazzi",
+                "path": "/img/photos/palace.jpg",
+                "url": "/monuments/palazzi"
+            },
+            {
+                "name": "Musei",
+                "path": "/img/photos/museum.jpg",
+                "url": "/monuments/musei"
+            },
+            {
+                "name": "Chiese",
+                "path": "/img/photos/church.jpg",
+                "url": "/monuments/chiese"
+            },
+            {
+                "name": "Archeo",
+                "path": "/img/photos/archeo.jpg",
+                "url": "/monuments/archeo"
+            },
+            {
+                "name": "Panorami",
+                "path": "/img/photos/panorami.jpg",
+                "url": "/monuments/panorami"
+            }
+        ]
+    },
+    "us": {}
+}

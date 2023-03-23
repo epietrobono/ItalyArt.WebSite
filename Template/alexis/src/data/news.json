@@ -1,0 +1,41 @@
+{
+    "it": {
+        "title": "Ultime notizie",
+        "news": [
+            {
+                "title": "Notizia numero 1",
+                "desc": "Adipisicing dolore aliquip ullamco consectetur mollit pariatur. Cupidatat incididunt quis incididunt ut nisi Lorem.",
+                "buttonText": "Leggi di più",
+                "image": {
+                    "path": "/img/blog/01.jpg",
+                    "alt": "Villa Lante"
+                },
+                "url": "/blog/1",
+                "id": "uno-blog"
+            },
+            {
+                "title": "Notizia numero 2",
+                "desc": "Adipisicing dolore aliquip ullamco consectetur mollit pariatur. Cupidatat incididunt quis incididunt ut nisi Lorem.",
+                "buttonText": "Leggi di più",
+                "image": {
+                    "path": "/img/blog/02.jpg",
+                    "alt": "Villa Lante"
+                },
+                "url": "/blog/2",
+                "id": "due-blog"
+            },
+            {
+                "title": "Notizia numero 3",
+                "desc": "Adipisicing dolore aliquip ullamco consectetur mollit pariatur. Cupidatat incididunt quis incididunt ut nisi Lorem.",
+                "buttonText": "Leggi di più",
+                "image": {
+                    "path": "/img/blog/03.jpg",
+                    "alt": "Villa Lante"
+                },
+                "url": "/blog/3",
+                "id": "tre-blog"
+            }
+        ]
+    },
+    "us": {}
+}

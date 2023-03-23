@@ -1,0 +1,14 @@
+{
+    "it": { 
+        "gridTitle1": "I nostri monumenti",
+        "gridTitle2": "Altri Monumenti",
+        "form": {
+            "placeholder": "Inserisci città, paese o indirizzo...",
+            "buttonText": "Cerca",
+            "url": "/monuments"
+        }
+    },
+    "us": {
+
+    }
+}

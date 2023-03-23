@@ -1,0 +1,15 @@
+{
+    "it": {
+        "title": "ItalyArt.info",
+        "desc": "Minim quis dolore dolore eu amet. Duis velit ea consequat elit elit dolor ut est excepteur dolore fugiat laborum cillum sint. Et deserunt mollit et cupidatat esse eu voluptate do.",
+        "buttonText": "ItalyArt.info",
+        "url": "#/info",
+        "image": {
+            "path": "/img/about/info.jpg",
+            "alt": ""
+        }
+    },
+    "us": {
+
+    }
+}

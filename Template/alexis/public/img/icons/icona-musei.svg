@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27.659" height="24.69" viewBox="0 0 27.659 24.69">
+  <g id="icona-musi" transform="translate(0.5 0.506)">
+    <g id="Livello_1" data-name="Livello 1" transform="translate(0 0)">
+      <path id="Tracciato_7262" data-name="Tracciato 7262" d="M27.193,56.17H1.851a.6.6,0,0,0-.6.6v1.451a.6.6,0,0,0,.6.6H27.3a.6.6,0,0,0,.6-.6V56.871a.712.712,0,0,0-.708-.7Z" transform="translate(-1.25 -35.14)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linea_466" data-name="Linea 466" y2="12.012" transform="translate(1.551 9.018)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linea_467" data-name="Linea 467" y2="12.012" transform="translate(4.074 9.018)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linea_468" data-name="Linea 468" y2="12.012" transform="translate(8.489 9.332)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linea_469" data-name="Linea 469" y2="12.012" transform="translate(11.013 9.332)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linea_470" data-name="Linea 470" y2="12.012" transform="translate(15.428 9.018)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linea_471" data-name="Linea 471" y2="12.012" transform="translate(17.951 9.018)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linea_472" data-name="Linea 472" y2="12.012" transform="translate(22.367 8.773)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Linea_473" data-name="Linea 473" y2="12.012" transform="translate(24.89 8.773)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Tracciato_7263" data-name="Tracciato 7263" d="M1.25,7.967V9.452a.716.716,0,0,0,.716.716H27.193a.712.712,0,0,0,.716-.716V7.967a.716.716,0,0,0-.406-.647l-12.621-6a.716.716,0,0,0-.613,0l-12.61,6a.712.712,0,0,0-.41.647Z" transform="translate(-1.25 -1.25)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Tracciato_7264" data-name="Tracciato 7264" d="M35.3,10.779A1.149,1.149,0,1,1,34.149,9.63,1.149,1.149,0,0,1,35.3,10.779Z" transform="translate(-20.842 -6.421)" fill="none" stroke="#3e3e3e" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

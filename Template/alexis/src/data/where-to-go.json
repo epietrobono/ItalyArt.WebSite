@@ -1,0 +1,15 @@
+{
+    "it": {
+        "title": "Dove vuoi andare?",
+        "subtitle": "Cerca nella mappa",
+        "desc": "Per trovare il luogo che vuoi visitare, cerca sulla mappa interattiva e scopri tutti i luoghi da vedere. \n\r La tua prossima avventura ti aspetta!",
+        "placeholder": "Inserisci città, paese o indirizzo...",
+        "buttonText": "Cerca",
+        "url": "#/search-locations",
+        "image": {
+            "path": "/img/photos/italy-outline.svg",
+            "alt": "Bordo Mappa Italia"
+        }
+    },
+    "us": {}
+}
