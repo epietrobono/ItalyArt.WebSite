@@ -1,27 +1,19 @@
 import PropTypes from "prop-types";
 
-const MonumentTextContainer = ({contenuto, nSection}) => {
+const MonumentTitleTextContainer = ({contenuto}) => {
     return (
         <div className="row justify-content-center">
             <div className="col col-auto">
-                <h3>{contenuto.testoConTitolo.titolo}</h3>
-                <p>{contenuto.testoConTitolo.testo}</p>
+                <h3>{contenuto.titolo}</h3>
+                <p>{contenuto.testo}</p>
             </div>
         </div>
-    );
+    ); 
 };
 
-MonumentTextContainer.propTypes = {
-    contenuto: PropTypes.shape({
-        testoConTitolo: PropTypes.arrayOf(
-          PropTypes.shape({
-            titolo: PropTypes.string,
-            testo: PropTypes.string,
-          })
-        )
-      }),      
-      nSezione: PropTypes.number.isRequired,
-    };
+MonumentTitleTextContainer.propTypes = {
+    contenuto: PropTypes.object
+}
 
 
-export default MonumentTextContainer;
+export default MonumentTitleTextContainer;

@@ -19,7 +19,7 @@ const Monument3DModelContainer = ({contenuto}) => {
                     
                     <Button className=" btn-primary btn-italyart botton-monument-carousel container-button-position" id="button-3d" title="Visita il 3D" onClick={handleShow}>Visita il 3D</Button>
                 </div>
-                <Image rounded  src={process.env.PUBLIC_URL + contenuto.image}></Image>
+                <Image rounded  src={process.env.PUBLIC_URL + contenuto.image.path} alt={contenuto.image.alt}></Image>
             </div>
             <Modal show={show} fullscreen={fullscreen} onHide={handleClose}>
                 <Modal.Header closeButton></Modal.Header>

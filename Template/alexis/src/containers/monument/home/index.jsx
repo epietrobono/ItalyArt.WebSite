@@ -1,27 +1,25 @@
 import PropTypes from "prop-types";
 import Model3D from "../3dmodel";
 import MonumentCitContainer from "../citazione";
+import MonumentGalleryContainer from "../gallery";
 import MonumentRightImgContainer from "../imageADestra";
 import MonumentLeftImgContainer from "../imageASinistra";
 import Text from "../text";
 import Title from "../title";
+import MonumentTitleTextContainer from "../titleText";
 import Tour360 from "../tour360";
 
 const MonumentHomeContainer = ({monuments,id}) => {
-    
-    let testoDestra = 0;
-    let testoSinistra = 0;
-    let citazione = 0;
-    
-    const monument = monuments.filter((monument)=>{
-        if (monument.id == id){
+
+    const monument = monuments.filter((monument) => {
+        if (monument.id == parseInt(id)){
             return monument
         }
     }).pop();
     return (
         <div className="col-12 justify-content-center">
             {
-                monument.contenuti.map((contenuto,index) => {
+                monument.contenuti.map((contenuto) => {
                     switch(contenuto.type){
                         case 'title':                                            
                             return (<Title contenuto={contenuto}></Title>);
@@ -32,20 +30,15 @@ const MonumentHomeContainer = ({monuments,id}) => {
                         case 'tour':                                            
                             return (<Tour360 contenuto={contenuto}></Tour360>);
                         case 'testoADestra':                                            
-                            testoDestra++;
-                            return (
-                                <MonumentLeftImgContainer contenuto={contenuto} nSezione={testoDestra - 1} />
-                            );
+                            return (<MonumentLeftImgContainer contenuto={contenuto} /> );
                         case 'testoASinistra':                                            
-                            testoSinistra++;
-                            return (
-                                <MonumentRightImgContainer contenuto={contenuto} nSezione={testoSinistra - 1} />
-                            );
+                            return (<MonumentRightImgContainer contenuto={contenuto} />);
                         case 'citazione':                                            
-                            citazione++;
-                            return (
-                                <MonumentCitContainer contenuto={contenuto} nSezione={citazione - 1} />
-                            );
+                            return ( <MonumentCitContainer contenuto={contenuto}  /> );
+                        case 'testoConTitolo':                                            
+                            return (<MonumentTitleTextContainer contenuto={contenuto}  /> );
+                        case 'galleria':                                            
+                            return (<MonumentGalleryContainer contenuto={contenuto}  /> );
                         default:
                             return'';
                     }
@@ -57,7 +50,7 @@ const MonumentHomeContainer = ({monuments,id}) => {
 
 MonumentHomeContainer.propTypes = {
     monuments: PropTypes.object,
-    id: PropTypes.number
+    id: PropTypes.string
 }
 
 export default MonumentHomeContainer;
