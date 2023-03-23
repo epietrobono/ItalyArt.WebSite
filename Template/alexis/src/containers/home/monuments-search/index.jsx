@@ -22,7 +22,7 @@ const MonumentsSearchContainer = () => {
                 },
                 body: JSON.stringify(postBody)
             };
-            const response = await fetch(`http://localhost:4439/api/Banner`, settings);
+            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/Banner`, settings);
             console.log(response);
             const responseJson = await response.json();
             console.log(responseJson);
