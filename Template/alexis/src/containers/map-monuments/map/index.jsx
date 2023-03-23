@@ -1,5 +1,4 @@
 import GoogleMapReact from 'google-map-react';
-import React from "react";
 import MapPlace from "../../../components/map-place";
 import MapPlaceTour from "../../../components/map-place-tour";
 import {React,useEffect, useState }  from "react";

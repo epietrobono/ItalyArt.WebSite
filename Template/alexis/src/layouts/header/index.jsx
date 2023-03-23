@@ -4,7 +4,6 @@ import HamburgerMenu from "../../components/hamburger-menu";
 import HeaderLinks from "../../components/header-links";
 import LanguageSelector from "../../components/language-selector";
 import Logo from "../../components/logo/index";
-import {React,useEffect, useState }  from "react";
 
 const Header = ({ classOption }) => {
     const [ofcanvasShow, setOffcanvasShow] = useState(false);

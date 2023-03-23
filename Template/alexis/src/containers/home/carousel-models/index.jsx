@@ -31,7 +31,7 @@ function CarouselModelsContainer() {
         <div className="carousel-models section-margin " id="tred-carousel">
             <Carousel indicators={false}>
                 {
-                    data.map((monumento, key) => {
+                    data?.map((monumento, key) => {
                         return (
                             <Carousel.Item key={key}>
                                 <div className="row card-3d-carousel">

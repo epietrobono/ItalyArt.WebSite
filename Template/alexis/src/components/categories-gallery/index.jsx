@@ -14,7 +14,7 @@ function CategoriesGallery({ data }) {
     return(
         <div className="row justify-content-center categories py-5 category-gallery-desktop">
             {
-                data.map((image, key) => {
+                data?.map((image, key) => {
                     return (
                         <div role="button" tabIndex={key} key={key}
                             id={"category-photo-" + key}

@@ -32,7 +32,7 @@ function CarouselMonumentsContainer() {
         <div className="carousel-monuments section-margin" id="mon-carousel">
             <Carousel indicators={false}>
                 {
-                    data.map((monumento, key) => {
+                    data?.map((monumento, key) => {
                         return (
                             <Carousel.Item key={key}>
                                 <div className="row mx-5 carousel-monuments-home">

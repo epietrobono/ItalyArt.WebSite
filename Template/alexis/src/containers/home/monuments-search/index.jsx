@@ -1,7 +1,6 @@
 import {React,useEffect, useState }  from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import SearchForm from "../../../components/search-form";
-import {React,useEffect, useState }  from "react";
 
 const MonumentsSearchContainer = () => {
 

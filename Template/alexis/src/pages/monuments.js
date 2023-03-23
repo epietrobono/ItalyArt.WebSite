@@ -5,6 +5,7 @@ import ScrollToTop from "../components/scroll-to-top";
 import SearchForm from "../components/search-form";
 import SEO from "../components/seo";
 import CategoriesContainer from "../containers/monuments/categories";
+import MonumentsData from "../data/monuments.json";
 import GridContainer from "../containers/monuments/grid";
 import Layout from "../layouts";
 import Footer from "../layouts/footer";
@@ -39,29 +40,30 @@ const MonumentsPage = ({
         }, []);
     
     //TODO: Form Ricerca
-    const [monumentsDt, setmonumentsDt] = useState({});
-    useEffect(() => {
-        async function getAjaxApiData() {
-            const postBody = {
-                Pagina:"Home",
-                Lingua:"IT"
-            };
-            const settings = {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(postBody)
-            };
-            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/Monuments`, settings);
-            const responseJson = await response.json();
-            setmonumentsDt(responseJson.results.Monuments);
-        }
+    // const [monumentsDt, setmonumentsDt] = useState({});
+    // useEffect(() => {
+    //     async function getAjaxApiData() {
+    //         const postBody = {
+    //             Pagina:"Home",
+    //             Lingua:"IT"
+    //         };
+    //         const settings = {
+    //             method: 'POST',
+    //             headers: {
+    //                 Accept: 'application/json',
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify(postBody)
+    //         };
+    //         const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/MonumentPageText`, settings);
+    //         const responseJson = await response.json();
+    //         setmonumentsDt(responseJson.results.Monuments);
+    //     }
 
-        getAjaxApiData();
-        }, []);
-        
+    //     getAjaxApiData();
+    //     }, []);
+    
+    const monumentsDt = MonumentsData.it.monuments;
     const monuments = monumentsDt.filter((monument)=>{
         if(!category){
             return monument;

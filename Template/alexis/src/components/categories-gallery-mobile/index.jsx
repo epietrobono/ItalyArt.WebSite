@@ -10,7 +10,7 @@ function CategoriesGallery({ data }) {
         <div className="category-gallery-mobile">
             <ScrollMenu>
                 {
-                    data.map((image, key) => {
+                    data?.map((image, key) => {
                         return(
                         <div key={key}>
                             <Link to={process.env.PUBLIC_URL + image.Url}>
