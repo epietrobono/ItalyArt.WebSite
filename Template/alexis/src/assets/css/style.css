@@ -429,6 +429,7 @@
     flex-direction: row;
     justify-content: space-between ;
     border-radius: 15px;
+    width: 95%;
 }
 
 .rounded{
