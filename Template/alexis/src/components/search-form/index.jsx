@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 const SearchForm = ({ data, icon="search-icon" }) => {
     return (
         <div className="search-form">
-            <form action={data.url}>
+            <form action={data?.Url}>
                 <input
                     id="search"
                     className={"col col-auto input-text border rounded-pill py-2 px-4 " + icon}
-                    placeholder={data.placeholder}
+                    placeholder={data?.Placeholder}
                     type="search"
                 />
                 <Link
-                    to={process.env.PUBLIC_URL + data.url}
+                    to={process.env.PUBLIC_URL + data?.Url}
                     className="col col-auto btn-cerca btn-light border rounded-pill ms-2"
                 >
-                    {data.buttonText}
+                    {data?.ButtonText}
                 </Link>
             </form>
         </div>
