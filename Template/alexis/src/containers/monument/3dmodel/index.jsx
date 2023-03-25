@@ -12,7 +12,7 @@ const Monument3DModelContainer = ({contenuto}) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
-        <>
+        <section className="main-content container-ita-2">
             <div className="row justify-content-center module-3d img-3d">
                 <div className="img-3d-overlay"></div>
                 <div className="container-button-3Dmodel ">
@@ -27,7 +27,7 @@ const Monument3DModelContainer = ({contenuto}) => {
                     <Monument3dModel iframe={contenuto.model3D}></Monument3dModel>
                 </Modal.Body>
             </Modal>
-        </>
+        </ section>
     );
 };
 

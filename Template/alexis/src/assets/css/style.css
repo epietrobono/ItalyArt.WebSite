@@ -872,7 +872,6 @@ margin-bottom: 15px;
 
 .img-3d{
     height: 400px !important;
-    width: 100%;
     position: relative;
     margin-bottom: 25px;
     margin-top: 20px;
@@ -1730,6 +1729,31 @@ margin-bottom: 15px;
     display: grid ;
     grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
     justify-items: center
+}
+
+.text-image-section{
+    padding: 50px 0 ;
+    background-color: #C217180D;
+}
+
+.margin-section-image-text{
+    width: 80%;
+    padding: 0 75px;
+    margin:auto;
+}
+
+.image-text-section{
+    width: 90%;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+}
+
+.float-right{
+    float : right
+}
+
+.float-left{
+    float : left
 }
 
 @media screen and ( min-width: 800px) {
