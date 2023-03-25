@@ -6,7 +6,7 @@ const MonumentCitContainer = ({contenuto}) => {
             <div className="col col-auto border-citazione">
                 <p>{contenuto.testo}</p>
                 <div className="title-citazione">
-                    <h5>{contenuto.titolo}</h5>
+                    <h6>{contenuto.titolo}</h6>
                 </div>
             </div>
         </div>

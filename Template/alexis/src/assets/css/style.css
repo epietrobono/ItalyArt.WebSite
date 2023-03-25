@@ -1756,6 +1756,33 @@ margin-bottom: 15px;
     float : left
 }
 
+.title-citazione{
+    display: flex;
+    justify-content: end;
+}
+
+.border-citazione{
+    border: 1px solid #C21718;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.border-citazione p{
+    margin-bottom: 15px;
+}
+
+.gallery-monument{
+    display: flex;
+    gap: 25px;
+    justify-content: flex-start;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.gallery-monument img{
+    border-radius: 10px;
+}
+
 @media screen and ( min-width: 800px) {
    .flex-container-monuments{
     display: flex !important;
