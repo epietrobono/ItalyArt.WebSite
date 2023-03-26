@@ -21,9 +21,9 @@ function HeaderLinks({ data }) {
                         <li className="nav-item">
                             <a className="mx-3 nav-link" href="/blog">{data.Blog}</a>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <a className="mx-3 nav-link" href="/map">{data.Map}</a>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <a className="mx-3 nav-link" href="/about">{data.About}</a>
                         </li>

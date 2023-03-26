@@ -28,6 +28,10 @@ const Api = {
     const response = await axios.post(baseUrl+"api/CategorieHome", postBody);
     return response.data.results;
   },
+  GetCategorieIcons: async () => {
+    const response = await axios.post(baseUrl+"api/CategorieIcons", postBody);
+    return response.data.results;
+  },
   GetMonuments3DHome: async () => {
     const response = await axios.post(baseUrl+"api/Monuments3DHome", postBody);
     return response.data.results;
@@ -44,8 +48,13 @@ const Api = {
     const response = await axios.post(baseUrl+"api/Monuments360Home", postBody);
     return response.data.results;
   },
-  GetMonuments: async () => {
+  GetMonuments: async (category) => {
+    postBody.Category=category;
     const response = await axios.post(baseUrl+"api/Monuments", postBody);
+    return response.data.results;
+  },
+  GetHeader: async () => {
+    const response = await axios.post(baseUrl+"api/Header", postBody);
     return response.data.results;
   },
   GetFooter: async () => {
@@ -58,6 +67,12 @@ const Api = {
   },
   GetMonumentPageText: async () => {
     const response = await axios.post(baseUrl+"api/MonumentPageText", postBody);
+    return response.data.results;
+  },
+  GetMonument: async (id, keyword) => {
+    postBody.Id=id;
+    postBody.Deyword=keyword;
+    const response = await axios.post(baseUrl+"api/Monument", postBody);
     return response.data.results;
   }
 }

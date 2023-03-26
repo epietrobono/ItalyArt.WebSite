@@ -15,26 +15,30 @@ const ModelSuggestionsContainer = () => {
         fetchData();
     }, []);
     
-
-    return (
-        <div className="container-ita">
-        <div className="py-4 d-flex flex-column section-margin ">
-            <h2 className="text-center mob-h2">{modelSuggestionsContainerData.Title}</h2>
-            <p className="text-center mob-p">{modelSuggestionsContainerData.Desc}</p>
-            <div className="row justify-content-center sezione-card-monumenti r-gap">
-                {!isLoading && 
-                    modelSuggestionsContainerData.Suggestions.map((val, key)=>{
-                        return(
-                            <div className="col col-auto width-3d-card card-monumenti" key={key}>
-                                <MonumentCard data={val}></MonumentCard>
-                            </div>
-                        );
-                    })
-                }
+if(!isLoading && modelSuggestionsContainerData.Suggestions.lenght > 0){
+        return (
+            <div className="container-ita">
+            <div className="py-4 d-flex flex-column section-margin ">
+                <h2 className="text-center mob-h2">{modelSuggestionsContainerData.Title}</h2>
+                <p className="text-center mob-p">{modelSuggestionsContainerData.Desc}</p>
+                <div className="row justify-content-center sezione-card-monumenti r-gap">
+                    {!isLoading && modelSuggestionsContainerData.Suggestions.lenght > 0 &&
+                        modelSuggestionsContainerData.Suggestions.map((val, key)=>{
+                            return(
+                                <div className="col col-auto width-3d-card card-monumenti" key={key}>
+                                    <MonumentCard data={val}></MonumentCard>
+                                </div>
+                            );
+                        })
+                    }
+                </div>
             </div>
-        </div>
-        </div>
-    );
+            </div>
+        );
+    }else
+    {
+        return null;
+    }
 };
 
 export default ModelSuggestionsContainer;

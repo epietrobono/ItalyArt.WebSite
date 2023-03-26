@@ -5,7 +5,7 @@ const MonumentTitleContainer = ({contenuto}) => {
         <>
             <div className="row justify-content-center">
                 <div className="col col-auto">
-                    <h2 className="title-monument">{contenuto.titolo}</h2>
+                    <h2 className="title-monument">{contenuto.Titolo}</h2>
                 </div>
             </div>
         </>

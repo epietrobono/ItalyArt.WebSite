@@ -1,5 +1,5 @@
 
-import {React,useEffect, useState }  from "react";
+import React,{useEffect, useState }  from "react";
 import PropTypes from "prop-types";
 import ScrollToTop from "../components/scroll-to-top";
 import SearchForm from "../components/search-form";
@@ -18,56 +18,29 @@ const MonumentsPage = ({
     },
 }) => {
     const [MonumentsPageData, setMonumentsPageData] = useState({});
+    const [monumentsDt, setmonumentsDt] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
     const [isMounted14, setIsMounted14] = useState(false);
     
     useEffect(async () => {
         console.log("entro in useEffects");
         await Api.GetMonumentPageText().then((results) => {    
+            console.log("esegue then");
+            setMonumentsPageData(results);
+            });
+        await Api.GetMonuments(category).then((results) => {    
+            console.log("esegue then");
+            setmonumentsDt(results.Monuments);
             setIsMounted14(true);
-        console.log("esegue then");
-        setMonumentsPageData(results);
-      });
-    }, []);
+            setIsLoading(false);
+        });
+    }, [category]);
     
-    if (!isMounted14) {
+    if (!isMounted14 && isLoading) {
         return null; // non renderizzare il componente fino a quando non è montato
       }
     
-    //TODO: Form Ricerca
-    // const [monumentsDt, setmonumentsDt] = useState({});
-    // useEffect(() => {
-    //     async function getAjaxApiMonumentsPageData() {
-    //         const postBody = {
-    //             Pagina:"Home",
-    //             Lingua:"IT"
-    //         };
-    //         const settings = {
-    //             method: 'POST',
-    //             headers: {
-    //                 Accept: 'application/json',
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify(postBody)
-    //         };
-    //         const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/MonumentPageText`, settings);
-    //         const responseJson = await response.json();
-    //         setmonumentsDt(responseJson.results.Monuments);
-    //     }
-
-    //     getAjaxApiMonumentsPageData();
-    //     }, []);
-    
-    const monumentsDt = MonumentsMonumentsPageData.it.monuments;
-    const monuments = monumentsDt.filter((monument)=>{
-        if(!category){
-            return monument;
-        }
-        if (monument.Categories.includes(category)){
-            return monument
-        }
-    });
-    console.log(monuments);
-    const form = MonumentsPageData.Form;
+    const form = MonumentsPageData?.Form;
     return (
         <React.Fragment>
             <Layout>
@@ -84,14 +57,14 @@ const MonumentsPage = ({
                     <div className="main-content">
                         <div className="col col-auto my-4">
                             <div className="row mx-5 monuments-section">
-                                <h1 className="mob-h2">{MonumentsPageData.GridTitle1}</h1>
-                                <GridContainer nCols={5} monuments={monuments}></GridContainer>
+                                <h1 className="mob-h2">{MonumentsPageData?.GridTitle1}</h1>
+                                <GridContainer nCols={5} monuments={monumentsDt}></GridContainer>
                             </div>
                         </div>
                         <div className="col col-auto my-4 px-auto">
                             <div className="row mx-5 monuments-section">
-                                <h1 className="mob-h2">{MonumentsPageData.GridTitle2}</h1>
-                                <GridContainer nCols={5} monuments={monuments}></GridContainer>
+                                <h1 className="mob-h2">{MonumentsPageData?.GridTitle2}</h1>
+                                <GridContainer nCols={5} monuments={monumentsDt}></GridContainer>
                             </div>
                         </div>
                     </div>

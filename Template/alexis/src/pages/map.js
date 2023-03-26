@@ -27,7 +27,7 @@ const MonumentsPage = () => {
         return null; // non renderizzare il componente fino a quando non è montato
       }
 
-    const form = MapMonumentsPageData.Form;
+    const form = MapMonumentsPageData?.Form;
 
     return (
         <React.Fragment>

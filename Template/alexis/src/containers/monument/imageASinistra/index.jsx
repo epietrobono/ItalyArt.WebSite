@@ -6,13 +6,13 @@ const MonumentLeftImgContainer = ({ contenuto }) => {
       <div className="col-md-6">
         <img
           className="img-fluid"
-          src={contenuto.image.path}
-          alt={contenuto.image.alt}
+          src={contenuto.Image.Path}
+          alt={contenuto.Image.Alt}
         />
       </div>
       <div className="col-md-6">
-        <h2>{contenuto.titolo}</h2>
-        <p>{contenuto.testo}</p>
+        <h2>{contenuto.Titolo}</h2>
+        <p>{contenuto.Testo}</p>
       </div>
     </div>
   );

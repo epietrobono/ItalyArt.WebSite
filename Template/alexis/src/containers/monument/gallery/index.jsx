@@ -5,8 +5,8 @@ const MonumentGalleryContainer = ({contenuto }) => {
         <div className="row justify-content-center">
             <div className="col col-auto border-citazione">
                 {
-                    contenuto.images.map((content, index) => {
-                        return <img src={content.path} alt={content.alt} key={index} />;
+                    contenuto.Images.map((content, index) => {
+                        return <img src={content.Path} alt={content.Alt} key={index} />;
                       })
                 }
             </div>
@@ -16,10 +16,10 @@ const MonumentGalleryContainer = ({contenuto }) => {
 
 MonumentGalleryContainer.propTypes = {
     contenuto: PropTypes.shape({
-      images: PropTypes.arrayOf(
+      Images: PropTypes.arrayOf(
         PropTypes.shape({
-          path: PropTypes.string.isRequired,
-          alt: PropTypes.string.isRequired,
+          Path: PropTypes.string.isRequired,
+          Alt: PropTypes.string.isRequired,
         })
       ).isRequired,
     }).isRequired,

@@ -11,6 +11,7 @@ const MonumentTour360 = ({contenuto}) => {
     const [fullscreen, setFullscreen] = useState(true);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    console.log("in tour");
     return (
         <>
             <div className="row justify-content-center module-3d img-3d">
@@ -18,12 +19,12 @@ const MonumentTour360 = ({contenuto}) => {
                 <div className="container-button-3Dmodel">
                     <Button className=" btn-primary botton-monument-carousel btn-italyart" id="button-360" title="Visita ora a 360" onClick={handleShow}>Visita ora a 360</Button>
                 </div>
-                <Image rounded src={process.env.PUBLIC_URL + contenuto.image}></Image>
+                <Image rounded src={process.env.PUBLIC_URL + contenuto.Image?.Path} alt={contenuto.Image?.Alt}></Image>
             </div>
             <Modal show={show} fullscreen={fullscreen} onHide={handleClose}>
                 <Modal.Header closeButton></Modal.Header>
                 <Modal.Body>
-                    <Tour360ContentModal url={contenuto.tour360}></Tour360ContentModal>
+                    <Tour360ContentModal url={contenuto.Tour360}></Tour360ContentModal>
                 </Modal.Body>
             </Modal>
         </>

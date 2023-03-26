@@ -29,7 +29,7 @@ const MonumentsSearchContainer = () => {
                                         className="row monuments-search align-content-center justify-content-center  home-initial"
                                         style={{
                                             backgroundImage: `url(${
-                                                'http://'+banner.BackgroundImage
+                                                banner.BackgroundImage
                                             })`,
                                         }}>
                                             <div className="home-overlay"></div>  

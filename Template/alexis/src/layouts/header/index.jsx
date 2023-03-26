@@ -4,12 +4,14 @@ import HamburgerMenu from "../../components/hamburger-menu";
 import HeaderLinks from "../../components/header-links";
 import LanguageSelector from "../../components/language-selector";
 import Logo from "../../components/logo/index";
+import Api from "../../services/Api";
 
 const Header = ({ classOption }) => {
     const [ofcanvasShow, setOffcanvasShow] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     
     const [data, setData] = useState({});
+    const [isMounted18, setIsMounted18] = useState(false);
     
     const onCanvasHandler = () => {
         setOffcanvasShow((prev) => !prev);
@@ -35,36 +37,51 @@ const Header = ({ classOption }) => {
     const handleScroll = ({}) => {
         setScroll(window.scrollY);
     };
-    
-    useEffect(() => {
-        const getAjaxApiData = async () =>  {
-            const postBody = {
-                Pagina:"Home",
-                Lingua:"IT"
-            };
-            const settings = {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(postBody)
-            };
-            const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/SubMenus`, settings);
-            const responseJson = await response.json();
-            setData(responseJson.results);
-            setIsLoading(false);
-            const header = document.querySelector(".header-area");
-            setHeaderTop(header.offsetTop);
-            window.addEventListener("scroll", handleScroll);
-            return () => {
-                window.removeEventListener("scroll", handleScroll);
-            };
-        }
-    
-        getAjaxApiData();
 
-        }, []);
+    
+    useEffect(async () => {
+        console.log("entro in useEffects");
+        await Api.GetHeader().then((results) => {    
+                setIsMounted18(true);
+                console.log("esegue then");
+                setData(results);
+                setIsLoading(false);
+            });
+    }, []);
+    
+    if (!isMounted18) {
+        return null; // non renderizzare il componente fino a quando non è montato
+      }
+    
+    // useEffect(() => {
+    //     const getAjaxApiData = async () =>  {
+    //         const postBody = {
+    //             Pagina:"Home",
+    //             Lingua:"IT"
+    //         };
+    //         const settings = {
+    //             method: 'POST',
+    //             headers: {
+    //                 Accept: 'application/json',
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify(postBody)
+    //         };
+    //         const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/SubMenus`, settings);
+    //         const responseJson = await response.json();
+    //         setData(responseJson.results);
+    //         setIsLoading(false);
+    //         const header = document.querySelector(".header-area");
+    //         setHeaderTop(header.offsetTop);
+    //         window.addEventListener("scroll", handleScroll);
+    //         return () => {
+    //             window.removeEventListener("scroll", handleScroll);
+    //         };
+    //     }
+    
+    //     getAjaxApiData();
+
+    //     }, []);
 
     return (
         <Fragment>

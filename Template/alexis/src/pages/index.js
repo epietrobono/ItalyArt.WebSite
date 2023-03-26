@@ -9,6 +9,7 @@ import MonumentsSearchContainer from "../containers/home/monuments-search/index.
 import NewsContainer from "../containers/home/news";
 import NewsletterContainer from "../containers/home/newsletter";
 import SuggestionsContainer from "../containers/home/suggestions";
+import ModelSuggestionsContainer from "../containers/home/model-suggestions";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
@@ -29,7 +30,7 @@ const HomePage = () => {
                         <SuggestionsContainer></SuggestionsContainer>
                         {/* <WhereToGoContainer></WhereToGoContainer> */}
                         <CarouselModelsContainer></CarouselModelsContainer>
-                        {/* <ModelSuggestionsContainer></ModelSuggestionsContainer> */}
+                        <ModelSuggestionsContainer></ModelSuggestionsContainer>
                         <NewsContainer></NewsContainer>
                     </div>
                     <NewsletterContainer></NewsletterContainer>
