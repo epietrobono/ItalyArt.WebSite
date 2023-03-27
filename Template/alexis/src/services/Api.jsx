@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const baseUrl="http://treppiweb-002-site1.htempurl.com/";
-// const baseUrl="http://localhost:4439/";
+// const baseUrl="http://treppiweb-002-site1.htempurl.com/";
+const baseUrl="http://localhost:4439/";
 const postBody = {
     Pagina:"",
     Lingua:"IT"
@@ -48,8 +48,9 @@ const Api = {
     const response = await axios.post(baseUrl+"api/Monuments360Home", postBody);
     return response.data.results;
   },
-  GetMonuments: async (category) => {
+  GetMonuments: async (category,research) => {
     postBody.Category=category;
+    postBody.Search=research;
     const response = await axios.post(baseUrl+"api/Monuments", postBody);
     return response.data.results;
   },
@@ -65,14 +66,20 @@ const Api = {
     const response = await axios.post(baseUrl+"api/MonumentPageText", postBody);
     return response.data.results;
   },
-  GetMonumentPageText: async () => {
-    const response = await axios.post(baseUrl+"api/MonumentPageText", postBody);
+  GetBlogArticoliHome: async () => {
+    const response = await axios.post(baseUrl+"api/BlogArticoliHome", postBody);
     return response.data.results;
   },
   GetMonument: async (id, keyword) => {
     postBody.Id=id;
-    postBody.Deyword=keyword;
+    postBody.Keyword=keyword;
     const response = await axios.post(baseUrl+"api/Monument", postBody);
+    return response.data.results;
+  },
+  GetArticolo: async (id, keyword) => {
+    postBody.Id=id;
+    postBody.Keyword=keyword;
+    const response = await axios.post(baseUrl+"api/Articolo", postBody);
     return response.data.results;
   }
 }

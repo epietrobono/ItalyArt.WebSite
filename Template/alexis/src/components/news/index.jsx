@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 
 const News = ({ data }) => {
     return (
-        <div className="p-2" id={data.id}>
-            <Image rounded alt={data.image.alt} src={process.env.PUBLIC_URL + data.image.path}></Image>
-            <h4 className="text-left mt-3 mob-h2">{data.title}</h4>
-            <p className="mob-p">{data.desc}</p>
+        <div className="p-2" id={data?.Id}>
+            <Image rounded alt={data?.Image?.Alt} src={process.env.PUBLIC_URL + data?.Image?.Path}></Image>
+            <h4 className="text-left mt-3 mob-h2">{data?.Title}</h4>
+            <p className="mob-p">{data?.Desc}</p>
             <div>
                 <Link
-                    to={process.env.PUBLIC_URL + data.url}
+                    to={process.env.PUBLIC_URL + data?.Url}
                     className="btn btn-light border shadow rounded-pill"
                 >
-                    {data.buttonText}
+                    {data?.ButtonText}
                 </Link>
             </div>
         </div>

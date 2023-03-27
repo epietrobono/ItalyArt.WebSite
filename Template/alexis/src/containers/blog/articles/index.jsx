@@ -1,44 +1,44 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ArticlePreview from "../../../components/article-preview";
-import Api from "../../../services/Api";
+import PropTypes from "prop-types";
 
-const ArticlesContainer = () => {    
-    const [articlesContainerData, setarticlesContainerData] = useState({});
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const results = await Api.GetTestiArticoli();
-            setarticlesContainerData(results);
-            setIsLoading(false);
-      }
-      fetchData();
-    }, []);
-
+const ArticlesContainer = ({articles}) => {    
       
-    const articles = articlesContainerData.articles;
+    var i=1;
     return (
         <div className="row justify-content-center intro-blog py-5">
             {
-            !isLoading && ( 
             <>
                 <div id="primo-articolo" className="col col-md-6 col-sm-12">
-                    <ArticlePreview articlesContainerData={articles[0]}></ArticlePreview>
+                    <ArticlePreview data={articles[0]}></ArticlePreview>
                 </div>
                 <div className="col col-md-4 col-sm-12 ">
-                    <div className="row gap-10">
-                        <div className="row flex-1">
-                            <ArticlePreview articlesContainerData={articles[1]}></ArticlePreview>
-                        </div>
-                        <div className="row flex-1">
-                            <ArticlePreview articlesContainerData={articles[2]}></ArticlePreview>
-                        </div>
+                    <div className="row gap-10">                        
+                        {
+                            articles.map((val, key)=>{
+                                if(i==1){
+                                    i=i+1;
+                                    return null;
+                                }else{
+                                    return (
+                                        <div className="row flex-1"  key={key}>
+                                            <ArticlePreview data={val}></ArticlePreview>
+                                        </div>
+                                    )
+                                        
+                                }
+                            })
+                        }
                     </div>
                 </div>
             </>
-            )}
+            }
         </div>
     );
 };
+
+ArticlesContainer.propTypes = {
+    articles: PropTypes.object
+}
 
 export default ArticlesContainer;

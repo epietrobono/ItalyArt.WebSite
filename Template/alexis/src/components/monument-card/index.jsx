@@ -25,52 +25,106 @@ const MonumentCard = ({ data }) => {
     }
 
     if(data.Title.length>20 && width<=900){        
-        return (
-            <Link to={process.env.PUBLIC_URL + data.Url}>
-                <div className="shadow rounded p-2 card-monument-size">
-                    {/*<div className="card-background" alt={data.image.alt} style={{ backgroundImage:`url(${process.env.PUBLIC_URL + data.image.path}) ` }}>*/}
-                    <Image rounded alt={data.Image.Alt} src={process.env.PUBLIC_URL + data.Image.Path}></Image>
-                    {/*</div>*/}
-                    <div className="textarea-monument-card">
-                        <Marquee direction={"left"} gradient={false} delay={5}>
-                            <h4 className="text-left monument-card-title">{data.Title} &nbsp;</h4>
-                        </Marquee>
-                        <div className="d-flex justify-content-between">
-                            <p className="col col-auto">{data.Location}</p>
-                            <Link
-                                to={process.env.PUBLIC_URL + data.Url}
-                                className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card"
-                            >
-                                {data.ButtonText}
-                            </Link>
+        if(data.Location.length>20){        
+            return (
+                <Link to={process.env.PUBLIC_URL + data.Url}>
+                    <div className="shadow rounded p-2 card-monument-size">
+                        {/*<div className="card-background" alt={data.image.alt} style={{ backgroundImage:`url(${process.env.PUBLIC_URL + data.image.path}) ` }}>*/}
+                        <Image rounded alt={data.Image.Alt} src={process.env.PUBLIC_URL + data.Image.Path}></Image>
+                        {/*</div>*/}
+                        <div className="textarea-monument-card">
+                            <Marquee direction={"left"} gradient={false} delay={5}>
+                                <h4 className="text-left monument-card-title">{data.Title} &nbsp;</h4>
+                            </Marquee>
+                            <div className="d-flex justify-content-between">
+                                <Marquee direction={"left"} gradient={false} delay={5} style={{'margin-bottom': '30px'}}>
+                                    <p className="col col-auto">{data.Location}</p>
+                                </Marquee>
+                                <Link
+                                    to={process.env.PUBLIC_URL + data.Url}
+                                    className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card"
+                                >
+                                    {data.ButtonText}
+                                </Link>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </Link>
-        );
+                </Link>
+            );
+        }else{
+            return (
+                <Link to={process.env.PUBLIC_URL + data.Url}>
+                    <div className="shadow rounded p-2 card-monument-size">
+                        {/*<div className="card-background" alt={data.image.alt} style={{ backgroundImage:`url(${process.env.PUBLIC_URL + data.image.path}) ` }}>*/}
+                        <Image rounded alt={data.Image.Alt} src={process.env.PUBLIC_URL + data.Image.Path}></Image>
+                        {/*</div>*/}
+                        <div className="textarea-monument-card">
+                            <Marquee direction={"left"} gradient={false} delay={5}>
+                                <h4 className="text-left monument-card-title">{data.Title} &nbsp;</h4>
+                            </Marquee>
+                            <div className="d-flex justify-content-between">
+                                <p className="col col-auto">{data.Location}</p>
+                                <Link
+                                    to={process.env.PUBLIC_URL + data.Url}
+                                    className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card"
+                                >
+                                    {data.ButtonText}
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </Link>
+            );
+        }
     }
     else{
-        return (
-            <Link to={process.env.PUBLIC_URL + data.Url}>
-                <div className="shadow rounded p-2 card-monument-size">
-                    {/*<div className="card-background" alt={data.image.alt} style={{ backgroundImage:`url(${process.env.PUBLIC_URL + data.image.path}) ` }}>*/}
-                         <Image rounded alt={data.Image.Alt} src={process.env.PUBLIC_URL + data.Image.Path}></Image>
-                    {/*</div>*/}
-                    <div className="textarea-monument-card">
-                        <h4 className="text-left monument-card-title">{data.Title}</h4>
-                        <div className="d-flex justify-content-between">
-                            <p className="col col-auto">{data.Location}</p>
-                            <Link
-                                to={process.env.PUBLIC_URL + data.Url}
-                                className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card"
-                            >
-                                {data.ButtonText}
-                            </Link>
+        if(data.Location.length>20){        
+            return (
+                <Link to={process.env.PUBLIC_URL + data.Url}>
+                    <div className="shadow rounded p-2 card-monument-size">
+                        {/*<div className="card-background" alt={data.image.alt} style={{ backgroundImage:`url(${process.env.PUBLIC_URL + data.image.path}) ` }}>*/}
+                            <Image rounded alt={data.Image.Alt} src={process.env.PUBLIC_URL + data.Image.Path}></Image>
+                        {/*</div>*/}
+                        <div className="textarea-monument-card">
+                            <h4 className="text-left monument-card-title">{data.Title}</h4>
+                            <div className="d-flex justify-content-between">
+                                <Marquee direction={"left"} gradient={false} delay={5} style={{'margin-bottom': '30px'}}>
+                                    <p className="col col-auto">{data.Location}</p>
+                                </Marquee>
+                                <Link
+                                    to={process.env.PUBLIC_URL + data.Url}
+                                    className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card"
+                                >
+                                    {data.ButtonText}
+                                </Link>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </Link>
-        );
+                </Link>
+            );
+        }else{
+            return (
+                <Link to={process.env.PUBLIC_URL + data.Url}>
+                    <div className="shadow rounded p-2 card-monument-size">
+                        {/*<div className="card-background" alt={data.image.alt} style={{ backgroundImage:`url(${process.env.PUBLIC_URL + data.image.path}) ` }}>*/}
+                            <Image rounded alt={data.Image.Alt} src={process.env.PUBLIC_URL + data.Image.Path}></Image>
+                        {/*</div>*/}
+                        <div className="textarea-monument-card">
+                            <h4 className="text-left monument-card-title">{data.Title}</h4>
+                            <div className="d-flex justify-content-between">
+                                <p className="col col-auto">{data.Location}</p>
+                                <Link
+                                    to={process.env.PUBLIC_URL + data.Url}
+                                    className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card"
+                                >
+                                    {data.ButtonText}
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </Link>
+            );
+        }
     }
 };
 

@@ -1,5 +1,6 @@
 
 import React,{useEffect, useState }  from "react";
+import { useSearchParams } from "react-router-dom";
 import PropTypes from "prop-types";
 import ScrollToTop from "../components/scroll-to-top";
 import SearchForm from "../components/search-form";
@@ -11,6 +12,7 @@ import Layout from "../layouts";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header";
 import Api from "../services/Api";
+import {getUrlParameter} from "../utils";
 
 const MonumentsPage = ({
     match: {
@@ -22,13 +24,15 @@ const MonumentsPage = ({
     const [isLoading, setIsLoading] = useState(true);
     const [isMounted14, setIsMounted14] = useState(false);
     
+
     useEffect(async () => {
         console.log("entro in useEffects");
         await Api.GetMonumentPageText().then((results) => {    
             console.log("esegue then");
             setMonumentsPageData(results);
             });
-        await Api.GetMonuments(category).then((results) => {    
+        const research=getUrlParameter("research");
+        await Api.GetMonuments(category,research).then((results) => {    
             console.log("esegue then");
             setmonumentsDt(results.Monuments);
             setIsMounted14(true);
@@ -39,8 +43,8 @@ const MonumentsPage = ({
     if (!isMounted14 && isLoading) {
         return null; // non renderizzare il componente fino a quando non è montato
       }
-    
     const form = MonumentsPageData?.Form;
+    form.Research= getUrlParameter("research");
     return (
         <React.Fragment>
             <Layout>

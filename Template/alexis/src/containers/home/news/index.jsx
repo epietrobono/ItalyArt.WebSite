@@ -1,21 +1,40 @@
 import News from "../../../components/news";
-import NewsData from "../../../data/news.json";
+import React,{useEffect, useState }  from "react";
+import Api from "../../../services/Api";
 
 const NewsContainer = () => {
-    const data = NewsData.it;
+    const [ArticlesHomeData, setArticlesHomeData] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
+    const [isMounted21, setIsMounted21] = useState(false);
+    
+
+    useEffect(async () => {
+        console.log("entro in useEffects");
+        await Api.GetBlogArticoliHome().then((results) => {    
+            console.log("esegue then");
+            setArticlesHomeData(results);
+            setIsMounted21(true);
+            setIsLoading(false);
+            });
+    }, []);
+    
+    if (!isMounted21 && isLoading) {
+        return null; // non renderizzare il componente fino a quando non è montato
+      }
+      
     return (
         <div className="news ">
         <div className="news py-5 section-margin delete-margin mob-news">
-            <h2 className="text-center mob-h2">{data.title}</h2>
+            <h2 className="text-center mob-h2">{ArticlesHomeData.Title}</h2>
             <div className="row justify-content-center">
                 {
-                    data.news.map((val, key)=>{
-                        return(
-                            
-                                <News data={val}  key={key}></News>
-                            
-                        );
-                    })
+                    !isLoading && ( 
+                        ArticlesHomeData.Articles.map((val, key)=>{
+                            return(
+                                    <News data={val}  key={key}></News>
+                            );
+                        })
+                    )
                 }
             </div>
         </div>

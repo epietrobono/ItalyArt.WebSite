@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
 import AllArticlesContainer from "../containers/blog/all-articles";
@@ -9,10 +9,29 @@ import ArticlesData from "../data/articles.json";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
+import Api from "../services/Api";
 
 const Blog = () => {
-    const data = ArticlesData.it;
-    const articles = data.articles;
+    const [BlogData, setBlogData] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
+    const [isMounted23, setIsMounted23] = useState(false);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const results = await Api.GetTestiArticoli();
+            setBlogData(results);
+            setIsMounted23(true);
+            setIsLoading(false);
+      }
+      fetchData();
+    }, []);
+
+    
+    if (!isMounted23 && isLoading) {
+        return null; // non renderizzare il componente fino a quando non è montato
+      }
+      
+    const articles = BlogData.Articles;
     return (
         <React.Fragment>
             <Layout>
@@ -23,9 +42,9 @@ const Blog = () => {
 
                     <div className="container-ita">
                         <ArticlesContainer articles={articles}></ArticlesContainer>
-                        <RecentArticlesContainer title={data?.recentTitle} articles={articles}></RecentArticlesContainer>
-                        <PopularArticlesContainer title={data?.popularTitle} articles={articles}></PopularArticlesContainer>
-                        <AllArticlesContainer title={data?.allTitle} articles={articles}></AllArticlesContainer>
+                        <RecentArticlesContainer title={BlogData?.RecentTitle} articles={articles}></RecentArticlesContainer>
+                        <PopularArticlesContainer title={BlogData?.PopularTitle} articles={articles}></PopularArticlesContainer>
+                        <AllArticlesContainer title={BlogData?.AllTitle} articles={articles}></AllArticlesContainer>
                     </div>
                     <Footer />
                     <ScrollToTop />

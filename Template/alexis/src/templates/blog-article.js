@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import {React,useEffect, useState }  from "react";
+import React,{useEffect, useState }  from "react";
 import ArticleContent from "../components/article-content";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
@@ -17,35 +17,29 @@ const BlogArticle = ({
     },
 }) => {
     //TODO Metodo Singolo Articolo
-    const [articlesData, setarticlesData] = useState({});
-    const [monumentsData, setmonumentsData] = useState({});
-    const [isMounted15, setIsMounted15] = useState(false);
+    const [BlogArticlesData, setBlogArticlesData] = useState({});
+    const [isMounted23, setIsMounted23] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     
     useEffect(async () => {
         console.log("entro in useEffects");
-        await Api.GetTestiArticoli().then((results) => {    
-            setIsMounted15(true);
+        await Api.GetArticolo(id).then((results) => {    
             console.log("esegue then");
-            setarticlesData(results);
-        });
-        await Api.GetMonuments().then((results) => {    
-            console.log("esegue then");
-            setmonumentsData(results);
+            setBlogArticlesData(results);
+            setIsLoading(false);
+            setIsMounted23(true);
         });
     }, []);
     
-    if (!isMounted15) {
+    if (!isMounted23 && isLoading) {
         return null; // non renderizzare il componente fino a quando non è montato
       }
 
-    const articles = articlesData.Articles;
-    const article = articles.filter((article)=>{
-        if (article.Id == Id){
-            return article
-        }
-    }).pop();
+    const article = BlogArticlesData?.Article;
+
+    const articles = BlogArticlesData?.RelatedArticles;
             
-    const monuments = monumentsData.Monuments;
+    const monuments = BlogArticlesData?.RelatedMonuments;
     return (
         <React.Fragment>
             <Layout>
@@ -60,15 +54,15 @@ const BlogArticle = ({
                             </div>
                             <div className="col  col-lg-3 col-sm-12 ">
                                 <div className="row">
-                                    <MonumentsContainer title={monumentsData.AlsoTitle} monuments={monuments}></MonumentsContainer>
+                                    <MonumentsContainer title={BlogArticlesData?.ShowMore} monuments={monuments}></MonumentsContainer>
                                 </div>
                                 <div className="row">
-                                    <RelatedArticlesContainer title={articlesData.RelatedTitle} articles={articles}></RelatedArticlesContainer>
+                                    <RelatedArticlesContainer title={BlogArticlesData?.RelatedTitle} articles={articles}></RelatedArticlesContainer>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <OtherMonumentsContainer title={monumentsData.Othertitle} monuments={monuments}></OtherMonumentsContainer>
+                    {/* <OtherMonumentsContainer title={monumentsData.Othertitle} monuments={monuments}></OtherMonumentsContainer> */}
                     <Footer />
                     <ScrollToTop />
                 </div>
