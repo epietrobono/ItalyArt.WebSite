@@ -23,21 +23,25 @@ const NewsContainer = () => {
       }
       
     return (
-        <div className="news ">
-        <div className="news py-5 section-margin delete-margin mob-news">
-            <h2 className="text-center mob-h2">{ArticlesHomeData.Title}</h2>
-            <div className="row justify-content-center">
-                {
-                    !isLoading && ( 
-                        ArticlesHomeData.Articles.map((val, key)=>{
-                            return(
-                                    <News data={val}  key={key}></News>
-                            );
-                        })
-                    )
-                }
+        <div className="news">
+            <div className="container-ita">
+                <div className="news py-5 section-margin delete-margin mob-news">
+                    <h2 className="text-center mob-h2">{ArticlesHomeData.Title}</h2>
+                    <div className="row justify-content-center">
+                        {
+                            !isLoading && ( 
+                                ArticlesHomeData.Articles.map((val, key)=>{
+                                    return(
+                                        <div className="col col-3 px-4 mx-4" key={key}>
+                                            <News data={val}  key={key}></News>
+                                        </div>
+                                    );
+                                })
+                            )
+                        }
+                    </div>
+                </div>
             </div>
-        </div>
         </div>
     );
 };
