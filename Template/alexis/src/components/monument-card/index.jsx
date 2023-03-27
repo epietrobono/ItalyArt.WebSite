@@ -38,7 +38,7 @@ const MonumentCard = ({ data }) => {
                             </Marquee>
                             <div className="d-flex justify-content-between">
                                 <Marquee direction={"left"} gradient={false} delay={5} style={{'margin-bottom': '30px'}}>
-                                    <p className="col col-auto">{data.Location}</p>
+                                    <p className="col col-auto">{data.Location} &nbsp;</p>
                                 </Marquee>
                                 <Link
                                     to={process.env.PUBLIC_URL + data.Url}
@@ -89,7 +89,7 @@ const MonumentCard = ({ data }) => {
                             <h4 className="text-left monument-card-title">{data.Title}</h4>
                             <div className="d-flex justify-content-between">
                                 <Marquee direction={"left"} gradient={false} delay={5} style={{'margin-bottom': '30px'}}>
-                                    <p className="col col-auto">{data.Location}</p>
+                                    <p className="col col-auto">{data.Location} &nbsp;</p>
                                 </Marquee>
                                 <Link
                                     to={process.env.PUBLIC_URL + data.Url}
