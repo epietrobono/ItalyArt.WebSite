@@ -42,7 +42,7 @@ const MonumentPage = ({
                     <div className="header-space"></div>
                     <MonumentSections monument={monument}></MonumentSections>
                     <div >
-                        <MonumentHomeContainer monuments={monuments} id={id}></MonumentHomeContainer>                    
+                        <MonumentHomeContainer monument={monument} id={id}></MonumentHomeContainer>                    
                     </div>
                     <Footer />
                     <ScrollToTop />
@@ -59,7 +59,7 @@ const MonumentPage = ({
                     <Header classOption="hb-border" />
                     <div className="header-space"></div>
                     <div >
-                        <MonumentHomeContainer monuments={monuments} id={id}></MonumentHomeContainer>                    
+                        <MonumentHomeContainer monument={monument} id={id}></MonumentHomeContainer>                    
                     </div>
                     <Footer />
                     <ScrollToTop />

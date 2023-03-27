@@ -4,7 +4,7 @@ import ArticleContent from "../components/article-content";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
 import RelatedArticlesContainer from "../containers/blog/related-articles";
-import MonumentsContainer from "../containers/monuments/monuments";
+import MonumentsRelated from "../containers/blog/monuments-related";
 import OtherMonumentsContainer from "../containers/monuments/other-monuments";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
@@ -29,7 +29,7 @@ const BlogArticle = ({
             setIsLoading(false);
             setIsMounted23(true);
         });
-    }, []);
+    }, [id]);
     
     if (!isMounted23 && isLoading) {
         return null; // non renderizzare il componente fino a quando non è montato
@@ -54,7 +54,7 @@ const BlogArticle = ({
                             </div>
                             <div className="col  col-lg-3 col-sm-12 ">
                                 <div className="row">
-                                    <MonumentsContainer title={BlogArticlesData?.ShowMore} monuments={monuments}></MonumentsContainer>
+                                    <MonumentsRelated title={BlogArticlesData?.ShowMore} monuments={monuments}></MonumentsRelated>
                                 </div>
                                 <div className="row">
                                     <RelatedArticlesContainer title={BlogArticlesData?.RelatedTitle} articles={articles}></RelatedArticlesContainer>

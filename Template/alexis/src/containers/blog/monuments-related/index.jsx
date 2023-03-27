@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import MonumentPreview from "../../../components/monument-preview";
+import MonumentCard from "../../../components/monument-card";
 
-const MonumentsContainer = ({title, monuments}) => {
+const MonumentsRelated = ({title, monuments}) => {
     return (
         <div>
             <div className="row-mod justify-content-center">
@@ -12,7 +12,7 @@ const MonumentsContainer = ({title, monuments}) => {
                         monuments.slice(0,2).map((val, key)=>{
                             return (
                                 <div className="row-mod flex-1" key={key}>
-                                    <MonumentPreview data={val} titleLocation={true} preview={false}></MonumentPreview>
+                                    <MonumentCard data={val}></MonumentCard>
                                 </div>
                             )
                         })
@@ -24,9 +24,9 @@ const MonumentsContainer = ({title, monuments}) => {
     );
 };
 
-MonumentsContainer.propTypes = {
+MonumentsRelated.propTypes = {
     title: PropTypes.string,
     monuments: PropTypes.object,
 }
 
-export default MonumentsContainer;
+export default MonumentsRelated;
