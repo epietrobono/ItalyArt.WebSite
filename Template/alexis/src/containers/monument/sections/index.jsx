@@ -3,7 +3,7 @@ import MonumentSectionImg from "../../../components/monument-section-img";
 
 const MonumentTextContainer = ({monument}) => {
     return (
-        <div className="row monument-section-bar">
+        <div className="row monument-section-bar main-content container-ita-2">
             <div className="row">
                 <h4>{monument.titoloSezione}</h4>
             </div>

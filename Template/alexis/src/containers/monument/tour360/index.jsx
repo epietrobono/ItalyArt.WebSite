@@ -13,8 +13,8 @@ const MonumentTour360 = ({contenuto}) => {
     const handleShow = () => setShow(true);
     console.log("in tour");
     return (
-        <>
-            <div className="row justify-content-center module-3d img-3d">
+        <section className="main-content container-ita-2">
+            <div className="row justify-content-center module-3d img-3d ">
             <div className="img-3d-overlay"></div>
                 <div className="container-button-3Dmodel">
                     <Button className=" btn-primary botton-monument-carousel btn-italyart" id="button-360" title="Visita ora a 360" onClick={handleShow}>Visita ora a 360</Button>
@@ -27,7 +27,7 @@ const MonumentTour360 = ({contenuto}) => {
                     <Tour360ContentModal url={contenuto.Tour360}></Tour360ContentModal>
                 </Modal.Body>
             </Modal>
-        </>
+        </ section>
     );
 };
 

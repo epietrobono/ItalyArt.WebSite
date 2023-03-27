@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 
 const MonumentGalleryContainer = ({contenuto }) => {
     return (
-        <div className="row justify-content-center">
-            <div className="col col-auto border-citazione">
+        <div className="row justify-content-center main-content container-ita-2">
+            <div className="col col-auto gallery-monument">
                 {
                     contenuto.Images.map((content, index) => {
                         return <img src={content.Path} alt={content.Alt} key={index} />;

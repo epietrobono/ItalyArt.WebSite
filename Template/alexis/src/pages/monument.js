@@ -41,9 +41,9 @@ const MonumentPage = ({
                     <Header classOption="hb-border" />
                     <div className="header-space"></div>
                     <MonumentSections monument={monument}></MonumentSections>
-                    <div className="main-content container-ita-2"> 
-                        <MonumentHomeContainer monument={monument} id={id}></MonumentHomeContainer>                    
-                    </div> 
+                    <div >
+                        <MonumentHomeContainer monuments={monuments} id={id}></MonumentHomeContainer>                    
+                    </div>
                     <Footer />
                     <ScrollToTop />
                 </div>
@@ -58,9 +58,9 @@ const MonumentPage = ({
                 <div className=" wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
                     <div className="header-space"></div>
-                    <div className="main-content container-ita-2">
-                        <MonumentHomeContainer monument={monument} id={id}></MonumentHomeContainer>                    
-                    </div> 
+                    <div >
+                        <MonumentHomeContainer monuments={monuments} id={id}></MonumentHomeContainer>                    
+                    </div>
                     <Footer />
                     <ScrollToTop />
                 </div>
