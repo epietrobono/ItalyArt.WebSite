@@ -34,7 +34,7 @@ const MonumentsPage = ({
         const research=getUrlParameter("research");
         await Api.GetMonuments(category,research).then((results) => {    
             console.log("esegue then");
-            setmonumentsDt(results.Monuments);
+            setmonumentsDt(results);
             setIsMounted14(true);
             setIsLoading(false);
         });
@@ -62,15 +62,29 @@ const MonumentsPage = ({
                         <div className="col col-auto my-4">
                             <div className="row mx-5 monuments-section">
                                 <h1 className="mob-h2">{MonumentsPageData?.GridTitle1}</h1>
-                                <GridContainer nCols={5} monuments={monumentsDt}></GridContainer>
+                                <GridContainer nCols={5} monuments={monumentsDt.Monuments}></GridContainer>
                             </div>
                         </div>
-                        <div className="col col-auto my-4 px-auto">
-                            <div className="row mx-5 monuments-section">
-                                <h1 className="mob-h2">{MonumentsPageData?.GridTitle2}</h1>
-                                <GridContainer nCols={5} monuments={monumentsDt}></GridContainer>
-                            </div>
-                        </div>
+                        {(monumentsDt?.OthersMonuments.length>0) ?
+                                (
+                                    <div className="col col-auto my-4 px-auto">
+                                    <div className="row mx-5 monuments-section">
+                                        <h1 className="mob-h2">{MonumentsPageData?.GridTitle2}</h1>
+                                        <GridContainer nCols={5} monuments={monumentsDt?.OthersMonuments}></GridContainer>
+                                    </div>
+                                </div> 
+                                ) : null
+                        }
+                        {(monumentsDt?.MonumentsComingSoon.length>0) ?
+                                (
+                                    <div className="col col-auto my-4 px-auto">
+                                    <div className="row mx-5 monuments-section">
+                                        <h1 className="mob-h2">{monumentsDt?.ProssimamenteTitle}</h1>
+                                        <GridContainer nCols={5} monuments={monumentsDt?.MonumentsComingSoon}></GridContainer>
+                                    </div>
+                                </div> 
+                                ) : null
+                        }
                     </div>
                     <Footer></Footer>
                     <ScrollToTop />

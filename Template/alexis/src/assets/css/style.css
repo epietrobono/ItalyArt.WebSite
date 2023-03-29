@@ -1873,3 +1873,7 @@ margin-bottom: 15px;
         height : 58px !important
     }
   }
+
+  p, span, h1, h2, h3, h4, h5, h6, li, td {
+    white-space: pre-line !important;
+  }
