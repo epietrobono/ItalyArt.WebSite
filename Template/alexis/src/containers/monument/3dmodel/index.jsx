@@ -12,12 +12,27 @@ const Monument3DModelContainer = ({contenuto}) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
+        <>
+        { contenuto?.Titolo ?
+        (
+            <div className="row justify-content-center main-content container-ita-2">
+                <div className="col col-auto">
+                    <h3>{contenuto?.Titolo}</h3> 
+                </div>
+            </div>
+        ):null
+        }
         <section className="main-content container-ita-2">
             <div className="row justify-content-center module-3d img-3d">
                 <div className="img-3d-overlay"></div>
                 <div className="container-button-3Dmodel ">
-                    
+                    { contenuto?.Titolo ?
+                    (
+                        <h3>{contenuto?.Titolo}</h3>
+                    ):null
+                    }
                     <Button className=" btn-primary btn-italyart botton-monument-carousel container-button-position" id="button-3d" title="Visita il 3D" onClick={handleShow}>Visita il 3D</Button>
+                    <p>{contenuto?.Testo}</p>
                 </div>
                 <Image rounded  src={process.env.PUBLIC_URL + contenuto.Image?.Path} alt={contenuto.Image?.Alt}></Image>
             </div>
@@ -28,6 +43,16 @@ const Monument3DModelContainer = ({contenuto}) => {
                 </Modal.Body>
             </Modal>
         </ section>
+            { contenuto?.Testo ?
+                (
+                    <div className="row justify-content-center main-content container-ita-2">
+                        <div className="col col-auto">
+                            <p  className="mb-5">{contenuto?.Testo}</p>
+                        </div>
+                    </div>
+                ):null
+            }
+        </>
     );
 };
 

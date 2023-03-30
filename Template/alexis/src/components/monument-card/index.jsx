@@ -24,7 +24,7 @@ const MonumentCard = ({ data }) => {
         console.log("toggle it");
     }
 
-    if(data.Title.length>20 && width<=900){        
+    if((data.Title.length>20 && width<=900)||(data.Title.length>25 && width>900)){        
         if(data.Location.length>20){        
             return (
                 <Link to={process.env.PUBLIC_URL + data.Url}>

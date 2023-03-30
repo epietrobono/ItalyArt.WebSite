@@ -13,6 +13,16 @@ const MonumentTour360 = ({contenuto}) => {
     const handleShow = () => setShow(true);
     console.log("in tour");
     return (
+        <>
+        { contenuto?.Titolo ?
+        (
+            <div className="row justify-content-center main-content container-ita-2">
+                <div className="col col-auto">
+                    <h3>{contenuto?.Titolo}</h3> 
+                </div>
+            </div>
+        ):null
+        }
         <section className="main-content container-ita-2">
             <div className="row justify-content-center module-3d img-3d ">
             <div className="img-3d-overlay"></div>
@@ -28,6 +38,16 @@ const MonumentTour360 = ({contenuto}) => {
                 </Modal.Body>
             </Modal>
         </ section>
+            { contenuto?.Testo ?
+                (
+                    <div className="row justify-content-center main-content container-ita-2">
+                        <div className="col col-auto">
+                            <p  className="mb-5">{contenuto?.Testo}</p>
+                        </div>
+                    </div>
+                ):null
+            }
+        </>
     );
 };
 
