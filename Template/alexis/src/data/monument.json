@@ -104,6 +104,85 @@
                         "testo": "testo con citazione prova ident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proi, "
                     },
                     {
+                        "type": "Credits",
+                        "titolo": "Arco di Traiano a Benevento",
+                        "image": {
+                            "path": "/img/monuments/arco-traiano.jpg",
+                            "alt": "Arco di Traiano a Benevento"
+                        },
+                        "model3D": "",
+                        "tour360": "",
+                        "images": [
+                            {
+                                "alt": "Arco di Traiano a Benevento",
+                                "path": "/img/monuments/arco-traiano.jpg"
+                            },
+                            {
+                                "alt": "Arco di Traiano a Benevento",
+                                "path": "/img/monuments/arco-traiano.jpg"
+                            },
+                            {
+                                "alt": "Arco di Traiano a Benevento",
+                                "path": "/img/monuments/arco-traiano.jpg"
+                            },
+                            {
+                                "alt": "Arco di Traiano a Benevento",
+                                "path": "/img/monuments/arco-traiano.jpg"
+                            },
+                            {
+                                "alt": "Arco di Traiano a Benevento",
+                                "path": "/img/monuments/arco-traiano.jpg"
+                            }
+                        ],
+                        "testo": "testo con citazione prova ident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proiEu id proident officia et magna Lorem quis ullamco incididunt aliquip. Exercitation qui et velit velit ullamco esse irure ipsum officia nulla sint proi, ",
+                        "credits": [
+                            {
+                                "Titolo": "inserire ruolo",
+                                "Testo": "inserire il nome e cognome della persona"
+                            },
+                            {
+                                "Titolo": "inserire ruolo",
+                                "Testo": "inserire il nome e cognome della persona"
+                            },
+                            {
+                                "Titolo": "inserire ruolo",
+                                "Testo": "inserire il nome e cognome della persona"
+                            },
+                            {
+                                "Titolo": "inserire ruolo",
+                                "Testo": "inserire il nome e cognome della persona"
+                            },
+                            {
+                                "Titolo": "inserire ruolo",
+                                "Testo": "inserire il nome e cognome della persona"
+                            },
+                            {
+                                "Titolo": "inserire ruolo",
+                                "Testo": "inserire il nome e cognome della persona"
+                            },
+                            {
+                                "Titolo": "inserire ruolo",
+                                "Testo": "inserire il nome e cognome della persona"
+                            },
+                            {
+                                "Titolo": "inserire ruolo",
+                                "Testo": "inserire il nome e cognome della persona"
+                            },
+                            {
+                                "Titolo": "inserire ruolo",
+                                "Testo": "inserire il nome e cognome della persona"
+                            },
+                            {
+                                "Titolo": "inserire ruolo",
+                                "Testo": "inserire il nome e cognome della persona"
+                            },
+                            {
+                                "Titolo": "inserire ruolo",
+                                "Testo": "inserire il nome e cognome della persona"
+                            }
+                        ]
+                    },
+                    {
                         "type": "galleria",
                         "titolo": "Arco di Traiano a Benevento",
                         "image": {

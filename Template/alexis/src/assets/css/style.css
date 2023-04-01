@@ -684,6 +684,7 @@
 .nav-item a{
     color:#707070;
     font-size: 17px;
+    font-weight: 500;
 }
 
 #dropdown-basic-button{
@@ -1782,6 +1783,30 @@ margin-bottom: 15px;
 .gallery-monument img{
     border-radius: 10px;
 }
+
+.credist-bg-custom {
+    background-color: #D5D5D5 !important;
+  }
+  
+  .credits-image-list {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+  
+  .credits-image-list img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .credits-thanks-text {
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
 
 @media screen and ( min-width: 800px) {
    .flex-container-monuments{

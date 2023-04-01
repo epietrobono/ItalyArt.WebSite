@@ -1,0 +1,47 @@
+import PropTypes from "prop-types";
+
+const CreditsComponent = ({ contenuto }) => {
+    const half = Math.ceil(contenuto?.credits.length / 2);
+    const leftCredits = contenuto?.credits.slice(0, half);
+    const rightCredits = contenuto?.credits.slice(half);
+
+    return (
+        <section className="text-image-section bg-custom">
+            <div className="credits-image-list">
+                {contenuto?.Image.map((image, index) => (
+                    <img
+                        key={index}
+                        className="img-fluid"
+                        src={image?.Path}
+                        alt={image?.Alt}
+                    />
+                ))}
+            </div>
+            <div className="credits-thanks-text">Si ringrazia</div>
+            <div className="row">
+                <div className="col-md-6 text-left">
+                    {leftCredits.map((credit, index) => (
+                        <div key={index}>
+                            <h3>{credit?.Titolo}</h3>
+                            <p>{credit?.Testo}</p>
+                        </div>
+                    ))}
+                </div>
+                <div className="col-md-6 text-right">
+                    {rightCredits.map((credit, index) => (
+                        <div key={index}>
+                            <h3>{credit?.Titolo}</h3>
+                            <p>{credit?.Testo}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+CreditsComponent.propTypes = {
+    contenuto: PropTypes.object,
+};
+
+export default CreditsComponent;
