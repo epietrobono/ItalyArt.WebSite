@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const baseUrl="http://treppiweb-002-site1.htempurl.com/";
-// const baseUrl="http://localhost:4439/";
+// const baseUrl="http://treppiweb-002-site1.htempurl.com/";
+const baseUrl="http://localhost:4439/";
 const postBody = {
     Pagina:"",
     Lingua:"IT"
@@ -52,6 +52,16 @@ const Api = {
     postBody.Category=category;
     postBody.Search=research;
     const response = await axios.post(baseUrl+"api/Monuments", postBody);
+    return response.data.results;
+  },
+  GetMapMonuments: async (category,search,NELat,NELon,SWLat,SWLon) => {
+    postBody.Category=category;
+    postBody.Search=search;
+    postBody.NELat=NELat;
+    postBody.NELon=NELon;
+    postBody.SWLat=SWLat;
+    postBody.SWLon=SWLon;
+    const response = await axios.post(baseUrl+"api/MapMonuments", postBody);
     return response.data.results;
   },
   GetHeader: async () => {
