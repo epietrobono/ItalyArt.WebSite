@@ -13,36 +13,36 @@ import Tour360 from "../tour360";
 const MonumentHomeContainer = ({ monument, id }) => {
     return (
         <div className="col-12 justify-content-center">
-            {monument?.Contenuti?.map((contenuto) => {
+            {monument?.Contenuti?.map((contenuto, key) => {
                 switch (contenuto.Type) {
                     case "Titolo":
-                        return <Title contenuto={contenuto}></Title>;
+                        return <Title key={key} contenuto={contenuto}></Title>;
                     case "Testo":
-                        return <Text contenuto={contenuto}></Text>;
+                        return <Text key={key}  contenuto={contenuto}></Text>;
                     case "Modello3D":
-                        return <Model3D contenuto={contenuto}></Model3D>;
+                        return <Model3D  key={key} contenuto={contenuto}></Model3D>;
                     case "Tour360":
-                        return <Tour360 contenuto={contenuto}></Tour360>;
+                        return <Tour360  key={key} contenuto={contenuto}></Tour360>;
                     case "TestoConImmagineASinistra":
                         return (
-                            <MonumentLeftImgContainer contenuto={contenuto} />
+                            <MonumentLeftImgContainer key={key}  contenuto={contenuto} />
                         );
                     case "TestoConImmagineADestra":
                         return (
-                            <MonumentRightImgContainer contenuto={contenuto} />
+                            <MonumentRightImgContainer key={key}  contenuto={contenuto} />
                         );
                     case "Citazione":
-                        return <MonumentCitContainer contenuto={contenuto} />;
+                        return <MonumentCitContainer key={key}  contenuto={contenuto} />;
                     case "testoConTitolo":
                         return (
-                            <MonumentTitleTextContainer contenuto={contenuto} />
+                            <MonumentTitleTextContainer  key={key} contenuto={contenuto} />
                         );
                     case "GalleriaImmagini":
                         return (
-                            <MonumentGalleryContainer contenuto={contenuto} />
+                            <MonumentGalleryContainer key={key}  contenuto={contenuto} />
                         );
                     case "Credits":
-                        return <CreditsComponent contenuto={contenuto} />;
+                        return <CreditsComponent key={key}  contenuto={contenuto} />;
                     default:
                         return "";
                 }
