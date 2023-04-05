@@ -448,6 +448,8 @@
     color: white;
     font-weight: 500;
     padding: 2px 30px !important;
+    width: 20%;
+    margin-left: 2%;
 }
 
 .btn-cerca:hover{
