@@ -1,6 +1,7 @@
 .monuments-search {
     height: 818px;
     background-size: cover;
+    background-position-x: center;
 }
 .home-bar .title {
     color: white;
@@ -151,7 +152,7 @@
     background-repeat: no-repeat;
     background-position: 4%;
     text-indent: 35px;
-    width: 78%;
+    flex-grow: 1;
     font-weight: 400;
     font-size: 15px;
 }
@@ -448,8 +449,8 @@
     color: white;
     font-weight: 500;
     padding: 2px 30px !important;
-    width: 20%;
-    margin-left: 2%;
+    min-width: 20%;
+    margin-left: 2% ;
 }
 
 .btn-cerca:hover{
@@ -944,7 +945,7 @@ margin-bottom: 15px;
 
     .search-icon{
         width: 100%;
-        text-indent: 18px;
+        text-indent: 1.5rem;
         padding-right: 0.5rem !important;
         padding-top: 0.1rem !important;
         padding-bottom: 0.1rem !important;
@@ -965,6 +966,7 @@ margin-bottom: 15px;
 
     .monuments-search {
         height: 90vh;
+        background-position-x: center;
     }
 
     .row{
@@ -1588,8 +1590,17 @@ margin-bottom: 15px;
     .social-logo{
         margin: 10px;
     }
+
+    .col-auto-in{
+        flex: 0 0 auto;
+        width: inherit !important;
+    }
 }
 
+.col-auto-in{
+    flex: 0 0 auto;
+    width: auto;
+}
 
 .rounded-search{
     border-radius: 50px ;
