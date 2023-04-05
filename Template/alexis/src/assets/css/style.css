@@ -1506,7 +1506,7 @@ margin-bottom: 15px;
     .map-mobile{
         position: fixed;
         height: 90vh !important;
-        top: 10vh;
+        top: 24vh;
     }
 
     .map-position{

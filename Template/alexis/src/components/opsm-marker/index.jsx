@@ -4,11 +4,11 @@ import { Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 
 const PinComponent = ({ monument }) => {
-  const pinColor = (category) => {
-    switch (category) {
-      case 'chiese':
+  const pinColor = (type) => {
+    switch (type) {
+      case '4':
         return 'red';
-      case 'panorami':
+      case '5':
         return 'blue';
       default:
         return 'black';
@@ -17,7 +17,7 @@ const PinComponent = ({ monument }) => {
 
   const icon = new L.Icon({
     iconUrl: `https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-${pinColor(
-      monument.Category
+      monument.Type
     )}.png`,
     shadowUrl:
       'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -28,11 +28,11 @@ const PinComponent = ({ monument }) => {
   });
 
   return (
-    <Marker position={[monument.Latitude, monument.Longitude]} icon={icon}>
+    <Marker position={[monument.Gps.Latitude, monument.Gps.Longitude]} icon={icon}>
       <Popup>
-        <strong>{monument.Name}</strong>
+        <strong>{monument.Title}</strong>
         <br />
-        {monument.Address}
+        {monument.Location}
       </Popup>
     </Marker>
   );
@@ -40,11 +40,13 @@ const PinComponent = ({ monument }) => {
 
 PinComponent.propTypes = {
   monument: PropTypes.shape({
-    Category: PropTypes.string,
-    Longitude: PropTypes.string,
-    Latitude: PropTypes.string,
-    Name: PropTypes.string,
-    Address: PropTypes.string
+    Type: PropTypes.string,
+    Gps:PropTypes.shape({
+      Longitude: PropTypes.string,
+      Latitude: PropTypes.string,
+    }),
+    Title: PropTypes.string,
+    Location: PropTypes.string
   })  
 }
 

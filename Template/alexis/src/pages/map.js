@@ -1,4 +1,3 @@
-
 import {React,useEffect, useState }  from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SearchForm from "../components/search-form";
@@ -9,6 +8,7 @@ import Layout from "../layouts";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header";
 import Api from "../services/Api";
+import {getUrlParameter} from "../utils";
 
 const MonumentsPage = () => {
     const [MapMonumentsPageData, setMapMonumentsPageData] = useState({});

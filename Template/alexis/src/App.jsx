@@ -61,7 +61,7 @@ const App = () => {
                         component={MonumentsPage}
                     />
                     <Route
-                        path={`${process.env.PUBLIC_URL + "/map"}`}
+                        path={`${process.env.PUBLIC_URL + "/map/:category?"}`}
                         component={MapMonumentsPage}
                     />
                     <Route

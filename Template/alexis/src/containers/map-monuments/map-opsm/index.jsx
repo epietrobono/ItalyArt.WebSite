@@ -4,9 +4,9 @@ import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import PinComponent from '../../../components/opsm-marker';
 
-const MapComponent = ({ monuments, onViewportChanged, isLoading }) => {
+const MapComponent = ({ monuments, onViewportChanged, isLoading, category }) => {
   const [viewport, setViewport] = useState({
-    center: [45.4642, 9.1900], // Coordinata iniziale (Milano)
+    center: [41.894038, 12.497480], // Coordinata iniziale (Milano)
     zoom: 13,
   });
 
@@ -22,11 +22,11 @@ const MapComponent = ({ monuments, onViewportChanged, isLoading }) => {
   useEffect(() => {
     const bounds = new window.L.LatLngBounds(viewport.center, viewport.center);
     onViewportChanged(bounds);
-  }, []);
+  }, [category]);
 
   return (
     <MapContainer
-      style={{ height: '100%', width: '100%' }}
+      style={{ height: '600px', width: '100%' }}
       center={viewport.center}
       zoom={viewport.zoom}
     >
@@ -34,18 +34,19 @@ const MapComponent = ({ monuments, onViewportChanged, isLoading }) => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="&amp;copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
       />
-      {isLoading && monuments?.map((monument) => (
+      {!isLoading && monuments?.map((monument) => (
         <PinComponent key={monument.Id} monument={monument} />
-      ))}
+      ))} 
       <MapEvents />
     </MapContainer>
   );
 };
 
 MapComponent.propTypes = {
-  monuments: PropTypes.object,
-  onViewportChanged: PropTypes.function,
-  isLoading: PropTypes.bool
+  monuments: PropTypes.array,
+  onViewportChanged: PropTypes.func,
+  isLoading: PropTypes.bool,
+  category: PropTypes.string
 }
 
 export default MapComponent;
