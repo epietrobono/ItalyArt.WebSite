@@ -8,7 +8,7 @@ function CenterFooterLogo({ data }) {
                 <FooterLogo
                     image={`${process.env.PUBLIC_URL}/img/footer-logo.png`}
                 />
-                <p className="text-wrap">
+                <p>
                     {data.Desc}
                 </p>
             </div>
