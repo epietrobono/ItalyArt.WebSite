@@ -1,99 +1,103 @@
 import axios from "axios";
-import { useContext } from 'react';
-import LanguageContext from '../context/LanguageContext';
 
-const baseUrl="http://treppiweb-002-site1.htempurl.com/";
-// const baseUrl="http://localhost:4439/";
+// const baseUrl="http://treppiweb-002-site1.htempurl.com/";
+const baseUrl="http://localhost:4439/";
+const instance = axios.create();
 
-const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext);
-const postBody = {
-    Pagina:"",
-    Lingua: selectedLanguage ? selectedLanguage: "IT"
-};
+instance.interceptors.request.use((config) => {
+  const selectedLanguage = localStorage.getItem("selectedLanguage");
+  if (config.data) {
+    config.data.Lingua = selectedLanguage;
+  } else {
+    config.data = { Lingua: selectedLanguage };
+  }
+  return config;
+});
+// const postBody = {
+//     Pagina:"",
+//     Lingua: selectedLanguage ? selectedLanguage: "IT"
+// };
 
 const Api = {
   CheckPath: async (url) => {
-    postBody.Url=url;
-    const response = await axios.post(baseUrl+"api/CheckPath", postBody);
+    const postBody={Url: url};
+    const response = await instance.post(baseUrl+"api/CheckPath", postBody);
     return response.data.results;
   },
   AddNewsletter: async (email) => {
-    postBody.Email=email;
-    const response = await axios.post(baseUrl+"api/AddNewsletter", postBody);
+    const postBody={Email: email};
+    const response = await instance.post(baseUrl+"api/AddNewsletter", postBody);
     return response.data.results;
   },
   GetSubmenus: async () => {
-    const response = await axios.post(baseUrl+"api/SubMenus", postBody);
+    const response = await instance.post(baseUrl+"api/SubMenus");
     return response.data.results;
   },
   GetTestiArticoli: async () => {
-    const response = await axios.post(baseUrl+"api/TestiArticoli", postBody);
+    const response = await instance.post(baseUrl+"api/TestiArticoli");
     return response.data.results;
   },
   GetCarouselModel3D: async () => {
-    const response = await axios.post(baseUrl+"api/CarouselModel3D", postBody);
+    const response = await instance.post(baseUrl+"api/CarouselModel3D");
     return response.data.results;
   },
   GetCarouselModel360: async () => {
-    const response = await axios.post(baseUrl+"api/CarouselTour360", postBody);
+    const response = await instance.post(baseUrl+"api/CarouselTour360");
     return response.data.results;
   },
   GetCategorieHome: async () => {
-    const response = await axios.post(baseUrl+"api/CategorieHome", postBody);
+    const response = await instance.post(baseUrl+"api/CategorieHome");
     return response.data.results;
   },
   GetCategorieIcons: async () => {
-    const response = await axios.post(baseUrl+"api/CategorieIcons", postBody);
+    const response = await instance.post(baseUrl+"api/CategorieIcons");
     return response.data.results;
   },
   GetMonuments3DHome: async () => {
-    const response = await axios.post(baseUrl+"api/Monuments3DHome", postBody);
+    const response = await instance.post(baseUrl+"api/Monuments3DHome");
     return response.data.results;
   },
   GetBanner: async () => {
-    const response = await axios.post(baseUrl+"api/Banner", postBody);
+    const response = await instance.post(baseUrl+"api/Banner");
     return response.data.results;
   },
   GetNewsletter: async () => {
-    const response = await axios.post(baseUrl+"api/Newsletter", postBody);
+    const response = await instance.post(baseUrl+"api/Newsletter");
     return response.data.results;
   },
   GetMonuments360Home: async () => {
-    const response = await axios.post(baseUrl+"api/Monuments360Home", postBody);
+    const response = await instance.post(baseUrl+"api/Monuments360Home");
     return response.data.results;
   },
   GetMonuments: async (category,research) => {
-    postBody.Category=category;
-    postBody.Search=research;
-    const response = await axios.post(baseUrl+"api/Monuments", postBody);
+    const postBody={Category: category, Search:research};
+    const response = await instance.post(baseUrl+"api/Monuments", postBody);
     return response.data.results;
   },
   GetHeader: async () => {
-    const response = await axios.post(baseUrl+"api/Header", postBody);
+    const response = await instance.post(baseUrl+"api/Header");
     return response.data.results;
   },
   GetFooter: async () => {
-    const response = await axios.post(baseUrl+"api/Footer", postBody);
+    const response = await instance.post(baseUrl+"api/Footer");
     return response.data.results;
   },
   GetMonumentPageText: async () => {
-    const response = await axios.post(baseUrl+"api/MonumentPageText", postBody);
+    const response = await instance.post(baseUrl+"api/MonumentPageText");
     return response.data.results;
   },
   GetBlogArticoliHome: async () => {
-    const response = await axios.post(baseUrl+"api/BlogArticoliHome", postBody);
+    const response = await instance.post(baseUrl+"api/BlogArticoliHome");
     return response.data.results;
   },
   GetMonument: async (id, keyword) => {
-    postBody.Id=id;
-    postBody.Keyword=keyword;
-    const response = await axios.post(baseUrl+"api/Monument", postBody);
+    const postBody={Id: id, Keyword:keyword};
+    const response = await instance.post(baseUrl+"api/Monument", postBody);
     return response.data.results;
   },
   GetArticolo: async (id, keyword) => {
-    postBody.Id=id;
-    postBody.Keyword=keyword;
-    const response = await axios.post(baseUrl+"api/Articolo", postBody);
+    const postBody={Id: id, Keyword:keyword};
+    const response = await instance.post(baseUrl+"api/Articolo", postBody);
     return response.data.results;
   }
 }

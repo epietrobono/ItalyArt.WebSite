@@ -2,16 +2,15 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import LanguageContext from '../../context/LanguageContext';
 
 function LanguageSelector({ data }) {
-    const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext);
 
     const handleLanguageChange = (languageCode) => {
-        setSelectedLanguage(languageCode);
+        localStorage.setItem("selectedLanguage", languageCode);
+        window.location.reload();
     };
 
-    const currentLanguage = data.find(lang => lang.Sigla === selectedLanguage);
+    const currentLanguage = data.find(lang => lang.Sigla.toLowerCase() === localStorage.getItem("selectedLanguage").toLowerCase());
 
     return (
         <DropdownButton

@@ -1,11 +1,10 @@
 import PropTypes from "prop-types";
 import React, { useContext } from "react";
 import { Helmet } from "react-helmet";
-import LanguageContext from "../../context/LanguageContext";
 
 const SEO = ({ title, description, keywords }) => {
-    const { selectedLanguage } = useContext(LanguageContext);
 
+    const selectedLanguage  =  localStorage.getItem("selectedLanguage").toLowerCase()
     return (
         <Helmet>
             <html lang={selectedLanguage} />

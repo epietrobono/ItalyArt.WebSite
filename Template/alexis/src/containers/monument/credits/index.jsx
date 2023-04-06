@@ -1,14 +1,13 @@
 import PropTypes from "prop-types";
 
 const CreditsComponent = ({ contenuto }) => {
-    const half = Math.ceil(contenuto?.credits.length / 2);
-    const leftCredits = contenuto?.credits.slice(0, half);
-    const rightCredits = contenuto?.credits.slice(half);
+    const leftCredits = contenuto?.Credits.filter((credit) => credit.IsSinistra);
+    const rightCredits = contenuto?.Credits.filter((credit) => !credit.IsSinistra);
 
     return (
         <section className="text-image-section bg-custom">
             <div className="credits-image-list">
-                {contenuto?.Image.map((image, index) => (
+                {contenuto?.Image?.map((image, index) => (
                     <img
                         key={index}
                         className="img-fluid"

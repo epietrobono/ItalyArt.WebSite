@@ -5,8 +5,6 @@ import HeaderLinks from "../../components/header-links";
 import LanguageSelector from "../../components/language-selector";
 import Logo from "../../components/logo/index";
 import Api from "../../services/Api";
-import LanguageContext from "../../context/LanguageContext";
-import { useContext } from "react";
 
 const Header = ({ classOption }) => {
     const [ofcanvasShow, setOffcanvasShow] = useState(false);
@@ -40,8 +38,6 @@ const Header = ({ classOption }) => {
                 setIsLoading(false);
             });
     }, []);
-
-    const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext);
     
     if (!isMounted18) {
         return null; // non renderizzare il componente fino a quando non è montato
@@ -75,7 +71,7 @@ const Header = ({ classOption }) => {
 
                         <div className="col-auto">
                             <div className="header-languages-area">
-                                <LanguageSelector data={data.Lingue} selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
+                                <LanguageSelector data={data.Lingue} />
                             </div>
                             <div className="header-action-area">
                                 <button
