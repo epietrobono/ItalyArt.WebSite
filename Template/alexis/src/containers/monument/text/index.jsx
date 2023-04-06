@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const MonumentTextContainer = ({contenuto}) => {
     return (
-        <>
+        <section className={`${contenuto?.IsPink? "text-image-section":""}`}>
         { contenuto?.Titolo ?
         (
             <div className="row justify-content-center main-content container-ita-2">
@@ -17,7 +17,7 @@ const MonumentTextContainer = ({contenuto}) => {
                 <p className="mb-5">{contenuto.Testo}</p>
             </div>
         </div>
-        </>
+        </section>
     );
 };
 
