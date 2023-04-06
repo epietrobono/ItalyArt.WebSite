@@ -1060,7 +1060,7 @@ margin-bottom: 15px;
     }
 
     .carousel-info{
-        padding: 0.5rem !important;
+        padding: 0.5rem 0 !important;
         margin:0 !important
     }
 
@@ -1577,10 +1577,11 @@ margin-bottom: 15px;
     .carousel-monuments-home{
         margin: 0 !important;
         min-height: 24vh !important;
+        flex-direction: column-reverse !important;
     }
 
     .carousel-monuments-home img{
-        width: 50% !important;
+        width: 90% !important;
     }
 
     .header-action-area{
@@ -1595,12 +1596,18 @@ margin-bottom: 15px;
         flex: 0 0 auto;
         width: inherit !important;
     }
+    
+    .carousel-monuments-home .text-left {
+        width: 90% !important;
+    }
 }
 
 .col-auto-in{
     flex: 0 0 auto;
     width: auto;
 }
+
+
 
 .rounded-search{
     border-radius: 50px ;
@@ -1705,10 +1712,11 @@ margin-bottom: 15px;
     margin-left: 3rem ;
     min-height: auto;
     justify-content: space-between;
+    align-items: center;
 }
 
 .carousel-monuments-home .text-left{
-    width: 40% !important;
+    width: 50% ;
 }
 
 .carousel-monuments-home img{

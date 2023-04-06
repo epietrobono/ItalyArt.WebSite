@@ -53,7 +53,7 @@ function CarouselMonumentsContainer() {
                                             </div>
                                             <Image
                                                 rounded
-                                                className="col  image-home-carousel-360"
+                                                className="  image-home-carousel-360"
                                                 alt={monumento.Alt}
                                                 src={
                                                     process.env.PUBLIC_URL +
