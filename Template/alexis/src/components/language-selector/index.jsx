@@ -10,7 +10,7 @@ function LanguageSelector({ data }) {
         window.location.reload();
     };
 
-    const currentLanguage = data.find(lang => lang.Sigla.toLowerCase() === localStorage.getItem("selectedLanguage").toLowerCase());
+    const currentLanguage = data.find(lang => lang.Sigla === localStorage.getItem("selectedLanguage"));
 
     return (
         <DropdownButton

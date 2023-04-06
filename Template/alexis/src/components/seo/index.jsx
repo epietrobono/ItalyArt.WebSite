@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 
 const SEO = ({ title, description, keywords }) => {
 
-    const selectedLanguage  =  localStorage.getItem("selectedLanguage").toLowerCase()
+    const selectedLanguage  =  localStorage.getItem("selectedLanguage")
     return (
         <Helmet>
             <html lang={selectedLanguage} />
