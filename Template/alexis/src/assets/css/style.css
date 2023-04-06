@@ -1923,3 +1923,16 @@ margin-bottom: 15px;
     line-height: 1.35;
     color: #373737;
   }
+
+  .ml-2{
+    margin-left: 2px
+  }
+  .ml-3{
+    margin-left: 3px
+  }
+  .ml-4{
+    margin-left: 4px
+  }
+  .ml-5{
+    margin-left: 5px
+  }

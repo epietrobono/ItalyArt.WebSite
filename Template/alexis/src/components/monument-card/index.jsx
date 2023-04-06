@@ -46,7 +46,7 @@ const MonumentCard = ({ data }) => {
                                 delay={5}
                             >
                                 <h4 className="text-left monument-card-title">
-                                    {data.Title} &nbsp;
+                                    {data.Title} &nbsp; - &nbsp; 
                                 </h4>
                             </Marquee>
                             <div className="d-flex justify-content-between">
@@ -57,12 +57,12 @@ const MonumentCard = ({ data }) => {
                                     style={{ "margin-bottom": "30px" }}
                                 >
                                     <p className="col col-auto">
-                                        {data.Location} &nbsp;
+                                        {data.Location} &nbsp; - &nbsp; 
                                     </p>
                                 </Marquee>
                                 <Link
                                     to={process.env.PUBLIC_URL + data.Url}
-                                    className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card"
+                                    className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card ml-3"
                                 >
                                     {data.ButtonText}
                                 </Link>
@@ -89,14 +89,14 @@ const MonumentCard = ({ data }) => {
                                 delay={5}
                             >
                                 <h4 className="text-left monument-card-title">
-                                    {data.Title} &nbsp;
+                                    {data.Title} &nbsp; - &nbsp; 
                                 </h4>
                             </Marquee>
                             <div className="d-flex justify-content-between">
                                 <p className="col col-auto">{data.Location}</p>
                                 <Link
                                     to={process.env.PUBLIC_URL + data.Url}
-                                    className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card"
+                                    className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card ml-3"
                                 >
                                     {data.ButtonText}
                                 </Link>
@@ -130,12 +130,12 @@ const MonumentCard = ({ data }) => {
                                     style={{ "margin-bottom": "30px" }}
                                 >
                                     <p className="col col-auto">
-                                        {data.Location} &nbsp;
+                                        {data.Location} &nbsp; - &nbsp; 
                                     </p>
                                 </Marquee>
                                 <Link
                                     to={process.env.PUBLIC_URL + data.Url}
-                                    className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card"
+                                    className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card ml-3"
                                 >
                                     {data.ButtonText}
                                 </Link>
@@ -163,7 +163,7 @@ const MonumentCard = ({ data }) => {
                                 <p className="col col-auto">{data.Location}</p>
                                 <Link
                                     to={process.env.PUBLIC_URL + data.Url}
-                                    className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card"
+                                    className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card ml-3"
                                 >
                                     {data.ButtonText}
                                 </Link>
