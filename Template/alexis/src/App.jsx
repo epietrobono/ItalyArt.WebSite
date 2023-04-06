@@ -31,8 +31,11 @@ import BlogArticle from "./templates/blog-article";
 import BlogTag from "./templates/blog-tag";
 import PortfolioDetails from "./templates/portfolio-details";
 import NotFound from './pages/NotFound';
+import LanguageContext from './context/LanguageContext';
 
 const App = () => {
+    const [selectedLanguage, setSelectedLanguage] = useState('it');
+
     useEffect(() => {
         AOS.init({
             offset: 80,
@@ -44,80 +47,82 @@ const App = () => {
     }, []);
     console.log(process.env.PUBLIC_URL); 
     return (
-        <Router>
-            <NavScrollTop>
-                <Switch>
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/"}`}
-                        exact
-                        component={HomePage}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/about"}`}
-                        component={AboutPage}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/monuments/:category?"}`}
-                        component={MonumentsPage}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/map"}`}
-                        component={MapMonumentsPage}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/monument/:id"}`}
-                        component={MonumentPage}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/portfolio"}`}
-                        component={Portfolio}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/video-gallery"}`}
-                        component={VideoGallery}
-                    />
-                    <Route
-                        path={`${
-                            process.env.PUBLIC_URL + "/portfolio-details/:id"
-                        }`}
-                        component={PortfolioDetails}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/blog"}`}
-                        component={Blog}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/article/:id"}`}
-                        component={BlogArticle}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/category/:slug"}`}
-                        component={BlogCategory}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/tag/:slug"}`}
-                        component={BlogTag}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/date/:date"}`}
-                        component={BlogDate}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/author/:author"}`}
-                        component={BlogAuthor}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/blog-details/:id"}`}
-                        component={BlogDetails}
-                    />
-                    <Route
-                        path={`${process.env.PUBLIC_URL + "/contact"}`}
-                        component={Contact}
-                    />                    
-                    <Route component={NotFound} />
-                </Switch>
-            </NavScrollTop>
-        </Router>
+        <LanguageContext.Provider value={{ selectedLanguage, setSelectedLanguage }}>
+            <Router>
+                <NavScrollTop>
+                    <Switch>
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/"}`}
+                            exact
+                            component={HomePage}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/about"}`}
+                            component={AboutPage}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/monuments/:category?"}`}
+                            component={MonumentsPage}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/map"}`}
+                            component={MapMonumentsPage}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/monument/:id"}`}
+                            component={MonumentPage}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/portfolio"}`}
+                            component={Portfolio}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/video-gallery"}`}
+                            component={VideoGallery}
+                        />
+                        <Route
+                            path={`${
+                                process.env.PUBLIC_URL + "/portfolio-details/:id"
+                            }`}
+                            component={PortfolioDetails}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/blog"}`}
+                            component={Blog}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/article/:id"}`}
+                            component={BlogArticle}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/category/:slug"}`}
+                            component={BlogCategory}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/tag/:slug"}`}
+                            component={BlogTag}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/date/:date"}`}
+                            component={BlogDate}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/author/:author"}`}
+                            component={BlogAuthor}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/blog-details/:id"}`}
+                            component={BlogDetails}
+                        />
+                        <Route
+                            path={`${process.env.PUBLIC_URL + "/contact"}`}
+                            component={Contact}
+                        />                    
+                        <Route component={NotFound} />
+                    </Switch>
+                </NavScrollTop>
+            </Router>
+        </LanguageContext.Provider>
     );
 };
 

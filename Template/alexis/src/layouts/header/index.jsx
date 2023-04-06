@@ -5,6 +5,8 @@ import HeaderLinks from "../../components/header-links";
 import LanguageSelector from "../../components/language-selector";
 import Logo from "../../components/logo/index";
 import Api from "../../services/Api";
+import LanguageContext from "../../context/LanguageContext";
+import { useContext } from "react";
 
 const Header = ({ classOption }) => {
     const [ofcanvasShow, setOffcanvasShow] = useState(false);
@@ -25,19 +27,9 @@ const Header = ({ classOption }) => {
     const [scroll, setScroll] = useState(0);
     const [headerTop, setHeaderTop] = useState(0);
     
-    // useEffect(() => {
-    //     const header = document.querySelector(".header-area");
-    //     setHeaderTop(header.offsetTop);
-    //     window.addEventListener("scroll", handleScroll);
-    //     return () => {
-    //         window.removeEventListener("scroll", handleScroll);
-    //     };
-    // }, []);
-    
     const handleScroll = ({}) => {
         setScroll(window.scrollY);
     };
-
     
     useEffect(async () => {
         console.log("entro in useEffects");
@@ -48,40 +40,12 @@ const Header = ({ classOption }) => {
                 setIsLoading(false);
             });
     }, []);
+
+    const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext);
     
     if (!isMounted18) {
         return null; // non renderizzare il componente fino a quando non è montato
       }
-    
-    // useEffect(() => {
-    //     const getAjaxApiData = async () =>  {
-    //         const postBody = {
-    //             Pagina:"Home",
-    //             Lingua:"IT"
-    //         };
-    //         const settings = {
-    //             method: 'POST',
-    //             headers: {
-    //                 Accept: 'application/json',
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify(postBody)
-    //         };
-    //         const response = await fetch(`http://treppiweb-002-site1.htempurl.com/api/SubMenus`, settings);
-    //         const responseJson = await response.json();
-    //         setData(responseJson.results);
-    //         setIsLoading(false);
-    //         const header = document.querySelector(".header-area");
-    //         setHeaderTop(header.offsetTop);
-    //         window.addEventListener("scroll", handleScroll);
-    //         return () => {
-    //             window.removeEventListener("scroll", handleScroll);
-    //         };
-    //     }
-    
-    //     getAjaxApiData();
-
-    //     }, []);
 
     return (
         <Fragment>
@@ -111,7 +75,7 @@ const Header = ({ classOption }) => {
 
                         <div className="col-auto">
                             <div className="header-languages-area">
-                                <LanguageSelector></LanguageSelector>
+                                <LanguageSelector data={data.Lingue} selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
                             </div>
                             <div className="header-action-area">
                                 <button

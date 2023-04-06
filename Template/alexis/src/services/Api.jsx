@@ -1,10 +1,14 @@
 import axios from "axios";
+import { useContext } from 'react';
+import LanguageContext from '../context/LanguageContext';
 
 const baseUrl="http://treppiweb-002-site1.htempurl.com/";
 // const baseUrl="http://localhost:4439/";
+
+const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext);
 const postBody = {
     Pagina:"",
-    Lingua:"IT"
+    Lingua: selectedLanguage ? selectedLanguage: "IT"
 };
 
 const Api = {

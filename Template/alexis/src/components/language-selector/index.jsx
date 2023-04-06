@@ -1,40 +1,56 @@
+import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import LanguageContext from '../../context/LanguageContext';
 
-function LanguageSelector() {
+function LanguageSelector({ data }) {
+    const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext);
+
+    const handleLanguageChange = (languageCode) => {
+        setSelectedLanguage(languageCode);
+    };
+
+    const currentLanguage = data.find(lang => lang.Sigla === selectedLanguage);
+
     return (
-        <DropdownButton id="dropdown-basic-button" variant="white" title={
+        <DropdownButton
+            id="dropdown-basic-button"
+            variant="white"
+            title={
                 <picture>
-                    <img 
-                        src={`${process.env.PUBLIC_URL}/img/icons/it-flag.png`}
+                    <img
+                        src={`${process.env.PUBLIC_URL}${currentLanguage?.Image?.Path}`}
                         className="img-fluid"
-                        alt="IT-FLAG" />
+                        alt={currentLanguage?.Image?.Alt}
+                    />
                 </picture>
             }>
             <ul className="align-items-center">
-                <li>
-                    <Dropdown.Item href="#/it">
-                        <picture>
-                            <img
-                                src={`${process.env.PUBLIC_URL}/img/icons/it-flag.png`}
-                                className="img-fluid"
-                                alt="IT-FLAG" />
-                        </picture>
-                    </Dropdown.Item>
-                </li>
-                <li>
-                    <Dropdown.Item href="#/us">
-                        <picture>
-                            <img
-                                src={`${process.env.PUBLIC_URL}/img/icons/us-flag.png`}
-                                className="img-fluid"
-                                alt="US-FLAG" />
-                        </picture>
-                    </Dropdown.Item>
-                </li>
+                {data.map((val, key) => {
+                    return (
+                        <li key={key}>
+                            <Dropdown.Item
+                                onClick={() => handleLanguageChange(val?.Sigla)}
+                            >
+                                <picture>
+                                    <img
+                                        src={`${process.env.PUBLIC_URL}${val?.Image?.Path}`}
+                                        className="img-fluid"
+                                        alt={val?.Image?.Alt}
+                                    />
+                                </picture>
+                            </Dropdown.Item>
+                        </li>
+                    );
+                })}
             </ul>
         </DropdownButton>
     );
 }
+
+LanguageSelector.propTypes = {
+    data: PropTypes.array,
+};
 
 export default LanguageSelector;
