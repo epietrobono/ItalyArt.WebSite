@@ -179,6 +179,11 @@
     height: 20px;
 }
 
+.footer-link {
+    font-size: 16px;
+    font-weight: 500;
+}
+
 /* sezione aggiunte */
 
 .bg-light{
@@ -1943,4 +1948,11 @@ margin-bottom: 15px;
   }
   .ml-5{
     margin-left: 5px
+  }
+
+  .dati-aziendali-footer{
+    position: absolute;
+    bottom: 3px;
+    text-align: center;
+    width: 100%;
   }
