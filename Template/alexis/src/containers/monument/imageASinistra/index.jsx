@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const MonumentLeftImgContainer = ({ contenuto }) => {
   return (
-    <section className=" text-image-section ">
+    <section className={`${contenuto?.IsPink? "text-image-section":""}`}>
       <div className="margin-section-image-text d-flex">
         <div className="col-md-6">
           <img

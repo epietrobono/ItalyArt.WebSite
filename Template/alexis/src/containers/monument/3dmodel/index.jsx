@@ -12,7 +12,7 @@ const Monument3DModelContainer = ({contenuto}) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
-        <>
+        <section className={`${contenuto?.IsPink? "text-image-section":""}`}>
         { contenuto?.Titolo ?
         (
             <div className="row justify-content-center main-content container-ita-2">
@@ -52,7 +52,7 @@ const Monument3DModelContainer = ({contenuto}) => {
                     </div>
                 ):null
             }
-        </>
+        </section>
     );
 };
 

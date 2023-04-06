@@ -21,8 +21,8 @@ const CategoriesContainer = () => {
         
         <div className="d-flex flex-column section-margin text-categorie-home">
         <h2 className="text-center">{categoriesContainerData.Title}</h2>
-        <span className="text-center">{categoriesContainerData.Desc}</span>
-        <span className="text-center">{categoriesContainerData.Desc2}</span>
+        <span className="text-center spanLikeAP">{categoriesContainerData.Desc}</span>
+        <span className="text-center spanLikeAP">{categoriesContainerData.Desc2}</span>
         <CategoriesGallery data={categoriesContainerData.Categories}></CategoriesGallery>
         <CategoriesGalleryMobile data={categoriesContainerData.Categories}></CategoriesGalleryMobile>
         </div>

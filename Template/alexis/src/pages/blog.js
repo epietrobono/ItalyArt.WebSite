@@ -42,9 +42,9 @@ const Blog = () => {
 
                     <div className="container-ita">
                         <ArticlesContainer articles={articles}></ArticlesContainer>
-                        <RecentArticlesContainer title={BlogData?.RecentTitle} articles={articles}></RecentArticlesContainer>
-                        <PopularArticlesContainer title={BlogData?.PopularTitle} articles={articles}></PopularArticlesContainer>
-                        <AllArticlesContainer title={BlogData?.AllTitle} articles={articles}></AllArticlesContainer>
+                        <RecentArticlesContainer title={BlogData?.RecentTitle} articles={BlogData.RecentArticles}></RecentArticlesContainer>
+                        <PopularArticlesContainer title={BlogData?.PopularTitle} articles={BlogData.PopularArticles}></PopularArticlesContainer>
+                        <AllArticlesContainer title={BlogData?.AllTitle} articles={BlogData.AllArticles}></AllArticlesContainer>
                     </div>
                     <Footer />
                     <ScrollToTop />

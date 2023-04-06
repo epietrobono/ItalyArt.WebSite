@@ -1,6 +1,7 @@
 .monuments-search {
     height: 818px;
     background-size: cover;
+    background-position-x: center;
 }
 .home-bar .title {
     color: white;
@@ -151,7 +152,7 @@
     background-repeat: no-repeat;
     background-position: 4%;
     text-indent: 35px;
-    width: 78%;
+    flex-grow: 1;
     font-weight: 400;
     font-size: 15px;
 }
@@ -176,6 +177,11 @@
 
 .footer-area .footer-empty-space {
     height: 20px;
+}
+
+.footer-link {
+    font-size: 16px;
+    font-weight: 500;
 }
 
 /* sezione aggiunte */
@@ -448,6 +454,8 @@
     color: white;
     font-weight: 500;
     padding: 2px 30px !important;
+    min-width: 20%;
+    margin-left: 2% ;
 }
 
 .btn-cerca:hover{
@@ -684,6 +692,7 @@
 .nav-item a{
     color:#707070;
     font-size: 17px;
+    font-weight: 500;
 }
 
 #dropdown-basic-button{
@@ -941,7 +950,7 @@ margin-bottom: 15px;
 
     .search-icon{
         width: 100%;
-        text-indent: 18px;
+        text-indent: 1.5rem;
         padding-right: 0.5rem !important;
         padding-top: 0.1rem !important;
         padding-bottom: 0.1rem !important;
@@ -962,6 +971,7 @@ margin-bottom: 15px;
 
     .monuments-search {
         height: 90vh;
+        background-position-x: center;
     }
 
     .row{
@@ -1055,7 +1065,7 @@ margin-bottom: 15px;
     }
 
     .carousel-info{
-        padding: 0.5rem !important;
+        padding: 0.5rem 0 !important;
         margin:0 !important
     }
 
@@ -1572,10 +1582,11 @@ margin-bottom: 15px;
     .carousel-monuments-home{
         margin: 0 !important;
         min-height: 24vh !important;
+        flex-direction: column-reverse !important;
     }
 
     .carousel-monuments-home img{
-        width: 50% !important;
+        width: 90% !important;
     }
 
     .header-action-area{
@@ -1585,7 +1596,22 @@ margin-bottom: 15px;
     .social-logo{
         margin: 10px;
     }
+
+    .col-auto-in{
+        flex: 0 0 auto;
+        width: inherit !important;
+    }
+    
+    .carousel-monuments-home .text-left {
+        width: 90% !important;
+    }
 }
+
+.col-auto-in{
+    flex: 0 0 auto;
+    width: auto;
+}
+
 
 
 .rounded-search{
@@ -1690,15 +1716,18 @@ margin-bottom: 15px;
     margin-right: 3rem ; 
     margin-left: 3rem ;
     min-height: auto;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .carousel-monuments-home .text-left{
-    width: 40% !important;
+    width: 50% ;
 }
 
 .carousel-monuments-home img{
-    width: 60%;
+    width: 45%;
     padding: 0;
+    
 }
 
 .r-gap{
@@ -1782,6 +1811,30 @@ margin-bottom: 15px;
 .gallery-monument img{
     border-radius: 10px;
 }
+
+.credist-bg-custom {
+    background-color: #D5D5D5 !important;
+  }
+  
+  .credits-image-list {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+  
+  .credits-image-list img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .credits-thanks-text {
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
 
 @media screen and ( min-width: 800px) {
    .flex-container-monuments{
@@ -1876,4 +1929,30 @@ margin-bottom: 15px;
 
   p, span, h1, h2, h3, h4, h5, h6, li, td {
     white-space: pre-line !important;
+  }
+
+  .spanLikeAP{    
+    font-size: 15px;
+    line-height: 1.35;
+    color: #373737;
+  }
+
+  .ml-2{
+    margin-left: 2px
+  }
+  .ml-3{
+    margin-left: 3px
+  }
+  .ml-4{
+    margin-left: 4px
+  }
+  .ml-5{
+    margin-left: 5px
+  }
+
+  .dati-aziendali-footer{
+    position: absolute;
+    bottom: 3px;
+    text-align: center;
+    width: 100%;
   }

@@ -1,7 +1,7 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "lightgallery.js/dist/css/lightgallery.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "react-bootstrap";
 import "react-modal-video/scss/modal-video.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -31,8 +31,10 @@ import BlogDetails from "./templates/blog-details";
 import BlogArticle from "./templates/blog-article";
 import BlogTag from "./templates/blog-tag";
 import PortfolioDetails from "./templates/portfolio-details";
+import NotFound from './pages/NotFound';
 
 const App = () => {
+
     useEffect(() => {
         AOS.init({
             offset: 80,
@@ -42,6 +44,17 @@ const App = () => {
         });
         AOS.refresh();
     }, []);
+
+    useEffect(() => {
+        // Controlla se selectedLanguage è già presente nel localStorage
+        const savedLanguage = localStorage.getItem("selectedLanguage");
+    
+        // Se non è presente, imposta il valore di default "IT"
+        if (!savedLanguage) {
+          localStorage.setItem("selectedLanguage", "IT");
+        }
+      }, []);
+      
     console.log(process.env.PUBLIC_URL); 
     return (
         <Router>
@@ -114,6 +127,7 @@ const App = () => {
                         path={`${process.env.PUBLIC_URL + "/contact"}`}
                         component={Contact}
                     />
+                    <Route component={NotFound} />
                 </Switch>
             </NavScrollTop>
         </Router>

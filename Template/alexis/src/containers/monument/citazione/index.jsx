@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 
 const MonumentCitContainer = ({contenuto}) => {
     return (
+        <section className={`${contenuto?.IsPink? "text-image-section":""}`}>
         <div className="row justify-content-center main-content container-ita-2">
             <div className="col col-auto border-citazione">
                 <p>{contenuto.Testo}</p>
@@ -10,6 +11,7 @@ const MonumentCitContainer = ({contenuto}) => {
                 </div>
             </div>
         </div>
+        </section>
     );
 };
 

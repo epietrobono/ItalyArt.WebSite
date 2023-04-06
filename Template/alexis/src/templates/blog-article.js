@@ -43,7 +43,7 @@ const BlogArticle = ({
     return (
         <React.Fragment>
             <Layout>
-                <SEO title="ItalyArt || Article" />
+                <SEO title={article?.Title ? `ItalyArt || ${article?.Title}` : "ItalyArt || Article" } keywords={article?.MetaKeywords} />
                 <div className="wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
                     <div className="header-space"></div>

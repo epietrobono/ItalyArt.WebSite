@@ -36,7 +36,7 @@ const MonumentPage = ({
         return (
             <React.Fragment>
             <Layout>
-                <SEO title="ItalyArt || Monument" />
+                <SEO title={monument?.Title ? `ItalyArt || ${monument?.Title}` : "ItalyArt || Monument" } keywords={monument?.MetaKeywords} />
                 <div className=" wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
                     <div className="header-space"></div>
@@ -74,7 +74,7 @@ const MonumentPage = ({
 MonumentPage.propTypes = {
     match: PropTypes.shape({
         params: PropTypes.shape({
-            id: PropTypes.number,
+            id: PropTypes.string,
         }),
     }),
 };
