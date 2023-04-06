@@ -15,14 +15,14 @@ function GridContainer({nCols}) {
         }
         fetchData();
     }, []);
-    
       
+    const classColAuto= monuments?.length==1 ? "col-auto" : "col-auto-in";
     return (
         <div className={"categories sezione-card-maps sezione-card-monumenti row row-cols-" + nCols + " justify-content-center mx-0"}>
             { !isLoading && 
                 GridContainerData.Monuments.map((val, key)=>{
                     return (
-                        <div className="col col-auto card-monumenti monumenti-map" key={key}>
+                        <div className={`col ${classColAuto} card-monumenti`} key={key}>
                             <MonumentCard data={val}></MonumentCard>
                         </div>
                     )

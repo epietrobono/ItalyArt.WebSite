@@ -8,6 +8,16 @@ const postBody = {
 };
 
 const Api = {
+  CheckPath: async (url) => {
+    postBody.Url=url;
+    const response = await axios.post(baseUrl+"api/CheckPath", postBody);
+    return response.data.results;
+  },
+  AddNewsletter: async (email) => {
+    postBody.Email=email;
+    const response = await axios.post(baseUrl+"api/AddNewsletter", postBody);
+    return response.data.results;
+  },
   GetSubmenus: async () => {
     const response = await axios.post(baseUrl+"api/SubMenus", postBody);
     return response.data.results;
