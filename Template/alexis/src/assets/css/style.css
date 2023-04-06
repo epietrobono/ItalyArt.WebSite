@@ -1704,6 +1704,7 @@ margin-bottom: 15px;
     margin-right: 3rem ; 
     margin-left: 3rem ;
     min-height: auto;
+    justify-content: space-between;
 }
 
 .carousel-monuments-home .text-left{
@@ -1711,8 +1712,9 @@ margin-bottom: 15px;
 }
 
 .carousel-monuments-home img{
-    width: 60%;
+    width: 45%;
     padding: 0;
+    
 }
 
 .r-gap{

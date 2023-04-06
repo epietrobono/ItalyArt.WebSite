@@ -28,7 +28,7 @@ function CarouselMonumentsContainer() {
                                 return (
                                     <Carousel.Item key={key}>
                                         <div className="row mx-5 carousel-monuments-home">
-                                            <div className="col text-left carousel-info  ">
+                                            <div className=" text-left carousel-info  ">
                                                 <h2 className="carousel-title">
                                                     {monumento.Title}
                                                 </h2>
