@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const baseUrl="http://treppiweb-002-site1.htempurl.com/";
-const baseUrl="http://localhost:4439/";
+const baseUrl="http://treppiweb-002-site1.htempurl.com/";
+// const baseUrl="http://localhost:4439/";
 const instance = axios.create();
 
 instance.interceptors.request.use((config) => {
