@@ -15,7 +15,8 @@ const ModelSuggestionsContainer = () => {
         fetchData();
     }, []);
     
-if(!isLoading && modelSuggestionsContainerData.Suggestions.lenght > 0){
+if(!isLoading && modelSuggestionsContainerData.Suggestions.lenght > 0){    
+    const classColAuto= modelSuggestionsContainerData.Suggestions?.length==1 ? "col-auto" : "col-auto-in";
         return (
             <div className="container-ita">
             <div className="py-4 d-flex flex-column section-margin ">
@@ -25,7 +26,7 @@ if(!isLoading && modelSuggestionsContainerData.Suggestions.lenght > 0){
                     {!isLoading && modelSuggestionsContainerData.Suggestions.lenght > 0 &&
                         modelSuggestionsContainerData.Suggestions.map((val, key)=>{
                             return(
-                                <div className="col col-auto width-3d-card card-monumenti" key={key}>
+                                <div className={`col ${classColAuto} card-monumenti`} key={key}>
                                     <MonumentCard data={val}></MonumentCard>
                                 </div>
                             );

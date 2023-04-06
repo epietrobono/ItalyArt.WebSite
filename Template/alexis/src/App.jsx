@@ -30,6 +30,7 @@ import BlogDetails from "./templates/blog-details";
 import BlogArticle from "./templates/blog-article";
 import BlogTag from "./templates/blog-tag";
 import PortfolioDetails from "./templates/portfolio-details";
+import NotFound from './pages/NotFound';
 
 const App = () => {
     useEffect(() => {
@@ -112,7 +113,8 @@ const App = () => {
                     <Route
                         path={`${process.env.PUBLIC_URL + "/contact"}`}
                         component={Contact}
-                    />
+                    />                    
+                    <Route component={NotFound} />
                 </Switch>
             </NavScrollTop>
         </Router>

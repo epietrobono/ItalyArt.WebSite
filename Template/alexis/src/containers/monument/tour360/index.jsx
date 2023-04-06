@@ -13,7 +13,7 @@ const MonumentTour360 = ({contenuto}) => {
     const handleShow = () => setShow(true);
     console.log("in tour");
     return (
-        <>
+        <section className={`${contenuto?.IsPink? "text-image-section":""}`}>
         { contenuto?.Titolo ?
         (
             <div className="row justify-content-center main-content container-ita-2">
@@ -47,7 +47,7 @@ const MonumentTour360 = ({contenuto}) => {
                     </div>
                 ):null
             }
-        </>
+        </section>
     );
 };
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Image } from "react-bootstrap";
-import SearchForm from "../../../components/search-form";
+import SearchForm from "../../../components/search-form-newsletter";
 import Api from "../../../services/Api";
 
 const NewsletterContainer = () => {
