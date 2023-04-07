@@ -1,8 +1,8 @@
 import axios from "axios";
 
 
-const baseUrl="http://treppiweb-002-site1.htempurl.com/";
-// const baseUrl="http://localhost:4439/";
+// const baseUrl="http://treppiweb-002-site1.htempurl.com/";
+const baseUrl="http://localhost:4439/";
 const instance = axios.create();
 
 instance.interceptors.request.use((config) => {
@@ -70,8 +70,8 @@ const Api = {
     const response = await instance.post(baseUrl+"api/Monuments360Home");
     return response.data.results;
   },
-  GetMonuments: async (category,research) => {
-    const postBody={Category: category, Search:research};
+  GetMonuments: async (category,research,currentPage) => {
+    const postBody={Category: category, Search:research, Page: currentPage};
     const response = await instance.post(baseUrl+"api/Monuments", postBody);
     return response.data.results;
   },

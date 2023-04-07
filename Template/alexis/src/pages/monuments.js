@@ -1,6 +1,7 @@
 
 import React,{useEffect, useState }  from "react";
 import { useSearchParams } from "react-router-dom";
+import { Spinner } from "reactstrap"; 
 import PropTypes from "prop-types";
 import ScrollToTop from "../components/scroll-to-top";
 import SearchForm from "../components/search-form";
@@ -24,6 +25,33 @@ const MonumentsPage = ({
     const [isLoading, setIsLoading] = useState(true);
     const [isMounted14, setIsMounted14] = useState(false);
     
+    const [currentPage, setCurrentPage] = useState(1);
+    const [hasMoreResults, setHasMoreResults] = useState(true);
+    const [loadingMore, setLoadingMore] = useState(false);
+
+   
+    const loadMoreMonuments = async () => {
+        setLoadingMore(true);
+        try{
+            const nextPage = currentPage + 1;
+            const research = getUrlParameter("research");
+            const moreResults = await Api.GetMonuments(category, research, nextPage);
+        
+            if (moreResults.Monuments.length === 0) {
+            setHasMoreResults(false);
+            } else {
+            setmonumentsDt((prevState) => ({
+                ...prevState,
+                Monuments: [...prevState.Monuments, ...moreResults.Monuments],
+            }));
+            setLoadingMore(false);
+            setCurrentPage(nextPage);
+            }
+        }
+        catch{
+            setLoadingMore(false);
+        }
+      };
 
     useEffect(async () => {
         console.log("entro in useEffects");
@@ -32,7 +60,7 @@ const MonumentsPage = ({
             setMonumentsPageData(results);
             });
         const research=getUrlParameter("research");
-        await Api.GetMonuments(category,research).then((results) => {    
+        await Api.GetMonuments(category,research,currentPage).then((results) => {    
             console.log("esegue then");
             setmonumentsDt(results);
             setIsMounted14(true);
@@ -65,6 +93,18 @@ const MonumentsPage = ({
                                 <GridContainer nCols={5} monuments={monumentsDt.Monuments}></GridContainer>
                             </div>
                         </div>
+                        {hasMoreResults && (
+                            <div className="text-center">
+                                {
+                                loadingMore ? (
+                                    <Spinner color="custom-spinner-primary-color" /> // Modifica "primary" con il colore desiderato per lo spinner
+                                    ) : (
+                                    <button className="btn btn-primary mt-4" onClick={loadMoreMonuments}>
+                                        Visualizza Altri
+                                    </button>
+                                )}
+                            </div>
+                        )}
                         {(monumentsDt?.OthersMonuments.length>0) ?
                                 (
                                     <div className="col col-auto my-4 px-auto">

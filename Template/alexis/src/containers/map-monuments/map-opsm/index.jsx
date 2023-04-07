@@ -26,7 +26,7 @@ const MapComponent = ({ monuments, onViewportChanged, isLoading, category, searc
   useEffect(() => {
     const bounds = new window.L.LatLngBounds(viewport.center, viewport.center);
     onViewportChanged(bounds);
-  }, [category]);
+  }, [category,viewport]);
 
   useEffect(() => {
     if (search) {
@@ -34,8 +34,8 @@ const MapComponent = ({ monuments, onViewportChanged, isLoading, category, searc
       provider.search({ query: search }).then((results) => {
         if (results.length > 0) {
           const { x, y } = results[0];
-          setViewport((prevState) => ({
-            ...prevState,
+          setViewport(() => ({
+            zoom: 13,
             center: [parseFloat(y), parseFloat(x)],
           }));
         }

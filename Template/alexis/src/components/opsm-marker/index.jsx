@@ -7,11 +7,11 @@ const PinComponent = ({ monument }) => {
   const pinColor = (type) => {
     switch (type) {
       case '4':
-        return 'red';
-      case '5':
         return 'blue';
-      default:
+      case '5':
         return 'black';
+      default:
+        return 'red';
     }
   };
 

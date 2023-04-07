@@ -2047,3 +2047,8 @@ margin-bottom: 15px;
     margin-left: 0;
     margin-right: 0;
 }
+
+.custom-spinner-primary-color {
+    border-color: #C21718;
+    border-right-color: transparent;
+  }
