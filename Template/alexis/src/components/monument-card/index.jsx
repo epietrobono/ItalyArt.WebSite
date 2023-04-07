@@ -56,7 +56,7 @@ const MonumentCard = ({ data }) => {
                                     delay={5}
                                     style={{ "margin-bottom": "30px" }}
                                 >
-                                    <p className="col col-auto">
+                                    <p className="col col-auto ptp-5">
                                         {data.Location} &nbsp; - &nbsp; 
                                     </p>
                                 </Marquee>
@@ -93,7 +93,7 @@ const MonumentCard = ({ data }) => {
                                 </h4>
                             </Marquee>
                             <div className="d-flex justify-content-between">
-                                <p className="col col-auto">{data.Location}</p>
+                                <p className="col col-auto ptp-5">{data.Location}</p>
                                 <Link
                                     to={process.env.PUBLIC_URL + data.Url}
                                     className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card ml-3"
@@ -129,7 +129,7 @@ const MonumentCard = ({ data }) => {
                                     delay={5}
                                     style={{ "margin-bottom": "30px" }}
                                 >
-                                    <p className="col col-auto">
+                                    <p className="col col-auto ptp-5">
                                         {data.Location} &nbsp; - &nbsp; 
                                     </p>
                                 </Marquee>
@@ -160,7 +160,7 @@ const MonumentCard = ({ data }) => {
                                 {data.Title}
                             </h4>
                             <div className="d-flex justify-content-between">
-                                <p className="col col-auto">{data.Location}</p>
+                                <p className="col col-auto ptp-5">{data.Location}</p>
                                 <Link
                                     to={process.env.PUBLIC_URL + data.Url}
                                     className="col col-auto btn btn-light border botton-card shadow rounded-pill mob-btn-card ml-3"
