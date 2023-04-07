@@ -20,28 +20,30 @@ const MapComponent = ({ monuments, onViewportChanged, isLoading, category, searc
         onViewportChanged(map.getBounds());
       },
     });
+    
+    useEffect(() => {
+      if (search) {
+        const provider = new OpenStreetMapProvider();
+        provider.search({ query: search }).then((results) => {
+          if (results.length > 0) {
+            const { x, y } = results[0];
+            const newCenter = [parseFloat(y), parseFloat(x)];
+            map.setView(newCenter, 13);
+            onViewportChanged(map.getBounds());
+          }
+        });
+      }
+    }, [search,map]);
+
     return null;
   };
 
   useEffect(() => {
     const bounds = new window.L.LatLngBounds(viewport.center, viewport.center);
     onViewportChanged(bounds);
-  }, [category,viewport]);
+  }, [category]);
 
-  useEffect(() => {
-    if (search) {
-      const provider = new OpenStreetMapProvider();
-      provider.search({ query: search }).then((results) => {
-        if (results.length > 0) {
-          const { x, y } = results[0];
-          setViewport(() => ({
-            zoom: 13,
-            center: [parseFloat(y), parseFloat(x)],
-          }));
-        }
-      });
-    }
-  }, [search]);
+
 
   return (
     <MapContainer

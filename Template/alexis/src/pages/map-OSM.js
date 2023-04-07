@@ -23,8 +23,8 @@ const MapMonumentsPage = ({
 
   const search=getUrlParameter("research");
   
-  const fetchMonuments = async (NELat, NELon, SWLat, SWLon, category = '', search = '') => {
-    await Api.GetMapMonuments(category,search,NELat,NELon,SWLat,SWLon).then((results) => {  
+  const fetchMonuments = async (NELat, NELon, SWLat, SWLon) => {
+    await Api.GetMapMonuments(category,'',NELat,NELon,SWLat,SWLon).then((results) => {  
             setMonuments(results);
             setIsMounted14(true);
             setIsLoading(false);
