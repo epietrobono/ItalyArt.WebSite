@@ -4,7 +4,7 @@ import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import PinComponent from '../../../components/opsm-marker';
 
-const MapComponent = ({ monuments, onViewportChanged, isLoading, category }) => {
+const MapComponent = ({ monuments, onViewportChanged, isLoading, category, search }) => {
   const [viewport, setViewport] = useState({
     center: [41.894038, 12.497480], // Coordinata iniziale (Milano)
     zoom: 13,
@@ -46,7 +46,8 @@ MapComponent.propTypes = {
   monuments: PropTypes.array,
   onViewportChanged: PropTypes.func,
   isLoading: PropTypes.bool,
-  category: PropTypes.string
+  category: PropTypes.string,
+  search: PropTypes.string
 }
 
 export default MapComponent;
