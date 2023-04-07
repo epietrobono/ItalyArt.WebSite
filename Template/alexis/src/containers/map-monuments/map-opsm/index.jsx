@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import PinComponent from '../../../components/opsm-marker';
+import { OpenStreetMapProvider } from 'leaflet-geosearch';
 
 const MapComponent = ({ monuments, onViewportChanged, isLoading, category, search }) => {
   const [viewport, setViewport] = useState({
@@ -12,6 +13,9 @@ const MapComponent = ({ monuments, onViewportChanged, isLoading, category, searc
 
   const MapEvents = () => {
     const map = useMapEvents({
+      load: () => {
+        onViewportChanged(map.getBounds());
+      },
       moveend: () => {
         onViewportChanged(map.getBounds());
       },
@@ -23,6 +27,21 @@ const MapComponent = ({ monuments, onViewportChanged, isLoading, category, searc
     const bounds = new window.L.LatLngBounds(viewport.center, viewport.center);
     onViewportChanged(bounds);
   }, [category]);
+
+  useEffect(() => {
+    if (search) {
+      const provider = new OpenStreetMapProvider();
+      provider.search({ query: search }).then((results) => {
+        if (results.length > 0) {
+          const { x, y } = results[0];
+          setViewport((prevState) => ({
+            ...prevState,
+            center: [parseFloat(y), parseFloat(x)],
+          }));
+        }
+      });
+    }
+  }, [search]);
 
   return (
     <MapContainer

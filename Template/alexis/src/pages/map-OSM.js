@@ -21,6 +21,8 @@ const MapMonumentsPage = ({
   const [isLoading, setIsLoading] = useState(true);
   const [isMounted14, setIsMounted14] = useState(false);
 
+  const search=getUrlParameter("research");
+  
   const fetchMonuments = async (NELat, NELon, SWLat, SWLon, category = '', search = '') => {
     await Api.GetMapMonuments(category,search,NELat,NELon,SWLat,SWLon).then((results) => {  
             setMonuments(results);
@@ -37,14 +39,13 @@ const MapMonumentsPage = ({
     const NELon = bounds.getNorthEast().lng;
     const SWLat = bounds.getSouthWest().lat;
     const SWLon = bounds.getSouthWest().lng;
-    const search=getUrlParameter("research");
     const paramCategory=category;
     fetchMonuments(NELat, NELon, SWLat, SWLon,paramCategory,search);
   };
 
   const form = monuments?.Form;
   if(!isLoading){
-    form.Research= getUrlParameter("research");
+    form.Research= search;
   }
   // if (!isMounted14 && isLoading) {
   //   return null; // non renderizzare il componente fino a quando non è montato
@@ -72,7 +73,7 @@ const MapMonumentsPage = ({
                                 <GridContainer nCols={3} monuments={monuments.Monuments} isLoading={isLoading}></GridContainer>
                             </div>
                             <div className="col-md-7 col-sm-12 map-mobile">
-                              <MapComponent monuments={monuments.Monuments} onViewportChanged={handleViewportChanged} isLoading={isLoading} category={category} />
+                              <MapComponent monuments={monuments.Monuments} onViewportChanged={handleViewportChanged} isLoading={isLoading} category={category} search={search}/>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 import { Image } from "react-bootstrap";
-import SearchForm from "../../../components/search-form";
+import SearchForm from "../../../components/search-form-map";
 import WhereToGoData from "../../../data/where-to-go.json";
 
 const WhereToGoContainer = () => {
