@@ -11,7 +11,7 @@ function CenterFooterLogo({ data }) {
                 />
                 <p>{data.Desc}</p>
             </div>
-            <div className="row align-items-start justify-content-center mt-1">
+            <div className="row center-footer-logo remove-row-margin align-items-start justify-content-center mt-3">
                 <SocialLogo
                     className="col-auto"
                     social="instagram"
