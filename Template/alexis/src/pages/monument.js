@@ -16,6 +16,7 @@ const MonumentPage = ({
 }) => {
     const [MonumentPageData, setMonumentPageData] = useState({});
     const [isMounted17, setIsMounted17] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     
     useEffect(async () => {
         console.log("entro in useEffects");
@@ -23,10 +24,11 @@ const MonumentPage = ({
                 console.log("esegue then");
                 setMonumentPageData(results);   
                 setIsMounted17(true);
+                setIsLoading(false);
             });
     }, []);
     
-    if (!isMounted17) {
+    if (!isMounted17 && isLoading) {
         return null; // non renderizzare il componente fino a quando non è montato
       }
 
@@ -54,7 +56,7 @@ const MonumentPage = ({
         return (
             <React.Fragment>
             <Layout>
-                <SEO title="ItalyArt || Monument" />
+                <SEO title={monument?.Title ? `ItalyArt || ${monument?.Title}` : "ItalyArt || Monument" } keywords={monument?.MetaKeywords} />
                 <div className=" wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
                     <div className="header-space"></div>

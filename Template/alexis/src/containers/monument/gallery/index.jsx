@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const MonumentGalleryContainer = ({contenuto }) => {
     return (
-      <section className={`${contenuto?.IsPink? "text-image-section":""}`}>
+      <section className={`${contenuto?.IsPink? "text-image-section":"text-image-section-white"}`}>
         <div className="row justify-content-center main-content container-ita-2">
             <div className="col col-auto gallery-monument">
                 {

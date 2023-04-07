@@ -56,7 +56,7 @@ const BlogArticle = ({
                                 <div className="row">
                                     <MonumentsRelated title={BlogArticlesData?.ShowMore} monuments={monuments}></MonumentsRelated>
                                 </div>
-                                <div className="row">
+                                <div className="row mt-5">
                                     <RelatedArticlesContainer title={BlogArticlesData?.RelatedTitle} articles={articles}></RelatedArticlesContainer>
                                 </div>
                             </div>

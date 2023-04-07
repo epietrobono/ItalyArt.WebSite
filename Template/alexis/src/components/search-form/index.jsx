@@ -19,9 +19,16 @@ class SearchForm extends React.Component {
         this.setState({value: event.target.value});
     }
 
-    handleSubmit(event) {
-        
-        window.location.reload();
+    handleSubmit(event) {        
+        const location = window.location.href.split('?')[0];
+        var newUrl = location;
+        if(!newUrl.includes("monuments")){
+            newUrl=window.location.origin+'/monuments'
+        }
+        newUrl= newUrl+'?research='+this.state.value;
+        // alert('E\' stato inserito un nome: ' + this.state.value + ' all\'url: '+location+ ' verso un nuovo url: ' + newUrl);
+        event.preventDefault();
+        window.location.replace(newUrl);
     }
    
 

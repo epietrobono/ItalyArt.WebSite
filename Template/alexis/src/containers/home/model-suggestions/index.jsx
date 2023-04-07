@@ -5,6 +5,15 @@ import Api from "../../../services/Api";
 const ModelSuggestionsContainer = () => {
     const [modelSuggestionsContainerData, setmodelSuggestionsContainerData] = useState({});
     const [isLoading, setIsLoading] = useState(true);
+    const [width, setWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        function handleResize() {
+            setWidth(window.innerWidth);
+        }
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [width]);
     
     useEffect(() => {
         const fetchData = async () => {
@@ -23,15 +32,24 @@ if(!isLoading && modelSuggestionsContainerData.Suggestions.lenght > 0){
                 <h2 className="text-center mob-h2">{modelSuggestionsContainerData.Title}</h2>
                 <p className="text-center mob-p">{modelSuggestionsContainerData.Desc}</p>
                 <div className="row justify-content-center sezione-card-monumenti r-gap">
-                    {!isLoading && modelSuggestionsContainerData.Suggestions.lenght > 0 &&
-                        modelSuggestionsContainerData.Suggestions.map((val, key)=>{
-                            return(
+                    {!isLoading && modelSuggestionsContainerData.Suggestions.lenght > 0 && width >= 1600 && modelSuggestionsContainerData.Suggestions.map(
+                        (val, key) => {
+                            return (
                                 <div className={`col ${classColAuto} card-monumenti`} key={key}>
                                     <MonumentCard data={val}></MonumentCard>
                                 </div>
                             );
-                        })
-                    }
+                        }
+                    )}
+                    {!isLoading && modelSuggestionsContainerData.Suggestions.lenght > 0 && width < 1600 && modelSuggestionsContainerData.Suggestions.slice(0, 4).map(
+                        (val, key) => {
+                            return (
+                                <div className={`col ${classColAuto} card-monumenti`} key={key}>
+                                    <MonumentCard data={val}></MonumentCard>
+                                </div>
+                            );
+                        }
+                    )}
                 </div>
             </div>
             </div>

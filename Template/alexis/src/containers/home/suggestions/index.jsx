@@ -8,6 +8,16 @@ const SuggestionsContainer = () => {
         {}
     );
     const [isLoading, setIsLoading] = useState(true);
+    const [width, setWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        function handleResize() {
+            setWidth(window.innerWidth);
+        }
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [width]);
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -41,7 +51,21 @@ const SuggestionsContainer = () => {
                             {SuggestionsContainerData.Desc}
                         </p>
                         <div className="row justify-content-center sezione-card-monumenti r-gap">
-                            {SuggestionsContainerData.Suggestions.map(
+                            {width >= 1600 && SuggestionsContainerData.Suggestions.map(
+                                (val, key) => {
+                                    return (
+                                        <div
+                                            className={`col ${classColAuto} `}
+                                            key={key}
+                                        >
+                                            <MonumentCard
+                                                data={val}
+                                            ></MonumentCard>
+                                        </div>
+                                    );
+                                }
+                            )}
+                            {width < 1600 && SuggestionsContainerData.Suggestions.slice(0, 4).map(
                                 (val, key) => {
                                     return (
                                         <div
