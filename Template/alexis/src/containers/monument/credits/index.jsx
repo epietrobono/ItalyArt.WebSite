@@ -9,8 +9,8 @@ const CreditsComponent = ({ contenuto }) => {
     );
 
     return (
-        <section className="bg-credits">
-            <div className="text-image-section-credits">
+        <section className="text-image-section-credits">
+            <div>
                 <div className="credits-image-list">
                     {contenuto?.Image?.map((image, index) => (
                         <img
