@@ -2042,3 +2042,8 @@ margin-bottom: 15px;
 .ptp-5{
     padding-top: 5px;
 }
+
+.remove-row-margin{
+    margin-left: 0;
+    margin-right: 0;
+}
