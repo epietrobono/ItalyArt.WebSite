@@ -7,7 +7,7 @@ import Footer from "../layouts/footer";
 import Header from "../layouts/header";
 import GridContainer from "../containers/map-monuments/grid";
 import ScrollToTop from "../components/scroll-to-top";
-import SearchForm from "../components/search-form";
+import SearchForm from "../components/search-form-map";
 import SEO from "../components/seo";
 import Api from "../services/Api";
 import {getUrlParameter} from "../utils";
@@ -60,6 +60,9 @@ const MapMonumentsPage = ({
                     {!isLoading && (
                       <>
                         <div className="row justify-content-center py-5 search-bar-monuments ricerca-map">
+                          <div className="col col-auto form-width mb-4" id="search-form-monuments">
+                              <SearchForm data={form}></SearchForm>
+                          </div>
                           <CategoriesContainer categories={monuments.Categories} isLoading={isLoading}></CategoriesContainer>
                         </div>
                       </>
