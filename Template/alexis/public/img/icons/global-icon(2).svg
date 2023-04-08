@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.71" height="32.71" viewBox="0 0 32.71 32.71">
+  <g id="global-icon" transform="translate(0 0)">
+    <g id="Ellisse_95" data-name="Ellisse 95" transform="matrix(-0.883, 0.469, -0.469, -0.883, 32.71, 21.355)" fill="#fff" stroke="#3e3e3e" stroke-width="1">
+      <ellipse cx="12.093" cy="12.093" rx="12.093" ry="12.093" stroke="none"/>
+      <ellipse cx="12.093" cy="12.093" rx="11.593" ry="11.593" fill="none"/>
+    </g>
+    <line id="Linea_484" data-name="Linea 484" y1="22.661" transform="matrix(-0.883, 0.469, -0.469, -0.883, 21.632, 26.28)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="1"/>
+    <path id="Tracciato_7284" data-name="Tracciato 7284" d="M6.285,22.671S0,21.145,0,11.336C0,1.644,6.285,0,6.285,0" transform="matrix(-0.883, 0.469, -0.469, -0.883, 27.314, 23.426)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="1"/>
+    <path id="Tracciato_7285" data-name="Tracciato 7285" d="M0,22.671s6.506-1.526,6.506-11.336C6.506,1.644,0,0,0,0" transform="matrix(-0.883, 0.469, -0.469, -0.883, 21.702, 26.41)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="1"/>
+    <path id="Tracciato_7287" data-name="Tracciato 7287" d="M0,0" transform="matrix(0.485, 0.875, -0.875, 0.485, 27.691, 18.503)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="1"/>
+    <path id="Tracciato_7289" data-name="Tracciato 7289" d="M0,3.393S4.92.018,9.881,0s9.965,3.321,9.965,3.321" transform="matrix(-0.883, 0.469, -0.469, -0.883, 24.085, 9.799)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="1"/>
+    <path id="Tracciato_7290" data-name="Tracciato 7290" d="M0,4.15S5.724.13,11.489,0,23.061,3.642,23.061,3.642" transform="matrix(-0.883, 0.469, -0.469, -0.883, 28.11, 14.019)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="1"/>
+    <path id="Tracciato_7291" data-name="Tracciato 7291" d="M0,3.831S5.163,0,10.382,0,20.877,3.837,20.877,3.837" transform="matrix(-0.883, 0.469, -0.469, -0.883, 29.617, 19.152)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="1"/>
+    <path id="Tracciato_7288" data-name="Tracciato 7288" d="M0,3.872A12.356,12.356,0,0,1,5.574.23c3.132-.759,6.955.606,6.955.606" transform="translate(18.428 8.696) rotate(166)" fill="none" stroke="#3e3e3e" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>

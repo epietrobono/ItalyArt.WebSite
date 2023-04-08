@@ -31,7 +31,7 @@ const Monument3DModelContainer = ({contenuto}) => {
                         <h3>{contenuto?.Titolo}</h3>
                     ):null
                     }
-                    <Button className=" btn-primary btn-italyart botton-monument-carousel container-button-position" id="button-3d" title="Visita il 3D" onClick={handleShow}>Visita il 3D</Button>
+                    <Button className=" btn-primary btn-italyart botton-monument-carousel container-button-position" id="button-3d" title={`${contenuto?.ButtonText}`} onClick={handleShow}>{contenuto?.ButtonText}</Button>
                     <p>{contenuto?.Testo}</p>
                 </div>
                 <Image rounded  src={process.env.PUBLIC_URL + contenuto.Image?.Path} alt={contenuto.Image?.Alt}></Image>

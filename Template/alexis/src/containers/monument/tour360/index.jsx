@@ -27,7 +27,7 @@ const MonumentTour360 = ({contenuto}) => {
             <div className="row justify-content-center module-3d img-3d ">
             <div className="img-3d-overlay"></div>
                 <div className="container-button-3Dmodel">
-                    <Button className=" btn-primary botton-monument-carousel btn-italyart" id="button-360" title="Visita ora a 360" onClick={handleShow}>Visita ora a 360</Button>
+                    <Button className=" btn-primary botton-monument-carousel btn-italyart" id="button-360" title={`${contenuto?.ButtonText}`} onClick={handleShow}>{contenuto?.ButtonText}</Button>
                 </div>
                 <Image rounded src={process.env.PUBLIC_URL + contenuto.Image?.Path} alt={contenuto.Image?.Alt}></Image>
             </div>
