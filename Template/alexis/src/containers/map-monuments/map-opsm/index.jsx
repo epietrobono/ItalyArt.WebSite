@@ -10,7 +10,8 @@ const MapComponent = ({ monuments, onViewportChanged, isLoading, category, searc
     center: [41.894038, 12.497480], // Coordinata iniziale (Milano)
     zoom: 13,
   });
-
+  const [tmpSearch, setTmpSearch] = useState('');
+  
   const MapEvents = () => {
     const map = useMapEvents({
       load: () => {
@@ -22,18 +23,22 @@ const MapComponent = ({ monuments, onViewportChanged, isLoading, category, searc
     });
     
     useEffect(() => {
-      if (search) {
-        const provider = new OpenStreetMapProvider();
-        provider.search({ query: search }).then((results) => {
-          if (results.length > 0) {
-            const { x, y } = results[0];
-            const newCenter = [parseFloat(y), parseFloat(x)];
-            map.setView(newCenter, 13);
-            onViewportChanged(map.getBounds());
-          }
-        });
+      if (search && search!= tmpSearch) {
+        try{
+          const provider = new OpenStreetMapProvider();
+          provider.search({ query: search }).then((results) => {
+            if (results.length > 0) {
+              const { x, y } = results[0];
+              const newCenter = [parseFloat(y), parseFloat(x)];
+              map.setView(newCenter, 13);
+              onViewportChanged(map.getBounds());
+              setTmpSearch(search)
+            }
+          }).error();
+        }
+        catch{}
       }
-    }, [search,map]);
+    }, [search]);
 
     return null;
   };
