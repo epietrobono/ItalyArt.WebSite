@@ -8,7 +8,7 @@ const RelatedArticlesContainer = ({ title, articles }) => {
             <div className="gap-10 blog-monuments">
                 {articles.slice(0, 2).map((val, key) => {
                     return (
-                        <div className="flex-1" key={key}>
+                        <div className="flex-1-1" key={key}>
                             <ArticlePreview data={val}></ArticlePreview>
                         </div>
                     );

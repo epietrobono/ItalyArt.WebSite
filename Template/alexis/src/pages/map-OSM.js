@@ -56,13 +56,13 @@ const MapMonumentsPage = ({
             <Layout>
                 <SEO title="ItalyArt Monuments"></SEO>
                 <div className="wrapper monuments-wrapper">
-                    <Header classOption="hb-border"></Header>
+                    <Header classOption="hb-border "></Header>
                     <div className="header-space"></div>
                     {!isLoading && (
                         <>
-                            <div className="row justify-content-center py-5 search-bar-monuments ricerca-map">
+                            <div className="row justify-content-center py-5 search-bar-monuments ricerca-map .header-map-page">
                                 <div
-                                    className="col col-auto form-width mb-4"
+                                    className="col col-auto form-width mb-4  "
                                     id="search-form-monuments"
                                 >
                                     <SearchForm data={form}></SearchForm>

@@ -34,20 +34,38 @@ const CreditsComponent = ({ contenuto }) => {
                 <div className="credits-thanks-text">Si ringrazia</div>
                 <div className="row">
                     <div className="col-md-6 text-left credits-text">
-                        {leftCredits.map((credit, index) => (
-                            <div key={index}>
-                                <h6>{credit?.Titolo}</h6>
-                                <p>{credit?.Testo}</p>
-                            </div>
-                        ))}
+                        {leftCredits.map((credit, index) =>
+                            credit.url ? (
+                                <a key={index} href={credit.url}>
+                                    <div>
+                                        <h6>{credit?.Titolo}</h6>
+                                        <p>{credit?.Testo}</p>
+                                    </div>
+                                </a>
+                            ) : (
+                                <div key={index}>
+                                    <h6>{credit?.Titolo}</h6>
+                                    <p>{credit?.Testo}</p>
+                                </div>
+                            )
+                        )}
                     </div>
                     <div className="col-md-6 text-right credits-text">
-                        {rightCredits.map((credit, index) => (
-                            <div key={index}>
-                                <h6>{credit?.Titolo}</h6>
-                                <p>{credit?.Testo}</p>
-                            </div>
-                        ))}
+                        {rightCredits.map((credit, index) =>
+                            credit.url ? (
+                                <a key={index} href={credit.url}>
+                                    <div>
+                                        <h6>{credit?.Titolo}</h6>
+                                        <p>{credit?.Testo}</p>
+                                    </div>
+                                </a>
+                            ) : (
+                                <div key={index}>
+                                    <h6>{credit?.Titolo}</h6>
+                                    <p>{credit?.Testo}</p>
+                                </div>
+                            )
+                        )}
                     </div>
                 </div>
             </div>
