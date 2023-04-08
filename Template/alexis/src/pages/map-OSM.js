@@ -1,82 +1,99 @@
-import React, { useEffect, useState } from 'react';
 import PropTypes from "prop-types";
-import MapComponent from "../containers/map-monuments/map-opsm";
-import CategoriesContainer from "../containers/map-monuments/categories";
-import Layout from "../layouts";
-import Footer from "../layouts/footer";
-import Header from "../layouts/header";
-import GridContainer from "../containers/map-monuments/grid";
+import React, { useState } from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SearchForm from "../components/search-form-map";
 import SEO from "../components/seo";
+import CategoriesContainer from "../containers/map-monuments/categories";
+import GridContainer from "../containers/map-monuments/grid";
+import MapComponent from "../containers/map-monuments/map-opsm";
+import Layout from "../layouts";
+import Footer from "../layouts/footer";
+import Header from "../layouts/header";
 import Api from "../services/Api";
-import {getUrlParameter} from "../utils";
+import { getUrlParameter } from "../utils";
 
 const MapMonumentsPage = ({
-  match: {
-      params: { category },
-  },
+    match: {
+        params: { category },
+    },
 }) => {
-  const [monuments, setMonuments] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
-  const [isMounted14, setIsMounted14] = useState(false);
+    const [monuments, setMonuments] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
+    const [isMounted14, setIsMounted14] = useState(false);
 
-  const search=getUrlParameter("research");
-  
-  const fetchMonuments = async (NELat, NELon, SWLat, SWLon) => {
-    await Api.GetMapMonuments(category,'',NELat,NELon,SWLat,SWLon).then((results) => {  
-            setMonuments(results);
-            setIsMounted14(true);
-            setIsLoading(false);
-          })
-          .catch((error) => {
-            console.error('Error fetching monuments:', error);
-          });
-  };
+    const search = getUrlParameter("research");
 
-  const handleViewportChanged = (bounds) => {
-    const NELat = bounds.getNorthEast().lat;
-    const NELon = bounds.getNorthEast().lng;
-    const SWLat = bounds.getSouthWest().lat;
-    const SWLon = bounds.getSouthWest().lng;
-    const paramCategory=category;
-    fetchMonuments(NELat, NELon, SWLat, SWLon,paramCategory,search);
-  };
+    const fetchMonuments = async (NELat, NELon, SWLat, SWLon) => {
+        await Api.GetMapMonuments(category, "", NELat, NELon, SWLat, SWLon)
+            .then((results) => {
+                setMonuments(results);
+                setIsMounted14(true);
+                setIsLoading(false);
+            })
+            .catch((error) => {
+                console.error("Error fetching monuments:", error);
+            });
+    };
 
-  const form = monuments?.Form;
-  if(!isLoading){
-    form.Research= search;
-  }
-  // if (!isMounted14 && isLoading) {
-  //   return null; // non renderizzare il componente fino a quando non è montato
-  // }
-  return (
-    <React.Fragment>
+    const handleViewportChanged = (bounds) => {
+        const NELat = bounds.getNorthEast().lat;
+        const NELon = bounds.getNorthEast().lng;
+        const SWLat = bounds.getSouthWest().lat;
+        const SWLon = bounds.getSouthWest().lng;
+        const paramCategory = category;
+        fetchMonuments(NELat, NELon, SWLat, SWLon, paramCategory, search);
+    };
+
+    const form = monuments?.Form;
+    if (!isLoading) {
+        form.Research = search;
+    }
+    // if (!isMounted14 && isLoading) {
+    //   return null; // non renderizzare il componente fino a quando non è montato
+    // }
+    return (
+        <React.Fragment>
             <Layout>
                 <SEO title="ItalyArt Monuments"></SEO>
                 <div className="wrapper monuments-wrapper">
                     <Header classOption="hb-border"></Header>
                     <div className="header-space"></div>
                     {!isLoading && (
-                      <>
-                        <div className="row justify-content-center py-5 search-bar-monuments ricerca-map">
-                          <div className="col col-auto form-width mb-4" id="search-form-monuments">
-                              <SearchForm data={form}></SearchForm>
-                          </div>
-                          <CategoriesContainer categories={monuments.Categories} isLoading={isLoading}></CategoriesContainer>
-                        </div>
-                      </>
+                        <>
+                            <div className="row justify-content-center py-5 search-bar-monuments ricerca-map">
+                                <div
+                                    className="col col-auto form-width mb-4"
+                                    id="search-form-monuments"
+                                >
+                                    <SearchForm data={form}></SearchForm>
+                                </div>
+                                <CategoriesContainer
+                                    categories={monuments.Categories}
+                                    isLoading={isLoading}
+                                ></CategoriesContainer>
+                            </div>
+                        </>
                     )}
-                    <div >
+                    <div>
                         <div className="row map-section">
                             <div className="col-md-5 col-sm-12 column-monument-map">
                                 {/* <div className="number-article-map">
                                     <h2 className="mob-h2">0 Risultati</h2>
                                 </div> */}
-                                <GridContainer nCols={3} monuments={monuments.Monuments} isLoading={isLoading}></GridContainer>
+                                <GridContainer
+                                    nCols={3}
+                                    monuments={monuments.Monuments}
+                                    isLoading={isLoading}
+                                ></GridContainer>
                             </div>
                             <div className="col-md-7 col-sm-12 map-mobile">
-                              <MapComponent monuments={monuments.Monuments} onViewportChanged={handleViewportChanged} isLoading={isLoading} category={category} search={search}/>
+                                <MapComponent
+                                    monuments={monuments.Monuments}
+                                    onViewportChanged={handleViewportChanged}
+                                    isLoading={isLoading}
+                                    category={category}
+                                    search={search}
+                                />
                             </div>
                         </div>
                     </div>
@@ -85,15 +102,15 @@ const MapMonumentsPage = ({
                 </div>
             </Layout>
         </React.Fragment>
-  );
+    );
 };
 
 MapMonumentsPage.propTypes = {
-  match: PropTypes.shape({
-      params: PropTypes.shape({
-          category: PropTypes.string,
-      }),
-  }),
+    match: PropTypes.shape({
+        params: PropTypes.shape({
+            category: PropTypes.string,
+        }),
+    }),
 };
 
 export default MapMonumentsPage;

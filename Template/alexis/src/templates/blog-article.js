@@ -1,11 +1,10 @@
 import PropTypes from "prop-types";
-import React,{useEffect, useState }  from "react";
+import React, { useEffect, useState } from "react";
 import ArticleContent from "../components/article-content";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
-import RelatedArticlesContainer from "../containers/blog/related-articles";
 import MonumentsRelated from "../containers/blog/monuments-related";
-import OtherMonumentsContainer from "../containers/monuments/other-monuments";
+import RelatedArticlesContainer from "../containers/blog/related-articles";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
@@ -20,30 +19,37 @@ const BlogArticle = ({
     const [BlogArticlesData, setBlogArticlesData] = useState({});
     const [isMounted23, setIsMounted23] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
-    
+
     useEffect(async () => {
         console.log("entro in useEffects");
-        await Api.GetArticolo(id).then((results) => {    
+        await Api.GetArticolo(id).then((results) => {
             console.log("esegue then");
             setBlogArticlesData(results);
             setIsLoading(false);
             setIsMounted23(true);
         });
     }, [id]);
-    
+
     if (!isMounted23 && isLoading) {
         return null; // non renderizzare il componente fino a quando non è montato
-      }
+    }
 
     const article = BlogArticlesData?.Article;
 
     const articles = BlogArticlesData?.RelatedArticles;
-            
+
     const monuments = BlogArticlesData?.RelatedMonuments;
     return (
         <React.Fragment>
             <Layout>
-                <SEO title={article?.Title ? `ItalyArt || ${article?.Title}` : "ItalyArt || Article" } keywords={article?.MetaKeywords} />
+                <SEO
+                    title={
+                        article?.Title
+                            ? `ItalyArt || ${article?.Title}`
+                            : "ItalyArt || Article"
+                    }
+                    keywords={article?.MetaKeywords}
+                />
                 <div className="wrapper home-default-wrapper">
                     <Header classOption="hb-border" />
                     <div className="header-space"></div>
@@ -54,10 +60,15 @@ const BlogArticle = ({
                             </div>
                             <div className="col  col-lg-3 col-sm-12 ">
                                 <div className="row">
-                                    <MonumentsRelated title={BlogArticlesData?.ShowMore} monuments={monuments}></MonumentsRelated>
-                                </div>
-                                <div className="row mt-5">
-                                    <RelatedArticlesContainer title={BlogArticlesData?.RelatedTitle} articles={articles}></RelatedArticlesContainer>
+                                    <MonumentsRelated
+                                        title={BlogArticlesData?.ShowMore}
+                                        monuments={monuments}
+                                    ></MonumentsRelated>
+
+                                    <RelatedArticlesContainer
+                                        title={BlogArticlesData?.RelatedTitle}
+                                        articles={articles}
+                                    ></RelatedArticlesContainer>
                                 </div>
                             </div>
                         </div>

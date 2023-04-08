@@ -9,7 +9,7 @@ const MonumentRightImgContainer = ({ contenuto }) => {
                     : "text-image-section-white"
             }`}
         >
-            <div className="margin-section-image-text d-flex">
+            <div className="margin-section-image-text margin-section-image-destra d-flex">
                 <div className="col-sm-12  col-md-6">
                     <h3>{contenuto?.Titolo}</h3>
                     <p>{contenuto?.Testo}</p>

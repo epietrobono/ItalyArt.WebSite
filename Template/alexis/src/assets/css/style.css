@@ -722,7 +722,7 @@
 }
 
 .img-prew{
-    width: 100%;
+    width: fit-content;
 }
 .img-prew img{
     width: 100%;
@@ -881,7 +881,7 @@ margin-bottom: 15px;
 
 .img-3d{
     position: relative;
-    aspect-ratio: 30/13;
+    aspect-ratio: 2/1;
     margin-bottom: 25px;
     overflow: hidden;
     margin-top: 20px;
@@ -890,7 +890,7 @@ margin-bottom: 15px;
 .img-3d-overlay{
     background-color: rgba(0, 0, 0, 0.15);
     position: absolute;
-    aspect-ratio: 30/13;
+    aspect-ratio: 2/1;
     width: 100%;
     z-index: 1;
     border-radius: 15px;
@@ -898,7 +898,7 @@ margin-bottom: 15px;
 
 .img-3d img{
     padding: 0;
-    aspect-ratio: 30/15;
+    aspect-ratio: 2/1;
 }
 
 .card-monument-size{
@@ -1619,9 +1619,17 @@ margin-bottom: 15px;
     }
 
     .margin-section-image-text img{
-        margin: 20px 10px;
-        width: 100% !important;
+        margin: 20px 0px;
+        width: 90% !important;
     }
+
+    .text-icon-category{
+        display: none !important;
+    }
+}
+
+.text-icon-category{
+    display: block;
 }
 
 .margin-section-image-text img{
@@ -1655,7 +1663,7 @@ margin-bottom: 15px;
     padding-left: 0px;
     display: flex;
     align-items: center;
-    aspect-ratio: 30/13;
+    aspect-ratio: 2/1;
     justify-content: center;
 }
 
@@ -1789,7 +1797,6 @@ margin-bottom: 15px;
     width: 80%;
     padding: 50px 75px;
     margin: auto;
-    background-color: #02020226;
 }
 
 .margin-section-image-text{
@@ -1827,6 +1834,7 @@ margin-bottom: 15px;
 
 .border-citazione p{
     margin-bottom: 15px;
+    width: 100%;
 }
 
 .gallery-monument{
@@ -1850,13 +1858,15 @@ margin-bottom: 15px;
   .credits-image-list {
     display: flex;
     overflow-x: auto;
+    justify-content: start;
     white-space: nowrap;
     padding: 10px 0;
+    max-height: 100px;
   }
   
   .credits-image-list img {
     max-width: 100%;
-    height: auto;
+    height: max-content;
     margin-right: 10px;
   }
   
@@ -1963,6 +1973,9 @@ margin-bottom: 15px;
         flex-direction: column !important;
         align-items: center !important;
     }
+    .margin-section-image-destra{
+        flex-direction: column-reverse !important;
+    }
   }
 
   p, span, h1, h2, h3, h4, h5, h6, li, td {
@@ -2011,9 +2024,10 @@ margin-bottom: 15px;
     text-align: left;
 }
 
-.credits-text h5{
+.credits-text h6{
     margin-bottom: 5px;
     color: #C21718;
+    font-weight: 600;
 }
 
 .credits-text p{
@@ -2056,3 +2070,58 @@ margin-bottom: 15px;
 .header-primopiano{
     z-index: 99999 !important;
 }
+
+@media screen and (max-width: 600px){
+
+    .icon-list-category {
+        display: block;
+        width: 100%;
+        overflow-x: scroll;
+        justify-content: flex-start !important;
+    }
+    .icon-list-category::-webkit-scrollbar {
+        display: none;
+      }
+      
+
+    .icon-list-category .list{
+        display: inline-flex;
+        white-space: nowrap;
+        gap: 10px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start !important;
+        width: 100%;
+        padding: 0px;
+    }
+    .icon-list-category .list .element-list-category{
+        min-width: 65px;
+        flex: 1;
+    }
+
+
+}
+
+.icon-list-category {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.icon-list-category .list{
+    display: inline-flex;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    width: 70%;
+}
+
+.icon-list-category .list .element-list-category{
+    flex: 1;
+}
+
+.blog-monuments .card-monument-size {
+    width: fit-content !important;
+    margin-top: 20px;
+}
+
