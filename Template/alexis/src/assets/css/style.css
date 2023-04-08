@@ -2125,3 +2125,6 @@ margin-bottom: 15px;
     margin-top: 20px;
 }
 
+.leaflet-attribution-flag{
+    display: none !important;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from "prop-types";
 import { Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
+import MonumentCard from "../monument-card";
 
 const PinComponent = ({ monument }) => {
   const pinColor = (type) => {
@@ -30,9 +31,7 @@ const PinComponent = ({ monument }) => {
   return (
     <Marker position={[monument.Gps.Latitude, monument.Gps.Longitude]} icon={icon}>
       <Popup>
-        <strong>{monument.Title}</strong>
-        <br />
-        {monument.Location}
+        <MonumentCard data={monument}></MonumentCard>
       </Popup>
     </Marker>
   );
