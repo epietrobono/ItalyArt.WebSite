@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function CategoryIcon ({data}) {
+function CategoryIcon({ data }) {
     return (
         <div className="d-flex-icon-cat">
             <Link to={process.env.PUBLIC_URL + data.Url}>
@@ -11,7 +11,12 @@ function CategoryIcon ({data}) {
                     alt="Icon"
                 />
             </Link>
-            <p className="text-center">{data.Name}</p>
+            <Link
+                to={process.env.PUBLIC_URL + data.Url}
+                className="text-icon-category"
+            >
+                <p className="text-center">{data.Name}</p>
+            </Link>
         </div>
     );
 }
