@@ -7,7 +7,11 @@ function ArticleContent ({data}) {
             <Image rounded className="shadow" alt={data?.Image?.Alt} src={process.env.PUBLIC_URL + data?.Image?.Path}></Image>
             <h6 className="title-blog-article-detail">{data.Title}</h6>
             <strong className="strong-blog-article-detail">{data.Subtitle}</strong>
-            <p className="p-blog-article">{data.Content}</p>
+            {data.IsTextHtml ?(
+                <div className="p-blog-article" dangerouslySetInnerHTML={{ __html: data.Content }} />
+            ):(
+                <p className="p-blog-article">{data.Content}</p>
+            )}
         </div>
     );
 }
