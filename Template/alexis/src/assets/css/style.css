@@ -2052,3 +2052,7 @@ margin-bottom: 15px;
     border-color: #C21718;
     border-right-color: transparent;
   }
+
+.header-primopiano{
+    z-index: 99999 !important;
+}

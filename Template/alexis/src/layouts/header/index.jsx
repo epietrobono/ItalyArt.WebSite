@@ -48,7 +48,7 @@ const Header = ({ classOption }) => {
             {!isLoading && ( 
             <>
             <header
-                className={`py-0 header-area header-default sticky-header ${classOption} ${
+                className={`py-0 header-area header-default sticky-header header-primopiano ${classOption} ${
                     scroll > headerTop ? "sticky" : ""
                 }`}>
 
