@@ -20,8 +20,8 @@ const MonumentsPage = ({
         params: { category },
     },
 }) => {
-    const [MonumentsPageData, setMonumentsPageData] = useState({});
     const [monumentsDt, setmonumentsDt] = useState({});
+    const [search, setSearch] = useState("");
     const [isLoading, setIsLoading] = useState(true);
     const [isMounted14, setIsMounted14] = useState(false);
     
@@ -34,8 +34,7 @@ const MonumentsPage = ({
         setLoadingMore(true);
         try{
             const nextPage = currentPage + 1;
-            const research = getUrlParameter("research");
-            const moreResults = await Api.GetMonuments(category, research, nextPage);
+            const moreResults = await Api.GetMonuments(category, search, nextPage);
         
             if (moreResults.Monuments.length === 0) {
             setHasMoreResults(false);
@@ -54,14 +53,10 @@ const MonumentsPage = ({
       };
 
     useEffect(async () => {
-        console.log("entro in useEffects");
-        await Api.GetMonumentPageText().then((results) => {    
-            console.log("esegue then");
-            setMonumentsPageData(results);
-            });
-        const research=getUrlParameter("research");
-        await Api.GetMonuments(category,research,currentPage).then((results) => {    
-            console.log("esegue then");
+        if(!search || search==""){
+            setSearch(getUrlParameter("research"));
+        }
+        await Api.GetMonuments(category,search,currentPage).then((results) => {    
             setmonumentsDt(results);
             setIsMounted14(true);
             setIsLoading(false);
@@ -71,8 +66,8 @@ const MonumentsPage = ({
     if (!isMounted14 && isLoading) {
         return null; // non renderizzare il componente fino a quando non è montato
       }
-    const form = MonumentsPageData?.Form;
-    form.Research= getUrlParameter("research");
+    const form = monumentsDt?.Form;
+    form.Research= search;
     return (
         <React.Fragment>
             <Layout>
@@ -89,7 +84,7 @@ const MonumentsPage = ({
                     <div className="main-content">
                         <div className="col col-auto my-4">
                             <div className="row mx-5 monuments-section">
-                                <h1 className="mob-h2">{MonumentsPageData?.GridTitle1}</h1>
+                                <h1 className="mob-h2">{monumentsDt?.GridTitle1}</h1>
                                 <GridContainer nCols={5} monuments={monumentsDt.Monuments}></GridContainer>
                             </div>
                         </div>
@@ -109,7 +104,7 @@ const MonumentsPage = ({
                                 (
                                     <div className="col col-auto my-4 px-auto">
                                     <div className="row mx-5 monuments-section">
-                                        <h1 className="mob-h2">{MonumentsPageData?.GridTitle2}</h1>
+                                        <h1 className="mob-h2">{monumentsDt?.GridTitle2}</h1>
                                         <GridContainer nCols={5} monuments={monumentsDt?.OthersMonuments}></GridContainer>
                                     </div>
                                 </div> 
