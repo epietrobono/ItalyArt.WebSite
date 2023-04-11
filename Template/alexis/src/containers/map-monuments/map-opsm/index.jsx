@@ -1,79 +1,98 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import PinComponent from '../../../components/opsm-marker';
-import { OpenStreetMapProvider } from 'leaflet-geosearch';
+import { MapContainer, TileLayer, useMapEvents } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import PinComponent from "../../../components/opsm-marker";
+import { OpenStreetMapProvider } from "leaflet-geosearch";
 
-const MapComponent = ({ monuments, onViewportChanged, isLoading, category, search }) => {
-  const [viewport, setViewport] = useState({
-    center: [41.894038, 12.497480], // Coordinata iniziale (Milano)
-    zoom: 13,
-  });
-  const [tmpSearch, setTmpSearch] = useState('');
-  
-  const MapEvents = () => {
-    const map = useMapEvents({
-      load: () => {
-        onViewportChanged(map.getBounds());
-      },
-      moveend: () => {
-        onViewportChanged(map.getBounds());
-      },
+const MapComponent = ({
+    monuments,
+    onViewportChanged,
+    isLoading,
+    category,
+    search,
+}) => {
+    const [viewport, setViewport] = useState({
+        center: [41.894038, 12.49748], // Coordinata iniziale (Milano)
+        zoom: 13,
     });
-    
-    useEffect(() => {
-      if (search && search!= tmpSearch) {
-        try{
-          const provider = new OpenStreetMapProvider();
-          provider.search({ query: search }).then((results) => {
-            if (results.length > 0) {
-              const { x, y } = results[0];
-              const newCenter = [parseFloat(y), parseFloat(x)];
-              map.setView(newCenter, 13);
-              onViewportChanged(map.getBounds());
-              setTmpSearch(search)
+    const [tmpSearch, setTmpSearch] = useState("");
+    const [firstLoad, setFirstLoad] = useState(true);
+
+    const MapEvents = () => {
+        const map = useMapEvents({
+            load: () => {
+                onViewportChanged(map.getBounds());
+            },
+            moveend: () => {
+                onViewportChanged(map.getBounds());
+            },
+        });
+
+        useEffect(() => {
+            if (search && search != tmpSearch) {
+                try {
+                    const provider = new OpenStreetMapProvider();
+                    provider
+                        .search({ query: search })
+                        .then((results) => {
+                            if (results.length > 0) {
+                                const { x, y } = results[0];
+                                const newCenter = [
+                                    parseFloat(y),
+                                    parseFloat(x),
+                                ];
+                                map.setView(newCenter, 13);
+                                onViewportChanged(map.getBounds());
+                                setTmpSearch(search);
+                            }
+                        })
+                        .error();
+                } catch {}
+            } else if (firstLoad) {
+                setFirstLoad(false);
+                const newCenter = [41.894048, 12.49758];
+                map.setView(newCenter, 13);
+                onViewportChanged(map.getBounds());
             }
-          }).error();
-        }
-        catch{}
-      }
-    }, [search]);
+        }, [search]);
 
-    return null;
-  };
+        return null;
+    };
 
-  useEffect(() => {
-    const bounds = new window.L.LatLngBounds(viewport.center, viewport.center);
-    onViewportChanged(bounds);
-  }, [category]);
+    useEffect(() => {
+        const bounds = new window.L.LatLngBounds(
+            viewport.center,
+            viewport.center
+        );
+        onViewportChanged(bounds);
+    }, [category]);
 
-
-
-  return (
-    <MapContainer
-      style={{ height: '600px', width: '100%' }}
-      center={viewport.center}
-      zoom={viewport.zoom}
-    >
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution="&amp;copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-      />
-      {!isLoading && monuments?.map((monument) => (
-        <PinComponent key={monument.Id} monument={monument} />
-      ))} 
-      <MapEvents />
-    </MapContainer>
-  );
+    return (
+        <MapContainer
+            style={{ height: "600px", width: "100%" }}
+            center={viewport.center}
+            zoom={viewport.zoom}
+        >
+            <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&amp;copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            />
+            {!isLoading &&
+                monuments?.map((monument) => (
+                    <PinComponent key={monument.Id} monument={monument} />
+                ))}
+            <MapEvents />
+        </MapContainer>
+    );
 };
 
 MapComponent.propTypes = {
-  monuments: PropTypes.array,
-  onViewportChanged: PropTypes.func,
-  isLoading: PropTypes.bool,
-  category: PropTypes.string,
-  search: PropTypes.string
-}
+    monuments: PropTypes.array,
+    onViewportChanged: PropTypes.func,
+    isLoading: PropTypes.bool,
+    category: PropTypes.string,
+    search: PropTypes.string,
+};
 
 export default MapComponent;
