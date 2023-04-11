@@ -1495,8 +1495,8 @@ margin-bottom: 15px;
 
     .map-section{
         display: flex;
-        flex-direction: column-reverse;
-        
+        flex-direction: column-reverse !important;
+        position: unset !important;
     }
 
     .monumenti-map{
@@ -1510,15 +1510,14 @@ margin-bottom: 15px;
         background-color: white;
         z-index: 10;
         margin-top: 80vh;
-        width: 93%;
+        width: 100%;
         padding-top: 20px;
         min-height: 0 !important;
     }
 
     .map-mobile{
         position: fixed;
-        height: 90vh !important;
-        top: 20vh;
+        height: 78vh !important;
         width: 100%;
     }
 
@@ -1532,7 +1531,7 @@ margin-bottom: 15px;
         position: fixed;
         z-index: 20;
         background-color: white;
-        width: 93%;
+        width: 100%;
         margin-top: -5px;
 
     }
@@ -1626,6 +1625,17 @@ margin-bottom: 15px;
 
     .text-icon-category{
         display: none !important;
+    }
+
+    .map-mobile>div {
+        border-radius: 1px !important;
+        height: 100% !important;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .header-map-page {
+        height: 15vh !important;
     }
 }
 
@@ -2157,8 +2167,9 @@ margin-bottom: 15px;
 }
 
 .column-monument-map{
-    margin-top: 24vh;
     min-height: 600px;
+    position: absolute;
+    top: 0vh;
 }
 
 .leaflet-popup-content-wrapper .ptp-5,
@@ -2167,4 +2178,20 @@ margin-bottom: 15px;
 }
 .leaflet-popup-content-wrapper .monument-card-title {
     padding-bottom: 7px;
+}
+
+.map-mobile>div  {
+    border-radius: 15px;
+}
+
+.map-section{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    position: relative;
+}
+
+.header-map{
+    position: relative;
+    height: 23vh;
 }

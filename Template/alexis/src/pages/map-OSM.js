@@ -59,7 +59,7 @@ const MapMonumentsPage = ({
                     <Header classOption="hb-border "></Header>
                     <div className="header-space"></div>
                     {!isLoading && (
-                        <>
+                        <div className="header-map">
                             <div className="row justify-content-center py-5 search-bar-monuments ricerca-map header-map-page">
                                 <div
                                     className="col col-auto form-width mb-4  "
@@ -72,32 +72,31 @@ const MapMonumentsPage = ({
                                     isLoading={isLoading}
                                 ></CategoriesContainer>
                             </div>
-                        </>
+                        </div>
                     )}
-                    <div>
-                        <div className="row map-section">
-                            <div className="col-md-5 col-sm-12 column-monument-map">
-                                {/* <div className="number-article-map">
-                                    <h2 className="mob-h2">0 Risultati</h2>
-                                </div> */}
-                                <GridContainer
-                                    nCols={3}
-                                    monuments={monuments.Monuments}
-                                    isLoading={isLoading}
-                                ></GridContainer>
-                            </div>
-                            <div className="col-md-7 col-sm-12 map-mobile">
-                                <MapComponent
-                                    monuments={monuments.Monuments}
-                                    onViewportChanged={handleViewportChanged}
-                                    isLoading={isLoading}
-                                    category={category}
-                                    search={search}
-                                />
-                            </div>
+                    <div className="row map-section">
+                        <div className="col-md-5 col-sm-12 column-monument-map">
+                            {/* <div className="number-article-map">
+                                <h2 className="mob-h2">0 Risultati</h2>
+                            </div> */}
+                            <GridContainer
+                                nCols={3}
+                                monuments={monuments.Monuments}
+                                isLoading={isLoading}
+                            ></GridContainer>
+                            <div className="my-5"> </div>
+                            <Footer></Footer>
+                        </div>
+                        <div className="col-md-7 col-sm-12 map-mobile">
+                            <MapComponent
+                                monuments={monuments.Monuments}
+                                onViewportChanged={handleViewportChanged}
+                                isLoading={isLoading}
+                                category={category}
+                                search={search}
+                            />
                         </div>
                     </div>
-                    <Footer></Footer>
                     <ScrollToTop />
                 </div>
             </Layout>
