@@ -2069,7 +2069,7 @@ margin-bottom: 15px;
   }
 
 .header-primopiano{
-    z-index: 99999 !important;
+    z-index: 1049 !important;
 }
 
 @media screen and (max-width: 600px){

@@ -9,88 +9,94 @@ import Api from "../../services/Api";
 const Header = ({ classOption }) => {
     const [ofcanvasShow, setOffcanvasShow] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
-    
+
     const [data, setData] = useState({});
     const [isMounted18, setIsMounted18] = useState(false);
-    
+
     const onCanvasHandler = () => {
         setOffcanvasShow((prev) => !prev);
     };
-    
+
     const [searchbarShow, setSearchbarShow] = useState(false);
     const onSearchHandler = () => {
         setSearchbarShow((prev) => !prev);
     };
-    
+
     const [scroll, setScroll] = useState(0);
     const [headerTop, setHeaderTop] = useState(0);
-    
+
     const handleScroll = ({}) => {
         setScroll(window.scrollY);
     };
-    
+
     useEffect(async () => {
         console.log("entro in useEffects");
-        await Api.GetHeader().then((results) => {    
-                setIsMounted18(true);
-                console.log("esegue then");
-                setData(results);
-                setIsLoading(false);
-            });
+        await Api.GetHeader().then((results) => {
+            setIsMounted18(true);
+            console.log("esegue then");
+            setData(results);
+            setIsLoading(false);
+        });
     }, []);
-    
+
     if (!isMounted18) {
         return null; // non renderizzare il componente fino a quando non è montato
-      }
+    }
 
     return (
         <Fragment>
-            {!isLoading && ( 
-            <>
-            <header
-                className={`py-0 header-area header-default sticky-header header-primopiano ${classOption} ${
-                    scroll > headerTop ? "sticky" : ""
-                }`}>
+            {!isLoading && (
+                <>
+                    <header
+                        className={`py-0 header-area header-default sticky-header header-primopiano ${classOption} ${
+                            scroll > headerTop ? "sticky" : ""
+                        }`}
+                    >
+                        <div className="container-fluid">
+                            <div className="row align-items-center justify-content-between padd-header">
+                                <div className="col-auto ">
+                                    <div className="header-logo-area">
+                                        <Logo
+                                            image={`${process.env.PUBLIC_URL}/img/logo.png`}
+                                            className="logo-nav-bar"
+                                        />
+                                    </div>
+                                </div>
 
-                <div className="container-fluid">
-                    <div className="row align-items-center justify-content-between padd-header">
-                        <div className="col-auto ">
-                            <div className="header-logo-area">
-                                <Logo
-                                    image={`${process.env.PUBLIC_URL}/img/logo.png`}
-                                    className="logo-nav-bar"
-                                />
+                                <div className="col">
+                                    <div className="header-links-area">
+                                        <HeaderLinks data={data}></HeaderLinks>
+                                    </div>
+                                </div>
+
+                                <div className="col-auto">
+                                    <div className="header-languages-area">
+                                        <LanguageSelector data={data.Lingue} />
+                                    </div>
+                                    <div className="header-action-area">
+                                        <button
+                                            className="btn btn-white"
+                                            onClick={onCanvasHandler}
+                                            id="btn-burger-menu"
+                                        >
+                                            <img
+                                                src={`${process.env.PUBLIC_URL}/img/icons/burger-menu.svg`}
+                                                alt="burger menu"
+                                            />
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div className="col">
-                            <div className="header-links-area">
-                                <HeaderLinks data={data}></HeaderLinks>
-                            </div>
-                        </div>
-
-                        <div className="col-auto">
-                            <div className="header-languages-area">
-                                <LanguageSelector data={data.Lingue} />
-                            </div>
-                            <div className="header-action-area">
-                                <button
-                                    className="btn btn-white"
-                                    onClick={onCanvasHandler}
-                                    id="btn-burger-menu"
-                                >
-                                    <img src={`${process.env.PUBLIC_URL}/img/icons/burger-menu.svg`} alt="burger menu" />
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </header>
-            <HamburgerMenu show={ofcanvasShow} onClose={onCanvasHandler} data={data}></HamburgerMenu>
-       </> 
+                    </header>
+                    <HamburgerMenu
+                        show={ofcanvasShow}
+                        onClose={onCanvasHandler}
+                        data={data}
+                    ></HamburgerMenu>
+                </>
             )}
-       </Fragment>
+        </Fragment>
     );
 };
 
