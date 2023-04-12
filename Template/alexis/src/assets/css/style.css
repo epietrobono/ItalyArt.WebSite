@@ -1563,6 +1563,9 @@ margin-bottom: 15px;
         margin-bottom: -26px;
     }
     
+    .leaflet-popup-content .textarea-monument-card{
+        margin-bottom: -10px !important;
+    }
     
     
     .monument-card-title{
