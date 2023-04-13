@@ -1517,7 +1517,7 @@ margin-bottom: 15px;
 
     .map-mobile{
         position: fixed;
-        height: 78vh !important;
+        height: 74vh !important;
         width: 100%;
     }
 
@@ -2158,7 +2158,7 @@ margin-bottom: 15px;
     position: fixed;
     right: 0;
     bottom: 0;
-    height: 70vh;
+    height: 67vh;
 }
 
 .header-map-page {
@@ -2196,5 +2196,15 @@ margin-bottom: 15px;
 
 .header-map{
     position: relative;
-    height: 23vh;
+    height: 25vh;
+}
+
+
+@media only screen and (min-width: 1570px) {
+    .map-mobile{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        height: 69vh;
+    }
 }

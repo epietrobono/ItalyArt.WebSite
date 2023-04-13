@@ -57,13 +57,17 @@ const MonumentsPage = ({
     };
 
     useEffect(async () => {
+        let research = "";
         if (!search || search == "") {
-            setSearch(getUrlParameter("research"));
+            research = getUrlParameter("research");
+            setSearch(research);
+        } else {
+            research = search;
         }
         setCurrentPage(1);
         setHasMoreResults(true);
         setLoadingMore(false);
-        await Api.GetMonuments(category, search, 1).then((results) => {
+        await Api.GetMonuments(category, research, 1).then((results) => {
             setmonumentsDt(results);
             setIsMounted14(true);
             setIsLoading(false);
@@ -109,7 +113,7 @@ const MonumentsPage = ({
                                     <Spinner color="custom-spinner-primary-color" /> // Modifica "primary" con il colore desiderato per lo spinner
                                 ) : (
                                     <button
-                                        className="btn btn-primary mt-4"
+                                        className="border shadow rounded-pill mx-auto botton-suggestions"
                                         onClick={loadMoreMonuments}
                                     >
                                         Visualizza Altri
