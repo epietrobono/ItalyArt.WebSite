@@ -19,6 +19,12 @@ const MapComponent = ({
     const [tmpSearch, setTmpSearch] = useState("");
     const [firstLoad, setFirstLoad] = useState(true);
 
+    // Aggiungi il tuo token di accesso Mapbox qui
+    const mapboxAccessToken =
+        "pk.eyJ1IjoiaXRhbHlhcnQiLCJhIjoiY2xnNWlma3F0MDNzZTNucW5jYjd1NXBtayJ9.GYododkimgqH1yEe8ZKiCw";
+    // Sostituisci con il tuo URL dello stile Mapbox
+    const mapboxStyleUrl = `https://api.mapbox.com/styles/v1/italyart/clg5im3xr001k01la2ij25bt8/tiles/{z}/{x}/{y}?access_token=${mapboxAccessToken}`;
+
     const MapEvents = () => {
         const map = useMapEvents({
             load: () => {
@@ -75,9 +81,15 @@ const MapComponent = ({
             zoom={viewport.zoom}
         >
             <TileLayer
+                url={mapboxStyleUrl}
+                tileSize={512}
+                zoomOffset={-1}
+                attribution='&amp;copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors &amp; <a href="https://www.mapbox.com/feedback/">Mapbox</a>'
+            />
+            {/* <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&amp;copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            />
+            /> */}
             {!isLoading &&
                 monuments?.map((monument) => (
                     <PinComponent key={monument.Id} monument={monument} />
