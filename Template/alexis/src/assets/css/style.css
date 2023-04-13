@@ -1640,6 +1640,14 @@ margin-bottom: 15px;
     .header-map-page {
         height: 15vh !important;
     }
+
+    .blog-monuments {
+        max-width: 100% !important;
+    }
+}
+
+.blog-monuments {
+    max-width: 325px;
 }
 
 .text-icon-category{
