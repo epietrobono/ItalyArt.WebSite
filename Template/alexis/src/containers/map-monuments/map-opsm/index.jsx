@@ -17,6 +17,7 @@ const MapComponent = ({
         zoom: 5.5,
     });
     const [tmpSearch, setTmpSearch] = useState("");
+    const [tmpCategory, setTmpCategory] = useState("");
     const [firstLoad, setFirstLoad] = useState(true);
 
     // Aggiungi il tuo token di accesso Mapbox qui
@@ -67,16 +68,18 @@ const MapComponent = ({
             }
         }, [search]);
 
+        useEffect(() => {
+            if (category && category != tmpCategory) {
+                setFirstLoad(false);
+                const newCenter = [41.894048, 12.49758];
+                map.setView(newCenter, 5.5);
+                onViewportChanged(map.getBounds());
+                setTmpCategory(category);
+            }
+        }, [category]);
+
         return null;
     };
-
-    useEffect(() => {
-        const bounds = new window.L.LatLngBounds(
-            viewport.center,
-            viewport.center
-        );
-        onViewportChanged(bounds);
-    }, [category]);
 
     return (
         <MapContainer
