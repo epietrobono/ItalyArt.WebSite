@@ -11,32 +11,53 @@ const CreditsComponent = ({ contenuto }) => {
     return (
         <section className="bg-credits">
             <div className="text-image-section-credits">
-                <div className="credits-image-list">
-                    {contenuto?.Image?.map((image, index) =>
-                        image.url ? (
-                            <a key={index} href={image.url}>
-                                <img
-                                    className="img-fluid"
-                                    src={image?.Path}
-                                    alt={image?.Alt}
-                                />
-                            </a>
-                        ) : (
-                            <img
-                                key={index}
-                                className="img-fluid"
-                                src={image?.Path}
-                                alt={image?.Alt}
-                            />
-                        )
-                    )}
+                {contenuto.Images.length > 0 && (
+                    <>
+                        <div className="credits-image-list">
+                            {contenuto?.Images?.map((image, index) =>
+                                image.Url ? (
+                                    <a
+                                        key={index}
+                                        href={image.Url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <img
+                                            className="img-fluid"
+                                            src={image?.Path}
+                                            alt={image?.Alt}
+                                        />
+                                    </a>
+                                ) : (
+                                    <img
+                                        key={index}
+                                        className="img-fluid"
+                                        src={image?.Path}
+                                        alt={image?.Alt}
+                                    />
+                                )
+                            )}
+                        </div>
+                    </>
+                )}
+                <div className="credits-thanks-text text-italyart">
+                    {contenuto?.Titolo}
                 </div>
-                <div className="credits-thanks-text">Si ringrazia</div>
+                <div className="row justify-content-center text-is-center">
+                    <div className="col col-auto">
+                        <p>{contenuto.Testo}</p>
+                    </div>
+                </div>
                 <div className="row">
                     <div className="col-md-6 text-left credits-text">
                         {leftCredits.map((credit, index) =>
-                            credit.url ? (
-                                <a key={index} href={credit.url}>
+                            credit.Url ? (
+                                <a
+                                    key={index}
+                                    href={credit.Url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
                                     <div>
                                         <h6>{credit?.Titolo}</h6>
                                         <p>{credit?.Testo}</p>

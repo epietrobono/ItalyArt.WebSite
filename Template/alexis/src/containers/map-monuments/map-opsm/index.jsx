@@ -14,7 +14,7 @@ const MapComponent = ({
 }) => {
     const [viewport, setViewport] = useState({
         center: [41.894038, 12.49748], // Coordinata iniziale (Milano)
-        zoom: 13,
+        zoom: 5.5,
     });
     const [tmpSearch, setTmpSearch] = useState("");
     const [firstLoad, setFirstLoad] = useState(true);
@@ -22,8 +22,12 @@ const MapComponent = ({
     // Aggiungi il tuo token di accesso Mapbox qui
     const mapboxAccessToken =
         "pk.eyJ1IjoiaXRhbHlhcnQiLCJhIjoiY2xnNWlma3F0MDNzZTNucW5jYjd1NXBtayJ9.GYododkimgqH1yEe8ZKiCw";
+
+    const mapID = "clg5im3xr001k01la2ij25bt8";
+
+    const idUtenza = "italyart";
     // Sostituisci con il tuo URL dello stile Mapbox
-    const mapboxStyleUrl = `https://api.mapbox.com/styles/v1/italyart/clg5im3xr001k01la2ij25bt8/tiles/{z}/{x}/{y}?access_token=${mapboxAccessToken}`;
+    const mapboxStyleUrl = `https://api.mapbox.com/styles/v1/${idUtenza}/${mapID}/tiles/{z}/{x}/{y}?access_token=${mapboxAccessToken}`;
 
     const MapEvents = () => {
         const map = useMapEvents({
@@ -58,7 +62,7 @@ const MapComponent = ({
             } else if (firstLoad) {
                 setFirstLoad(false);
                 const newCenter = [41.894048, 12.49758];
-                map.setView(newCenter, 13);
+                map.setView(newCenter, 5.5);
                 onViewportChanged(map.getBounds());
             }
         }, [search]);
@@ -79,6 +83,7 @@ const MapComponent = ({
             style={{ height: "600px", width: "100%" }}
             center={viewport.center}
             zoom={viewport.zoom}
+            minZoom={5}
         >
             <TileLayer
                 url={mapboxStyleUrl}
