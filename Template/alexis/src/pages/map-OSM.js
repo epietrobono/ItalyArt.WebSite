@@ -85,7 +85,6 @@ const MapMonumentsPage = ({
                                 isLoading={isLoading}
                             ></GridContainer>
                             <div className="my-5"> </div>
-                            <Footer></Footer>
                         </div>
                         <div className="col-md-7 col-sm-12 map-mobile">
                             <MapComponent
@@ -97,6 +96,7 @@ const MapMonumentsPage = ({
                             />
                         </div>
                     </div>
+                    <Footer></Footer>
                     <ScrollToTop />
                 </div>
             </Layout>

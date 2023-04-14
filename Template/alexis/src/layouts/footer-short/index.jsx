@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
-import CenterFooterLogo from "../../components/center-footer-logo";
-import LeftUsefulLinks from "../../components/left-useful-links";
-import RightUsefulLinks from "../../components/right-useful-links";
-import Api from "../../services/Api";
 import SocialLogo from "../../components/social-logo";
+import Api from "../../services/Api";
 
 const Footer = () => {
     const [FooterData, setFooterData] = useState({});
@@ -21,7 +18,7 @@ const Footer = () => {
     return (
         <footer className="footer-area reveal-footer footer-area-short border-top-style">
             {!isLoading && (
-                <div className="row footer-content row align-items-start justify-content-evenly">
+                <div className="row footer-content row align-items-center justify-content-evenly">
                     <div className="col-auto">&nbsp;</div>
                     <div className="col-auto">&nbsp;</div>
                     <div className="col-auto">

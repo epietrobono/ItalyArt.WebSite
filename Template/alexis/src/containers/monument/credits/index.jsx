@@ -49,7 +49,7 @@ const CreditsComponent = ({ contenuto }) => {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-6 text-left credits-text">
+                    <div className="col-sm-6 text-left credits-text">
                         {leftCredits.map((credit, index) =>
                             credit.Url ? (
                                 <a
@@ -71,7 +71,7 @@ const CreditsComponent = ({ contenuto }) => {
                             )
                         )}
                     </div>
-                    <div className="col-md-6 text-right credits-text">
+                    <div className="col-sm-6 text-right credits-text">
                         {rightCredits.map((credit, index) =>
                             credit.url ? (
                                 <a key={index} href={credit.url}>
