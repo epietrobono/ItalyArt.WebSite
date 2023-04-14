@@ -2228,3 +2228,12 @@ margin-bottom: 15px;
 .text-is-center{
     text-align: center;
 }
+
+.footer-area-short{
+    align-content: center;
+    justify-content: center;
+    padding: 0px;
+}
+.footer-area-short.border-top-style {
+    padding: 20px 0 20px;
+}

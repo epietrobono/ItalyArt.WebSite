@@ -7,7 +7,7 @@ import CategoriesContainer from "../containers/map-monuments/categories";
 import GridContainer from "../containers/map-monuments/grid";
 import MapComponent from "../containers/map-monuments/map-opsm";
 import Layout from "../layouts";
-import Footer from "../layouts/footer";
+import Footer from "../layouts/footer-short";
 import Header from "../layouts/header";
 import Api from "../services/Api";
 import { getUrlParameter } from "../utils";

@@ -44,10 +44,11 @@ const Footer = () => {
                     )}
                 </div>
             </div>
-            <p className="dati-aziendali-footer">
-                ItalyArt S.r.l.s. | Piazza Camerino 15 - Roma | P.Iva:
-                14324751008
-            </p>
+            {!isLoading && (
+                <p className="dati-aziendali-footer">
+                    {FooterData.TextDataCompany}
+                </p>
+            )}
         </footer>
     );
 };
