@@ -22,10 +22,7 @@ const Footer = () => {
                     <div className="col-auto">&nbsp;</div>
                     <div className="col-auto">&nbsp;</div>
                     <div className="col-auto">
-                        <p>
-                            {FooterData.TextDataCompany}ItalyArt S.r.l.s. |
-                            Piazza Camerino 15 - Roma | P.Iva: 14324751008
-                        </p>
+                        <p>{FooterData.TextDataCompany}</p>
                     </div>
                     <div className="row col-auto">
                         <SocialLogo
