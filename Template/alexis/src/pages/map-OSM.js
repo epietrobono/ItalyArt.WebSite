@@ -60,17 +60,19 @@ const MapMonumentsPage = ({
                     <div className="header-space"></div>
                     {!isLoading && (
                         <div className="header-map">
-                            <div className="row justify-content-center py-5 search-bar-monuments ricerca-map header-map-page">
+                            <div className="row justify-content-center pb-4 pt-5 search-bar-monuments ricerca-map header-map-page">
                                 <div
-                                    className="col col-auto form-width mb-4  "
+                                    className="col col-auto form-width   "
                                     id="search-form-monuments"
                                 >
                                     <SearchForm data={form}></SearchForm>
                                 </div>
-                                <CategoriesContainer
-                                    categories={monuments.Categories}
-                                    isLoading={isLoading}
-                                ></CategoriesContainer>
+                                <div className="bg-white pt-3 ">
+                                    <CategoriesContainer
+                                        categories={monuments.Categories}
+                                        isLoading={isLoading}
+                                    ></CategoriesContainer>
+                                </div>
                             </div>
                         </div>
                     )}
