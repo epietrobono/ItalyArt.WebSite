@@ -2274,3 +2274,7 @@ margin-bottom: 15px;
     position: fixed;
     bottom: 0;
 }
+
+.w-45{
+    width: 45%;
+}

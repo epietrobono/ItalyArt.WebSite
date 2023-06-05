@@ -18,9 +18,9 @@ const Footer = () => {
     return (
         <footer className="footer-area reveal-footer footer-area-short border-top-style">
             {!isLoading && (
-                <div className="row footer-content row align-items-center justify-content-evenly">
-                    <div className="col-auto">&nbsp;</div>
-                    <div className="col-auto">&nbsp;</div>
+                <div className="row footer-content row align-items-center justify-content-center">
+                    {/* <div className="col-auto">&nbsp;</div>
+                    <div className="col-auto">&nbsp;</div> */}
                     <div className="col-auto">
                         <p>
                             {FooterData.TextDataCompany}ItalyArt S.r.l.s. |
@@ -29,16 +29,16 @@ const Footer = () => {
                     </div>
                     <div className="row col-auto">
                         <SocialLogo
-                            className="col-auto"
+                            className="w-45"
                             social="instagram"
                         ></SocialLogo>
                         <SocialLogo
-                            className="col-auto"
+                            className="w-45"
                             social="facebook"
                         ></SocialLogo>
                     </div>
-                    <div className="col-auto">&nbsp;</div>
-                    <div className="col-auto">&nbsp;</div>
+                    {/* <div className="col-auto">&nbsp;</div>
+                    <div className="col-auto">&nbsp;</div> */}
                 </div>
             )}
         </footer>
