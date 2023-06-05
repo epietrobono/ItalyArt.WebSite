@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SearchForm from "../components/search-form-map";
 import SEO from "../components/seo";
@@ -8,6 +8,7 @@ import GridContainer from "../containers/map-monuments/grid";
 import MapComponent from "../containers/map-monuments/map-opsm";
 import Layout from "../layouts";
 import Footer from "../layouts/footer-short";
+import Footer1 from "../layouts/footer";
 import Header from "../layouts/header";
 import Api from "../services/Api";
 import { getUrlParameter } from "../utils";
@@ -20,6 +21,7 @@ const MapMonumentsPage = ({
     const [monuments, setMonuments] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [isMounted14, setIsMounted14] = useState(false);
+    const [width, setWidth] = useState(window.innerWidth);
 
     const search = getUrlParameter("research");
 
@@ -43,6 +45,14 @@ const MapMonumentsPage = ({
         const paramCategory = category;
         fetchMonuments(NELat, NELon, SWLat, SWLon, paramCategory, search);
     };
+
+    useEffect(() => {
+        function handleResize() {
+            setWidth(window.innerWidth);
+        }
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [width]);
 
     const form = monuments?.Form;
     if (!isLoading) {
@@ -87,6 +97,7 @@ const MapMonumentsPage = ({
                                 isLoading={isLoading}
                             ></GridContainer>
                             <div className="my-5"> </div>
+                            {width < 900 && <Footer1></Footer1>}
                         </div>
                         <div className="col-md-7 col-sm-12 map-mobile">
                             <MapComponent
@@ -98,7 +109,7 @@ const MapMonumentsPage = ({
                             />
                         </div>
                     </div>
-                    <Footer></Footer>
+                    {width >= 900 && <Footer></Footer>}
                     <ScrollToTop />
                 </div>
             </Layout>
